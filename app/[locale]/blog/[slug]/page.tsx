@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { generatePageMetadata } from "@/lib/seo";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
 interface BlogPostPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -45,6 +46,13 @@ function ArticleLayout({
 }) {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+      <Breadcrumbs
+        items={[
+          { label: 'Accueil', href: '/fr' },
+          { label: 'Blog', href: '/fr/blog' },
+          { label: title, href: '#' },
+        ]}
+      />
       <Link
         href="/fr/blog"
         className="mb-8 inline-flex items-center gap-2 text-sm text-secondary transition-colors hover:text-cyan"

@@ -81,6 +81,22 @@ export default async function Footer() {
                   {t('compatibility')}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/garages"
+                  className="text-sm text-secondary transition-colors duration-200 hover:text-white"
+                >
+                  {t('garages')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/comparaison"
+                  className="text-sm text-secondary transition-colors duration-200 hover:text-white"
+                >
+                  {t('comparison')}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

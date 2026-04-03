@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/shared/CookieConsent";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <CookieConsent />
+          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>
