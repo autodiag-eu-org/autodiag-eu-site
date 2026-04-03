@@ -4943,8 +4943,6 @@
       ]
     },
     "relatedCodes": [
-      "P0231",
-      "P0232",
       "P0087",
       "P0190"
     ],
@@ -6418,18 +6416,18 @@
           "fr": "Pneus mauvaise taille"
         },
         "costMin": {
-          "fr": 0,
-          "de": 0,
-          "ch": 0,
-          "es": 0,
-          "pt": 0
+          "fr": 60,
+          "de": 70,
+          "ch": 85,
+          "es": 50,
+          "pt": 45
         },
         "costMax": {
-          "fr": 0,
-          "de": 0,
-          "ch": 0,
-          "es": 0,
-          "pt": 0
+          "fr": 400,
+          "de": 460,
+          "ch": 580,
+          "es": 330,
+          "pt": 310
         }
       }
     ],
@@ -7241,8 +7239,6 @@
     },
     "relatedCodes": [
       "P0700",
-      "P0716",
-      "P0717",
       "P0720"
     ],
     "faq": {
@@ -7341,9 +7337,7 @@
     },
     "relatedCodes": [
       "P0700",
-      "P0715",
-      "P0721",
-      "P0722"
+      "P0715"
     ],
     "faq": {
       "fr": [
@@ -7442,9 +7436,6 @@
     },
     "relatedCodes": [
       "P0700",
-      "P0731",
-      "P0732",
-      "P0733",
       "P0740"
     ],
     "faq": {
@@ -7544,9 +7535,7 @@
     },
     "relatedCodes": [
       "P0700",
-      "P0741",
-      "P0742",
-      "P0743"
+      "P0741"
     ],
     "faq": {
       "fr": [
@@ -7644,9 +7633,7 @@
     },
     "relatedCodes": [
       "P0700",
-      "P0751",
-      "P0752",
-      "P0755"
+      "P0751"
     ],
     "faq": {
       "fr": [
@@ -8731,10 +8718,7 @@
         "Possible code clim"
       ]
     },
-    "relatedCodes": [
-      "B1421",
-      "B1422"
-    ],
+    "relatedCodes": [],
     "faq": {
       "fr": [
         {
@@ -8830,7 +8814,6 @@
       ]
     },
     "relatedCodes": [
-      "B1441",
       "B1420"
     ],
     "faq": {
@@ -8927,10 +8910,7 @@
         "Air chaud uniquement"
       ]
     },
-    "relatedCodes": [
-      "B1451",
-      "B1452"
-    ],
+    "relatedCodes": [],
     "faq": {
       "fr": [
         {
@@ -14627,18 +14607,18 @@
           "fr": "Carburant indice octane inadapte"
         },
         "costMin": {
-          "fr": 0,
-          "de": 0,
-          "ch": 0,
-          "es": 0,
-          "pt": 0
+          "fr": 5,
+          "de": 6,
+          "ch": 8,
+          "es": 4,
+          "pt": 4
         },
         "costMax": {
-          "fr": 0,
-          "de": 0,
-          "ch": 0,
-          "es": 0,
-          "pt": 0
+          "fr": 80,
+          "de": 92,
+          "ch": 115,
+          "es": 65,
+          "pt": 60
         }
       },
       {
@@ -14786,9 +14766,7 @@
       ]
     },
     "relatedCodes": [
-      "P0325",
-      "P0331",
-      "P0332"
+      "P0325"
     ],
     "faq": {
       "fr": [
@@ -15581,9 +15559,7 @@
       ]
     },
     "relatedCodes": [
-      "P0411",
-      "P0412",
-      "P0414"
+      "P0411"
     ],
     "faq": {
       "fr": [
@@ -15679,8 +15655,7 @@
       ]
     },
     "relatedCodes": [
-      "P0410",
-      "P0412"
+      "P0410"
     ],
     "faq": {
       "fr": [
@@ -16699,18 +16674,18 @@
           "fr": "Batterie debranchee recemment"
         },
         "costMin": {
-          "fr": 0,
-          "de": 0,
-          "ch": 0,
-          "es": 0,
-          "pt": 0
+          "fr": 10,
+          "de": 12,
+          "ch": 15,
+          "es": 8,
+          "pt": 7
         },
         "costMax": {
-          "fr": 0,
-          "de": 0,
-          "ch": 0,
-          "es": 0,
-          "pt": 0
+          "fr": 50,
+          "de": 58,
+          "ch": 72,
+          "es": 42,
+          "pt": 38
         }
       },
       {
@@ -17253,9 +17228,7 @@
       ]
     },
     "relatedCodes": [
-      "P0740",
-      "P0742",
-      "P0743"
+      "P0740"
     ],
     "faq": {
       "fr": [
@@ -17352,9 +17325,7 @@
       ]
     },
     "relatedCodes": [
-      "P0750",
-      "P0752",
-      "P0753"
+      "P0750"
     ],
     "faq": {
       "fr": [
@@ -19120,8 +19091,6 @@
       ]
     },
     "relatedCodes": [
-      "P2014",
-      "P2016",
       "P0101"
     ],
     "faq": {
@@ -20502,8 +20471,6 @@
       ]
     },
     "relatedCodes": [
-      "P0252",
-      "P0253",
       "P0216"
     ],
     "faq": {
@@ -20922,7 +20889,7 @@
       "fr": "Capteur position EGR B tension basse"
     },
     "description": {
-      "fr": "Le P0407 concerne le capteur secondaire de position EGR (si present) avec une tension basse. Certaines vannes EGR ont deux capteurs de position pour la redondance. Une tension basse signifie un court-circuit dans le circuit du second capteur. Le diagnostic et les causes sont similaires au P0405. Si le vehicule n'a qu'un seul capteur EGR, ce code peut indiquer un defaut interne du module EGR integre. Le remplacement de la vanne EGR complete resout generalement le probleme."
+      "fr": "Le P0407 concerne le capteur secondaire de position EGR (si present) avec une tension basse. Certaines vannes EGR ont deux capteurs de position pour la redondance. Une tension basse signifie un court-circuit dans le circuit du second capteur. Le diagnostic et les causes sont similaires au P0405. Si le vehicule n'a qu'un seul capteur EGR, ce code peut indiquer un defaut interne du module EGR integre. Le remplacement de la vanne EGR complete resout generalement le probleme. Avant de remplacer la piece, verifiez bien le faisceau electrique et les connecteurs pour exclure une cause plus simple et moins couteuse."
     },
     "severity": "low",
     "canDrive": true,
@@ -23476,7 +23443,7 @@
       "fr": "Sonde lambda tension basse banque 1 capteur 3"
     },
     "description": {
-      "fr": "Le P0143 concerne la tension basse d'une troisieme sonde lambda, presente sur certains vehicules avec double catalyseur en serie. Cette sonde surveille le second catalyseur. La tension constamment basse indique soit un catalyseur aval defaillant soit une sonde en fin de vie. Ce code est rare car la plupart des vehicules n'ont que deux sondes. Il concerne principalement les vehicules americains ou certains modeles japonais avec un systeme antipollution a double etage de conversion catalytique."
+      "fr": "Le P0143 concerne la tension basse d'une troisieme sonde lambda, presente sur certains vehicules avec double catalyseur en serie. Cette sonde surveille le second catalyseur. La tension constamment basse indique soit un catalyseur aval defaillant soit une sonde en fin de vie. Ce code est rare car la plupart des vehicules n'ont que deux sondes. Il concerne principalement les vehicules americains ou certains modeles japonais avec un systeme antipollution a double etage de conversion catalytique. Si votre vehicule europeen affiche ce code, faites verifier le cablage car un faux contact est souvent en cause."
     },
     "severity": "low",
     "canDrive": true,
@@ -23670,7 +23637,7 @@
       "fr": "Injecteur cylindre 7 circuit defaillant"
     },
     "description": {
-      "fr": "Le P0207 concerne l'injecteur du cylindre 7, present uniquement sur les moteurs V8 et plus grands. Le diagnostic est identique aux autres codes d'injecteurs : verifier la resistance, le connecteur et le cablage. Sur les V8, l'acces aux injecteurs de la banque arriere peut necessiter le demontage de composants encombrants comme le collecteur d'admission. Le cablage est plus long et traverse des zones chaudes du compartiment moteur, ce qui le rend plus vulnerable aux dommages thermiques."
+      "fr": "Le P0207 concerne l'injecteur du cylindre 7, present uniquement sur les moteurs V8 et plus grands. Le diagnostic est identique aux autres codes d'injecteurs : verifier la resistance, le connecteur et le cablage. Sur les V8, l'acces aux injecteurs de la banque arriere peut necessiter le demontage de composants encombrants comme le collecteur d'admission. Le cablage est plus long et traverse des zones chaudes du compartiment moteur, ce qui le rend plus vulnerable aux dommages thermiques. Un mecanicien specialise en moteurs V8 saura optimiser le temps de main-d'oeuvre pour reduire la facture globale de cette intervention."
     },
     "severity": "medium",
     "canDrive": true,
@@ -23768,7 +23735,7 @@
       "fr": "Injecteur cylindre 8 circuit defaillant"
     },
     "description": {
-      "fr": "Le P0208 signale un defaut sur l'injecteur du cylindre 8, le dernier cylindre d'un moteur V8. Ce cylindre est souvent le plus difficile d'acces et le plus expose a la chaleur du collecteur d'echappement. Les connecteurs et le cablage de cette zone sont soumis a des temperatures elevees qui accelerent leur degradation. Le diagnostic par permutation d'injecteurs est toujours la methode recommandee. Sur les V8 americains, les injecteurs sont generalement identiques et facilement interchangeables."
+      "fr": "Le P0208 signale un defaut sur l'injecteur du cylindre 8, le dernier cylindre d'un moteur V8. Ce cylindre est souvent le plus difficile d'acces et le plus expose a la chaleur du collecteur d'echappement. Les connecteurs et le cablage de cette zone sont soumis a des temperatures elevees qui accelerent leur degradation. Le diagnostic par permutation d'injecteurs est toujours la methode recommandee. Sur les V8 americains, les injecteurs sont generalement identiques et facilement interchangeables. Pensez a verifier egalement l'etat des joints toriques des injecteurs voisins tant que le collecteur est demonte, cela evite une seconde intervention couteuse."
     },
     "severity": "medium",
     "canDrive": true,
@@ -24060,7 +24027,7 @@
       "fr": "Injecteur cylindre 4 contribution desequilibree"
     },
     "description": {
-      "fr": "Le P0269 signale une contribution desequilibree du cylindre 4. Le calculateur detecte que ce cylindre produit une puissance differente des autres lors de chaque cycle. Les causes incluent un injecteur debitant hors norme, un probleme de compression specifique a ce cylindre, ou une soupape qui ne ferme plus correctement. Sur les moteurs diesel, un equilibrage des injecteurs par le calculateur via un outil de diagnostic est parfois possible pour compenser de legers ecarts de debit entre cylindres."
+      "fr": "Le P0269 signale une contribution desequilibree du cylindre 4. Le calculateur detecte que ce cylindre produit une puissance differente des autres lors de chaque cycle. Les causes incluent un injecteur debitant hors norme, un probleme de compression specifique a ce cylindre, ou une soupape qui ne ferme plus correctement. Sur les moteurs diesel, un equilibrage des injecteurs par le calculateur via un outil de diagnostic est parfois possible pour compenser de legers ecarts de debit entre cylindres. Un test de compression comparative entre tous les cylindres permet de confirmer si le probleme est mecanique ou electronique."
     },
     "severity": "medium",
     "canDrive": true,
@@ -24229,8 +24196,7 @@
       ]
     },
     "relatedCodes": [
-      "P0381",
-      "P0383"
+      "P0381"
     ],
     "faq": {
       "fr": [
@@ -24325,8 +24291,7 @@
       ]
     },
     "relatedCodes": [
-      "P0380",
-      "P0383"
+      "P0380"
     ],
     "faq": {
       "fr": [
@@ -24816,8 +24781,7 @@
     },
     "relatedCodes": [
       "P0545",
-      "P0546",
-      "P2002"
+      "P0546"
     ],
     "faq": {
       "fr": [
