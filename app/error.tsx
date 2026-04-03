@@ -1,13 +1,18 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
+import { captureException } from "@/lib/sentry";
 
 interface ErrorPageProps {
   error: Error & { digest?: string };
   reset: () => void;
 }
 
-export default function ErrorPage({ reset }: ErrorPageProps) {
+export default function ErrorPage({ error, reset }: ErrorPageProps) {
+  useEffect(() => {
+    captureException(error, { digest: error.digest });
+  }, [error]);
   return (
     <main className="min-h-screen bg-bg flex items-center justify-center px-4">
       <div className="text-center max-w-lg">

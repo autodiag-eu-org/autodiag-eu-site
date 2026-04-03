@@ -215,3 +215,70 @@ body {
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
+
+/* ============================================
+   Blog Article Prose
+   ============================================ */
+
+.prose-article {
+  color: #8a90b0;
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.prose-article h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-article h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-article p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-article ul,
+.prose-article ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose-article ul {
+  list-style-type: disc;
+}
+
+.prose-article ol {
+  list-style-type: decimal;
+}
+
+.prose-article li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-article strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-article em {
+  font-style: italic;
+}
+
+.prose-article a {
+  color: #00e5ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-article a:hover {
+  color: #00c853;
+}

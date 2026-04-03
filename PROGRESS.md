@@ -29,11 +29,11 @@
 - [x] quality-gate.sh PASS
 
 ## Phase 3 — Gamification
-- [ ] AudioQuiz (stethoscope 3 niveaux)
-- [ ] CarQuiz (15 questions)
-- [ ] CTChecklist (Pre-CT 5 pays)
-- [ ] AppSimulator (demo pipeline 30s)
-- [ ] quality-gate.sh PASS
+- [x] AudioQuiz (stethoscope 3 niveaux)
+- [x] CarQuiz (15 questions)
+- [x] CTChecklist (Pre-CT 5 pays)
+- [x] AppSimulator (demo pipeline 30s)
+- [x] quality-gate.sh PASS
 
 ## Phase 4 — SEO + i18n
 - [ ] Traduction EN complete

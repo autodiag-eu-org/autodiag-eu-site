@@ -3,19 +3,25 @@
   "short_name": "AutoDiag",
   "description": "Diagnostic automobile intelligent — scan audio IA, vision AI, 677 vehicules europeens",
   "start_url": "/fr",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#050510",
   "theme_color": "#00e5ff",
+  "lang": "fr",
+  "categories": ["auto", "utilities"],
   "icons": [
     {
       "src": "/images/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/images/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

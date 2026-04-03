@@ -44,6 +44,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="dark">
+      <head>
+        <meta name="theme-color" content="#050510" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/images/icon-192.png" />
+      </head>
       <body className="min-h-screen bg-[#050510] text-white antialiased font-sans">
         <NextIntlClientProvider messages={messages}>
           <Navigation />

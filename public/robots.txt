@@ -1,5 +1,10 @@
+# *
 User-agent: *
 Allow: /
 Disallow: /api/
 
+# Host
+Host: https://autodiag.eu
+
+# Sitemaps
 Sitemap: https://autodiag.eu/sitemap.xml
