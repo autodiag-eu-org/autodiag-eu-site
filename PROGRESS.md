@@ -19,14 +19,14 @@
 - [x] quality-gate.sh PASS
 
 ## Phase 2 — Outils
-- [ ] DTCSearch + DTCFilters + DTCCard
-- [ ] DTCDetail avec VehicleSelector + couts par pays
-- [ ] Pages DTC SSG (250 pages FR)
-- [ ] Schema JSON-LD FAQ sur chaque page DTC
-- [ ] Verificateur compatibilite vehicule
-- [ ] Calculateur economies
-- [ ] validate-dtc-data.ts PASS
-- [ ] quality-gate.sh PASS
+- [x] DTCSearch + DTCFilters + DTCCard
+- [x] DTCDetail avec VehicleSelector + couts par pays
+- [x] Pages DTC SSG (250 pages FR)
+- [x] Schema JSON-LD FAQ sur chaque page DTC
+- [x] Verificateur compatibilite vehicule
+- [x] Calculateur economies
+- [x] validate-dtc-data.ts PASS
+- [x] quality-gate.sh PASS
 
 ## Phase 3 — Gamification
 - [ ] AudioQuiz (stethoscope 3 niveaux)
