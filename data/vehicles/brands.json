@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Alfa Romeo",
+    "modelsCount": 14
+  },
+  {
+    "name": "Audi",
+    "modelsCount": 51
+  },
+  {
+    "name": "BMW",
+    "modelsCount": 54
+  },
+  {
+    "name": "Citroen",
+    "modelsCount": 32
+  },
+  {
+    "name": "Dacia",
+    "modelsCount": 14
+  },
+  {
+    "name": "Fiat",
+    "modelsCount": 23
+  },
+  {
+    "name": "Ford",
+    "modelsCount": 32
+  },
+  {
+    "name": "Hyundai",
+    "modelsCount": 28
+  },
+  {
+    "name": "Kia",
+    "modelsCount": 27
+  },
+  {
+    "name": "Mazda",
+    "modelsCount": 20
+  },
+  {
+    "name": "Mercedes",
+    "modelsCount": 48
+  },
+  {
+    "name": "Mini",
+    "modelsCount": 13
+  },
+  {
+    "name": "Mitsubishi",
+    "modelsCount": 14
+  },
+  {
+    "name": "Nissan",
+    "modelsCount": 24
+  },
+  {
+    "name": "Opel",
+    "modelsCount": 27
+  },
+  {
+    "name": "Peugeot",
+    "modelsCount": 37
+  },
+  {
+    "name": "Porsche",
+    "modelsCount": 17
+  },
+  {
+    "name": "Renault",
+    "modelsCount": 33
+  },
+  {
+    "name": "Seat",
+    "modelsCount": 19
+  },
+  {
+    "name": "Skoda",
+    "modelsCount": 21
+  },
+  {
+    "name": "Subaru",
+    "modelsCount": 14
+  },
+  {
+    "name": "Suzuki",
+    "modelsCount": 16
+  },
+  {
+    "name": "Toyota",
+    "modelsCount": 33
+  },
+  {
+    "name": "Volkswagen",
+    "modelsCount": 42
+  },
+  {
+    "name": "Volvo",
+    "modelsCount": 24
+  }
+]

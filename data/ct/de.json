@@ -1,0 +1,128 @@
+{
+  "country": "DE",
+  "name": "Hauptuntersuchung (TUV / DEKRA)",
+  "authority": "TUV, DEKRA, GTU, KUS",
+  "frequency": "Alle 2 Jahre (Neuwagen: nach 3 Jahren)",
+  "points": [
+    {
+      "id": "de-01",
+      "name": "Beleuchtung und Signaleinrichtungen",
+      "description": "Funktion aller Scheinwerfer, Blinker, Bremslichter, Ruckfahrscheinwerfer, Nebelschlussleuchte, Kennzeichenbeleuchtung. Einstellung der Scheinwerfer.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "de-02",
+      "name": "Bremsanlage",
+      "description": "Wirksamkeit der Betriebsbremse, Feststellbremse und Hilfsbremse. Zustand der Bremsscheiben, Bremsbelage, Bremsleitungen und Bremsflussigkeitsstand.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "de-03",
+      "name": "Lenkanlage",
+      "description": "Spiel in der Lenksaule, Zustand der Spurstangen, Kugelgelenke und Lenkungsmanschetten. Funktion der Servolenkung.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-04",
+      "name": "Sichtverhältnisse",
+      "description": "Zustand der Windschutzscheibe, Ruckspiegel, Scheibenwischer und Scheibenwaschanlage. Keine Risse im Sichtfeld.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-05",
+      "name": "Fahrwerk und Federung",
+      "description": "Zustand der Stossdampfer, Federn, Gummilager und Querlenker. Sichtprufung und Funktionsprufung.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-06",
+      "name": "Abgasuntersuchung (AU)",
+      "description": "Abgaswerte: CO, HC, Lambda fur Benziner. Trubungswert fur Diesel. Zustand von Katalysator, Lambdasonde und Partikelfilter. OBD-Prufung.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "de-07",
+      "name": "Bereifung",
+      "description": "Profiltiefe (Mindestens 1.6 mm), Zustand der Reifen (Beulen, Risse, ungleichmassiger Verschleiss), passende Grosse und Geschwindigkeitsindex.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-08",
+      "name": "Karosserie und Rahmen",
+      "description": "Durchrostungen, sicherheitsrelevante Verformungen, Befestigung der Karosserieteile, Zustand der Langstrager und Bodengruppe.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-09",
+      "name": "Sicherheitsausstattung",
+      "description": "Funktion der Sicherheitsgurte, Hupe, Airbag-Kontrollleuchte, Warndreieck und Verbandkasten (empfohlen).",
+      "obd2Checkable": true
+    },
+    {
+      "id": "de-10",
+      "name": "Motor und Antrieb",
+      "description": "Olundichtigkeiten, Kuhlmittelverlust, Zustand der sichtbaren Schlauche und Keilriemen, Motorlager.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-11",
+      "name": "Radaufhangung und Radlager",
+      "description": "Spiel in den Radlagern, Zustand der Antriebswellen und Gelenke, Felgenschlag, Radbefestigung.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-12",
+      "name": "Fahrzeugidentifikation",
+      "description": "Lesbarkeit des Kennzeichens, Ubereinstimmung der FIN mit dem Fahrzeugschein, Typschild.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-13",
+      "name": "OBD-System (Emissionen)",
+      "description": "Auslesen des Motorsteuergerats uber die OBD2-Schnittstelle: emissionsrelevante Fehlercodes, MIL-Kontrollleuchte, Readiness-Codes.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "de-14",
+      "name": "Elektrische Anlage",
+      "description": "Zustand der Batterie, Befestigung, Verkabelung, Sicherungen und Relais.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "de-15",
+      "name": "Abgasanlage",
+      "description": "Dichtigkeit der Auspuffanlage, Befestigung der Schalldampfer, Zustand des Flexrohrs, keine Durchrostungen.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-16",
+      "name": "Spiegel",
+      "description": "Vorhandensein und Zustand der Innen- und Aussenspiegel, korrekte Befestigung, spiegelflache ohne erhebliche Mangel.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-17",
+      "name": "Zundschloss und Lenkradsperre",
+      "description": "Funktion des Zundschlosses und der Lenkradsperre.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-18",
+      "name": "Signalhorn",
+      "description": "Korrekte Funktion der Hupe, ausreichende Lautstarke.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-19",
+      "name": "Kraftstoffsystem",
+      "description": "Keine Undichtigkeiten, Befestigung des Tanks, Zustand der sichtbaren Kraftstoffleitungen.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "de-20",
+      "name": "Armaturenbrett und Kontrollleuchten",
+      "description": "Funktion des Tachometers, korrektes Aufleuchten der Kontrollleuchten beim Start (ABS, Airbag, MIL), Geschwindigkeitsanzeige lesbar.",
+      "obd2Checkable": true
+    }
+  ]
+}

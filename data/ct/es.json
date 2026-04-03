@@ -1,0 +1,128 @@
+{
+  "country": "ES",
+  "name": "Inspeccion Tecnica de Vehiculos (ITV)",
+  "authority": "Ministerio de Industria, Comercio y Turismo",
+  "frequency": "Cada 2 anos a partir de los 4 anos (cada ano a partir de los 10)",
+  "points": [
+    {
+      "id": "es-01",
+      "name": "Alumbrado y senalizacion",
+      "description": "Verificacion de faros, luces de cruce, intermitentes, luces de freno, luces de marcha atras, antiniebla, iluminacion de matricula. Regulacion de altura.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "es-02",
+      "name": "Frenos",
+      "description": "Eficacia del freno de servicio, freno de estacionamiento y freno de socorro. Estado de discos, pastillas, latiguillos y nivel de liquido de frenos.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "es-03",
+      "name": "Direccion",
+      "description": "Holgura en la columna de direccion, estado de rotulas, bieletas y fuelles de cremallera. Funcionamiento de la direccion asistida.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-04",
+      "name": "Visibilidad",
+      "description": "Estado del parabrisas (grietas, impactos en zona de vision), retrovisores interior y exteriores, limpiaparabrisas y lavaparabrisas.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-05",
+      "name": "Suspension",
+      "description": "Estado de amortiguadores, muelles, silentblocks y brazos de suspension. Inspeccion visual y prueba en banco.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-06",
+      "name": "Emisiones contaminantes",
+      "description": "Control de gases de escape: CO, HC, lambda y opacidad para diesel. Verificacion del catalizador, sonda lambda y filtro de particulas.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "es-07",
+      "name": "Neumaticos",
+      "description": "Profundidad del dibujo (minimo 1.6 mm), estado general (hernias, cortes, desgaste irregular), concordancia de medidas en cada eje.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-08",
+      "name": "Carroceria y bastidor",
+      "description": "Corrosion perforante, deformaciones que afectan la seguridad, fijacion de elementos, estado de largueros y piso.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-09",
+      "name": "Equipos de seguridad",
+      "description": "Funcionamiento de cinturones de seguridad, claxon, testigo de airbag, triangulos de emergencia y chaleco reflectante.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "es-10",
+      "name": "Motor y transmision",
+      "description": "Fugas de liquidos (aceite, refrigerante, direccion asistida), estado de manguitos, correa de accesorios, soportes del motor.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-11",
+      "name": "Ejes, ruedas y rodamientos",
+      "description": "Holgura en rodamientos, estado de transmisiones y juntas homocinetas, alabeo de llantas, fijacion de ruedas.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-12",
+      "name": "Identificacion del vehiculo",
+      "description": "Legibilidad de la matricula, concordancia del numero VIN con la ficha tecnica, placa del fabricante.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-13",
+      "name": "Sistema OBD (emisiones)",
+      "description": "Lectura del calculador del motor via toma OBD2: codigos de averia de emisiones, funcionamiento del testigo MIL, readiness monitors.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "es-14",
+      "name": "Instalacion electrica",
+      "description": "Estado de la bateria, fijacion, cableado visible, fusibles y reles accesibles.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "es-15",
+      "name": "Escape",
+      "description": "Estanqueidad de la linea de escape, fijacion de silenciadores, estado del flexible, sin corrosion perforante.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-16",
+      "name": "Retrovisores",
+      "description": "Presencia y estado de retrovisores interiores y exteriores, fijacion correcta, superficie reflectante sin defectos graves.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-17",
+      "name": "Antirrobo y cerradura de direccion",
+      "description": "Funcionamiento del contacto de arranque y bloqueo de la columna de direccion.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-18",
+      "name": "Bocina",
+      "description": "Funcionamiento correcto del claxon, potencia sonora adecuada.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-19",
+      "name": "Deposito y conducciones de combustible",
+      "description": "Ausencia de fugas, fijacion del deposito, estado de las tuberias de combustible visibles.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "es-20",
+      "name": "Cuadro de instrumentos y testigos",
+      "description": "Funcionamiento del velocimetro, encendido correcto de testigos al arranque (ABS, airbag, MIL), velocimetro legible.",
+      "obd2Checkable": true
+    }
+  ]
+}

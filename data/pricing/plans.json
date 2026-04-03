@@ -1,0 +1,158 @@
+[
+  {
+    "id": "gratuit",
+    "name": { "fr": "Gratuit" },
+    "price": 0,
+    "currency": "CHF",
+    "period": null,
+    "description": { "fr": "Tout ce qu'il faut pour comprendre votre voiture au quotidien" },
+    "cta": { "fr": "Telecharger gratuitement" },
+    "highlighted": false,
+    "features": [
+      {
+        "name": { "fr": "Scan audio moteur IA" },
+        "included": true,
+        "limit": { "fr": "1 scan / semaine" }
+      },
+      {
+        "name": { "fr": "Scan audio habitacle" },
+        "included": true,
+        "limit": { "fr": "1 scan / semaine" }
+      },
+      {
+        "name": { "fr": "Lecture codes DTC" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Live data OBD2" },
+        "included": true,
+        "limit": { "fr": "4 PIDs basiques (RPM, vitesse, temperature, charge)" }
+      },
+      {
+        "name": { "fr": "IA mecanicien" },
+        "included": true,
+        "limit": { "fr": "3 questions / jour" }
+      },
+      {
+        "name": { "fr": "Historique diagnostics" },
+        "included": true,
+        "limit": { "fr": "7 derniers jours" }
+      },
+      {
+        "name": { "fr": "Effacement codes DTC" },
+        "included": false,
+        "limit": null
+      },
+      {
+        "name": { "fr": "Devis + couts reparation" },
+        "included": false,
+        "limit": null
+      },
+      {
+        "name": { "fr": "Pre-controle technique 5 pays" },
+        "included": false,
+        "limit": null
+      },
+      {
+        "name": { "fr": "Export PDF rapports" },
+        "included": false,
+        "limit": null
+      },
+      {
+        "name": { "fr": "Drive Test sans dongle" },
+        "included": false,
+        "limit": null
+      },
+      {
+        "name": { "fr": "Tous les PIDs OBD2" },
+        "included": false,
+        "limit": null
+      },
+      {
+        "name": { "fr": "Historique illimite" },
+        "included": false,
+        "limit": null
+      }
+    ]
+  },
+  {
+    "id": "premium",
+    "name": { "fr": "Premium" },
+    "price": 49,
+    "currency": "CHF",
+    "period": { "fr": "/ an" },
+    "description": { "fr": "L'outil complet du passione — tout illimite, zero limite" },
+    "cta": { "fr": "Essai gratuit 7 jours" },
+    "highlighted": true,
+    "trialDays": 7,
+    "trialNote": { "fr": "Pas de carte bancaire requise" },
+    "features": [
+      {
+        "name": { "fr": "Scan audio moteur IA" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Scan audio habitacle" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Lecture codes DTC" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Live data OBD2" },
+        "included": true,
+        "limit": { "fr": "Tous les PIDs disponibles" }
+      },
+      {
+        "name": { "fr": "IA mecanicien" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Historique diagnostics" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Effacement codes DTC" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Devis + couts reparation" },
+        "included": true,
+        "limit": { "fr": "Par pays (FR, DE, CH, ES, PT)" }
+      },
+      {
+        "name": { "fr": "Pre-controle technique 5 pays" },
+        "included": true,
+        "limit": { "fr": "France, Allemagne, Suisse, Espagne, Portugal" }
+      },
+      {
+        "name": { "fr": "Export PDF rapports" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Drive Test sans dongle" },
+        "included": true,
+        "limit": { "fr": "Accelerometre + gyroscope + GPS + micro" }
+      },
+      {
+        "name": { "fr": "Tous les PIDs OBD2" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      },
+      {
+        "name": { "fr": "Historique illimite" },
+        "included": true,
+        "limit": { "fr": "Illimite" }
+      }
+    ]
+  }
+]

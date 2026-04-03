@@ -1,0 +1,98 @@
+[
+  {
+    "id": "scan-audio-moteur",
+    "title": { "fr": "Scan audio moteur IA" },
+    "description": { "fr": "Notre intelligence artificielle ecoute votre moteur et identifie les anomalies sonores. Avec un taux de precision de 91.3%, elle detecte 11 classes de pannes differentes rien qu'au son — comme un mecanicien chevronne qui tend l'oreille sous le capot." },
+    "principle": { "fr": "Classification SVM sur spectrogramme MFCC 40 coefficients, entraine sur 3 927 echantillons audio reels de moteurs europeens." },
+    "icon": "waveform",
+    "colSpan": 2
+  },
+  {
+    "id": "scan-audio-habitacle",
+    "title": { "fr": "Scan audio habitacle" },
+    "description": { "fr": "Des bruits suspects dans l'habitacle ? Grincements, claquements, sifflements — posez votre telephone sur le tableau de bord et laissez l'IA analyser. Elle distingue 7 classes de bruits interieurs pour vous orienter vers la bonne reparation." },
+    "principle": { "fr": "Meme pipeline audio que le moteur, avec un modele specialise sur les frequences et resonances typiques de l'habitacle." },
+    "icon": "car-interior",
+    "colSpan": 1
+  },
+  {
+    "id": "vision-ai-ocr",
+    "title": { "fr": "Vision AI / OCR" },
+    "description": { "fr": "Prenez en photo un voyant, une piece, une etiquette — l'IA reconnait instantanement ce qu'elle voit. Plus besoin de chercher dans le manuel, votre telephone devient vos yeux de mecanicien augmente." },
+    "principle": { "fr": "Claude Vision analyse l'image et identifie le composant, le code ou le voyant avec explication contextuelle." },
+    "icon": "camera",
+    "colSpan": 1
+  },
+  {
+    "id": "ia-mecanicien",
+    "title": { "fr": "IA mecanicien" },
+    "description": { "fr": "Posez vos questions en langage naturel, comme si vous parliez a un ami mecanicien. L'IA connait votre vehicule, son historique et ses codes defauts pour vous donner des reponses personnalisees et claires." },
+    "principle": { "fr": "Claude Sonnet avec contexte vehicule complet : marque, modele, motorisation, DTCs actifs, historique diagnostics." },
+    "icon": "chat",
+    "colSpan": 1
+  },
+  {
+    "id": "drive-test",
+    "title": { "fr": "Drive Test sans dongle" },
+    "description": { "fr": "Pas de dongle OBD2 ? Pas de probleme. Votre telephone possede un accelerometre, un gyroscope, un GPS et un micro. On utilise tous ces capteurs pendant que vous roulez pour analyser le comportement de votre vehicule — sans rien brancher." },
+    "principle": { "fr": "Fusion multi-capteurs : accelerometre 3 axes + gyroscope + GPS + microphone. Analyse en temps reel des vibrations, trajectoire et sons." },
+    "icon": "smartphone",
+    "colSpan": 2
+  },
+  {
+    "id": "rpm-fft",
+    "title": { "fr": "RPM par FFT audio" },
+    "description": { "fr": "On calcule le regime moteur rien qu'avec le son. La transformee de Fourier extrait la frequence fondamentale du moteur et la convertit en tours/minute. Pas besoin de capteur OBD2 pour connaitre vos tours." },
+    "principle": { "fr": "Formule : f = (RPM x N_cyl) / (2 x 60). Analyse spectrale FFT sur le signal audio en temps reel." },
+    "icon": "chart-line",
+    "colSpan": 1
+  },
+  {
+    "id": "amortisseurs-rebond",
+    "title": { "fr": "Test amortisseurs par rebond" },
+    "description": { "fr": "Appuyez sur un coin de la voiture et relâchez. L'accelerometre de votre telephone mesure les oscillations et calcule le ratio d'amortissement. Vous saurez immediatement si vos amortisseurs sont fatigues." },
+    "principle": { "fr": "Ratio d'amortissement zeta calcule a partir de la decroissance logarithmique des oscillations mesurees par l'accelerometre." },
+    "icon": "spring",
+    "colSpan": 1
+  },
+  {
+    "id": "virtual-dyno",
+    "title": { "fr": "Virtual Dyno" },
+    "description": { "fr": "Estimez la puissance de votre moteur directement depuis votre telephone. En combinant les donnees d'acceleration GPS et la masse du vehicule, on calcule la puissance aux roues en temps reel." },
+    "principle": { "fr": "P = m·a·v + forces resistives (aerodynamique + roulement + pente). Mesure GPS haute frequence + masse vehicule connue." },
+    "icon": "gauge",
+    "colSpan": 1
+  },
+  {
+    "id": "patinage-embrayage",
+    "title": { "fr": "Detection patinage embrayage" },
+    "description": { "fr": "On compare le regime moteur estime par le son avec la vitesse reelle du vehicule mesuree par GPS. Si le moteur monte en tours sans que la voiture accelere proportionnellement, c'est que l'embrayage patine." },
+    "principle": { "fr": "Correlation croisee entre RPM audio (FFT) et vitesse GPS. Un ecart croissant signale un patinage d'embrayage." },
+    "icon": "clutch",
+    "colSpan": 1
+  },
+  {
+    "id": "disque-frein-voile",
+    "title": { "fr": "Detection disque de frein voile" },
+    "description": { "fr": "Des vibrations au freinage ? L'accelerometre detecte les oscillations periodiques typiques d'un disque voile. L'analyse frequentielle pendant le freinage identifie le probleme avant meme que vous ne le ressentiez dans le volant." },
+    "principle": { "fr": "Analyse frequentielle des vibrations pendant le freinage. Un disque voile produit une signature oscillatoire caracteristique liee a la vitesse de rotation." },
+    "icon": "brake-disc",
+    "colSpan": 1
+  },
+  {
+    "id": "empreinte-acoustique",
+    "title": { "fr": "Empreinte acoustique vehicule" },
+    "description": { "fr": "Chaque moteur a sa propre signature sonore, comme une empreinte digitale. On enregistre le profil acoustique de votre vehicule pour detecter la moindre deviation au fil du temps — un systeme d'alerte precoce unique." },
+    "principle": { "fr": "Distance de Kullback-Leibler entre le profil MFCC de reference et les nouveaux enregistrements. Alerte si la divergence depasse le seuil." },
+    "icon": "fingerprint",
+    "colSpan": 1
+  },
+  {
+    "id": "score-predictif",
+    "title": { "fr": "Score predictif flotte" },
+    "description": { "fr": "Pour les gestionnaires de flotte : un score de fiabilite predictif par vehicule base sur l'historique des diagnostics, le kilometrage et les statistiques de defaillance. Anticipez les pannes avant qu'elles n'arrivent." },
+    "principle": { "fr": "Modele de Weibull ajuste sur l'historique de defaillances. Prediction du temps restant avant prochaine panne probable par composant." },
+    "icon": "chart-bar",
+    "colSpan": 1
+  }
+]

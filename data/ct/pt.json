@@ -1,0 +1,128 @@
+{
+  "country": "PT",
+  "name": "Inspecao Periodica Obrigatoria (IPO)",
+  "authority": "IMT (Instituto da Mobilidade e dos Transportes)",
+  "frequency": "A cada 2 anos apos 4 anos (anual apos 8 anos)",
+  "points": [
+    {
+      "id": "pt-01",
+      "name": "Iluminacao e sinalizacao",
+      "description": "Verificacao do funcionamento de farois, luzes de cruzamento, piscas, luzes de travagem, luzes de marcha-atras, nevoeiro, iluminacao da matricula. Regulacao da altura dos farois.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "pt-02",
+      "name": "Travagem",
+      "description": "Eficacia do travao de servico, travao de estacionamento e travao de socorro. Estado dos discos, pastilhas, tubagens flexiveis e nivel do liquido de travoes.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "pt-03",
+      "name": "Direcao",
+      "description": "Folga na coluna de direcao, estado das rotulas, barras de direcao e fuoles da cremalheira. Funcionamento da direcao assistida.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-04",
+      "name": "Visibilidade",
+      "description": "Estado do para-brisas (fissuras, impactos no campo de visao), espelhos retrovisores, limpa-para-brisas e lava-para-brisas.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-05",
+      "name": "Suspensao",
+      "description": "Estado dos amortecedores, molas, coxins e bracos de suspensao. Inspecao visual e teste em banco de suspensao.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-06",
+      "name": "Emissoes poluentes",
+      "description": "Controlo dos gases de escape: CO, HC, lambda e opacidade para diesel. Verificacao do catalisador, sonda lambda e filtro de particulas.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "pt-07",
+      "name": "Pneumaticos",
+      "description": "Profundidade do piso (minimo 1.6 mm), estado geral (hernias, cortes, desgaste irregular), concordancia de medidas por eixo.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-08",
+      "name": "Carrocaria e quadro",
+      "description": "Corrosao perfurante, deformacoes que afetam a seguranca, fixacao de elementos de carrocaria, estado dos longaroes e piso.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-09",
+      "name": "Equipamentos de seguranca",
+      "description": "Funcionamento dos cintos de seguranca, buzina, indicador do airbag, triangulo de sinalizacao e colete refletor.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "pt-10",
+      "name": "Motor e transmissao",
+      "description": "Fugas de liquidos (oleo, refrigerante, direcao assistida), estado das mangueiras, correia de acessorios, apoios do motor.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-11",
+      "name": "Rolamentos e transmissoes",
+      "description": "Folga nos rolamentos das rodas, estado das transmissoes e juntas homocineticas, empeno das jantes, fixacao das rodas.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-12",
+      "name": "Identificacao do veiculo",
+      "description": "Legibilidade da matricula, concordancia do numero VIN com o documento unico, placa do fabricante.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-13",
+      "name": "Sistema OBD (emissoes)",
+      "description": "Leitura da unidade de controlo do motor via tomada OBD2: codigos de avaria de emissoes, funcionamento do indicador MIL, readiness monitors.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "pt-14",
+      "name": "Instalacao eletrica",
+      "description": "Estado da bateria, fixacao, cablagem visivel, fusiveis e reles acessiveis.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "pt-15",
+      "name": "Escape",
+      "description": "Estanquicidade da linha de escape, fixacao dos silenciadores, estado do tubo flexivel, sem corrosao perfurante.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-16",
+      "name": "Espelhos retrovisores",
+      "description": "Presenca e estado dos espelhos interiores e exteriores, fixacao correta, superficie refletora sem defeitos graves.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-17",
+      "name": "Anti-furto e fechadura de direcao",
+      "description": "Funcionamento do contacto de ignicao e bloqueio da coluna de direcao.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-18",
+      "name": "Buzina",
+      "description": "Funcionamento correto da buzina, potencia sonora adequada.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-19",
+      "name": "Deposito e tubagens de combustivel",
+      "description": "Ausencia de fugas, fixacao do deposito, estado das tubagens de combustivel visiveis.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "pt-20",
+      "name": "Painel de instrumentos e indicadores",
+      "description": "Funcionamento do velocimetro, acendimento correto dos indicadores ao arranque (ABS, airbag, MIL), velocimetro legivel.",
+      "obd2Checkable": true
+    }
+  ]
+}

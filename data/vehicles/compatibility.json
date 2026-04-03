@@ -1,0 +1,9480 @@
+[
+  {
+    "brand": "Alfa Romeo",
+    "model": "159",
+    "yearFrom": 2005,
+    "yearTo": 2011,
+    "protocol": "KWP2000",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "4C",
+    "yearFrom": 2013,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Brera",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "protocol": "KWP2000",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Giulia",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Giulia Quadrifoglio",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Giulia Veloce",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Giulietta",
+    "yearFrom": 2010,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "GT",
+    "yearFrom": 2003,
+    "yearTo": 2010,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "MiTo",
+    "yearFrom": 2008,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Spider",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Stelvio",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Stelvio Quadrifoglio",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Stelvio Sprint",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Alfa Romeo",
+    "model": "Tonale",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A1",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A1 Sportback",
+    "yearFrom": 2011,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A3",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A3 8P",
+    "yearFrom": 2003,
+    "yearTo": 2012,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A3 8V",
+    "yearFrom": 2012,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A3 8Y",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A3 Sportback",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A4",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A4 Avant",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A4 B6",
+    "yearFrom": 2001,
+    "yearTo": 2005,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A4 B7",
+    "yearFrom": 2005,
+    "yearTo": 2008,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A4 B8",
+    "yearFrom": 2008,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A4 B9",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A5",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A6",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 26,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A6 Avant",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A6 C5",
+    "yearFrom": 2001,
+    "yearTo": 2004,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 26,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A6 C6",
+    "yearFrom": 2004,
+    "yearTo": 2011,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A6 C7",
+    "yearFrom": 2011,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A6 C8",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A7",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "A8",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "e-tron",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "e-tron GT",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q2",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q3",
+    "yearFrom": 2011,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q3 Sportback",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q4 e-tron",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q5",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q5 Sportback",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q7",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q8",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "Q8 e-tron",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS Q3",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS Q8",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS3",
+    "yearFrom": 2011,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS4",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS5",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS6",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "RS7",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "S3",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "S4",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "S5",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "S6",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "S7",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "S8",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "SQ5",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "SQ7",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "SQ8",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "TT",
+    "yearFrom": 2006,
+    "yearTo": 2023,
+    "protocol": "KWP2000",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Audi",
+    "model": "TT RS",
+    "yearFrom": 2009,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "i3",
+    "yearFrom": 2013,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "i4",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "i5",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "i7",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "iX",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "iX1",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "iX3",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "M2",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "M3",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "M4",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "M5",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "M8",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 1",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 1 E87",
+    "yearFrom": 2004,
+    "yearTo": 2011,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 1 F20",
+    "yearFrom": 2011,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 1 F40",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 1 M",
+    "yearFrom": 2011,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 2",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 2 Active Tourer",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 2 Gran Coupe",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 3",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 3 E46",
+    "yearFrom": 2001,
+    "yearTo": 2005,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 3 E90",
+    "yearFrom": 2005,
+    "yearTo": 2011,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 3 F30",
+    "yearFrom": 2012,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 3 G20",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 4",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 5",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 5 E60",
+    "yearFrom": 2003,
+    "yearTo": 2010,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 5 F10",
+    "yearFrom": 2010,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 5 G30",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 6",
+    "yearFrom": 2003,
+    "yearTo": 2018,
+    "protocol": "KWP2000",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 7",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 8",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X1",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 E84",
+    "yearFrom": 2009,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 F48",
+    "yearFrom": 2015,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 U11",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X2",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X3",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 E83",
+    "yearFrom": 2004,
+    "yearTo": 2010,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 F25",
+    "yearFrom": 2010,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 G01",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 M",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X4",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 M",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X5",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 E53",
+    "yearFrom": 2003,
+    "yearTo": 2006,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 E70",
+    "yearFrom": 2006,
+    "yearTo": 2013,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 F15",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 G05",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 M",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X6",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "X7",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "BMW",
+    "model": "Z4",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "Berlingo",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "Berlingo III",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C1",
+    "yearFrom": 2005,
+    "yearTo": 2022,
+    "protocol": "KWP2000",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C2",
+    "yearFrom": 2003,
+    "yearTo": 2009,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C3",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C3 Aircross",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C3 III",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C3 Picasso",
+    "yearFrom": 2009,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C4",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C4 Cactus",
+    "yearFrom": 2014,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C4 II",
+    "yearFrom": 2010,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C4 III",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C4 Picasso",
+    "yearFrom": 2006,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C4 SpaceTourer",
+    "yearFrom": 2018,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C5",
+    "yearFrom": 2001,
+    "yearTo": 2017,
+    "protocol": "KWP2000",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C5 Aircross",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C5 II",
+    "yearFrom": 2008,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C5 X",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C6",
+    "yearFrom": 2005,
+    "yearTo": 2012,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "C8",
+    "yearFrom": 2002,
+    "yearTo": 2014,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "DS3",
+    "yearFrom": 2010,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "DS4",
+    "yearFrom": 2011,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "DS7",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "DS9",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "e-Berlingo",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "e-C4",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "e-Jumpy",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "e-SpaceTourer",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "Jumper",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "Jumpy",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "Nemo",
+    "yearFrom": 2008,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Citroen",
+    "model": "SpaceTourer",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Dokker",
+    "yearFrom": 2012,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Duster",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Duster II",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Duster III",
+    "yearFrom": 2024,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Jogger",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Jogger Hybrid",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Lodgy",
+    "yearFrom": 2012,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Logan",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Logan III",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Logan MCV",
+    "yearFrom": 2006,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Sandero",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Sandero III",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Sandero Stepway",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Dacia",
+    "model": "Spring",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "124 Spider",
+    "yearFrom": 2016,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "500",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "500e",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "500L",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "500X",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Bravo",
+    "yearFrom": 2007,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Croma",
+    "yearFrom": 2005,
+    "yearTo": 2011,
+    "protocol": "KWP2000",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Doblo",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Ducato",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Fiorino",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Fullback",
+    "yearFrom": 2016,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Grande Punto",
+    "yearFrom": 2005,
+    "yearTo": 2009,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Linea",
+    "yearFrom": 2007,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Panda",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Punto",
+    "yearFrom": 2005,
+    "yearTo": 2018,
+    "protocol": "KWP2000",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Punto Evo",
+    "yearFrom": 2009,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Qubo",
+    "yearFrom": 2008,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Scudo",
+    "yearFrom": 2007,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Sedici",
+    "yearFrom": 2006,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Strada",
+    "yearFrom": 2005,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Talento",
+    "yearFrom": 2016,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Tipo",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Fiat",
+    "model": "Ulysse",
+    "yearFrom": 2002,
+    "yearTo": 2011,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "B-Max",
+    "yearFrom": 2012,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "C-Max",
+    "yearFrom": 2003,
+    "yearTo": 2019,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 26,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "E-Transit",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "EcoSport",
+    "yearFrom": 2014,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Edge",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Explorer",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Fiesta",
+    "yearFrom": 2002,
+    "yearTo": 2023,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Fiesta VII",
+    "yearFrom": 2017,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 25,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus III",
+    "yearFrom": 2011,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus IV",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus RS",
+    "yearFrom": 2009,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus ST",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Galaxy",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Grand C-Max",
+    "yearFrom": 2010,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Ka+",
+    "yearFrom": 2016,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Kuga",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Kuga II",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Kuga III",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Mondeo",
+    "yearFrom": 2001,
+    "yearTo": 2022,
+    "protocol": "KWP2000",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Mondeo IV",
+    "yearFrom": 2007,
+    "yearTo": 2014,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Mondeo V",
+    "yearFrom": 2014,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Mustang Mach-E",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Puma",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Ranger",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "S-Max",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Tourneo Connect",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Tourneo Courier",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Tourneo Custom",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Transit",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Transit Connect",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Ford",
+    "model": "Transit Custom",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Accent",
+    "yearFrom": 2006,
+    "yearTo": 2017,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Bayon",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Genesis",
+    "yearFrom": 2014,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Getz",
+    "yearFrom": 2002,
+    "yearTo": 2011,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "H-1",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "i10",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "i20",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "i20 N",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "i30",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "i30 N",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "i40",
+    "yearFrom": 2011,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "IONIQ 5",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "IONIQ 6",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "ix20",
+    "yearFrom": 2010,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "ix35",
+    "yearFrom": 2010,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Kona",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Kona Electric",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Kona N",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Matrix",
+    "yearFrom": 2001,
+    "yearTo": 2010,
+    "protocol": "KWP2000",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Nexo",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Santa Fe",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Santa Fe IV",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Staria",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Terracan",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "protocol": "KWP2000",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Tucson",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Tucson III",
+    "yearFrom": 2015,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Tucson IV",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Veloster",
+    "yearFrom": 2011,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Carens",
+    "yearFrom": 2006,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Carnival",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Carnival III",
+    "yearFrom": 2014,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Ceed",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Ceed III",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Ceed SW",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Cerato",
+    "yearFrom": 2004,
+    "yearTo": 2013,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "e-Niro",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "EV6",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "EV9",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Magentis",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Niro",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Niro II",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Optima",
+    "yearFrom": 2012,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Picanto",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Proceed",
+    "yearFrom": 2008,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "ProCeed",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Rio",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sorento",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sorento IV",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Soul",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sportage",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Sportage V",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Stinger",
+    "yearFrom": 2017,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Stonic",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "Venga",
+    "yearFrom": 2009,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Kia",
+    "model": "XCeed",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-3",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-30",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-5",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-5 II",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-50",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-60",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-7",
+    "yearFrom": 2006,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-80",
+    "yearFrom": 2024,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-9",
+    "yearFrom": 2007,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda2",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda2 Hybrid",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda3",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda3 BP",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda5",
+    "yearFrom": 2005,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda6",
+    "yearFrom": 2002,
+    "yearTo": 2023,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "Mazda6 III",
+    "yearFrom": 2013,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "MX-30",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "MX-5",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "MX-5 ND",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mazda",
+    "model": "RX-8",
+    "yearFrom": 2003,
+    "yearTo": 2012,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "A 45 AMG",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "AMG GT",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "C 63 AMG",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Citan",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "CLA",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "CLA 45 AMG",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe A",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe A W169",
+    "yearFrom": 2004,
+    "yearTo": 2012,
+    "protocol": "KWP2000",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe A W176",
+    "yearFrom": 2012,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe A W177",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe B",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe C",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe C W203",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "protocol": "KWP2000",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe C W204",
+    "yearFrom": 2007,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe C W205",
+    "yearFrom": 2014,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe C W206",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe E",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe E W211",
+    "yearFrom": 2002,
+    "yearTo": 2009,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe E W212",
+    "yearFrom": 2009,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe E W213",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe S",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe S W220",
+    "yearFrom": 2002,
+    "yearTo": 2005,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe S W221",
+    "yearFrom": 2005,
+    "yearTo": 2013,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe S W222",
+    "yearFrom": 2013,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe S W223",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Classe V",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "CLC",
+    "yearFrom": 2008,
+    "yearTo": 2011,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "CLS",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "E 63 AMG",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "EQA",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "EQB",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "EQC",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "EQE",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "EQS",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLA",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLA 45 AMG",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLB",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLC",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLE",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLE Coupe",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLK",
+    "yearFrom": 2008,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "GLS",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "ML W164",
+    "yearFrom": 2005,
+    "yearTo": 2011,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "ML W166",
+    "yearFrom": 2011,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "SLC",
+    "yearFrom": 2016,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "SLK",
+    "yearFrom": 2004,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Sprinter",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mercedes",
+    "model": "Vito",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Clubman",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Clubman II",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Cooper",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 25,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Cooper S",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 32,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Cooper SE",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Countryman",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Countryman II",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Countryman S",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Coupe",
+    "yearFrom": 2011,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Electric",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "JCW",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Paceman",
+    "yearFrom": 2012,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mini",
+    "model": "Roadster",
+    "yearFrom": 2012,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "ASX",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "ASX II",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Colt",
+    "yearFrom": 2004,
+    "yearTo": 2013,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Eclipse Cross",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Galant",
+    "yearFrom": 2004,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "i-MiEV",
+    "yearFrom": 2011,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "L200",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Lancer",
+    "yearFrom": 2003,
+    "yearTo": 2017,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Outlander",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Outlander III",
+    "yearFrom": 2013,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Outlander PHEV",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Pajero",
+    "yearFrom": 2001,
+    "yearTo": 2021,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Pajero Sport",
+    "yearFrom": 2008,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Space Star",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "350Z",
+    "yearFrom": 2003,
+    "yearTo": 2009,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "370Z",
+    "yearFrom": 2009,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Almera",
+    "yearFrom": 2001,
+    "yearTo": 2006,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Ariya",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "e-NV200",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Juke",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Juke II",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Leaf",
+    "yearFrom": 2011,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Leaf II",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Micra",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Navara",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Note",
+    "yearFrom": 2006,
+    "yearTo": 2020,
+    "protocol": "KWP2000",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "NV200",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "NV300",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Pathfinder",
+    "yearFrom": 2005,
+    "yearTo": 2015,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Primastar",
+    "yearFrom": 2002,
+    "yearTo": 2016,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Pulsar",
+    "yearFrom": 2014,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Qashqai",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Qashqai II",
+    "yearFrom": 2014,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Qashqai III",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "Townstar",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "X-Trail",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "X-Trail III",
+    "yearFrom": 2014,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Nissan",
+    "model": "X-Trail IV",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Adam",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Ampera-e",
+    "yearFrom": 2017,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Astra",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Astra H",
+    "yearFrom": 2004,
+    "yearTo": 2009,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Astra J",
+    "yearFrom": 2009,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Astra K",
+    "yearFrom": 2015,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Astra L",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Astra Sports Tourer",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Cascada",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Combo",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Corsa",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Corsa D",
+    "yearFrom": 2006,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Corsa E",
+    "yearFrom": 2014,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Corsa F",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Corsa-e",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Crossland",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Grandland",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Grandland X",
+    "yearFrom": 2017,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Insignia",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Insignia B",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Karl",
+    "yearFrom": 2015,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Meriva",
+    "yearFrom": 2003,
+    "yearTo": 2017,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Mokka",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Mokka-e",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Movano",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 32,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Vivaro",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Opel",
+    "model": "Zafira",
+    "yearFrom": 2001,
+    "yearTo": 2019,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "1007",
+    "yearFrom": 2005,
+    "yearTo": 2009,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "108",
+    "yearFrom": 2014,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "2008",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "2008 II",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "207",
+    "yearFrom": 2006,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "208",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "208 GTi",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "208 II",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "3008",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "3008 II",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "307",
+    "yearFrom": 2001,
+    "yearTo": 2008,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "308",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "308 GTi",
+    "yearFrom": 2015,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "308 II",
+    "yearFrom": 2013,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "308 III",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "308 SW",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "4007",
+    "yearFrom": 2007,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "4008",
+    "yearFrom": 2012,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "407",
+    "yearFrom": 2004,
+    "yearTo": 2011,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "408",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "5008",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "5008 II",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "508",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "508 SW",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "607",
+    "yearFrom": 2001,
+    "yearTo": 2010,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 26,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "807",
+    "yearFrom": 2002,
+    "yearTo": 2014,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "Bipper",
+    "yearFrom": 2008,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "Boxer",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "e-2008",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "e-208",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "e-308",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "Expert",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "iOn",
+    "yearFrom": 2010,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "Partner",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "RCZ",
+    "yearFrom": 2010,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "Rifter",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Peugeot",
+    "model": "Traveller",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "718 Boxster",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "718 Cayman",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "911",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "911 991",
+    "yearFrom": 2012,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "911 992",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "911 997",
+    "yearFrom": 2004,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Boxster",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Cayenne",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Cayenne Coupe",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Cayenne III",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Cayman",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Macan",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Macan S",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Panamera",
+    "yearFrom": 2009,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Panamera Sport Turismo",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Taycan",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Porsche",
+    "model": "Taycan Cross Turismo",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Arkana",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Austral",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Captur",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Captur II",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Clio",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Clio III",
+    "yearFrom": 2005,
+    "yearTo": 2012,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Clio IV",
+    "yearFrom": 2012,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Clio RS",
+    "yearFrom": 2006,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Clio V",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Espace",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Express",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Fluence",
+    "yearFrom": 2009,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Kadjar",
+    "yearFrom": 2015,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Kangoo",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Koleos",
+    "yearFrom": 2008,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Koleos II",
+    "yearFrom": 2016,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Laguna",
+    "yearFrom": 2001,
+    "yearTo": 2015,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 26,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Latitude",
+    "yearFrom": 2010,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Master",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 32,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Megane",
+    "yearFrom": 2002,
+    "yearTo": 2023,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Megane E-Tech",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Megane III",
+    "yearFrom": 2008,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Megane IV",
+    "yearFrom": 2016,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Megane RS",
+    "yearFrom": 2004,
+    "yearTo": 2023,
+    "protocol": "KWP2000",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Modus",
+    "yearFrom": 2004,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Scenic",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Scenic III",
+    "yearFrom": 2009,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Scenic IV",
+    "yearFrom": 2016,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Talisman",
+    "yearFrom": 2015,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Trafic",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Twingo",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Wind",
+    "yearFrom": 2010,
+    "yearTo": 2013,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Renault",
+    "model": "Zoe",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Alhambra",
+    "yearFrom": 2010,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Altea",
+    "yearFrom": 2004,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Altea XL",
+    "yearFrom": 2006,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Arona",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Ateca",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Cupra Ateca",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Cupra Born",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Cupra Formentor",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Cupra Leon",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Exeo",
+    "yearFrom": 2009,
+    "yearTo": 2013,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Ibiza",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Ibiza V",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Leon",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Leon III",
+    "yearFrom": 2012,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Leon IV",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Leon ST",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Mii",
+    "yearFrom": 2011,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Tarraco",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Seat",
+    "model": "Toledo",
+    "yearFrom": 2004,
+    "yearTo": 2019,
+    "protocol": "KWP2000",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Citigo",
+    "yearFrom": 2012,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Enyaq",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Enyaq Coupe",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Fabia",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 25,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Fabia III",
+    "yearFrom": 2014,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Fabia IV",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Kamiq",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Karoq",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Kodiaq",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Kodiaq RS",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Octavia",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 25,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Octavia III",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Octavia IV",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Octavia RS",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Rapid",
+    "yearFrom": 2012,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Roomster",
+    "yearFrom": 2006,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Scala",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Superb",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Superb Combi",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Superb III",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Skoda",
+    "model": "Yeti",
+    "yearFrom": 2009,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "BRZ",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Crosstrek",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Forester",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Forester IV",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Forester V",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Impreza",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Legacy",
+    "yearFrom": 2003,
+    "yearTo": 2020,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Levorg",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Outback",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Outback VI",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Solterra",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "Trezia",
+    "yearFrom": 2011,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "WRX STI",
+    "yearFrom": 2005,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Subaru",
+    "model": "XV",
+    "yearFrom": 2012,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Across",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Alto",
+    "yearFrom": 2009,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Baleno",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Celerio",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Grand Vitara",
+    "yearFrom": 2005,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Ignis",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Jimny",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "S-Cross",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Splash",
+    "yearFrom": 2008,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Swace",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Swift",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Swift Sport",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "SX4 S-Cross",
+    "yearFrom": 2006,
+    "yearTo": 2013,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Vitara",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Vitara II",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Suzuki",
+    "model": "Wagon R",
+    "yearFrom": 2003,
+    "yearTo": 2008,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 27,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Auris",
+    "yearFrom": 2006,
+    "yearTo": 2019,
+    "protocol": "KWP2000",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Avensis",
+    "yearFrom": 2003,
+    "yearTo": 2018,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 25,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Aygo",
+    "yearFrom": 2005,
+    "yearTo": 2022,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Aygo X",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "bZ4X",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "C-HR",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "C-HR II",
+    "yearFrom": 2024,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Camry",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla",
+    "yearFrom": 2002,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla Cross",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 53,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla XII",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "GR Yaris",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "GR86",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "GT86",
+    "yearFrom": 2012,
+    "yearTo": 2021,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Highlander",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Hilux",
+    "yearFrom": 2005,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "iQ",
+    "yearFrom": 2008,
+    "yearTo": 2015,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Land Cruiser",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Proace",
+    "yearFrom": 2013,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Proace City",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Proace Verso",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "RAV4",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 25,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "RAV4 IV",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "RAV4 PHEV",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "RAV4 V",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Supra",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Urban Cruiser",
+    "yearFrom": 2009,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Verso",
+    "yearFrom": 2009,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris Cross",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris III",
+    "yearFrom": 2011,
+    "yearTo": 2020,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris IV",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Arteon",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Beetle",
+    "yearFrom": 2011,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Caddy",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "CC",
+    "yearFrom": 2008,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf GTI",
+    "yearFrom": 2004,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf IV",
+    "yearFrom": 2001,
+    "yearTo": 2003,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf R",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf V",
+    "yearFrom": 2003,
+    "yearTo": 2008,
+    "protocol": "KWP2000",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf VI",
+    "yearFrom": 2008,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf VII",
+    "yearFrom": 2012,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf VIII",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 37,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "ID. Buzz",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "ID.3",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 41,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "ID.4",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "ID.5",
+    "yearFrom": 2022,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 54,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "ID.7",
+    "yearFrom": 2023,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 42,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat B5",
+    "yearFrom": 2001,
+    "yearTo": 2005,
+    "protocol": "KWP2000",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat B6",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat B7",
+    "yearFrom": 2010,
+    "yearTo": 2014,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat B8",
+    "yearFrom": 2014,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat Variant",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 33,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Polo",
+    "yearFrom": 2001,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 29,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Polo GTI",
+    "yearFrom": 2006,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Polo V",
+    "yearFrom": 2009,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Polo VI",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Scirocco",
+    "yearFrom": 2008,
+    "yearTo": 2017,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Sharan",
+    "yearFrom": 2010,
+    "yearTo": 2022,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "T-Cross",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 43,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "T-Roc",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 55,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Taigo",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 51,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Tiguan",
+    "yearFrom": 2007,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 34,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Tiguan Allspace",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Tiguan I",
+    "yearFrom": 2007,
+    "yearTo": 2016,
+    "protocol": "KWP2000",
+    "pidsSupported": 32,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Tiguan II",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Touareg",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Touareg II",
+    "yearFrom": 2010,
+    "yearTo": 2018,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Touareg III",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Touran",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "KWP2000",
+    "pidsSupported": 31,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Transporter",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 30,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Up",
+    "yearFrom": 2011,
+    "yearTo": 2023,
+    "protocol": "CAN",
+    "pidsSupported": 48,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "C30",
+    "yearFrom": 2006,
+    "yearTo": 2013,
+    "protocol": "CAN",
+    "pidsSupported": 50,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "C40",
+    "yearFrom": 2021,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX30",
+    "yearFrom": 2024,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX90",
+    "yearFrom": 2024,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "S40",
+    "yearFrom": 2004,
+    "yearTo": 2012,
+    "protocol": "KWP2000",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "S60",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 45,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "S60 III",
+    "yearFrom": 2019,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 36,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "S80",
+    "yearFrom": 2006,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "S90",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 47,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V40",
+    "yearFrom": 2012,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V40 Cross Country",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "protocol": "CAN",
+    "pidsSupported": 39,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V50",
+    "yearFrom": 2004,
+    "yearTo": 2012,
+    "protocol": "CAN",
+    "pidsSupported": 49,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V60",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V60 Cross Country",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 40,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V60 II",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 46,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V70",
+    "yearFrom": 2007,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "V90",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC40",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC40 Recharge",
+    "yearFrom": 2020,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 35,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC60",
+    "yearFrom": 2008,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 44,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC60 II",
+    "yearFrom": 2017,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 52,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC70",
+    "yearFrom": 2007,
+    "yearTo": 2016,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC90",
+    "yearFrom": 2003,
+    "yearTo": 2024,
+    "protocol": "ISO 9141-2",
+    "pidsSupported": 28,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": false
+    }
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC90 II",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "protocol": "CAN",
+    "pidsSupported": 38,
+    "features": {
+      "dtcRead": true,
+      "dtcClear": true,
+      "liveData": true,
+      "absEsp": true
+    }
+  }
+]

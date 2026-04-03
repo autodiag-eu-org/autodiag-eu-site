@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "Que signifie le sigle OBD2 ?",
+    "options": [
+      "On-Board Diagnostics 2",
+      "Open Board Detection 2",
+      "Onboard Data Bridge 2",
+      "Optical Brake Diagnosis 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "OBD2 signifie On-Board Diagnostics, 2eme generation. C'est un systeme standardise de diagnostic embarque obligatoire sur toutes les voitures vendues en Europe depuis 2001 (essence) et 2004 (diesel)."
+  },
+  {
+    "id": 2,
+    "question": "Quelle est la profondeur minimum legale des sculptures d'un pneu en Europe ?",
+    "options": [
+      "1.0 mm",
+      "1.6 mm",
+      "2.0 mm",
+      "3.0 mm"
+    ],
+    "correctIndex": 1,
+    "explanation": "La profondeur legale minimum est de 1.6 mm en Europe. Cependant, les experts recommandent de changer ses pneus des 3 mm pour conserver une bonne adherence, surtout sur route mouillee."
+  },
+  {
+    "id": 3,
+    "question": "A quoi sert le catalyseur d'une voiture ?",
+    "options": [
+      "A refroidir le moteur",
+      "A reduire la consommation de carburant",
+      "A transformer les gaz polluants en gaz moins nocifs",
+      "A augmenter la puissance du moteur"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le catalyseur (pot catalytique) transforme les gaz nocifs (CO, HC, NOx) en gaz moins polluants (CO2, H2O, N2) grace a des metaux precieux comme le platine, le palladium et le rhodium."
+  },
+  {
+    "id": 4,
+    "question": "Tous les combien faut-il passer le controle technique en France pour un vehicule de plus de 4 ans ?",
+    "options": [
+      "Tous les ans",
+      "Tous les 2 ans",
+      "Tous les 3 ans",
+      "Tous les 5 ans"
+    ],
+    "correctIndex": 1,
+    "explanation": "En France, le controle technique est obligatoire tous les 2 ans apres le premier controle (4 ans apres la premiere immatriculation). En Allemagne, c'est aussi tous les 2 ans (TUV)."
+  },
+  {
+    "id": 5,
+    "question": "Que mesure la sonde lambda ?",
+    "options": [
+      "La temperature du moteur",
+      "La pression d'huile",
+      "Le taux d'oxygene dans les gaz d'echappement",
+      "La vitesse de rotation du turbo"
+    ],
+    "correctIndex": 2,
+    "explanation": "La sonde lambda mesure la quantite d'oxygene residuel dans les gaz d'echappement. Le calculateur moteur utilise cette information pour ajuster le melange air-carburant et optimiser la combustion."
+  },
+  {
+    "id": 6,
+    "question": "Quel voyant ressemble a un moteur sur votre tableau de bord ?",
+    "options": [
+      "Le voyant de pression d'huile",
+      "Le voyant de batterie",
+      "Le voyant moteur (MIL / check engine)",
+      "Le voyant de temperature"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le voyant MIL (Malfunction Indicator Lamp), souvent appele 'check engine', a la forme d'un moteur stylise. Quand il s'allume, cela signifie qu'un code defaut OBD2 a ete enregistre."
+  },
+  {
+    "id": 7,
+    "question": "Combien de cylindres possede generalement un moteur de Porsche 911 ?",
+    "options": [
+      "4 cylindres",
+      "6 cylindres a plat (flat-six)",
+      "8 cylindres en V",
+      "12 cylindres"
+    ],
+    "correctIndex": 1,
+    "explanation": "La Porsche 911 est celebre pour son moteur 6 cylindres a plat (flat-six ou boxer) monte a l'arriere. C'est une caracteristique qui definit la 911 depuis sa creation en 1963."
+  },
+  {
+    "id": 8,
+    "question": "Que signifie le code P0420 ?",
+    "options": [
+      "Capteur d'oxygene defaillant",
+      "Efficacite du systeme catalytique en dessous du seuil",
+      "Raté d'allumage detecte",
+      "Thermostat bloque ouvert"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le code P0420 indique que l'efficacite du catalyseur est en dessous du seuil requis. C'est l'un des codes OBD2 les plus frequents. Il peut indiquer un catalyseur use ou une sonde lambda defaillante."
+  },
+  {
+    "id": 9,
+    "question": "Quel constructeur a invente le moteur diesel ?",
+    "options": [
+      "Karl Benz (Mercedes)",
+      "Henry Ford",
+      "Rudolf Diesel",
+      "Ettore Bugatti"
+    ],
+    "correctIndex": 2,
+    "explanation": "Rudolf Diesel, ingenieur allemand, a brevete son moteur a allumage par compression en 1893. Contrairement au moteur essence, le diesel n'a pas besoin de bougies d'allumage — le carburant s'enflamme par la compression de l'air."
+  },
+  {
+    "id": 10,
+    "question": "A quoi sert le FAP (Filtre a Particules) ?",
+    "options": [
+      "A filtrer l'air entrant dans l'habitacle",
+      "A filtrer l'huile moteur",
+      "A capturer les particules fines des gaz d'echappement",
+      "A filtrer le carburant"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le FAP capture les particules de suie produites par la combustion du diesel (et de certains moteurs essence a injection directe). Il se regenere periodiquement en brulant ces particules a haute temperature."
+  },
+  {
+    "id": 11,
+    "question": "Quelle est la tension nominale d'une batterie de voiture classique ?",
+    "options": [
+      "6 volts",
+      "12 volts",
+      "24 volts",
+      "48 volts"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les voitures particulieres utilisent un systeme electrique 12 volts. Les camions et vehicules lourds utilisent du 24V. Les systemes mild-hybrid modernes ajoutent un reseau 48V en complement."
+  },
+  {
+    "id": 12,
+    "question": "Quel pays a le controle technique le plus strict en Europe ?",
+    "options": [
+      "France",
+      "Allemagne",
+      "Suisse",
+      "Espagne"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'Allemagne (TUV/DEKRA) est reputee pour avoir le controle technique le plus strict d'Europe, avec des criteres tres exigeants sur les emissions, la securite et l'etat general du vehicule."
+  },
+  {
+    "id": 13,
+    "question": "Que signifie le terme 'couple moteur' ?",
+    "options": [
+      "La vitesse maximale du vehicule",
+      "La force de rotation produite par le moteur",
+      "Le nombre de tours par minute",
+      "La consommation de carburant"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le couple moteur (mesure en Newton-metres, Nm) represente la force de rotation du moteur. Un couple eleve a bas regime donne de bonnes accelerations et facilite les reprises. Le diesel est repute pour son couple a bas regime."
+  },
+  {
+    "id": 14,
+    "question": "Depuis quelle annee la prise OBD2 est-elle obligatoire sur les voitures diesel en Europe ?",
+    "options": [
+      "1996",
+      "2001",
+      "2004",
+      "2008"
+    ],
+    "correctIndex": 2,
+    "explanation": "La norme EOBD (European OBD) a rendu la prise OBD2 obligatoire en 2001 pour les voitures essence et en 2004 pour les diesels. Aux USA, c'etait obligatoire des 1996 pour tous les vehicules."
+  },
+  {
+    "id": 15,
+    "question": "Quelle marque automobile a pour slogan 'Le plaisir de conduire' ?",
+    "options": [
+      "Mercedes-Benz",
+      "Audi",
+      "BMW",
+      "Porsche"
+    ],
+    "correctIndex": 2,
+    "explanation": "BMW utilise le slogan 'Freude am Fahren' en allemand, traduit par 'Le plaisir de conduire' en francais ('Sheer Driving Pleasure' en anglais). Ce slogan est utilise depuis les annees 1960."
+  }
+]

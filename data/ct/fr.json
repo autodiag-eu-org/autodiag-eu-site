@@ -1,0 +1,128 @@
+{
+  "country": "FR",
+  "name": "Controle Technique",
+  "authority": "OTC (Organisme Technique Central)",
+  "frequency": "Tous les 2 ans apres 4 ans",
+  "points": [
+    {
+      "id": "fr-01",
+      "name": "Eclairage et signalisation",
+      "description": "Verification du fonctionnement de tous les feux : phares, feux de croisement, clignotants, feux stop, feux de recul, antibrouillard, eclairage de plaque. Reglage de la hauteur des faisceaux.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "fr-02",
+      "name": "Freinage",
+      "description": "Efficacite du frein de service, du frein de stationnement et du frein de secours. Verification de l'epaisseur des disques et plaquettes, etat des flexibles, niveau de liquide de frein.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "fr-03",
+      "name": "Direction",
+      "description": "Jeu dans la colonne de direction, etat des rotules, biellettes et soufflets de cremaillere. Fonctionnement de l'assistance de direction.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-04",
+      "name": "Visibilite",
+      "description": "Etat du pare-brise (fissures, impacts dans le champ de vision du conducteur), retroviseurs interieur et exterieurs, essuie-glaces et lave-glace.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-05",
+      "name": "Suspension",
+      "description": "Etat des amortisseurs, ressorts, silentblocs et bras de suspension. Verification visuelle et test au banc de suspension.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-06",
+      "name": "Emissions polluantes",
+      "description": "Controle des gaz d'echappement : CO, HC, lambda et opacite pour les diesels. Verification du catalyseur, de la sonde lambda et du filtre a particules.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "fr-07",
+      "name": "Pneumatiques",
+      "description": "Profondeur des sculptures (minimum 1.6 mm), etat general (hernies, coupures, usure irreguliere), concordance des dimensions et indices sur un meme essieu.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-08",
+      "name": "Carrosserie et chassis",
+      "description": "Corrosion perforante, deformations affectant la securite, fixation des elements de carrosserie, etat des longerons et plancher.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-09",
+      "name": "Equipements de securite",
+      "description": "Fonctionnement des ceintures de securite, avertisseur sonore (klaxon), temoin airbag, triangle de presignalisation et gilet de securite.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "fr-10",
+      "name": "Organes mecaniques",
+      "description": "Fuites de liquides (huile moteur, liquide de refroidissement, direction assistee), etat des durites, courroie accessoire visible, supports moteur.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-11",
+      "name": "Liaison au sol",
+      "description": "Jeu dans les roulements de roue, etat des cardans et transmissions, voile des jantes, fixation des roues.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-12",
+      "name": "Identification du vehicule",
+      "description": "Lisibilite de la plaque d'immatriculation, concordance du numero VIN avec la carte grise, plaque de constructeur.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-13",
+      "name": "Systeme OBD (anti-pollution)",
+      "description": "Lecture du calculateur moteur via prise OBD2 : presence de codes defaut lies aux emissions, fonctionnement du voyant MIL, readiness monitors.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "fr-14",
+      "name": "Circuit electrique",
+      "description": "Etat de la batterie, fixation, absence de fuites d'acide, etat du cablage visible, fusibles et relais accessibles.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "fr-15",
+      "name": "Echappement",
+      "description": "Etancheite de la ligne d'echappement, fixation des silencieux, etat du flexible, absence de corrosion perforante.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-16",
+      "name": "Retroviseurs",
+      "description": "Presence et etat des retroviseurs interieurs et exterieurs, fixation correcte, surface reflechissante sans defaut majeur.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-17",
+      "name": "Dispositif antivol (Neiman)",
+      "description": "Fonctionnement du contacteur-demarreur, blocage de la colonne de direction.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-18",
+      "name": "Avertisseur sonore",
+      "description": "Fonctionnement correct du klaxon, puissance sonore conforme.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-19",
+      "name": "Reservoir et canalisations carburant",
+      "description": "Absence de fuites, fixation du reservoir, etat des canalisations de carburant visibles.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "fr-20",
+      "name": "Tableau de bord et temoins",
+      "description": "Fonctionnement du compteur de vitesse, allumage correct des temoins au demarrage (ABS, airbag, MIL), indicateur de vitesse lisible.",
+      "obd2Checkable": true
+    }
+  ]
+}

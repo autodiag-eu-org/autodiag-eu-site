@@ -1,0 +1,10 @@
+[
+  { "id": "moteur", "name": { "fr": "Moteur" }, "icon": "engine", "count": 130 },
+  { "id": "emissions", "name": { "fr": "Emissions" }, "icon": "leaf", "count": 57 },
+  { "id": "transmission", "name": { "fr": "Transmission" }, "icon": "gear", "count": 8 },
+  { "id": "abs", "name": { "fr": "ABS / Freinage" }, "icon": "brake", "count": 8 },
+  { "id": "airbag", "name": { "fr": "Airbag / Securite" }, "icon": "shield", "count": 8 },
+  { "id": "electrique", "name": { "fr": "Electrique" }, "icon": "bolt", "count": 21 },
+  { "id": "climatisation", "name": { "fr": "Climatisation" }, "icon": "snowflake", "count": 7 },
+  { "id": "reseau", "name": { "fr": "Reseau / Communication" }, "icon": "network", "count": 11 }
+]

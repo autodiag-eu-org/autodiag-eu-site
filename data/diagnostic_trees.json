@@ -1,0 +1,282 @@
+[
+  {
+    "id": "voyant-moteur",
+    "symptom": { "fr": "Voyant moteur allume" },
+    "icon": "engine-warning",
+    "description": { "fr": "Le temoin moteur (check engine) s'allume sur le tableau de bord. C'est le signal le plus courant et il peut indiquer des dizaines de problemes differents." },
+    "causes": [
+      {
+        "name": { "fr": "Sonde lambda defaillante" },
+        "probability": 35,
+        "severity": "medium",
+        "description": { "fr": "La sonde lambda mesure la quantite d'oxygene dans les gaz d'echappement. Quand elle vieillit, elle envoie des valeurs incorrectes au calculateur, ce qui allume le voyant et augmente la consommation." },
+        "costMin": { "fr": 120, "de": 140, "ch": 180, "es": 100, "pt": 95 },
+        "costMax": { "fr": 350, "de": 400, "ch": 500, "es": 290, "pt": 270 },
+        "relatedCodes": ["P0130", "P0131", "P0133", "P0134", "P0135", "P0136"]
+      },
+      {
+        "name": { "fr": "Catalyseur use" },
+        "probability": 25,
+        "severity": "high",
+        "description": { "fr": "Le catalyseur est un composant cle du systeme antipollution. Avec le temps et les kilometres, il perd son efficacite. Le remplacement est couteux mais indispensable pour passer le controle technique." },
+        "costMin": { "fr": 400, "de": 450, "ch": 600, "es": 330, "pt": 310 },
+        "costMax": { "fr": 1500, "de": 1700, "ch": 2100, "es": 1200, "pt": 1100 },
+        "relatedCodes": ["P0420", "P0421", "P0430"]
+      },
+      {
+        "name": { "fr": "Bobine d'allumage defectueuse" },
+        "probability": 20,
+        "severity": "medium",
+        "description": { "fr": "La bobine transforme la basse tension en haute tension pour creer l'etincelle dans les bougies. Une bobine fatiguee provoque des rates d'allumage, une perte de puissance et des vibrations." },
+        "costMin": { "fr": 80, "de": 95, "ch": 120, "es": 65, "pt": 60 },
+        "costMax": { "fr": 250, "de": 290, "ch": 370, "es": 210, "pt": 190 },
+        "relatedCodes": ["P0300", "P0301", "P0302", "P0303", "P0304"]
+      }
+    ]
+  },
+  {
+    "id": "demarrage-difficile",
+    "symptom": { "fr": "Demarrage difficile ou impossible" },
+    "icon": "key",
+    "description": { "fr": "Le moteur a du mal a demarrer, tourne longtemps au demarreur ou ne demarre pas du tout. Plusieurs causes possibles, de la plus simple a la plus complexe." },
+    "causes": [
+      {
+        "name": { "fr": "Batterie faible ou dechargee" },
+        "probability": 40,
+        "severity": "low",
+        "description": { "fr": "C'est la cause numero un des problemes de demarrage. Une batterie de plus de 4-5 ans commence a faiblir, surtout par temps froid. Un simple test de charge permet de le confirmer." },
+        "costMin": { "fr": 80, "de": 90, "ch": 120, "es": 70, "pt": 65 },
+        "costMax": { "fr": 200, "de": 230, "ch": 300, "es": 170, "pt": 155 },
+        "relatedCodes": ["P0562", "P0563"]
+      },
+      {
+        "name": { "fr": "Demarreur defaillant" },
+        "probability": 25,
+        "severity": "medium",
+        "description": { "fr": "Le demarreur est un moteur electrique qui entraine le moteur pour le faire tourner. Avec le temps, les charbons s'usent et le solenoid peut coller. On entend souvent un claquement sans que le moteur tourne." },
+        "costMin": { "fr": 200, "de": 230, "ch": 300, "es": 170, "pt": 155 },
+        "costMax": { "fr": 500, "de": 570, "ch": 720, "es": 420, "pt": 390 },
+        "relatedCodes": []
+      },
+      {
+        "name": { "fr": "Pompe a carburant defectueuse" },
+        "probability": 15,
+        "severity": "high",
+        "description": { "fr": "La pompe a carburant envoie l'essence ou le diesel vers le moteur. Si elle faiblit, la pression est insuffisante pour demarrer. On peut parfois entendre un bourdonnement anormal en mettant le contact." },
+        "costMin": { "fr": 300, "de": 350, "ch": 450, "es": 250, "pt": 230 },
+        "costMax": { "fr": 700, "de": 800, "ch": 1000, "es": 580, "pt": 540 },
+        "relatedCodes": ["P0230", "P0087", "P0190", "P0191"]
+      }
+    ]
+  },
+  {
+    "id": "perte-puissance",
+    "symptom": { "fr": "Perte de puissance" },
+    "icon": "arrow-down",
+    "description": { "fr": "La voiture manque de peche, les accelerations sont molles, le moteur ne repond plus comme avant. Plusieurs systemes peuvent etre en cause." },
+    "causes": [
+      {
+        "name": { "fr": "Filtre a air encrasse" },
+        "probability": 30,
+        "severity": "low",
+        "description": { "fr": "Le filtre a air bloque les impuretes avant qu'elles n'entrent dans le moteur. Quand il est sature, le moteur etouffe litteralement. C'est la reparation la plus simple et la moins chere de cette liste." },
+        "costMin": { "fr": 15, "de": 18, "ch": 25, "es": 12, "pt": 10 },
+        "costMax": { "fr": 50, "de": 60, "ch": 75, "es": 40, "pt": 35 },
+        "relatedCodes": ["P0101", "P0171"]
+      },
+      {
+        "name": { "fr": "Turbo defaillant" },
+        "probability": 20,
+        "severity": "high",
+        "description": { "fr": "Le turbocompresseur force l'air dans le moteur pour augmenter la puissance. Quand il commence a lacher, on perd enormement de reprise. Un sifflement anormal a l'acceleration est souvent le premier signe." },
+        "costMin": { "fr": 800, "de": 920, "ch": 1200, "es": 660, "pt": 620 },
+        "costMax": { "fr": 2500, "de": 2900, "ch": 3600, "es": 2100, "pt": 1950 },
+        "relatedCodes": ["P0243", "P0234", "P0299"]
+      },
+      {
+        "name": { "fr": "Injecteurs encrasses" },
+        "probability": 25,
+        "severity": "medium",
+        "description": { "fr": "Les injecteurs pulverisent le carburant dans les cylindres. Avec le temps, des depots s'accumulent et la pulverisation devient irreguliere. Le moteur tourne de maniere inegale et perd de la puissance." },
+        "costMin": { "fr": 150, "de": 175, "ch": 220, "es": 125, "pt": 115 },
+        "costMax": { "fr": 600, "de": 690, "ch": 870, "es": 500, "pt": 460 },
+        "relatedCodes": ["P0200", "P0201", "P0202", "P0203", "P0204"]
+      }
+    ]
+  },
+  {
+    "id": "vibrations-moteur",
+    "symptom": { "fr": "Vibrations anormales du moteur" },
+    "icon": "vibrate",
+    "description": { "fr": "Le moteur vibre de maniere inhabituelle au ralenti ou en roulant. Les vibrations peuvent se ressentir dans le volant, le siege ou les pedales." },
+    "causes": [
+      {
+        "name": { "fr": "Bougies d'allumage usees" },
+        "probability": 35,
+        "severity": "low",
+        "description": { "fr": "Les bougies creent l'etincelle qui enflamme le melange air-carburant. Quand elles sont usees, l'allumage est irregulier et le moteur vibre. C'est un entretien courant a faire tous les 30 000 a 60 000 km." },
+        "costMin": { "fr": 40, "de": 48, "ch": 60, "es": 32, "pt": 30 },
+        "costMax": { "fr": 150, "de": 175, "ch": 220, "es": 125, "pt": 115 },
+        "relatedCodes": ["P0300", "P0301", "P0302", "P0303", "P0304"]
+      },
+      {
+        "name": { "fr": "Supports moteur fatigues" },
+        "probability": 25,
+        "severity": "medium",
+        "description": { "fr": "Les silentblocs et supports moteur absorbent les vibrations du moteur. Avec le temps, le caoutchouc se deteriore et les vibrations se transmettent a la carrosserie. On ressent alors des tremblements au ralenti et des a-coups." },
+        "costMin": { "fr": 150, "de": 175, "ch": 220, "es": 125, "pt": 115 },
+        "costMax": { "fr": 450, "de": 520, "ch": 650, "es": 370, "pt": 340 },
+        "relatedCodes": []
+      },
+      {
+        "name": { "fr": "Volant moteur bimasse use" },
+        "probability": 15,
+        "severity": "high",
+        "description": { "fr": "Le volant moteur bimasse amortit les a-coups du moteur diesel. Quand il s'use, on entend un bruit de ferraille au ralenti et les vibrations augmentent fortement. Son remplacement est souvent associe a celui de l'embrayage." },
+        "costMin": { "fr": 500, "de": 575, "ch": 725, "es": 420, "pt": 390 },
+        "costMax": { "fr": 1200, "de": 1380, "ch": 1740, "es": 1000, "pt": 930 },
+        "relatedCodes": []
+      }
+    ]
+  },
+  {
+    "id": "surconsommation",
+    "symptom": { "fr": "Surconsommation de carburant" },
+    "icon": "fuel",
+    "description": { "fr": "Votre voiture consomme plus que d'habitude. La facture de carburant augmente sans raison apparente. Plusieurs capteurs et composants peuvent etre en cause." },
+    "causes": [
+      {
+        "name": { "fr": "Sonde lambda encrassee" },
+        "probability": 30,
+        "severity": "medium",
+        "description": { "fr": "Une sonde lambda qui donne des informations erronees au calculateur provoque un melange trop riche. Le moteur injecte trop de carburant, ce qui augmente la consommation de 10 a 25% selon les cas." },
+        "costMin": { "fr": 120, "de": 140, "ch": 180, "es": 100, "pt": 95 },
+        "costMax": { "fr": 300, "de": 345, "ch": 435, "es": 250, "pt": 230 },
+        "relatedCodes": ["P0171", "P0172", "P0174", "P0175"]
+      },
+      {
+        "name": { "fr": "Thermostat bloque ouvert" },
+        "probability": 25,
+        "severity": "low",
+        "description": { "fr": "Le thermostat regule la temperature du moteur. S'il reste bloque ouvert, le moteur ne chauffe jamais assez et le calculateur enrichit le melange en permanence. Le chauffage de l'habitacle est aussi moins performant." },
+        "costMin": { "fr": 80, "de": 95, "ch": 120, "es": 65, "pt": 60 },
+        "costMax": { "fr": 250, "de": 290, "ch": 365, "es": 210, "pt": 190 },
+        "relatedCodes": ["P0128", "P0125"]
+      },
+      {
+        "name": { "fr": "Capteur de debit d'air (MAF) encrasse" },
+        "probability": 20,
+        "severity": "medium",
+        "description": { "fr": "Le debitmetre d'air mesure la quantite d'air entrant dans le moteur. Quand il est encrasse, il sous-estime le debit et le calculateur compense en injectant trop de carburant. Un nettoyage suffit parfois." },
+        "costMin": { "fr": 30, "de": 35, "ch": 45, "es": 25, "pt": 22 },
+        "costMax": { "fr": 350, "de": 400, "ch": 510, "es": 290, "pt": 270 },
+        "relatedCodes": ["P0100", "P0101", "P0102", "P0103"]
+      }
+    ]
+  },
+  {
+    "id": "fumee-echappement",
+    "symptom": { "fr": "Fumee anormale a l'echappement" },
+    "icon": "cloud",
+    "description": { "fr": "De la fumee blanche, bleue ou noire sort de l'echappement. La couleur de la fumee donne deja une bonne indication sur l'origine du probleme." },
+    "causes": [
+      {
+        "name": { "fr": "Joint de culasse defaillant (fumee blanche)" },
+        "probability": 25,
+        "severity": "critical",
+        "description": { "fr": "Le joint de culasse assure l'etancheite entre le bloc moteur et la culasse. Quand il lache, le liquide de refroidissement s'infiltre dans les cylindres et produit une epaisse fumee blanche. C'est une reparation lourde mais urgente." },
+        "costMin": { "fr": 800, "de": 920, "ch": 1160, "es": 660, "pt": 620 },
+        "costMax": { "fr": 2000, "de": 2300, "ch": 2900, "es": 1650, "pt": 1540 },
+        "relatedCodes": ["P0128", "P0217"]
+      },
+      {
+        "name": { "fr": "Segments uses (fumee bleue)" },
+        "probability": 20,
+        "severity": "high",
+        "description": { "fr": "Les segments assurent l'etancheite entre les pistons et les cylindres. Quand ils sont uses, l'huile remonte dans la chambre de combustion et brule, produisant une fumee bleue. La consommation d'huile augmente aussi." },
+        "costMin": { "fr": 1000, "de": 1150, "ch": 1450, "es": 830, "pt": 770 },
+        "costMax": { "fr": 3000, "de": 3450, "ch": 4350, "es": 2500, "pt": 2300 },
+        "relatedCodes": []
+      },
+      {
+        "name": { "fr": "Probleme d'injection (fumee noire)" },
+        "probability": 30,
+        "severity": "medium",
+        "description": { "fr": "La fumee noire indique un melange trop riche — trop de carburant par rapport a l'air. Les causes vont d'un simple filtre a air bouche a des injecteurs defaillants. Sur les diesels, c'est souvent lie a l'encrassement." },
+        "costMin": { "fr": 50, "de": 58, "ch": 75, "es": 42, "pt": 38 },
+        "costMax": { "fr": 600, "de": 690, "ch": 870, "es": 500, "pt": 460 },
+        "relatedCodes": ["P0172", "P0175", "P0200", "P0201"]
+      }
+    ]
+  },
+  {
+    "id": "bruit-freinage",
+    "symptom": { "fr": "Bruit au freinage" },
+    "icon": "brake",
+    "description": { "fr": "Des grincements, des crissements ou des frottements metalliques se font entendre quand vous freinez. Ne negligez jamais un bruit de frein — c'est votre securite qui est en jeu." },
+    "causes": [
+      {
+        "name": { "fr": "Plaquettes de frein usees" },
+        "probability": 45,
+        "severity": "high",
+        "description": { "fr": "Les plaquettes ont un temoin d'usure qui produit un crissement aigu quand la garniture est presque finie. C'est un signal d'alerte clair : il faut les remplacer rapidement avant d'abimer les disques." },
+        "costMin": { "fr": 80, "de": 95, "ch": 120, "es": 65, "pt": 60 },
+        "costMax": { "fr": 250, "de": 290, "ch": 365, "es": 210, "pt": 190 },
+        "relatedCodes": []
+      },
+      {
+        "name": { "fr": "Disques de frein voiles ou uses" },
+        "probability": 30,
+        "severity": "high",
+        "description": { "fr": "Un disque voile produit des vibrations dans la pedale de frein et parfois un frottement rythmique. Un disque trop fin ne dissipe plus correctement la chaleur. Le remplacement des disques inclut generalement celui des plaquettes." },
+        "costMin": { "fr": 200, "de": 230, "ch": 290, "es": 165, "pt": 155 },
+        "costMax": { "fr": 600, "de": 690, "ch": 870, "es": 500, "pt": 460 },
+        "relatedCodes": []
+      },
+      {
+        "name": { "fr": "Etrier de frein grippe" },
+        "probability": 15,
+        "severity": "high",
+        "description": { "fr": "L'etrier presse les plaquettes contre le disque. S'il grippe, il reste partiellement serre meme quand vous ne freinez pas. Cela provoque une usure prematuree, un echauffement excessif et parfois une odeur de brule." },
+        "costMin": { "fr": 150, "de": 175, "ch": 220, "es": 125, "pt": 115 },
+        "costMax": { "fr": 450, "de": 520, "ch": 650, "es": 370, "pt": 340 },
+        "relatedCodes": []
+      }
+    ]
+  },
+  {
+    "id": "voyant-abs",
+    "symptom": { "fr": "Voyant ABS allume" },
+    "icon": "abs",
+    "description": { "fr": "Le temoin ABS s'allume sur le tableau de bord. Le freinage classique fonctionne toujours, mais le systeme antiblocage est desactive. En cas de freinage d'urgence, les roues risquent de bloquer." },
+    "causes": [
+      {
+        "name": { "fr": "Capteur de vitesse de roue defaillant" },
+        "probability": 40,
+        "severity": "medium",
+        "description": { "fr": "Chaque roue a un capteur qui informe le calculateur ABS de sa vitesse de rotation. Si un capteur est endommage ou encrasse, le systeme se met en defaut. C'est souvent un probleme de cablage ou de capteur oxyde." },
+        "costMin": { "fr": 80, "de": 95, "ch": 120, "es": 65, "pt": 60 },
+        "costMax": { "fr": 250, "de": 290, "ch": 365, "es": 210, "pt": 190 },
+        "relatedCodes": ["C0035", "C0040", "C0045", "C0050"]
+      },
+      {
+        "name": { "fr": "Bloc hydraulique ABS defectueux" },
+        "probability": 20,
+        "severity": "high",
+        "description": { "fr": "Le bloc hydraulique contient les electrovannes qui modulent la pression de freinage. Si une electrovanne colle ou si le module electronique tombe en panne, tout le systeme ABS est hors service. La reparation peut etre couteuse." },
+        "costMin": { "fr": 400, "de": 460, "ch": 580, "es": 330, "pt": 310 },
+        "costMax": { "fr": 1200, "de": 1380, "ch": 1740, "es": 1000, "pt": 930 },
+        "relatedCodes": ["C0060", "C0065"]
+      },
+      {
+        "name": { "fr": "Bague ABS endommagee" },
+        "probability": 25,
+        "severity": "medium",
+        "description": { "fr": "La bague ABS est un anneau dente fixe sur le moyeu ou le cardan. Elle permet au capteur de compter les tours de la roue. Si elle est fissuree, rouille ou desaxee, le capteur envoie un signal erratique au calculateur." },
+        "costMin": { "fr": 50, "de": 58, "ch": 75, "es": 42, "pt": 38 },
+        "costMax": { "fr": 200, "de": 230, "ch": 290, "es": 165, "pt": 155 },
+        "relatedCodes": ["C0035", "C0040"]
+      }
+    ]
+  }
+]

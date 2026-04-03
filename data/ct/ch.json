@@ -1,0 +1,128 @@
+{
+  "country": "CH",
+  "name": "Motorfahrzeugkontrolle (MFK)",
+  "authority": "Strassenverkehrsamt cantonal",
+  "frequency": "Apres 4 ans, puis 3 ans, puis tous les 2 ans",
+  "points": [
+    {
+      "id": "ch-01",
+      "name": "Eclairage et signalisation",
+      "description": "Fonctionnement des phares, feux de croisement, clignotants, feux stop, feux arriere, eclairage de plaque. Reglage des faisceaux lumineux.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Freins",
+      "description": "Efficacite du frein de service (decelerometre), frein a main, frein de secours. Etat des disques, plaquettes, tambours, flexibles et liquide de frein.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Direction",
+      "description": "Jeu dans la direction, etat des biellettes, rotules et soufflets. Assistance de direction fonctionnelle.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-04",
+      "name": "Visibilite",
+      "description": "Pare-brise sans fissure dans le champ de vision, retroviseurs en bon etat, essuie-glaces et lave-glace fonctionnels.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-05",
+      "name": "Train de roulement",
+      "description": "Amortisseurs, ressorts, silentblocs, bras de suspension. Geometrie de train correcte.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-06",
+      "name": "Gaz d'echappement",
+      "description": "Mesure CO, HC et lambda (essence). Opacite (diesel). Controle OBD2 pour vehicules equipes. Catalyseur et filtre a particules.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "ch-07",
+      "name": "Pneus et jantes",
+      "description": "Profondeur des rainures (minimum 1.6 mm ete, 4 mm recommande hiver), etat general, dimensions conformes au permis de circulation.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-08",
+      "name": "Carrosserie et chassis",
+      "description": "Corrosion perforante, elements mal fixes, deformations compromettant la securite, etat general du chassis.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-09",
+      "name": "Securite passive",
+      "description": "Ceintures de securite, temoins airbag, appuie-tetes, protections pour enfants (le cas echeant).",
+      "obd2Checkable": true
+    },
+    {
+      "id": "ch-10",
+      "name": "Moteur et transmission",
+      "description": "Fuites d'huile, de liquide de refroidissement, etat des durites visibles, courroies, supports moteur et boite.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-11",
+      "name": "Roulements et transmissions",
+      "description": "Jeu dans les roulements de roue, etat des cardans, soufflets de transmission, fixation des roues.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-12",
+      "name": "Identification",
+      "description": "Plaques d'immatriculation lisibles et conformes, numero de chassis (VIN) concordant avec le permis de circulation.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-13",
+      "name": "Systeme OBD",
+      "description": "Lecture des codes defaut via OBD2, etat du voyant MIL, readiness monitors (vehicules a partir de 2006 environ).",
+      "obd2Checkable": true
+    },
+    {
+      "id": "ch-14",
+      "name": "Installation electrique",
+      "description": "Batterie fixee, pas de fuites, cablage en bon etat, fusibles et relais fonctionnels.",
+      "obd2Checkable": true
+    },
+    {
+      "id": "ch-15",
+      "name": "Echappement",
+      "description": "Etancheite du systeme, fixation correcte, pas de bruit anormal, pas de corrosion perforante.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-16",
+      "name": "Retroviseurs",
+      "description": "Retroviseurs interieur et exterieurs presents, bien fixes, surface reflechissante en bon etat.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-17",
+      "name": "Antidemarrage et serrures",
+      "description": "Fonctionnement du contacteur a cle, blocage de la colonne de direction.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-18",
+      "name": "Avertisseur sonore",
+      "description": "Klaxon fonctionnel, puissance sonore adequate.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-19",
+      "name": "Reservoir et alimentation carburant",
+      "description": "Absence de fuites, bouchon de reservoir etanche, canalisations en bon etat.",
+      "obd2Checkable": false
+    },
+    {
+      "id": "ch-20",
+      "name": "Instruments de bord",
+      "description": "Compteur de vitesse fonctionnel, temoins lumineux (ABS, airbag, moteur) operationnels, lisibilite des cadrans.",
+      "obd2Checkable": true
+    }
+  ]
+}
