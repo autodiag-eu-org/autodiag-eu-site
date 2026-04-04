@@ -154,7 +154,7 @@ const faqItems: FaqItem[] = [
   {
     question: "Puis-je me faire rembourser ?",
     answer:
-      "Google Play offre un remboursement automatique dans les 48 heures. Au-dela, contactez-nous a info@autodiag.eu et nous traiterons votre demande sous 14 jours conformement au droit de retractation UE.",
+      "Google Play offre un remboursement automatique dans les 48 heures. Au-dela, contactez-nous a info@autodiag-eu.com et nous traiterons votre demande sous 14 jours conformement au droit de retractation UE.",
   },
 ];
 

@@ -18,10 +18,10 @@ export async function sendBetaWelcomeEmail(
 ): Promise<boolean> {
   try {
     const betaOptinUrl =
-      process.env.NEXT_PUBLIC_BETA_OPTIN_URL ?? "https://autodiag.eu";
+      process.env.NEXT_PUBLIC_BETA_OPTIN_URL ?? "https://autodiag-eu.com";
 
     const { error } = await getResend().emails.send({
-      from: "AutoDiag EU <noreply@autodiag.eu>",
+      from: "AutoDiag EU <noreply@autodiag-eu.com>",
       to: email,
       subject: "Bienvenue dans la beta AutoDiag EU !",
       html: `
@@ -45,7 +45,7 @@ export async function sendBetaWelcomeEmail(
           </div>
           <p style="color: #666; font-size: 14px; line-height: 1.5;">
             Si vous avez des questions, contactez-nous a
-            <a href="mailto:info@autodiag.eu" style="color: #00e5ff;">info@autodiag.eu</a>.
+            <a href="mailto:info@autodiag-eu.com" style="color: #00e5ff;">info@autodiag-eu.com</a>.
           </p>
           <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;" />
           <p style="color: #999; font-size: 12px;">

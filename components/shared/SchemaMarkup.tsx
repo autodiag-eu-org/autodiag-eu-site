@@ -65,7 +65,7 @@ const DEFAULT_ORGANIZATION: OrganizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'AutoDiag EU Sarl',
-  url: 'https://autodiag.eu',
+  url: 'https://autodiag-eu.com',
   description: 'Diagnostic automobile intelligent',
   address: {
     '@type': 'PostalAddress',
@@ -74,7 +74,7 @@ const DEFAULT_ORGANIZATION: OrganizationSchema = {
     postalCode: '2926',
     addressCountry: 'CH',
   },
-  email: 'info@autodiag.eu',
+  email: 'info@autodiag-eu.com',
   founder: {
     '@type': 'Person',
     name: 'Reda Kaouani',

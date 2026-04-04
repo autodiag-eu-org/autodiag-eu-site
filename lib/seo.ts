@@ -4,7 +4,7 @@
 
 import type { Metadata } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag.eu";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag-eu.com";
 const SITE_NAME = "AutoDiag EU";
 
 interface DTCMetadataParams {

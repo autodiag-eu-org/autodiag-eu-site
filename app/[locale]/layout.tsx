@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "La seule app qui ecoute votre moteur. Diagnostic OBD2, scan audio IA, 250 codes DTC, 677 vehicules compatibles. Gratuit au lancement.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag.eu"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag-eu.com"
   ),
   openGraph: {
     title: "AutoDiag EU — Diagnostic automobile intelligent",

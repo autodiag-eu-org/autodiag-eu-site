@@ -91,10 +91,10 @@ export default function IOSWaitlist() {
           <p className="mt-3 text-sm text-red-400">
             Erreur — reessayez ou contactez{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="underline hover:text-cyan"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>
           </p>
         )}

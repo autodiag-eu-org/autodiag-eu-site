@@ -80,7 +80,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
     return NextResponse.json(
-      { error: "Erreur lors de l'inscription. Contactez info@autodiag.eu" },
+      { error: "Erreur lors de l'inscription. Contactez info@autodiag-eu.com" },
       { status: 500 }
     );
   }

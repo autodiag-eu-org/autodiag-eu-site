@@ -134,7 +134,7 @@ export async function GET(request: NextRequest) {
           }}
         >
           <span style={{ fontSize: "18px", color: "#8a90b044" }}>
-            autodiag.eu
+            autodiag-eu.com
           </span>
           <span style={{ fontSize: "18px", color: "#8a90b044" }}>
             Diagnostic auto intelligent

@@ -165,7 +165,7 @@ export default function CarQuiz() {
 
   const shareResult = useCallback(() => {
     const verdict = getVerdict(score);
-    const text = `Quiz Voiture AutoDiag EU — ${score}/${TOTAL} : "${verdict.title}" ! Testez vos connaissances sur autodiag.eu`;
+    const text = `Quiz Voiture AutoDiag EU — ${score}/${TOTAL} : "${verdict.title}" ! Testez vos connaissances sur autodiag-eu.com`;
     if (navigator.share) {
       navigator.share({ text }).catch(() => {
         /* user cancelled */

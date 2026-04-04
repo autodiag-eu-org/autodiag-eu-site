@@ -2,7 +2,7 @@
 const dtcCodes = require('./data/dtc/dtc_codes.json');
 
 const config = {
-  siteUrl: 'https://autodiag.eu',
+  siteUrl: 'https://autodiag-eu.com',
   generateRobotsTxt: true,
   exclude: ['/api/*'],
   additionalPaths: async () => {

@@ -75,10 +75,10 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
         <p className="mt-10 text-secondary/60 text-sm">
           Si le probl&egrave;me persiste, contactez-nous :&nbsp;
           <a
-            href="mailto:info@autodiag.eu"
+            href="mailto:info@autodiag-eu.com"
             className="text-cyan underline hover:no-underline"
           >
-            info@autodiag.eu
+            info@autodiag-eu.com
           </a>
         </p>
 

@@ -149,7 +149,7 @@
     "submit": "Rejoindre la beta",
     "submitting": "Inscription en cours...",
     "success": "Inscription reussie ! Verifiez votre boite email.",
-    "error": "Une erreur est survenue. Contactez-nous a info@autodiag.eu",
+    "error": "Une erreur est survenue. Contactez-nous a info@autodiag-eu.com",
     "gmailWarning": "Important : vous aurez besoin d'un compte Google (Gmail) pour installer l'app",
     "countries": {
       "fr": "France",
@@ -187,7 +187,7 @@
     "comparison": "Comparatif",
     "copyright": "AutoDiag EU Sarl — Tous droits reserves",
     "madeIn": "Concu en Suisse",
-    "contact": "Contact : info@autodiag.eu",
+    "contact": "Contact : info@autodiag-eu.com",
     "address": "Route du Jura 10, 2926 Boncourt, Suisse",
     "manageChoices": "Gerer mes choix"
   },
@@ -230,7 +230,7 @@
     "title": "Une erreur est survenue",
     "description": "Quelque chose s'est mal passe. Veuillez reessayer.",
     "cta": "Recharger la page",
-    "contact": "Si le probleme persiste, contactez-nous a info@autodiag.eu"
+    "contact": "Si le probleme persiste, contactez-nous a info@autodiag-eu.com"
   },
   "common": {
     "loading": "Chargement...",

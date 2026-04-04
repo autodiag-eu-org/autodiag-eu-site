@@ -188,10 +188,10 @@ export default function BetaForm() {
               <p className="text-center text-sm text-red-400">
                 Une erreur est survenue. Contactez-nous a{" "}
                 <a
-                  href="mailto:info@autodiag.eu"
+                  href="mailto:info@autodiag-eu.com"
                   className="underline hover:text-cyan"
                 >
-                  info@autodiag.eu
+                  info@autodiag-eu.com
                 </a>
               </p>
             )}

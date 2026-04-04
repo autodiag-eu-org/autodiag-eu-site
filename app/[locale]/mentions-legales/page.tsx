@@ -46,10 +46,10 @@ export default function MentionsLegalesPage() {
             <p className="mb-2">
               <strong className="text-white">Email :</strong>{" "}
               <a
-                href="mailto:info@autodiag.eu"
+                href="mailto:info@autodiag-eu.com"
                 className="text-cyan hover:underline"
               >
-                info@autodiag.eu
+                info@autodiag-eu.com
               </a>
             </p>
             <p className="mb-2">
@@ -162,10 +162,10 @@ export default function MentionsLegalesPage() {
             Pour toute question relative aux presentes mentions legales,
             contactez-nous a{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="text-cyan hover:underline"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>
             .
           </p>

@@ -491,7 +491,7 @@ export default function AudioQuiz() {
   }, []);
 
   const shareResult = useCallback(() => {
-    const text = `Stethoscope Virtuel AutoDiag EU — Niveau ${level.name} : ${score}/3 bonnes reponses ! Testez votre oreille de mecanicien sur autodiag.eu`;
+    const text = `Stethoscope Virtuel AutoDiag EU — Niveau ${level.name} : ${score}/3 bonnes reponses ! Testez votre oreille de mecanicien sur autodiag-eu.com`;
     if (navigator.share) {
       navigator.share({ text }).catch(() => {
         /* user cancelled */

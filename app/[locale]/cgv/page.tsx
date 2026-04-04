@@ -177,10 +177,10 @@ export default function CGVPage() {
               remboursement sur demande motivee aupres de notre service client
               a{" "}
               <a
-                href="mailto:info@autodiag.eu"
+                href="mailto:info@autodiag-eu.com"
                 className="text-cyan hover:underline"
               >
-                info@autodiag.eu
+                info@autodiag-eu.com
               </a>
               . Chaque demande est examinee individuellement.
             </li>
@@ -201,10 +201,10 @@ export default function CGVPage() {
           <p className="mt-3">
             Pour exercer ce droit, envoyez un email a{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="text-cyan hover:underline"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>{" "}
             en indiquant clairement votre volonte de vous retracter, accompagne
             de votre identifiant Google Play ou de l&apos;email associe a
@@ -278,10 +278,10 @@ export default function CGVPage() {
             Pour toute question relative aux presentes conditions generales de
             vente, contactez-nous a{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="text-cyan hover:underline"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>
             .
           </p>

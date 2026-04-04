@@ -55,10 +55,10 @@ export default function ConfidentialitePage() {
             <br />
             Email :{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="text-cyan hover:underline"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>
             <br />
             Responsable : Reda Kaouani
@@ -238,10 +238,10 @@ export default function ConfidentialitePage() {
           <p className="mt-3">
             Pour exercer vos droits, envoyez un email a{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="text-cyan hover:underline"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>{" "}
             en precisant votre demande. Nous repondons dans un delai de 30
             jours.
@@ -325,10 +325,10 @@ export default function ConfidentialitePage() {
             Pour toute question relative a la protection de vos donnees,
             contactez-nous a{" "}
             <a
-              href="mailto:info@autodiag.eu"
+              href="mailto:info@autodiag-eu.com"
               className="text-cyan hover:underline"
             >
-              info@autodiag.eu
+              info@autodiag-eu.com
             </a>
             .
           </p>

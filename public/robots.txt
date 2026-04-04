@@ -4,7 +4,7 @@ Allow: /
 Disallow: /api/
 
 # Host
-Host: https://autodiag.eu
+Host: https://autodiag-eu.com
 
 # Sitemaps
-Sitemap: https://autodiag.eu/sitemap.xml
+Sitemap: https://autodiag-eu.com/sitemap.xml
