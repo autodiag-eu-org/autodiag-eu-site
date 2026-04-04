@@ -23,7 +23,7 @@ export async function sendBetaWelcomeEmail(
       process.env.NEXT_PUBLIC_BETA_OPTIN_URL ?? "https://autodiag-eu.com";
 
     const { error } = await getResend().emails.send({
-      from: "AutoDiag EU <noreply@autodiag-eu.com>",
+      from: process.env.RESEND_FROM_EMAIL ?? "AutoDiag EU <onboarding@resend.dev>",
       to: email,
       subject: "Bienvenue dans la beta AutoDiag EU !",
       html: `
@@ -99,7 +99,7 @@ export async function notifyRedaIOSWaitlist(email: string): Promise<void> {
 async function notifyReda(subject: string, lines: string[]): Promise<void> {
   try {
     await getResend().emails.send({
-      from: "AutoDiag EU <noreply@autodiag-eu.com>",
+      from: process.env.RESEND_FROM_EMAIL ?? "AutoDiag EU <onboarding@resend.dev>",
       to: REDA_EMAIL,
       subject: `[AutoDiag EU] ${subject}`,
       html: `
