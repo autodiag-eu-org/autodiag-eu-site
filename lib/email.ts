@@ -31,7 +31,7 @@ export async function sendBetaWelcomeEmail(
     if (!resend) return false;
 
     const { error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL ?? "AutoDiag EU <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev",
       to: email,
       subject: "Bienvenue dans la beta AutoDiag EU !",
       html: `
@@ -112,7 +112,7 @@ async function notifyReda(subject: string, lines: string[]): Promise<void> {
     if (!resend) return;
 
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL ?? "AutoDiag EU <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev",
       to: REDA_EMAIL,
       subject: `[AutoDiag EU] ${subject}`,
       html: `
