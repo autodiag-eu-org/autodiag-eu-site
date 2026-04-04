@@ -58,11 +58,13 @@ export async function sendBetaWelcomeEmail(
     });
 
     if (error) {
+      console.error("[email] Resend error:", JSON.stringify(error));
       return false;
     }
 
     return true;
-  } catch {
+  } catch (err: unknown) {
+    console.error("[email] Exception:", err instanceof Error ? err.message : String(err));
     return false;
   }
 }
