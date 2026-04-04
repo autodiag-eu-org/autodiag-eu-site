@@ -3,7 +3,14 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { generatePageMetadata } from "@/lib/seo";
-import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
+import { getBlogPost, getAllBlogParams } from "@/lib/blog";
+import {
+  ArticleTop10MOTFailureReasons,
+  ArticleHowToPrepareCarForMOT,
+  ArticleBestOBD2AppUK2026,
+  ArticleOBD2FaultCodesExplainedUK,
+  ArticleCarDiagnosticAppVsGarageUK,
+} from "./en-articles";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
 interface BlogPostPageProps {
@@ -11,7 +18,7 @@ interface BlogPostPageProps {
 }
 
 export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ locale: "fr", slug }));
+  return getAllBlogParams();
 }
 
 export async function generateMetadata({
@@ -36,6 +43,7 @@ function ArticleLayout({
   author,
   readingTime,
   category,
+  locale = "fr",
 }: {
   children: ReactNode;
   title: string;
@@ -43,21 +51,24 @@ function ArticleLayout({
   author: string;
   readingTime: number;
   category: string;
+  locale?: string;
 }) {
+  const isEN = locale === "en";
+  const dateLocale = isEN ? "en-GB" : "fr-FR";
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
       <Breadcrumbs
         items={[
-          { label: 'Accueil', href: '/fr' },
-          { label: 'Blog', href: '/fr/blog' },
-          { label: title, href: '#' },
+          { label: isEN ? "Home" : "Accueil", href: `/${locale}` },
+          { label: "Blog", href: `/${locale}/blog` },
+          { label: title, href: "#" },
         ]}
       />
       <Link
-        href="/fr/blog"
+        href={`/${locale}/blog`}
         className="mb-8 inline-flex items-center gap-2 text-sm text-secondary transition-colors hover:text-cyan"
       >
-        &larr; Retour au blog
+        &larr; {isEN ? "Back to blog" : "Retour au blog"}
       </Link>
 
       <header className="mb-10">
@@ -68,17 +79,17 @@ function ArticleLayout({
           {title}
         </h1>
         <div className="flex flex-wrap items-center gap-4 text-sm text-secondary">
-          <span>Par {author}</span>
+          <span>{isEN ? "By" : "Par"} {author}</span>
           <span aria-hidden="true">&middot;</span>
           <time dateTime={date}>
-            {new Date(date).toLocaleDateString("fr-FR", {
+            {new Date(date).toLocaleDateString(dateLocale, {
               day: "numeric",
               month: "long",
               year: "numeric",
             })}
           </time>
           <span aria-hidden="true">&middot;</span>
-          <span>{readingTime} min de lecture</span>
+          <span>{readingTime} {isEN ? "min read" : "min de lecture"}</span>
         </div>
       </header>
 
@@ -86,17 +97,20 @@ function ArticleLayout({
 
       <footer className="mt-12 rounded-2xl border border-cyan/20 bg-cyan/5 p-8 text-center">
         <h3 className="mb-3 text-xl font-bold">
-          Envie de diagnostiquer votre voiture vous-meme ?
+          {isEN
+            ? "Ready to diagnose your car yourself?"
+            : "Envie de diagnostiquer votre voiture vous-meme ?"}
         </h3>
         <p className="mb-6 text-secondary">
-          AutoDiag EU vous donne les outils des pros, en plus simple. Scan
-          audio IA, lecture de codes defaut, tout est la.
+          {isEN
+            ? "AutoDiag EU gives you professional-grade tools, made simple. AI audio scan, fault code reader, and more \u2014 all in your pocket."
+            : "AutoDiag EU vous donne les outils des pros, en plus simple. Scan audio IA, lecture de codes defaut, tout est la."}
         </p>
         <Link
-          href="/fr#beta"
+          href={`/${locale}#beta`}
           className="inline-block rounded-xl bg-gradient-to-r from-cyan to-green px-8 py-3 font-semibold text-black transition-transform hover:scale-105"
         >
-          Rejoindre la beta gratuite
+          {isEN ? "Join the free beta" : "Rejoindre la beta gratuite"}
         </Link>
       </footer>
     </article>
@@ -1616,11 +1630,18 @@ function ArticleAutodiagVsGarage() {
    ================================================================ */
 
 const articleComponents: Record<string, () => React.JSX.Element> = {
+  /* FR articles */
   "comment-lire-code-defaut-obd2": ArticleCommentLireCodeDefautOBD2,
   "preparer-controle-technique": ArticlePreparerControleTechnique,
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
+  /* EN articles */
+  "top-10-mot-failure-reasons-2026": ArticleTop10MOTFailureReasons,
+  "how-to-prepare-car-for-mot": ArticleHowToPrepareCarForMOT,
+  "best-obd2-app-uk-2026": ArticleBestOBD2AppUK2026,
+  "obd2-fault-codes-explained-uk": ArticleOBD2FaultCodesExplainedUK,
+  "car-diagnostic-app-vs-garage-uk": ArticleCarDiagnosticAppVsGarageUK,
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
