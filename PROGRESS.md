@@ -36,8 +36,8 @@
 - [x] quality-gate.sh PASS
 
 ## Phase 4 — SEO + i18n
-- [ ] Traduction EN complete (reporte — FR prioritaire au lancement)
-- [x] Sitemap XML + robots.txt (next-sitemap, 251 URLs)
+- [x] Traduction EN complete (i18n/en.json, 391 cles)
+- [x] Sitemap XML + robots.txt (next-sitemap, 516+ URLs FR+EN)
 - [x] Open Graph images dynamiques (/api/og edge runtime)
 - [x] PWA manifest (enrichi + meta tags layout)
 - [x] Sentry integration (lib/sentry.ts + error.tsx)
@@ -57,12 +57,33 @@
 - [ ] Lighthouse >= 95 (a verifier apres deploy Vercel)
 - [x] quality-gate.sh PASS
 
-## Statut actuel
-Phase : 5 — TERMINEE (toutes les phases 1-5 livrees)
-Dernier commit : feat: Phase 5 — polish final
-Derniere mise a jour : 3 avril 2026
+## Phase 6 — EN-GB / UK Market
+- [x] i18n EN-GB foundation (lib/i18n.ts, i18n/request.ts, i18n/en.json)
+- [x] 250 DTC codes EN content (description 80+ mots, GBP prices, MOT FAQ)
+- [x] DTCDetail + DTCCard + DTCEncyclopediaClient locale-aware
+- [x] hreflang FR + EN-GB + x-default sur toutes les pages (lib/seo.ts)
+- [x] MOT check page (/en/mot-check) — 12 categories DVSA, checklist interactive
+- [x] data/ct/gb.json — donnees MOT reelles DVSA
+- [x] 5 articles blog UK (1500+ mots chacun)
+- [x] DongleRecommendation Amazon UK affiliate (Vgate iCar Pro 2S)
+- [x] Legal pages EN-GB (mentions-legales, confidentialite, cgv)
+- [x] Footer locale-aware + language switcher
+- [x] Sitemap mis a jour (516+ URLs)
+- [x] validate-dtc-data.ts verifie EN + GBP
+- [x] npx tsc --noEmit PASS
+- [x] npx next build PASS (516 pages statiques)
+- [x] Zero console.log
+- [x] Zero TODO/FIXME
+- [x] Chaque page DTC EN >= 500 mots (contenu + template)
+- [x] quality-gate PASS
 
-## Routes du site (22 pages)
+## Statut actuel
+Phase : 6 — TERMINEE (EN-GB / UK Market)
+Dernier commit : feat: Phase 7 — SEO UK
+Derniere mise a jour : 4 avril 2026
+
+## Routes du site (34+ pages)
+### FR (22 pages)
 - / → /fr (redirect middleware)
 - /fr — Landing page
 - /fr/codes — Encyclopedie 250 DTC
@@ -77,11 +98,26 @@ Derniere mise a jour : 3 avril 2026
 - /fr/prix — Tarification + comparaison
 - /fr/comparaison — Concurrents detaille
 - /fr/a-propos — Histoire Reda
-- /fr/blog — 5 articles
+- /fr/blog — 5 articles FR
 - /fr/blog/[slug] — 5 articles SSG
 - /fr/mentions-legales — Impressum
 - /fr/confidentialite — RGPD + nDSG
 - /fr/cgv — Conditions vente
+
+### EN-GB (22+ pages)
+- /en — Landing page (EN)
+- /en/codes — Fault Code Encyclopedia
+- /en/codes/[code] — 250 pages SSG (EN)
+- /en/compatibilite — Vehicle Compatibility
+- /en/mot-check — MOT Preparation Checklist (UK exclusive)
+- /en/blog — 5 articles EN
+- /en/blog/[slug] — 5 articles SSG
+- /en/mentions-legales — Legal Notice
+- /en/confidentialite — Privacy Policy (UK GDPR)
+- /en/cgv — Terms and Conditions
+- /en/prix, /en/demo, /en/quiz, etc. — all shared pages
+
+### API
 - /api/beta — Formulaire beta
 - /api/ios-waitlist — Waitlist iOS
 - /api/og — OG images dynamiques
