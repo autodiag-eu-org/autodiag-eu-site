@@ -127,10 +127,33 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     body.country.trim()
   );
 
+  // Debug: test email sending inline
+  let debugEmailResult: string = "not_attempted";
+  try {
+    const apiKey = process.env.RESEND_API_KEY;
+    const testRes = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "onboarding@resend.dev",
+        to: "r.kaouani25@gmail.com",
+        subject: "[DEBUG] Test inline depuis Vercel",
+        html: "<p>Si tu recois cet email, fetch fonctionne dans Vercel.</p>",
+      }),
+    });
+    const testData = await testRes.text();
+    debugEmailResult = `status=${testRes.status} body=${testData}`;
+  } catch (e: unknown) {
+    debugEmailResult = `error: ${e instanceof Error ? e.message : String(e)}`;
+  }
+
   return NextResponse.json({
     success: true,
     message: "Inscription reussie ! Verifiez votre boite mail.",
     emailSent,
-    debug: { hasResendKey },
+    debug: { hasResendKey, debugEmailResult },
   });
 }
