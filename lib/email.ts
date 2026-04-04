@@ -6,8 +6,13 @@ import { Resend } from "resend";
 
 const REDA_EMAIL = "r.kaouani25@gmail.com";
 
-function getResend(): Resend {
-  return new Resend(process.env.RESEND_API_KEY ?? "re_placeholder");
+function getResend(): Resend | null {
+  const key = process.env.RESEND_API_KEY;
+  if (!key || key === "re_placeholder") {
+    console.error("[email] RESEND_API_KEY is missing or placeholder");
+    return null;
+  }
+  return new Resend(key);
 }
 
 /**
@@ -22,7 +27,10 @@ export async function sendBetaWelcomeEmail(
     const betaOptinUrl =
       process.env.NEXT_PUBLIC_BETA_OPTIN_URL ?? "https://autodiag-eu.com";
 
-    const { error } = await getResend().emails.send({
+    const resend = getResend();
+    if (!resend) return false;
+
+    const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL ?? "AutoDiag EU <onboarding@resend.dev>",
       to: email,
       subject: "Bienvenue dans la beta AutoDiag EU !",
@@ -100,7 +108,10 @@ export async function notifyRedaIOSWaitlist(email: string): Promise<void> {
  */
 async function notifyReda(subject: string, lines: string[]): Promise<void> {
   try {
-    await getResend().emails.send({
+    const resend = getResend();
+    if (!resend) return;
+
+    await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL ?? "AutoDiag EU <onboarding@resend.dev>",
       to: REDA_EMAIL,
       subject: `[AutoDiag EU] ${subject}`,

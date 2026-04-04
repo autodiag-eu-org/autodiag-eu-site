@@ -109,6 +109,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   // Send welcome email (non-blocking for user experience)
+  const hasResendKey = !!process.env.RESEND_API_KEY;
   const emailSent = await sendBetaWelcomeEmail(body.name.trim(), body.email.trim().toLowerCase());
 
   if (emailSent) {
@@ -130,5 +131,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     success: true,
     message: "Inscription reussie ! Verifiez votre boite mail.",
     emailSent,
+    debug: { hasResendKey },
   });
 }
