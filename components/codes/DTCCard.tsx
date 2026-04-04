@@ -5,14 +5,18 @@ import Link from "next/link";
 import SeverityBadge from "@/components/shared/SeverityBadge";
 import CostRange from "@/components/shared/CostRange";
 import type { DTCCode } from "@/lib/dtc";
+import { getLocalised } from "@/lib/dtc";
 
 interface DTCCardProps {
   dtc: DTCCode;
   index: number;
+  locale?: string;
 }
 
-export default function DTCCard({ dtc, index }: DTCCardProps) {
+export default function DTCCard({ dtc, index, locale = "fr" }: DTCCardProps) {
   const firstCause = dtc.causes[0];
+  const isEn = locale === "en";
+  const costKey = isEn ? "gb" : "fr";
 
   return (
     <motion.div
@@ -21,7 +25,7 @@ export default function DTCCard({ dtc, index }: DTCCardProps) {
       transition={{ duration: 0.3, delay: Math.min(index * 0.03, 0.3) }}
     >
       <Link
-        href={`/fr/codes/${dtc.code.toLowerCase()}`}
+        href={`/${locale}/codes/${dtc.code.toLowerCase()}`}
         className="group block rounded-2xl border border-border bg-glass p-5 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan/20 hover:shadow-[0_4px_24px_rgba(0,229,255,0.06)]"
       >
         <div className="mb-3 flex items-start justify-between gap-3">
@@ -30,7 +34,7 @@ export default function DTCCard({ dtc, index }: DTCCardProps) {
         </div>
 
         <h3 className="mb-2 text-sm font-semibold leading-snug text-white/90 line-clamp-2">
-          {dtc.name.fr}
+          {getLocalised(dtc.name, locale)}
         </h3>
 
         <div className="mb-3 flex items-center gap-3">
@@ -66,7 +70,9 @@ export default function DTCCard({ dtc, index }: DTCCardProps) {
                 />
               </svg>
             )}
-            {dtc.canDrive ? "Peut rouler" : "Arreter le vehicule"}
+            {dtc.canDrive
+              ? (isEn ? "Safe to drive" : "Peut rouler")
+              : (isEn ? "Stop the vehicle" : "Arreter le vehicule")}
           </span>
 
           <span className="rounded-md border border-border px-2 py-0.5 text-xs text-secondary">
@@ -76,14 +82,17 @@ export default function DTCCard({ dtc, index }: DTCCardProps) {
 
         {firstCause && (
           <div className="border-t border-border pt-3">
-            <p className="mb-1 text-xs text-secondary">Cause principale :</p>
+            <p className="mb-1 text-xs text-secondary">
+              {isEn ? "Main cause:" : "Cause principale :"}
+            </p>
             <p className="text-xs font-medium text-white/80">
-              {firstCause.name.fr}
+              {getLocalised(firstCause.name, locale)}
             </p>
             <div className="mt-1">
               <CostRange
-                min={firstCause.costMin.fr}
-                max={firstCause.costMax.fr}
+                min={firstCause.costMin[costKey] ?? firstCause.costMin.fr}
+                max={firstCause.costMax[costKey] ?? firstCause.costMax.fr}
+                currency={isEn ? "GBP" : undefined}
               />
             </div>
           </div>

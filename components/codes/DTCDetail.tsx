@@ -8,22 +8,36 @@ import CostRange from "@/components/shared/CostRange";
 import ShareButton from "@/components/shared/ShareButton";
 import VehicleSelector from "@/components/tools/VehicleSelector";
 import type { DTCCode } from "@/lib/dtc";
+import { getLocalised, getLocalisedArray } from "@/lib/dtc";
 import type { VehicleCompatibility } from "@/lib/vehicles";
 
 interface DTCDetailProps {
   dtc: DTCCode;
   relatedDTCs: DTCCode[];
+  locale?: string;
 }
 
-type CountryKey = "fr" | "de" | "ch" | "es" | "pt";
+type CountryKey = "fr" | "de" | "ch" | "es" | "pt" | "gb";
 
-const countries: { key: CountryKey; label: string; currency: string }[] = [
-  { key: "fr", label: "France", currency: "EUR" },
-  { key: "de", label: "Allemagne", currency: "EUR" },
-  { key: "ch", label: "Suisse", currency: "CHF" },
-  { key: "es", label: "Espagne", currency: "EUR" },
-  { key: "pt", label: "Portugal", currency: "EUR" },
-];
+function getCountries(isEn: boolean): { key: CountryKey; label: string; currency: string }[] {
+  if (isEn) {
+    return [
+      { key: "gb", label: "United Kingdom", currency: "GBP" },
+      { key: "fr", label: "France", currency: "EUR" },
+      { key: "de", label: "Germany", currency: "EUR" },
+      { key: "ch", label: "Switzerland", currency: "CHF" },
+      { key: "es", label: "Spain", currency: "EUR" },
+      { key: "pt", label: "Portugal", currency: "EUR" },
+    ];
+  }
+  return [
+    { key: "fr", label: "France", currency: "EUR" },
+    { key: "de", label: "Allemagne", currency: "EUR" },
+    { key: "ch", label: "Suisse", currency: "CHF" },
+    { key: "es", label: "Espagne", currency: "EUR" },
+    { key: "pt", label: "Portugal", currency: "EUR" },
+  ];
+}
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
@@ -44,8 +58,12 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
-  const [selectedCountry, setSelectedCountry] = useState<CountryKey>("fr");
+export default function DTCDetail({ dtc, relatedDTCs, locale = "fr" }: DTCDetailProps) {
+  const isEn = locale === "en";
+  const countries = getCountries(isEn);
+  const defaultCountry: CountryKey = isEn ? "gb" : "fr";
+
+  const [selectedCountry, setSelectedCountry] = useState<CountryKey>(defaultCountry);
   const [expandedCauses, setExpandedCauses] = useState<Record<number, boolean>>(
     { 0: true }
   );
@@ -63,6 +81,13 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
   const toggleFaq = useCallback((index: number) => {
     setExpandedFaq((prev) => ({ ...prev, [index]: !prev[index] }));
   }, []);
+
+  const name = getLocalised(dtc.name, locale);
+  const description = getLocalised(dtc.description, locale);
+  const symptoms = getLocalisedArray(dtc.symptoms, locale);
+  const faqData = (isEn && dtc.faq.en) ? dtc.faq.en : dtc.faq.fr;
+
+  const numberFormat = isEn ? "en-GB" : "fr-FR";
 
   return (
     <article className="mx-auto max-w-4xl">
@@ -94,7 +119,7 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
                     clipRule="evenodd"
                   />
                 </svg>
-                Vous pouvez rouler
+                {isEn ? "Safe to drive" : "Vous pouvez rouler"}
               </>
             ) : (
               <>
@@ -110,35 +135,51 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
                     clipRule="evenodd"
                   />
                 </svg>
-                Arretez le vehicule
+                {isEn ? "Stop the vehicle" : "Arretez le vehicule"}
               </>
             )}
           </span>
         </div>
-        <h2 className="text-lg font-medium text-secondary">{dtc.name.fr}</h2>
+        <h2 className="text-lg font-medium text-secondary">{name}</h2>
       </header>
 
       {/* Description */}
       <section className="mb-10">
         <h3 className="mb-4 text-xl font-bold">
-          Qu&apos;est-ce que le code {dtc.code} ?
+          {isEn
+            ? `What does code ${dtc.code} mean?`
+            : `Qu\u0027est-ce que le code ${dtc.code} ?`}
         </h3>
         <div className="rounded-2xl border border-border bg-glass p-6 text-secondary leading-relaxed backdrop-blur-md">
-          {dtc.description.fr}
+          {description}
         </div>
       </section>
+
+      {/* MOT fail notice (EN only) */}
+      {isEn && dtc.motFail && (
+        <section className="mb-10">
+          <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
+            <h3 className="mb-2 text-lg font-bold text-amber-400">
+              Will {dtc.code} fail my MOT?
+            </h3>
+            <p className="text-secondary leading-relaxed">{dtc.motFail}</p>
+          </div>
+        </section>
+      )}
 
       {/* Causes with cost per country */}
       <section className="mb-10">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <h3 className="text-xl font-bold">
-            Causes possibles et couts de reparation
+            {isEn
+              ? "Possible causes and repair costs"
+              : "Causes possibles et couts de reparation"}
           </h3>
           <select
             value={selectedCountry}
             onChange={(e) => setSelectedCountry(e.target.value as CountryKey)}
             className="rounded-lg border border-border bg-surface px-3 py-2 text-sm text-white transition-colors focus:border-cyan/50 focus:outline-none focus:ring-2 focus:ring-cyan/20"
-            aria-label="Pays pour les prix"
+            aria-label={isEn ? "Country for pricing" : "Pays pour les prix"}
           >
             {countries.map((c) => (
               <option key={c.key} value={c.key}>
@@ -149,85 +190,91 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
         </div>
 
         <div className="space-y-3">
-          {dtc.causes.map((cause, index) => (
-            <div
-              key={index}
-              className="rounded-xl border border-border bg-glass backdrop-blur-md"
-            >
-              <button
-                type="button"
-                onClick={() => toggleCause(index)}
-                className="flex w-full items-center justify-between gap-3 p-5 text-left"
-                aria-expanded={expandedCauses[index] ?? false}
+          {dtc.causes.map((cause, index) => {
+            const costMinVal = cause.costMin[selectedCountry] ?? cause.costMin.fr;
+            const costMaxVal = cause.costMax[selectedCountry] ?? cause.costMax.fr;
+            return (
+              <div
+                key={index}
+                className="rounded-xl border border-border bg-glass backdrop-blur-md"
               >
-                <div className="flex-1">
-                  <p className="font-semibold">{cause.name.fr}</p>
-                  <div className="mt-1">
-                    <CostRange
-                      min={cause.costMin[selectedCountry]}
-                      max={cause.costMax[selectedCountry]}
-                      currency={currency}
-                    />
-                  </div>
-                </div>
-                <ChevronIcon open={expandedCauses[index] ?? false} />
-              </button>
-              <AnimatePresence>
-                {expandedCauses[index] && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="border-t border-border px-5 pb-5 pt-4">
-                      <p className="mb-3 text-sm text-secondary">
-                        Prix par pays :
-                      </p>
-                      <div className="grid gap-2 sm:grid-cols-5">
-                        {countries.map((country) => (
-                          <div
-                            key={country.key}
-                            className={`rounded-lg border p-3 text-center ${
-                              country.key === selectedCountry
-                                ? "border-cyan/30 bg-cyan/5"
-                                : "border-border"
-                            }`}
-                          >
-                            <p className="text-xs text-secondary">
-                              {country.label}
-                            </p>
-                            <p className="mt-1 text-sm font-semibold">
-                              {new Intl.NumberFormat("fr-FR").format(
-                                cause.costMin[country.key]
-                              )}{" "}
-                              —{" "}
-                              {new Intl.NumberFormat("fr-FR").format(
-                                cause.costMax[country.key]
-                              )}
-                            </p>
-                            <p className="text-xs text-secondary">
-                              {country.currency}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
+                <button
+                  type="button"
+                  onClick={() => toggleCause(index)}
+                  className="flex w-full items-center justify-between gap-3 p-5 text-left"
+                  aria-expanded={expandedCauses[index] ?? false}
+                >
+                  <div className="flex-1">
+                    <p className="font-semibold">{getLocalised(cause.name, locale)}</p>
+                    <div className="mt-1">
+                      <CostRange
+                        min={costMinVal}
+                        max={costMaxVal}
+                        currency={currency}
+                      />
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
+                  </div>
+                  <ChevronIcon open={expandedCauses[index] ?? false} />
+                </button>
+                <AnimatePresence>
+                  {expandedCauses[index] && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="border-t border-border px-5 pb-5 pt-4">
+                        <p className="mb-3 text-sm text-secondary">
+                          {isEn ? "Price by country:" : "Prix par pays :"}
+                        </p>
+                        <div className="grid gap-2 sm:grid-cols-5">
+                          {countries.map((country) => {
+                            const minVal = cause.costMin[country.key] ?? cause.costMin.fr;
+                            const maxVal = cause.costMax[country.key] ?? cause.costMax.fr;
+                            return (
+                              <div
+                                key={country.key}
+                                className={`rounded-lg border p-3 text-center ${
+                                  country.key === selectedCountry
+                                    ? "border-cyan/30 bg-cyan/5"
+                                    : "border-border"
+                                }`}
+                              >
+                                <p className="text-xs text-secondary">
+                                  {country.label}
+                                </p>
+                                <p className="mt-1 text-sm font-semibold">
+                                  {new Intl.NumberFormat(numberFormat).format(minVal)}{" "}
+                                  —{" "}
+                                  {new Intl.NumberFormat(numberFormat).format(maxVal)}
+                                </p>
+                                <p className="text-xs text-secondary">
+                                  {country.currency}
+                                </p>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
         </div>
       </section>
 
       {/* Symptoms */}
       <section className="mb-10">
-        <h3 className="mb-4 text-xl font-bold">Symptomes a surveiller</h3>
+        <h3 className="mb-4 text-xl font-bold">
+          {isEn ? "Symptoms to watch for" : "Symptomes a surveiller"}
+        </h3>
         <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
           <ul className="space-y-2.5">
-            {dtc.symptoms.fr.map((symptom, index) => (
+            {symptoms.map((symptom, index) => (
               <li key={index} className="flex items-start gap-2.5">
                 <svg
                   className="mt-0.5 h-4 w-4 shrink-0 text-cyan"
@@ -251,16 +298,17 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
       {/* Vehicle Selector */}
       <section className="mb-10">
         <h3 className="mb-4 text-xl font-bold">
-          Verifier la compatibilite de votre vehicule
+          {isEn
+            ? "Check your vehicle's compatibility"
+            : "Verifier la compatibilite de votre vehicule"}
         </h3>
         <VehicleSelector onSelect={setSelectedVehicle} />
         {selectedVehicle && (
           <div className="mt-4 rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
             <p className="text-sm text-emerald-400">
-              Votre {selectedVehicle.brand} {selectedVehicle.model} est
-              compatible avec AutoDiag EU. Le protocole {selectedVehicle.protocol}{" "}
-              permet la lecture du code {dtc.code} et{" "}
-              {selectedVehicle.pidsSupported} PIDs en temps reel.
+              {isEn
+                ? `Your ${selectedVehicle.brand} ${selectedVehicle.model} is compatible with AutoDiag EU. The ${selectedVehicle.protocol} protocol supports reading code ${dtc.code} and ${selectedVehicle.pidsSupported} real-time PIDs.`
+                : `Votre ${selectedVehicle.brand} ${selectedVehicle.model} est compatible avec AutoDiag EU. Le protocole ${selectedVehicle.protocol} permet la lecture du code ${dtc.code} et ${selectedVehicle.pidsSupported} PIDs en temps reel.`}
             </p>
           </div>
         )}
@@ -269,17 +317,19 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
       {/* Related codes */}
       {relatedDTCs.length > 0 && (
         <section className="mb-10">
-          <h3 className="mb-4 text-xl font-bold">Codes associes</h3>
+          <h3 className="mb-4 text-xl font-bold">
+            {isEn ? "Related codes" : "Codes associes"}
+          </h3>
           <div className="flex flex-wrap gap-2">
             {relatedDTCs.map((related) => (
               <Link
                 key={related.code}
-                href={`/fr/codes/${related.code.toLowerCase()}`}
+                href={`/${locale}/codes/${related.code.toLowerCase()}`}
                 className="rounded-lg border border-border bg-glass px-4 py-2.5 backdrop-blur-md transition-all hover:border-cyan/30 hover:text-cyan"
               >
                 <span className="font-bold text-gradient">{related.code}</span>
                 <span className="ml-2 text-sm text-secondary">
-                  {related.name.fr}
+                  {getLocalised(related.name, locale)}
                 </span>
               </Link>
             ))}
@@ -288,11 +338,13 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
       )}
 
       {/* FAQ */}
-      {dtc.faq.fr.length > 0 && (
+      {faqData.length > 0 && (
         <section className="mb-10">
-          <h3 className="mb-4 text-xl font-bold">Questions frequentes</h3>
+          <h3 className="mb-4 text-xl font-bold">
+            {isEn ? "Frequently asked questions" : "Questions frequentes"}
+          </h3>
           <div className="space-y-3">
-            {dtc.faq.fr.map((faqEntry, index) => (
+            {faqData.map((faqEntry, index) => (
               <div
                 key={index}
                 className="rounded-xl border border-border bg-glass backdrop-blur-md"
@@ -333,17 +385,22 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
       <section className="mb-10">
         <div className="rounded-2xl border border-cyan/20 bg-gradient-to-br from-cyan/5 to-green/5 p-8 text-center">
           <h3 className="mb-2 text-xl font-bold">
-            Pour un diagnostic precis de votre vehicule
+            {isEn
+              ? "For a precise diagnostic of your vehicle"
+              : "Pour un diagnostic precis de votre vehicule"}
           </h3>
           <p className="mb-6 text-secondary">
-            Scannez votre voiture avec AutoDiag EU — lecture des codes DTC en
-            temps reel, scan audio IA et bien plus encore.
+            {isEn
+              ? "Scan your car with AutoDiag EU — real-time fault code reading, AI audio scan and much more."
+              : "Scannez votre voiture avec AutoDiag EU — lecture des codes DTC en temps reel, scan audio IA et bien plus encore."}
           </p>
           <a
             href="#beta"
             className="group relative inline-block overflow-hidden rounded-full bg-green px-8 py-3 font-semibold text-black transition-shadow hover:shadow-[0_0_30px_rgba(0,200,83,0.4)]"
           >
-            <span className="relative z-10">Telecharger AutoDiag EU</span>
+            <span className="relative z-10">
+              {isEn ? "Download AutoDiag EU" : "Telecharger AutoDiag EU"}
+            </span>
             <span
               aria-hidden="true"
               className="shimmer pointer-events-none absolute inset-0"
@@ -355,8 +412,10 @@ export default function DTCDetail({ dtc, relatedDTCs }: DTCDetailProps) {
       {/* Share */}
       <div className="flex justify-end">
         <ShareButton
-          title={`${dtc.code} — ${dtc.name.fr}`}
-          text={`Decouvrez le code defaut ${dtc.code} : ${dtc.name.fr}`}
+          title={`${dtc.code} — ${name}`}
+          text={isEn
+            ? `Discover fault code ${dtc.code}: ${name}`
+            : `Decouvrez le code defaut ${dtc.code} : ${name}`}
         />
       </div>
     </article>

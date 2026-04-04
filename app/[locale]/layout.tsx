@@ -8,13 +8,20 @@ import CookieConsent from "@/components/shared/CookieConsent";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import "../globals.css";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag-eu.com";
+
 export const metadata: Metadata = {
   title: "AutoDiag EU — Diagnostic automobile intelligent",
   description:
     "La seule app qui ecoute votre moteur. Diagnostic OBD2, scan audio IA, 250 codes DTC, 677 vehicules compatibles. Gratuit au lancement.",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag-eu.com"
-  ),
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    languages: {
+      "fr": `${SITE_URL}/fr`,
+      "en-GB": `${SITE_URL}/en`,
+      "x-default": `${SITE_URL}/fr`,
+    },
+  },
   openGraph: {
     title: "AutoDiag EU — Diagnostic automobile intelligent",
     description:
@@ -44,7 +51,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale === "en" ? "en-GB" : locale} className="dark">
       <head>
         <meta name="theme-color" content="#050510" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

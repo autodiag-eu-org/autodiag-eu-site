@@ -1,5 +1,6 @@
 /**
  * SEO utilities — Generate Next.js Metadata objects
+ * Includes hreflang FR + EN-GB + x-default on all pages
  */
 
 import type { Metadata } from "next";
@@ -22,6 +23,21 @@ interface PageMetadataParams {
 }
 
 /**
+ * Build hreflang alternates for a given path segment.
+ * x-default points to FR (the default locale).
+ */
+function buildAlternates(pathSegment: string) {
+  return {
+    canonical: `${SITE_URL}${pathSegment}`,
+    languages: {
+      "fr": `${SITE_URL}/fr${pathSegment.replace(/^\/(fr|en)/, "")}`,
+      "en-GB": `${SITE_URL}/en${pathSegment.replace(/^\/(fr|en)/, "")}`,
+      "x-default": `${SITE_URL}/fr${pathSegment.replace(/^\/(fr|en)/, "")}`,
+    },
+  };
+}
+
+/**
  * Generate metadata for a DTC code page.
  */
 export function generateDTCMetadata({
@@ -30,7 +46,8 @@ export function generateDTCMetadata({
   description,
   locale,
 }: DTCMetadataParams): Metadata {
-  const url = `${SITE_URL}/${locale}/codes/${code.toLowerCase()}`;
+  const codeLower = code.toLowerCase();
+  const url = `${SITE_URL}/${locale}/codes/${codeLower}`;
   const fullTitle = `${code} — ${title} | ${SITE_NAME}`;
 
   return {
@@ -39,7 +56,9 @@ export function generateDTCMetadata({
     alternates: {
       canonical: url,
       languages: {
-        fr: `${SITE_URL}/fr/codes/${code.toLowerCase()}`,
+        "fr": `${SITE_URL}/fr/codes/${codeLower}`,
+        "en-GB": `${SITE_URL}/en/codes/${codeLower}`,
+        "x-default": `${SITE_URL}/fr/codes/${codeLower}`,
       },
     },
     openGraph: {
@@ -69,6 +88,7 @@ export function generatePageMetadata({
 }: PageMetadataParams): Metadata {
   const url = `${SITE_URL}/${locale}${path ? `/${path}` : ""}`;
   const fullTitle = `${title} | ${SITE_NAME}`;
+  const pathSuffix = path ? `/${path}` : "";
 
   return {
     title: fullTitle,
@@ -76,7 +96,9 @@ export function generatePageMetadata({
     alternates: {
       canonical: url,
       languages: {
-        fr: `${SITE_URL}/fr${path ? `/${path}` : ""}`,
+        "fr": `${SITE_URL}/fr${pathSuffix}`,
+        "en-GB": `${SITE_URL}/en${pathSuffix}`,
+        "x-default": `${SITE_URL}/fr${pathSuffix}`,
       },
     },
     openGraph: {

@@ -8,11 +8,13 @@ import type { DTCCode } from "@/lib/dtc";
 
 interface DTCEncyclopediaClientProps {
   initialCodes: DTCCode[];
+  locale?: string;
 }
 
-function DTCEncyclopediaContent({ initialCodes }: DTCEncyclopediaClientProps) {
+function DTCEncyclopediaContent({ initialCodes, locale = "fr" }: DTCEncyclopediaClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("tous");
+  const isEn = locale === "en";
 
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
@@ -35,12 +37,17 @@ function DTCEncyclopediaContent({ initialCodes }: DTCEncyclopediaClientProps) {
       const q = searchQuery.toLowerCase().trim();
       codes = codes.filter((dtc) => {
         const matchesCode = dtc.code.toLowerCase().includes(q);
-        const matchesName = dtc.name.fr.toLowerCase().includes(q);
-        const matchesDescription = dtc.description.fr.toLowerCase().includes(q);
-        const matchesSymptoms = dtc.symptoms.fr.some((s) =>
+        const matchesNameFr = dtc.name.fr.toLowerCase().includes(q);
+        const matchesNameEn = dtc.name.en?.toLowerCase().includes(q);
+        const matchesDescFr = dtc.description.fr.toLowerCase().includes(q);
+        const matchesDescEn = dtc.description.en?.toLowerCase().includes(q);
+        const matchesSymptomsFr = dtc.symptoms.fr.some((s) =>
           s.toLowerCase().includes(q)
         );
-        return matchesCode || matchesName || matchesDescription || matchesSymptoms;
+        const matchesSymptomsEn = dtc.symptoms.en?.some((s) =>
+          s.toLowerCase().includes(q)
+        );
+        return matchesCode || matchesNameFr || matchesNameEn || matchesDescFr || matchesDescEn || matchesSymptomsFr || matchesSymptomsEn;
       });
     }
 
@@ -64,16 +71,20 @@ function DTCEncyclopediaContent({ initialCodes }: DTCEncyclopediaClientProps) {
       {filteredCodes.length === 0 ? (
         <div className="py-16 text-center">
           <p className="text-lg text-secondary">
-            Aucun code ne correspond a votre recherche.
+            {isEn
+              ? "No codes match your search."
+              : "Aucun code ne correspond a votre recherche."}
           </p>
           <p className="mt-2 text-sm text-secondary/70">
-            Essayez un autre terme ou changez de categorie.
+            {isEn
+              ? "Try another term or change the category."
+              : "Essayez un autre terme ou changez de categorie."}
           </p>
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {filteredCodes.map((dtc, index) => (
-            <DTCCard key={dtc.code} dtc={dtc} index={index} />
+            <DTCCard key={dtc.code} dtc={dtc} index={index} locale={locale} />
           ))}
         </div>
       )}
@@ -83,10 +94,11 @@ function DTCEncyclopediaContent({ initialCodes }: DTCEncyclopediaClientProps) {
 
 export default function DTCEncyclopediaClient({
   initialCodes,
+  locale = "fr",
 }: DTCEncyclopediaClientProps) {
   return (
     <Suspense>
-      <DTCEncyclopediaContent initialCodes={initialCodes} />
+      <DTCEncyclopediaContent initialCodes={initialCodes} locale={locale} />
     </Suspense>
   );
 }

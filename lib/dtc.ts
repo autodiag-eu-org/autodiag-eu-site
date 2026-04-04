@@ -1,5 +1,6 @@
 /**
  * DTC utility functions — search, filter, and retrieve diagnostic trouble codes
+ * Supports FR and EN locales
  */
 
 import dtcCodesData from "@/data/dtc/dtc_codes.json";
@@ -10,10 +11,11 @@ interface CountryPrices {
   ch: number;
   es: number;
   pt: number;
+  gb?: number;
 }
 
 interface DTCCause {
-  name: { fr: string };
+  name: { fr: string; en?: string };
   costMin: CountryPrices;
   costMax: CountryPrices;
 }
@@ -25,15 +27,16 @@ interface DTCFaqEntry {
 
 export interface DTCCode {
   code: string;
-  name: { fr: string };
-  description: { fr: string };
+  name: { fr: string; en?: string };
+  description: { fr: string; en?: string };
   severity: "low" | "medium" | "high" | "critical";
   canDrive: boolean;
   category: string;
   causes: DTCCause[];
-  symptoms: { fr: string[] };
+  symptoms: { fr: string[]; en?: string[] };
   relatedCodes: string[];
-  faq: { fr: DTCFaqEntry[] };
+  faq: { fr: DTCFaqEntry[]; en?: DTCFaqEntry[] };
+  motFail?: string;
 }
 
 const dtcCodes: DTCCode[] = dtcCodesData as DTCCode[];
@@ -50,6 +53,7 @@ export function getDTCByCode(code: string): DTCCode | undefined {
 /**
  * Search DTCs by query string — matches code, name, or description.
  * Case-insensitive, returns all matching entries.
+ * Searches both FR and EN content.
  */
 export function searchDTCs(query: string): DTCCode[] {
   if (!query || query.trim().length === 0) {
@@ -60,15 +64,30 @@ export function searchDTCs(query: string): DTCCode[] {
 
   return dtcCodes.filter((dtc) => {
     const matchesCode = dtc.code.toLowerCase().includes(normalizedQuery);
-    const matchesName = dtc.name.fr.toLowerCase().includes(normalizedQuery);
-    const matchesDescription = dtc.description.fr
+    const matchesNameFr = dtc.name.fr.toLowerCase().includes(normalizedQuery);
+    const matchesNameEn = dtc.name.en?.toLowerCase().includes(normalizedQuery);
+    const matchesDescFr = dtc.description.fr
       .toLowerCase()
       .includes(normalizedQuery);
-    const matchesSymptoms = dtc.symptoms.fr.some((s) =>
+    const matchesDescEn = dtc.description.en
+      ?.toLowerCase()
+      .includes(normalizedQuery);
+    const matchesSymptomsFr = dtc.symptoms.fr.some((s) =>
+      s.toLowerCase().includes(normalizedQuery)
+    );
+    const matchesSymptomsEn = dtc.symptoms.en?.some((s) =>
       s.toLowerCase().includes(normalizedQuery)
     );
 
-    return matchesCode || matchesName || matchesDescription || matchesSymptoms;
+    return (
+      matchesCode ||
+      matchesNameFr ||
+      matchesNameEn ||
+      matchesDescFr ||
+      matchesDescEn ||
+      matchesSymptomsFr ||
+      matchesSymptomsEn
+    );
   });
 }
 
@@ -109,4 +128,27 @@ export function getRelatedDTCs(code: string): DTCCode[] {
   return dtc.relatedCodes
     .map((relCode) => getDTCByCode(relCode))
     .filter((entry): entry is DTCCode => entry !== undefined);
+}
+
+/**
+ * Helper to get localised text from a field that has {fr, en?} shape.
+ * Falls back to FR if the requested locale is not available.
+ */
+export function getLocalised(
+  field: { fr: string; en?: string },
+  locale: string
+): string {
+  if (locale === "en" && field.en) return field.en;
+  return field.fr;
+}
+
+/**
+ * Helper to get localised array from a field that has {fr: string[], en?: string[]} shape.
+ */
+export function getLocalisedArray(
+  field: { fr: string[]; en?: string[] },
+  locale: string
+): string[] {
+  if (locale === "en" && field.en) return field.en;
+  return field.fr;
 }
