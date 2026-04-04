@@ -9,16 +9,185 @@ export async function generateMetadata({
   params,
 }: MentionsLegalesPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const isEn = locale === "en";
   return generatePageMetadata({
-    title: "Mentions legales — Impressum",
-    description:
-      "Mentions legales et impressum d'AutoDiag EU Sarl, entreprise suisse basee a Boncourt, Canton du Jura.",
+    title: isEn
+      ? "Legal Notice — Impressum"
+      : "Mentions legales — Impressum",
+    description: isEn
+      ? "Legal notice and impressum for AutoDiag EU Sarl, a Swiss company based in Boncourt, Canton of Jura."
+      : "Mentions legales et impressum d'AutoDiag EU Sarl, entreprise suisse basee a Boncourt, Canton du Jura.",
     locale,
     path: "mentions-legales",
   });
 }
 
-export default function MentionsLegalesPage() {
+export default async function MentionsLegalesPage({
+  params,
+}: MentionsLegalesPageProps) {
+  const { locale } = await params;
+  const isEn = locale === "en";
+
+  if (isEn) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+        <h1 className="mb-8 text-3xl font-bold sm:text-4xl">Legal Notice</h1>
+
+        <div className="space-y-8 text-secondary leading-relaxed">
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Publisher
+            </h2>
+            <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
+              <p className="mb-2">
+                <strong className="text-white">Company name:</strong>{" "}
+                AutoDiag EU Sarl (registration in progress)
+              </p>
+              <p className="mb-2">
+                <strong className="text-white">Legal form:</strong>{" "}
+                Swiss limited liability company (Sarl / GmbH) under Swiss
+                Code of Obligations (CO)
+              </p>
+              <p className="mb-2">
+                <strong className="text-white">Registered address:</strong>{" "}
+                Route du Jura 10, 2926 Boncourt, Switzerland
+              </p>
+              <p className="mb-2">
+                <strong className="text-white">Email:</strong>{" "}
+                <a
+                  href="mailto:info@autodiag-eu.com"
+                  className="text-cyan hover:underline"
+                >
+                  info@autodiag-eu.com
+                </a>
+              </p>
+              <p className="mb-2">
+                <strong className="text-white">Publication manager:</strong>{" "}
+                Reda Kaouani
+              </p>
+              <p className="mb-2">
+                <strong className="text-white">IDE / CHE number:</strong>{" "}
+                Pending registration
+              </p>
+              <p>
+                <strong className="text-white">Commercial register:</strong>{" "}
+                Canton of Jura, Switzerland
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Hosting
+            </h2>
+            <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
+              <p className="mb-2">
+                <strong className="text-white">Host:</strong> Vercel Inc.
+              </p>
+              <p className="mb-2">
+                <strong className="text-white">Address:</strong> 440 N Barranca
+                Ave #4133, Covina, CA 91723, United States
+              </p>
+              <p>
+                <strong className="text-white">Website:</strong>{" "}
+                <a
+                  href="https://vercel.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan hover:underline"
+                >
+                  vercel.com
+                </a>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Intellectual Property
+            </h2>
+            <p>
+              All content on this website (text, images, graphics, logo, icons,
+              software) is the exclusive property of AutoDiag EU Sarl or its
+              partners and is protected by Swiss and international intellectual
+              property laws.
+            </p>
+            <p className="mt-3">
+              Any reproduction, representation, modification, publication or
+              adaptation of any part of the website&apos;s content, by any means
+              or process whatsoever, is prohibited without the prior written
+              authorisation of AutoDiag EU Sarl.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Limitation of Liability
+            </h2>
+            <p>
+              The information provided on this website is for guidance purposes
+              only. AutoDiag EU Sarl cannot guarantee the accuracy, completeness
+              or currency of the information published. Diagnostics provided by
+              the AutoDiag EU application are indicative only and do not under
+              any circumstances replace the advice of a qualified professional
+              mechanic.
+            </p>
+            <p className="mt-3">
+              AutoDiag EU Sarl shall not be liable for any direct or indirect
+              damage caused to the user&apos;s equipment when accessing the
+              website or application, nor for any damage resulting from the use
+              of diagnostic information provided.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Hyperlinks
+            </h2>
+            <p>
+              This website may contain links to other websites. AutoDiag EU
+              Sarl exercises no control over those sites and accepts no
+              responsibility for their content or data protection practices.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Applicable Law and Jurisdiction
+            </h2>
+            <p>
+              These legal notices are governed by Swiss law. Any dispute
+              relating to the use of this website shall be subject to the
+              exclusive jurisdiction of the courts of the Canton of Jura,
+              Switzerland, except where mandatory consumer protection provisions
+              applicable in the user&apos;s country of residence provide
+              otherwise.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">Contact</h2>
+            <p>
+              For any questions regarding these legal notices, please contact us
+              at{" "}
+              <a
+                href="mailto:info@autodiag-eu.com"
+                className="text-cyan hover:underline"
+              >
+                info@autodiag-eu.com
+              </a>
+              .
+            </p>
+          </section>
+
+          <p className="pt-4 text-sm text-secondary/60">
+            Last updated: 3 April 2026
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
       <h1 className="mb-8 text-3xl font-bold sm:text-4xl">

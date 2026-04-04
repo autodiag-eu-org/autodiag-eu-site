@@ -9,16 +9,360 @@ export async function generateMetadata({
   params,
 }: ConfidentialitePageProps): Promise<Metadata> {
   const { locale } = await params;
+  const isEn = locale === "en";
   return generatePageMetadata({
-    title: "Politique de confidentialite — RGPD et nDSG",
-    description:
-      "Politique de confidentialite d'AutoDiag EU : double conformite RGPD (UE) et nDSG (Suisse). Transparence totale sur vos donnees.",
+    title: isEn
+      ? "Privacy Policy — UK GDPR & Swiss nDSG"
+      : "Politique de confidentialite — RGPD et nDSG",
+    description: isEn
+      ? "Privacy Policy for AutoDiag EU: compliant with UK GDPR, EU GDPR, and Swiss nDSG. Full transparency on how your personal data is processed."
+      : "Politique de confidentialite d'AutoDiag EU : double conformite RGPD (UE) et nDSG (Suisse). Transparence totale sur vos donnees.",
     locale,
     path: "confidentialite",
   });
 }
 
-export default function ConfidentialitePage() {
+export default async function ConfidentialitePage({
+  params,
+}: ConfidentialitePageProps) {
+  const { locale } = await params;
+  const isEn = locale === "en";
+
+  if (isEn) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+        <h1 className="mb-8 text-3xl font-bold sm:text-4xl">
+          Privacy Policy
+        </h1>
+
+        <div className="space-y-8 text-secondary leading-relaxed">
+          <section>
+            <div className="rounded-2xl border border-cyan/20 bg-cyan/5 p-6">
+              <p className="text-white">
+                AutoDiag EU Sarl complies with the{" "}
+                <strong>
+                  UK General Data Protection Regulation (UK GDPR)
+                </strong>{" "}
+                as retained in UK law following the end of the Brexit transition
+                period, the{" "}
+                <strong>
+                  EU General Data Protection Regulation (EU GDPR)
+                </strong>
+                , and the{" "}
+                <strong>
+                  Swiss Federal Act on Data Protection (nDSG)
+                </strong>{" "}
+                which entered into force on 1 September 2023. This triple
+                compliance ensures the highest level of protection for your
+                personal data, whether you are in the United Kingdom,
+                the European Union, or Switzerland.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              1. Data Controller
+            </h2>
+            <p>
+              AutoDiag EU Sarl (registration in progress)
+              <br />
+              Route du Jura 10, 2926 Boncourt, Switzerland
+              <br />
+              Email:{" "}
+              <a
+                href="mailto:info@autodiag-eu.com"
+                className="text-cyan hover:underline"
+              >
+                info@autodiag-eu.com
+              </a>
+              <br />
+              Contact person: Reda Kaouani
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              2. Personal Data Collected and Purposes
+            </h2>
+            <p className="mb-4">
+              We collect only the personal data necessary for the provision of
+              our services. Full details are set out below:
+            </p>
+
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
+                <h3 className="mb-2 font-semibold text-white">
+                  Beta-tester registration form
+                </h3>
+                <p className="mb-2">
+                  <strong className="text-white">Data:</strong> name, email
+                  address, vehicle (optional), country
+                </p>
+                <p className="mb-2">
+                  <strong className="text-white">Legal basis:</strong>{" "}
+                  explicit consent (Article 6(1)(a) UK GDPR / Article 6(1)(a)
+                  EU GDPR / Article 31 nDSG)
+                </p>
+                <p>
+                  <strong className="text-white">Purpose:</strong> sending the
+                  access link to the beta version of the application and
+                  communications relating to the launch
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
+                <h3 className="mb-2 font-semibold text-white">
+                  Google Analytics 4 (GA4)
+                </h3>
+                <p className="mb-2">
+                  <strong className="text-white">Data:</strong> anonymised
+                  browsing data (pages visited, session duration, device type,
+                  country)
+                </p>
+                <p className="mb-2">
+                  <strong className="text-white">Legal basis:</strong>{" "}
+                  consent via the cookie banner (Article 6(1)(a) UK GDPR /
+                  EU GDPR)
+                </p>
+                <p className="mb-2">
+                  <strong className="text-white">Purpose:</strong> statistical
+                  audience analysis to improve the website
+                </p>
+                <p>
+                  <strong className="text-white">Important:</strong> GA4 does
+                  not load until you have accepted cookies. The consent banner
+                  is blocking — no tracker activates without your explicit
+                  agreement.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
+                <h3 className="mb-2 font-semibold text-white">
+                  Diagnostics via the mobile application
+                </h3>
+                <p className="mb-2">
+                  <strong className="text-white">Data:</strong> vehicle
+                  technical data (fault codes, engine parameters), engine audio
+                  recordings (if the audio scan feature is used)
+                </p>
+                <p className="mb-2">
+                  <strong className="text-white">Legal basis:</strong>{" "}
+                  performance of a contract (Article 6(1)(b) UK GDPR /
+                  EU GDPR)
+                </p>
+                <p>
+                  <strong className="text-white">Purpose:</strong> provision of
+                  the vehicle diagnostic service
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              3. Retention Periods
+            </h2>
+            <ul className="list-inside list-disc space-y-2">
+              <li>
+                <strong className="text-white">
+                  Email addresses and beta data:
+                </strong>{" "}
+                retained until you unsubscribe or submit a deletion request
+              </li>
+              <li>
+                <strong className="text-white">GA4 data:</strong> maximum 26
+                months (Google Analytics configuration)
+              </li>
+              <li>
+                <strong className="text-white">Application diagnostics:</strong>{" "}
+                automatic purge after 30 days (free plan) or 90 days (Premium
+                plan), unless the user requests that their history be retained
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              4. Data Sharing
+            </h2>
+            <p>
+              We never sell your personal data. The only processors with access
+              to certain data are:
+            </p>
+            <ul className="mt-3 list-inside list-disc space-y-2">
+              <li>
+                <strong className="text-white">Supabase (Singapore/EU):</strong>{" "}
+                database hosting, GDPR-compliant infrastructure
+              </li>
+              <li>
+                <strong className="text-white">Vercel (USA):</strong>{" "}
+                website hosting, DPA signed
+              </li>
+              <li>
+                <strong className="text-white">Resend (USA):</strong>{" "}
+                transactional email delivery
+              </li>
+              <li>
+                <strong className="text-white">Google (USA):</strong> Google
+                Analytics 4, only if you have accepted cookies
+              </li>
+            </ul>
+            <p className="mt-3">
+              Transfers to third countries (USA) are governed by the European
+              Commission&apos;s Standard Contractual Clauses and the EU–US Data
+              Privacy Framework. For UK data subjects, transfers rely on the
+              International Data Transfer Agreement (IDTA) or equivalent
+              adequacy mechanisms recognised by the UK ICO.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              5. Your Rights
+            </h2>
+            <p className="mb-3">
+              Under the UK GDPR, EU GDPR, and nDSG, you have the following
+              rights as a data subject:
+            </p>
+            <ul className="list-inside list-disc space-y-2">
+              <li>
+                <strong className="text-white">Right of access:</strong>{" "}
+                to know what personal data we hold about you
+              </li>
+              <li>
+                <strong className="text-white">Right to rectification:</strong>{" "}
+                to correct inaccurate personal data
+              </li>
+              <li>
+                <strong className="text-white">Right to erasure:</strong>{" "}
+                to request the deletion of your personal data
+              </li>
+              <li>
+                <strong className="text-white">Right to data portability:</strong>{" "}
+                to receive your data in a structured, machine-readable format
+              </li>
+              <li>
+                <strong className="text-white">Right to object:</strong>{" "}
+                to object to the processing of your personal data for marketing
+                purposes
+              </li>
+              <li>
+                <strong className="text-white">
+                  Right to withdraw consent:
+                </strong>{" "}
+                at any time, without affecting the lawfulness of processing
+                carried out before withdrawal
+              </li>
+            </ul>
+            <p className="mt-3">
+              To exercise any of these rights, please send an email to{" "}
+              <a
+                href="mailto:info@autodiag-eu.com"
+                className="text-cyan hover:underline"
+              >
+                info@autodiag-eu.com
+              </a>{" "}
+              setting out your request. We will respond within 30 days.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              6. Cookies
+            </h2>
+            <p>
+              This website uses only Google Analytics 4 cookies, and exclusively
+              after your explicit consent. The consent banner is blocking: no
+              analytics cookie is set until you click &ldquo;Accept&rdquo;.
+            </p>
+            <p className="mt-3">
+              No advertising or targeting cookies are used on this website.
+              Strictly necessary cookies (language preference, session) do not
+              require consent.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              7. Data Security
+            </h2>
+            <p>
+              We implement appropriate technical and organisational measures to
+              protect your personal data: encryption in transit (TLS 1.3),
+              encryption at rest (AES-256), two-factor authentication for
+              administrative access, and access logging.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              8. Supervisory Authorities
+            </h2>
+            <p>
+              If you believe that the processing of your personal data infringes
+              your rights, you may lodge a complaint with the relevant
+              supervisory authority:
+            </p>
+            <ul className="mt-3 list-inside list-disc space-y-2">
+              <li>
+                <strong className="text-white">United Kingdom:</strong>{" "}
+                Information Commissioner&apos;s Office (ICO) —{" "}
+                <a
+                  href="https://ico.org.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan hover:underline"
+                >
+                  ico.org.uk
+                </a>
+              </li>
+              <li>
+                <strong className="text-white">Switzerland:</strong> Federal
+                Data Protection and Information Commissioner (FDPIC / PFPDT)
+              </li>
+              <li>
+                <strong className="text-white">European Union:</strong> the data
+                protection authority in your country of residence
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              9. Changes to this Policy
+            </h2>
+            <p>
+              We reserve the right to amend this Privacy Policy at any time.
+              Any changes will be published on this page with an updated date.
+              In the event of a material change, we will notify you by email or
+              via a notice on the website.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">Contact</h2>
+            <p>
+              For any questions relating to the protection of your personal
+              data, please contact us at{" "}
+              <a
+                href="mailto:info@autodiag-eu.com"
+                className="text-cyan hover:underline"
+              >
+                info@autodiag-eu.com
+              </a>
+              .
+            </p>
+          </section>
+
+          <p className="pt-4 text-sm text-secondary/60">
+            Last updated: 3 April 2026
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
       <h1 className="mb-8 text-3xl font-bold sm:text-4xl">

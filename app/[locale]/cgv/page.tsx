@@ -9,16 +9,304 @@ export async function generateMetadata({
   params,
 }: CGVPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const isEn = locale === "en";
   return generatePageMetadata({
-    title: "Conditions generales de vente",
-    description:
-      "Conditions generales de vente d'AutoDiag EU : abonnement Premium 49 CHF/an, essai gratuit 7 jours, facturation Google Play.",
+    title: isEn
+      ? "Terms and Conditions"
+      : "Conditions generales de vente",
+    description: isEn
+      ? "Terms and Conditions for AutoDiag EU: Premium subscription at £42/year, 7-day free trial, Google Play Billing, 14-day cooling-off period."
+      : "Conditions generales de vente d'AutoDiag EU : abonnement Premium 49 CHF/an, essai gratuit 7 jours, facturation Google Play.",
     locale,
     path: "cgv",
   });
 }
 
-export default function CGVPage() {
+export default async function CGVPage({ params }: CGVPageProps) {
+  const { locale } = await params;
+  const isEn = locale === "en";
+
+  if (isEn) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+        <h1 className="mb-8 text-3xl font-bold sm:text-4xl">
+          Terms and Conditions
+        </h1>
+
+        <div className="space-y-8 text-secondary leading-relaxed">
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              1. Preamble
+            </h2>
+            <p>
+              These Terms and Conditions (&ldquo;T&amp;Cs&rdquo;) govern the
+              contractual relationship between AutoDiag EU Sarl (registration in
+              progress), Route du Jura 10, 2926 Boncourt, Switzerland
+              (&ldquo;the Publisher&rdquo;) and any individual or legal entity
+              wishing to subscribe to the Premium offer of the AutoDiag EU
+              application (&ldquo;the User&rdquo;).
+            </p>
+            <p className="mt-3">
+              By subscribing to the Premium offer, the User confirms that they
+              have read these T&amp;Cs and accept them without reservation.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              2. Product Description
+            </h2>
+            <p>
+              AutoDiag EU is a mobile vehicle diagnostic application available
+              on Android (Google Play Store). The application offers:
+            </p>
+            <ul className="mt-3 list-inside list-disc space-y-2">
+              <li>
+                <strong className="text-white">Free version:</strong> unlimited
+                fault code reading, 4 live PIDs, 1 engine audio scan and 1
+                cabin audio scan per week, 3 AI questions per day, 7-day history
+              </li>
+              <li>
+                <strong className="text-white">Premium version:</strong> all
+                features without restriction — audio scans, PIDs, fault code
+                clearing, repair estimates, pre-MOT check for 5 countries, PDF
+                export, Drive Test without dongle, unlimited AI mechanic,
+                unlimited history
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              3. Pricing
+            </h2>
+            <div className="rounded-2xl border border-cyan/20 bg-cyan/5 p-6">
+              <p className="mb-2 text-2xl font-bold text-white">
+                Premium: £42 / year
+              </p>
+              <p>
+                Price inclusive of all taxes. The price shown is in pounds
+                sterling and is approximate, based on the equivalent of 49 CHF
+                per year. The exact amount charged may vary slightly depending
+                on Google Play&apos;s local pricing policy and prevailing
+                exchange rates.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              4. Free Trial
+            </h2>
+            <p>
+              Users receive a 7-day free trial of the Premium version. During
+              this period, all Premium features are accessible without
+              restriction. No payment details are required to start the trial.
+            </p>
+            <p className="mt-3">
+              At the end of the trial period, the User will be invited to
+              subscribe to Premium. Without a subscription, access reverts
+              automatically to the free version, with no loss of previously
+              completed diagnostics (subject to the free plan&apos;s retention
+              period).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              5. Billing and Payment
+            </h2>
+            <p>
+              Billing is managed exclusively by{" "}
+              <strong className="text-white">Google Play Billing</strong>. The
+              Publisher does not have access to your payment information (debit
+              or credit card, Google Pay account). Payment is charged via the
+              User&apos;s Google Play account.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              6. Automatic Renewal
+            </h2>
+            <p>
+              The Premium subscription renews automatically at each annual
+              renewal date. The User is notified by Google Play before each
+              renewal. The amount charged is the price in force at the time of
+              renewal.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              7. Cancellation
+            </h2>
+            <p>
+              The User may cancel their subscription at any time directly
+              through the{" "}
+              <strong className="text-white">Google Play Store</strong>:
+            </p>
+            <ol className="mt-3 list-inside list-decimal space-y-2">
+              <li>Open the Google Play Store on your Android device</li>
+              <li>
+                Tap your profile picture in the top right, then tap
+                &ldquo;Payments &amp; subscriptions&rdquo;
+              </li>
+              <li>Select &ldquo;Subscriptions&rdquo;</li>
+              <li>Select AutoDiag EU</li>
+              <li>Tap &ldquo;Cancel subscription&rdquo;</li>
+            </ol>
+            <p className="mt-3">
+              Cancellation takes effect at the end of the current billing
+              period. The User retains Premium access until that date.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              8. Refund Policy
+            </h2>
+            <p>The refund policy is as follows:</p>
+            <ul className="mt-3 list-inside list-disc space-y-2">
+              <li>
+                <strong className="text-white">
+                  Within 48 hours of purchase:
+                </strong>{" "}
+                automatic refund via Google Play, no reason required
+              </li>
+              <li>
+                <strong className="text-white">After 48 hours:</strong>{" "}
+                refund on reasoned request to our customer service team at{" "}
+                <a
+                  href="mailto:info@autodiag-eu.com"
+                  className="text-cyan hover:underline"
+                >
+                  info@autodiag-eu.com
+                </a>
+                . Each request is considered individually.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              9. Cooling-Off Period (UK)
+            </h2>
+            <p>
+              Under the{" "}
+              <strong className="text-white">
+                Consumer Contracts (Information, Cancellation and Additional
+                Charges) Regulations 2013
+              </strong>
+              , Users resident in the United Kingdom have a right to cancel
+              within{" "}
+              <strong className="text-white">14 days</strong> from the date of
+              subscription without giving any reason.
+            </p>
+            <p className="mt-3">
+              To exercise this right, please send an email to{" "}
+              <a
+                href="mailto:info@autodiag-eu.com"
+                className="text-cyan hover:underline"
+              >
+                info@autodiag-eu.com
+              </a>{" "}
+              clearly stating your wish to cancel, together with your Google
+              Play identifier or the email address associated with your account.
+              A refund will be processed within 14 days of receipt of your
+              request.
+            </p>
+            <p className="mt-3">
+              Please note: if you have expressly requested that the service
+              begin during the 14-day cooling-off period and the service has
+              commenced, you may be required to pay for the period during which
+              the service was provided, in accordance with Regulation 36 of the
+              2013 Regulations.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              10. Minimum Age
+            </h2>
+            <p>
+              Use of the AutoDiag EU application and subscription to the Premium
+              offer are restricted to persons aged{" "}
+              <strong className="text-white">18 years and over</strong>. By
+              subscribing, the User confirms that they have reached this minimum
+              age.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              11. Limitation of Liability
+            </h2>
+            <p>
+              The AutoDiag EU application provides diagnostic information for
+              guidance purposes only. Such information does not under any
+              circumstances replace the advice of a qualified professional
+              mechanic. The Publisher shall not be liable for any decisions made
+              by the User on the basis of the diagnostics provided by the
+              application, nor for any direct or indirect damage that may
+              result.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              12. Amendments to these T&amp;Cs
+            </h2>
+            <p>
+              The Publisher reserves the right to amend these T&amp;Cs at any
+              time. Amendments take effect upon publication on the website. The
+              User will be notified of any material amendment by email or
+              in-app notification at least 30 days before the new terms come
+              into force.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              13. Applicable Law and Jurisdiction
+            </h2>
+            <p>
+              These T&amp;Cs are governed by Swiss law. Any dispute relating to
+              the interpretation or performance of these T&amp;Cs shall be
+              subject to the exclusive jurisdiction of the{" "}
+              <strong className="text-white">
+                courts of the Canton of Jura, Switzerland
+              </strong>
+              , subject to any mandatory consumer protection provisions
+              applicable in the User&apos;s country of residence. For UK
+              consumers, nothing in these T&amp;Cs affects your statutory rights
+              under UK law.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 text-xl font-semibold text-white">Contact</h2>
+            <p>
+              For any questions relating to these Terms and Conditions, please
+              contact us at{" "}
+              <a
+                href="mailto:info@autodiag-eu.com"
+                className="text-cyan hover:underline"
+              >
+                info@autodiag-eu.com
+              </a>
+              .
+            </p>
+          </section>
+
+          <p className="pt-4 text-sm text-secondary/60">
+            Last updated: 3 April 2026
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
       <h1 className="mb-8 text-3xl font-bold sm:text-4xl">
@@ -139,8 +427,8 @@ export default function CGVPage() {
           </h2>
           <p>
             L&apos;Utilisateur peut annuler son abonnement a tout moment
-            directement depuis le <strong className="text-white">Google Play
-            Store</strong> :
+            directement depuis le{" "}
+            <strong className="text-white">Google Play Store</strong> :
           </p>
           <ol className="mt-3 list-inside list-decimal space-y-2">
             <li>Ouvrir le Google Play Store sur votre appareil Android</li>
