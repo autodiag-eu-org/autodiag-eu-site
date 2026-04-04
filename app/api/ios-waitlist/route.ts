@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { rateLimit } from "@/lib/rate-limit";
-import { notifyRedaIOSWaitlist } from "@/lib/email";
+// Email sending inlined — lib/email.ts had bundling issues on Vercel
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
@@ -86,8 +86,24 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     );
   }
 
-  // Notify Reda (non-blocking)
-  await notifyRedaIOSWaitlist(body.email.trim().toLowerCase());
+  // Notify Reda (non-blocking, inlined fetch)
+  const apiKey = process.env.RESEND_API_KEY;
+  if (apiKey) {
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          from: process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev",
+          to: "r.kaouani25@gmail.com",
+          subject: "[AutoDiag EU] Nouvelle inscription iOS waitlist",
+          html: `<div style="font-family:system-ui,sans-serif;padding:20px"><h2 style="color:#00e5ff">Nouvelle inscription iOS waitlist</h2><p>Email : ${body.email.trim().toLowerCase()}</p><hr style="border:none;border-top:1px solid #eee;margin:20px 0"><p style="color:#999;font-size:12px">Notification automatique — autodiag-eu.com</p></div>`,
+        }),
+      });
+    } catch {
+      // Non-blocking
+    }
+  }
 
   return NextResponse.json({
     success: true,

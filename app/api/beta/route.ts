@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { rateLimit } from "@/lib/rate-limit";
-import { sendBetaWelcomeEmail, notifyRedaBeta } from "@/lib/email";
+// Email sending inlined — lib/email.ts had bundling issues on Vercel
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
@@ -108,52 +108,59 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     );
   }
 
-  // Send welcome email (non-blocking for user experience)
-  const hasResendKey = !!process.env.RESEND_API_KEY;
-  const emailSent = await sendBetaWelcomeEmail(body.name.trim(), body.email.trim().toLowerCase());
+  // Send welcome email + notify Reda via direct fetch to Resend API
+  const emailName = body.name.trim();
+  const emailAddr = body.email.trim().toLowerCase();
+  const apiKey = process.env.RESEND_API_KEY;
+  const fromAddr = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
+  const betaUrl = process.env.NEXT_PUBLIC_BETA_OPTIN_URL ?? "https://autodiag-eu.com";
+  let emailSent = false;
 
-  if (emailSent) {
-    await supabase
-      .from("beta_requests")
-      .update({ email_sent: true })
-      .eq("email", body.email.trim().toLowerCase());
-  }
+  if (apiKey) {
+    // Welcome email to user
+    try {
+      const welcomeRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          from: fromAddr,
+          to: emailAddr,
+          subject: "Bienvenue dans la beta AutoDiag EU !",
+          html: `<div style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;padding:24px"><h1 style="color:#00e5ff">Bienvenue ${emailName} !</h1><p>Merci de rejoindre la beta d'AutoDiag EU.</p><p><strong>Important :</strong> Vous aurez besoin d'un compte Google (Gmail) pour installer l'application.</p><div style="margin:32px 0;text-align:center"><a href="${betaUrl}" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#00e5ff,#00c853);color:#050510;font-weight:700;text-decoration:none;border-radius:8px">Rejoindre la beta sur Google Play</a></div><p style="color:#666;font-size:14px">Questions ? <a href="mailto:info@autodiag-eu.com" style="color:#00e5ff">info@autodiag-eu.com</a></p><hr style="border:none;border-top:1px solid #eee;margin:24px 0"><p style="color:#999;font-size:12px">AutoDiag EU Sarl — Boncourt, Suisse</p></div>`,
+        }),
+      });
+      emailSent = welcomeRes.ok;
+    } catch {
+      emailSent = false;
+    }
 
-  // Notify Reda (non-blocking)
-  await notifyRedaBeta(
-    body.name.trim(),
-    body.email.trim().toLowerCase(),
-    body.vehicle?.trim() || null,
-    body.country.trim()
-  );
+    if (emailSent) {
+      await supabase
+        .from("beta_requests")
+        .update({ email_sent: true })
+        .eq("email", emailAddr);
+    }
 
-  // Debug: test email sending inline
-  let debugEmailResult: string = "not_attempted";
-  try {
-    const apiKey = process.env.RESEND_API_KEY;
-    const testRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "onboarding@resend.dev",
-        to: "r.kaouani25@gmail.com",
-        subject: "[DEBUG] Test inline depuis Vercel",
-        html: "<p>Si tu recois cet email, fetch fonctionne dans Vercel.</p>",
-      }),
-    });
-    const testData = await testRes.text();
-    debugEmailResult = `status=${testRes.status} body=${testData}`;
-  } catch (e: unknown) {
-    debugEmailResult = `error: ${e instanceof Error ? e.message : String(e)}`;
+    // Notify Reda
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          from: fromAddr,
+          to: "r.kaouani25@gmail.com",
+          subject: "[AutoDiag EU] Nouveau beta testeur",
+          html: `<div style="font-family:system-ui,sans-serif;padding:20px"><h2 style="color:#00e5ff">Nouveau beta testeur</h2><p>Nom : ${emailName}</p><p>Email : ${emailAddr}</p><p>Vehicule : ${body.vehicle?.trim() || "Non renseigne"}</p><p>Pays : ${body.country.trim()}</p><hr style="border:none;border-top:1px solid #eee;margin:20px 0"><p style="color:#999;font-size:12px">Notification automatique — autodiag-eu.com</p></div>`,
+        }),
+      });
+    } catch {
+      // Non-blocking
+    }
   }
 
   return NextResponse.json({
     success: true,
     message: "Inscription reussie ! Verifiez votre boite mail.",
     emailSent,
-    debug: { hasResendKey, debugEmailResult },
   });
 }
