@@ -1,8 +1,12 @@
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 
 export default async function Footer() {
   const t = await getTranslations('footer');
+  const locale = await getLocale();
+  const isEn = locale === 'en';
+  const altLocale = isEn ? 'fr' : 'en';
+  const altLabel = isEn ? 'Francais' : 'English';
 
   return (
     <footer
@@ -10,13 +14,13 @@ export default async function Footer() {
       className="border-t border-[rgba(255,255,255,0.08)] bg-bg"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Column 1: Logo + tagline */}
           <div>
             <Link
-              href="/"
+              href={`/${locale}`}
               className="text-xl font-bold"
-              aria-label="AutoDiag EU — Accueil"
+              aria-label="AutoDiag EU"
             >
               <span className="text-gradient">AutoDiag EU</span>
             </Link>
@@ -26,10 +30,10 @@ export default async function Footer() {
 
           {/* Column 2: Legal links */}
           <div>
-            <ul className="space-y-3" aria-label="Liens juridiques">
+            <ul className="space-y-3" aria-label={isEn ? 'Legal links' : 'Liens juridiques'}>
               <li>
                 <Link
-                  href="/mentions-legales"
+                  href={`/${locale}/mentions-legales`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('legalNotice')}
@@ -37,7 +41,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/confidentialite"
+                  href={`/${locale}/confidentialite`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('privacy')}
@@ -45,7 +49,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/cgv"
+                  href={`/${locale}/cgv`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('terms')}
@@ -56,10 +60,10 @@ export default async function Footer() {
 
           {/* Column 3: Site links */}
           <div>
-            <ul className="space-y-3" aria-label="Liens du site">
+            <ul className="space-y-3" aria-label={isEn ? 'Site links' : 'Liens du site'}>
               <li>
                 <Link
-                  href="/blog"
+                  href={`/${locale}/blog`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('blog')}
@@ -67,7 +71,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/a-propos"
+                  href={`/${locale}/a-propos`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('about')}
@@ -75,7 +79,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/compatibilite"
+                  href={`/${locale}/compatibilite`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('compatibility')}
@@ -83,7 +87,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/garages"
+                  href={`/${locale}/garages`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('garages')}
@@ -91,13 +95,34 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/comparaison"
+                  href={`/${locale}/comparaison`}
                   className="text-sm text-secondary transition-colors duration-200 hover:text-white"
                 >
                   {t('comparison')}
                 </Link>
               </li>
             </ul>
+          </div>
+
+          {/* Column 4: Language switcher */}
+          <div>
+            <p className="mb-3 text-sm font-medium text-white">
+              {isEn ? 'Language' : 'Langue'}
+            </p>
+            <div className="flex flex-col gap-2">
+              <span className="inline-flex items-center gap-2 text-sm text-cyan">
+                <span className="h-2 w-2 rounded-full bg-cyan" />
+                {isEn ? 'English (UK)' : 'Francais'}
+              </span>
+              <Link
+                href={`/${altLocale}`}
+                className="inline-flex items-center gap-2 text-sm text-secondary transition-colors duration-200 hover:text-white"
+                hrefLang={altLocale === 'en' ? 'en-GB' : 'fr'}
+              >
+                <span className="h-2 w-2 rounded-full bg-secondary/50" />
+                {altLabel}
+              </Link>
+            </div>
           </div>
         </div>
 
