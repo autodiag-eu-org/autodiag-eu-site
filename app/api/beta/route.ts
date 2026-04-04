@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { rateLimit } from "@/lib/rate-limit";
-import { sendBetaWelcomeEmail } from "@/lib/email";
+import { sendBetaWelcomeEmail, notifyRedaBeta } from "@/lib/email";
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
@@ -117,6 +117,14 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       .update({ email_sent: true })
       .eq("email", body.email.trim().toLowerCase());
   }
+
+  // Notify Reda (non-blocking)
+  await notifyRedaBeta(
+    body.name.trim(),
+    body.email.trim().toLowerCase(),
+    body.vehicle?.trim() || null,
+    body.country.trim()
+  );
 
   return NextResponse.json({
     success: true,

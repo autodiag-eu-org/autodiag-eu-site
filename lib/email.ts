@@ -4,6 +4,8 @@
 
 import { Resend } from "resend";
 
+const REDA_EMAIL = "r.kaouani25@gmail.com";
+
 function getResend(): Resend {
   return new Resend(process.env.RESEND_API_KEY ?? "re_placeholder");
 }
@@ -62,5 +64,54 @@ export async function sendBetaWelcomeEmail(
     return true;
   } catch {
     return false;
+  }
+}
+
+/**
+ * Notify Reda of a new beta signup with details.
+ */
+export async function notifyRedaBeta(
+  name: string,
+  email: string,
+  vehicle: string | null,
+  country: string
+): Promise<void> {
+  await notifyReda("Nouveau beta testeur", [
+    `Nom : ${name}`,
+    `Email : ${email}`,
+    `Vehicule : ${vehicle ?? "Non renseigne"}`,
+    `Pays : ${country}`,
+  ]);
+}
+
+/**
+ * Notify Reda of a new iOS waitlist signup.
+ */
+export async function notifyRedaIOSWaitlist(email: string): Promise<void> {
+  await notifyReda("Nouvelle inscription iOS waitlist", [
+    `Email : ${email}`,
+  ]);
+}
+
+/**
+ * Send a notification email to Reda.
+ */
+async function notifyReda(subject: string, lines: string[]): Promise<void> {
+  try {
+    await getResend().emails.send({
+      from: "AutoDiag EU <noreply@autodiag-eu.com>",
+      to: REDA_EMAIL,
+      subject: `[AutoDiag EU] ${subject}`,
+      html: `
+        <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 500px; padding: 20px;">
+          <h2 style="color: #00e5ff; margin-bottom: 16px;">${subject}</h2>
+          ${lines.map((l) => `<p style="margin: 4px 0; color: #333;">${l}</p>`).join("")}
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+          <p style="color: #999; font-size: 12px;">Notification automatique — autodiag-eu.com</p>
+        </div>
+      `,
+    });
+  } catch {
+    // Non-blocking: don't fail the user request if notification fails
   }
 }
