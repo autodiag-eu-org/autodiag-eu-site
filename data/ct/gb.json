@@ -1,0 +1,129 @@
+{
+  "country": "GB",
+  "name": "MOT Test",
+  "authority": "DVSA (Driver and Vehicle Standards Agency)",
+  "frequency": "Annual, first MOT at 3 years old",
+  "failureRate": "Around 36% of vehicles fail their first MOT attempt",
+  "points": [
+    {
+      "id": "gb-01",
+      "name": "Lighting and signalling",
+      "failRate": "12.75%",
+      "description": "All lights must work correctly: headlamps (dipped and main beam), side lights, rear lights, brake lights, indicators, rear fog lights, reversing lights, number plate lights, hazard warning lights. Headlamp aim must be correct.",
+      "obd2Checkable": true,
+      "autodiagHelp": "AutoDiag EU can read OBD2 fault codes related to bulb failures and lighting circuit issues before your MOT.",
+      "commonDefects": ["Blown headlamp bulb", "Faulty indicator", "Dim number plate light", "Misaligned headlamps"],
+      "avgRepairCostGBP": { "min": 5, "max": 80 }
+    },
+    {
+      "id": "gb-02",
+      "name": "Suspension",
+      "failRate": "10.67%",
+      "description": "Shock absorbers, springs, wheel bearings, ball joints, track rod ends, anti-roll bar links and bushes. The tester checks for excessive play, leaks, corrosion and damage to all suspension components.",
+      "obd2Checkable": false,
+      "autodiagHelp": "AutoDiag EU's AI audio scan can detect worn suspension noises like knocking and clunking. The shock absorber bounce test uses your phone's sensors to assess damping.",
+      "commonDefects": ["Worn shock absorber", "Broken spring", "Worn ball joint", "Perished bush"],
+      "avgRepairCostGBP": { "min": 80, "max": 400 }
+    },
+    {
+      "id": "gb-03",
+      "name": "Tyres",
+      "failRate": "10.05%",
+      "description": "Minimum tread depth of 1.6mm across the central three-quarters of the tyre, around the entire circumference. Tyres must be free from cuts, bulges and exposed cords. Matching types on the same axle. Correct size and speed rating.",
+      "obd2Checkable": false,
+      "autodiagHelp": "AutoDiag EU's Vision AI can photograph your tyres and check tread depth visually. Always verify with a tread depth gauge before the MOT.",
+      "commonDefects": ["Insufficient tread depth", "Sidewall damage", "Mismatched tyres on same axle", "Incorrect tyre size"],
+      "avgRepairCostGBP": { "min": 50, "max": 200 }
+    },
+    {
+      "id": "gb-04",
+      "name": "Brakes",
+      "failRate": "9.80%",
+      "description": "Service brake, parking brake and ABS. Brake pad and disc thickness, brake pipe condition, brake fluid level, brake balance between sides. The roller brake test measures braking efficiency: minimum 58% for service brake, 16% for parking brake.",
+      "obd2Checkable": true,
+      "autodiagHelp": "AutoDiag EU can read ABS fault codes and brake-related DTCs. The warped disc detection feature analyses vibrations during braking.",
+      "commonDefects": ["Worn brake pads", "Corroded brake discs", "Leaking brake pipe", "Seized parking brake"],
+      "avgRepairCostGBP": { "min": 80, "max": 350 }
+    },
+    {
+      "id": "gb-05",
+      "name": "Emissions",
+      "failRate": "8.20%",
+      "description": "Exhaust emissions tested at idle and at fast idle. Petrol cars: CO, HC and lambda values. Diesel cars: smoke opacity. DPF must be present if factory-fitted. Catalytic converter must be present and working. No visible smoke from the exhaust.",
+      "obd2Checkable": true,
+      "autodiagHelp": "AutoDiag EU reads all emissions-related fault codes (P0420, P0171, P0300 series, etc.) and can flag issues likely to cause an MOT emissions failure before you get there.",
+      "commonDefects": ["Failed catalytic converter", "Faulty lambda sensor", "Blocked DPF", "High CO readings"],
+      "avgRepairCostGBP": { "min": 100, "max": 1300 }
+    },
+    {
+      "id": "gb-06",
+      "name": "Windscreen and wipers",
+      "failRate": "5.40%",
+      "description": "Windscreen must be free from damage in the driver's field of vision (Zone A: no chip larger than 10mm, Zone B: no chip larger than 25mm). Wipers must clear the screen effectively. Washer fluid must reach the windscreen.",
+      "obd2Checkable": false,
+      "autodiagHelp": "This is a visual check — AutoDiag EU's Vision AI could help identify chips, but a manual inspection before the MOT is best.",
+      "commonDefects": ["Chip in Zone A", "Worn wiper blades", "Empty washer bottle", "Cracked windscreen"],
+      "avgRepairCostGBP": { "min": 10, "max": 350 }
+    },
+    {
+      "id": "gb-07",
+      "name": "Steering",
+      "failRate": "4.50%",
+      "description": "Steering wheel play, power steering operation, steering rack and column condition. Steering geometry is not tested but excessive play in joints and bearings is checked. Steering lock must function correctly.",
+      "obd2Checkable": false,
+      "autodiagHelp": "AutoDiag EU's audio scan can detect power steering pump whine and groaning noises that may indicate a problem before the MOT.",
+      "commonDefects": ["Worn track rod end", "Power steering leak", "Worn steering rack bush", "Excessive steering play"],
+      "avgRepairCostGBP": { "min": 60, "max": 300 }
+    },
+    {
+      "id": "gb-08",
+      "name": "Body and structure",
+      "failRate": "4.20%",
+      "description": "Structural integrity of the vehicle: sills, chassis members, subframe, mounting points. Corrosion that has weakened the structure within 30cm of a mounting point is a dangerous defect. Doors, bonnet and boot must latch securely.",
+      "obd2Checkable": false,
+      "autodiagHelp": "Structural checks are visual and physical — AutoDiag EU cannot help directly, but our AI mechanic can advise on common rust spots for your specific vehicle.",
+      "commonDefects": ["Rust on sills", "Corroded subframe", "Weakened chassis member", "Loose bonnet catch"],
+      "avgRepairCostGBP": { "min": 100, "max": 800 }
+    },
+    {
+      "id": "gb-09",
+      "name": "Exhaust system",
+      "failRate": "3.50%",
+      "description": "Complete exhaust system from manifold to tailpipe must be secure, without leaks or excessive corrosion. Catalytic converter and DPF (if fitted) must be present. No modifications that increase noise above legal limits.",
+      "obd2Checkable": true,
+      "autodiagHelp": "AutoDiag EU reads exhaust-related fault codes and the AI audio scan can detect exhaust blowing and rattling noises.",
+      "commonDefects": ["Exhaust leak", "Corroded exhaust section", "Missing heat shield", "Blown exhaust gasket"],
+      "avgRepairCostGBP": { "min": 60, "max": 400 }
+    },
+    {
+      "id": "gb-10",
+      "name": "Seatbelts and airbags",
+      "failRate": "2.80%",
+      "description": "All seatbelts must be present, secure, retract properly and lock under sharp pulling. Buckles must engage and release correctly. Airbag warning light must not be illuminated on the dashboard.",
+      "obd2Checkable": true,
+      "autodiagHelp": "AutoDiag EU can read airbag (SRS) fault codes — B-series codes like B0001, B0002, B0003. A lit airbag light is an automatic MOT failure.",
+      "commonDefects": ["Airbag warning light on", "Seatbelt not retracting", "Damaged belt webbing", "Faulty buckle"],
+      "avgRepairCostGBP": { "min": 30, "max": 250 }
+    },
+    {
+      "id": "gb-11",
+      "name": "Horn",
+      "failRate": "1.20%",
+      "description": "The horn must produce a continuous, uniform note that is loud enough to be heard by other road users. Two-tone horns, sirens and musical horns are not permitted.",
+      "obd2Checkable": false,
+      "autodiagHelp": "This is a simple manual check — press the horn and listen. No OBD2 diagnostic needed.",
+      "commonDefects": ["Horn not working", "Weak horn sound", "Intermittent horn"],
+      "avgRepairCostGBP": { "min": 20, "max": 80 }
+    },
+    {
+      "id": "gb-12",
+      "name": "Mirrors",
+      "failRate": "1.10%",
+      "description": "At least two mirrors required: the interior mirror and the driver's door mirror (or two external mirrors if no interior mirror). Mirrors must be secure, not cracked and provide adequate rearward vision.",
+      "obd2Checkable": false,
+      "autodiagHelp": "Visual check only — no OBD2 diagnostic needed for mirrors.",
+      "commonDefects": ["Cracked mirror glass", "Loose mirror housing", "Missing mirror"],
+      "avgRepairCostGBP": { "min": 15, "max": 100 }
+    }
+  ]
+}
