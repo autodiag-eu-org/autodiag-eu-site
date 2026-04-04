@@ -11,7 +11,7 @@ interface BlogPostPageProps {
 }
 
 export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
+  return getAllBlogSlugs().map((slug) => ({ locale: "fr", slug }));
 }
 
 export async function generateMetadata({

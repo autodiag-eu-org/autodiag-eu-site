@@ -13,6 +13,7 @@ interface CodePageProps {
 export async function generateStaticParams() {
   const allCodes = getAllCodes();
   return allCodes.map((dtc) => ({
+    locale: "fr",
     code: dtc.code.toLowerCase(),
   }));
 }
