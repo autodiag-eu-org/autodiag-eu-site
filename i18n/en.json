@@ -268,7 +268,10 @@
     "scrollToTop": "Scroll to top",
     "language": "Language",
     "french": "French",
-    "english": "English"
+    "english": "English",
+    "german": "German",
+    "spanish": "Spanish",
+    "portuguese": "Portuguese"
   },
   "codes": {
     "title": "Fault Code Encyclopedia",

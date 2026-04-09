@@ -267,7 +267,10 @@
     "scrollToTop": "Remonter en haut",
     "language": "Langue",
     "french": "Francais",
-    "english": "Anglais"
+    "english": "Anglais",
+    "german": "Allemand",
+    "spanish": "Espagnol",
+    "portuguese": "Portugais"
   },
   "codes": {
     "title": "Encyclopedie des codes DTC",
