@@ -180,7 +180,8 @@
     "faq_payment_q": "Como e feito o pagamento?",
     "faq_payment_a": "Exclusivamente atraves do Google Play Billing. Renovaçao anual automatica, cancelavel a qualquer momento na sua conta Google Play.",
     "faq_refund_q": "Posso obter um reembolso?",
-    "faq_refund_a": "Sim. Reembolso automatico em 48 horas atraves do Google Play. Apos esse prazo, contacte-nos em info@autodiag-eu.com e processaremos o seu pedido."
+    "faq_refund_a": "Sim. Reembolso automatico em 48 horas atraves do Google Play. Apos esse prazo, contacte-nos em info@autodiag-eu.com e processaremos o seu pedido.",
+    "perYear": "ano"
   },
   "beta": {
     "title": "Adira a beta",

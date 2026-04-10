@@ -1,12 +1,30 @@
 /**
- * Middleware — Locale detection and redirection
- * Redirects / to /fr based on Accept-Language header
+ * Middleware — Locale detection + geolocation currency cookie
  */
 
 import createMiddleware from "next-intl/middleware";
+import { type NextRequest } from "next/server";
 import { routing } from "@/lib/i18n";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  const response = intlMiddleware(request);
+
+  // Set user-country cookie from Vercel geolocation header
+  const country = request.headers.get("x-vercel-ip-country") || "";
+
+  if (country) {
+    response.cookies.set("user-country", country, {
+      path: "/",
+      httpOnly: false,
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24, // 24h
+    });
+  }
+
+  return response;
+}
 
 export const config = {
   matcher: [

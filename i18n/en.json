@@ -180,7 +180,8 @@
     "faq_payment_q": "How is payment handled?",
     "faq_payment_a": "Exclusively via Google Play Billing. Annual automatic renewal, cancellable at any time from your Google Play account.",
     "faq_refund_q": "Can I get a refund?",
-    "faq_refund_a": "Yes. Automatic refund within 48 hours via Google Play. After that, contact us at info@autodiag-eu.com and we’ll process your request."
+    "faq_refund_a": "Yes. Automatic refund within 48 hours via Google Play. After that, contact us at info@autodiag-eu.com and we’ll process your request.",
+    "perYear": "year"
   },
   "beta": {
     "title": "Join the beta",

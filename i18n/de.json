@@ -180,7 +180,8 @@
     "faq_payment_q": "Wie erfolgt die Zahlung?",
     "faq_payment_a": "Ausschliesslich ueber Google Play Billing. Jaehrliche automatische Verlaengerung, jederzeit ueber Ihr Google-Play-Konto kuendbar.",
     "faq_refund_q": "Kann ich eine Rueckerstattung erhalten?",
-    "faq_refund_a": "Ja. Automatische Rueckerstattung innerhalb von 48 Stunden ueber Google Play. Danach kontaktieren Sie uns unter info@autodiag-eu.com."
+    "faq_refund_a": "Ja. Automatische Rueckerstattung innerhalb von 48 Stunden ueber Google Play. Danach kontaktieren Sie uns unter info@autodiag-eu.com.",
+    "perYear": "Jahr"
   },
   "beta": {
     "title": "Treten Sie der Beta bei",

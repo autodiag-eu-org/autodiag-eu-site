@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { getCurrency } from "@/lib/currency";
 
 /* ── Plan features — keys reference the pricing namespace ── */
 
@@ -108,6 +109,7 @@ function ChevronIcon({ open }: { open: boolean }) {
 
 export default function PrixClient() {
   const t = useTranslations("pricing");
+  const cur = getCurrency();
   const [expandedFaq, setExpandedFaq] = useState<Record<number, boolean>>({});
 
   const toggleFaq = (index: number) => {
@@ -122,8 +124,7 @@ export default function PrixClient() {
         <div className="glass flex flex-col rounded-2xl border border-border p-8 backdrop-blur-md transition-all hover:border-border/60">
           <h2 className="text-xl font-bold">{t("freeTitle")}</h2>
           <div className="mt-4 flex items-baseline gap-1">
-            <span className="text-4xl font-bold">0</span>
-            <span className="text-secondary">CHF</span>
+            <span className="text-4xl font-bold">{cur.format(0)}</span>
           </div>
           <p className="mt-2 text-sm text-secondary">
             {t("freeDesc")}
@@ -162,8 +163,8 @@ export default function PrixClient() {
           </span>
           <h2 className="text-xl font-bold">{t("premiumTitle")}</h2>
           <div className="mt-4 flex items-baseline gap-1">
-            <span className="text-4xl font-bold text-gradient">49</span>
-            <span className="text-secondary">{t("priceUnit")}</span>
+            <span className="text-4xl font-bold text-gradient">{cur.format(cur.premiumAmount)}</span>
+            <span className="text-secondary">/ {t("perYear")}</span>
           </div>
           <p className="mt-2 text-sm text-cyan/80">
             {t("premiumTrialDesc")}

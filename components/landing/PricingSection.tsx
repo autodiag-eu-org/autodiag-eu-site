@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { getCurrency } from "@/lib/currency";
 
 function CheckIcon() {
   return (
@@ -46,6 +47,7 @@ const PREMIUM_FEATURE_KEYS = [
 export default function PricingSection() {
   const t = useTranslations('pricing');
   const tc = useTranslations('common');
+  const cur = getCurrency();
 
   return (
     <section className="mx-auto max-w-4xl px-6 py-20 sm:py-28">
@@ -76,8 +78,7 @@ export default function PricingSection() {
           <h3 className="text-xl font-bold">{t('freeTitle')}</h3>
           <p className="mt-1 text-sm text-secondary">{t('freeSubtitle')}</p>
           <div className="mt-4 flex items-baseline gap-1">
-            <span className="text-4xl font-bold">0</span>
-            <span className="text-secondary">CHF</span>
+            <span className="text-4xl font-bold">{cur.format(0)}</span>
           </div>
           <ul className="mt-8 flex-1 space-y-3">
             {FREE_FEATURE_KEYS.map((key) => (
@@ -110,8 +111,9 @@ export default function PricingSection() {
           <p className="mt-1 text-sm text-secondary">{t('premiumSubtitle')}</p>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-4xl font-bold text-gradient">
-              {t('price')}
+              {cur.format(cur.premiumAmount)}
             </span>
+            <span className="text-secondary">/ {t('perYear')}</span>
           </div>
           <p className="mt-2 text-sm text-cyan/80">
             {t('trial')}

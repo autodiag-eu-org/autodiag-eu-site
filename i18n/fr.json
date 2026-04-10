@@ -180,7 +180,8 @@
     "faq_payment_q": "Comment se fait le paiement ?",
     "faq_payment_a": "Exclusivement via Google Play Billing. Renouvellement annuel automatique, annulable a tout moment depuis votre compte Google Play.",
     "faq_refund_q": "Puis-je etre rembourse ?",
-    "faq_refund_a": "Oui. Remboursement automatique sous 48h via Google Play. Au-dela, contactez-nous a info@autodiag-eu.com et nous traiterons votre demande."
+    "faq_refund_a": "Oui. Remboursement automatique sous 48h via Google Play. Au-dela, contactez-nous a info@autodiag-eu.com et nous traiterons votre demande.",
+    "perYear": "an"
   },
   "beta": {
     "title": "Rejoignez la beta",
