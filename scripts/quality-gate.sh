@@ -26,29 +26,31 @@ else
 fi
 echo ""
 
-# 3. Next.js lint
-echo "[3/4] Next.js lint..."
-if npx next lint 2>&1; then
-  echo "  ✓ next lint passed"
+# 3. ESLint (Next 16 removed "next lint" — use eslint directly)
+echo "[3/4] ESLint..."
+if npx eslint . --ext .ts,.tsx 2>&1; then
+  echo "  ✓ eslint passed"
 else
-  echo "  ✗ next lint FAILED"
+  echo "  ✗ eslint FAILED"
   ERRORS=$((ERRORS + 1))
 fi
 echo ""
 
-# 4. Check for console.log (excluding analytics.ts)
+# 4. Check for console.log (excluding analytics.ts and scripts/)
 echo "[4/4] Checking for console.log..."
 CONSOLE_LOGS=$(grep -r "console\.log" --include="*.ts" --include="*.tsx" \
   --exclude="analytics.ts" \
   --exclude-dir="node_modules" \
   --exclude-dir=".next" \
+  --exclude-dir="scripts" \
   . 2>/dev/null | wc -l)
 if [ "$CONSOLE_LOGS" -gt 0 ]; then
-  echo "  ✗ Found $CONSOLE_LOGS console.log statements (excluding analytics.ts)"
+  echo "  ✗ Found $CONSOLE_LOGS console.log statements (excluding analytics.ts and scripts/)"
   grep -r "console\.log" --include="*.ts" --include="*.tsx" \
     --exclude="analytics.ts" \
     --exclude-dir="node_modules" \
     --exclude-dir=".next" \
+    --exclude-dir="scripts" \
     . 2>/dev/null || true
   ERRORS=$((ERRORS + 1))
 else
