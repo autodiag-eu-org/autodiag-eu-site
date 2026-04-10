@@ -349,7 +349,15 @@
     "vehicleSpecific": "Particularidades por veiculo",
     "faqTitle": "Perguntas frequentes",
     "clearSearch": "Limpar pesquisa",
-    "resultCount": "{count, plural, =0 {Sem resultados} =1 {1 resultado} other {# resultados}} de {total} codigos"
+    "resultCount": "{count, plural, =0 {Sem resultados} =1 {1 resultado} other {# resultados}} de {total} codigos",
+    "metaTitle": "Enciclopedia de codigos de erro OBD2 — AutoDiag EU",
+    "metaDescription": "250 codigos de erro OBD2 documentados com causas, custos de reparaçao por pais e soluçoes. Pesquise o seu codigo de erro e compreenda o que o seu carro tenta dizer-lhe.",
+    "pageTitle": "Enciclopedia de",
+    "pageTitleAccent": "codigos de erro OBD2",
+    "pageSubtitle": "250 codigos documentados com causas, custos e soluçoes",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbCodes": "Codigos de erro",
+    "codeNotFound": "Codigo nao encontrado | AutoDiag EU"
   },
   "compatibility": {
     "title": "O seu veiculo e compativel?",

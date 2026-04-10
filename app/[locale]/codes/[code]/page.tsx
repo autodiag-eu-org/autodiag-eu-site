@@ -3,12 +3,18 @@ import { notFound } from "next/navigation";
 import { getAllCodes, getDTCByCode, getRelatedDTCs } from "@/lib/dtc";
 import { generateDTCMetadata } from "@/lib/seo";
 import { locales } from "@/lib/i18n";
+import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import DTCDetail from "@/components/codes/DTCDetail";
 
 interface CodePageProps {
   params: Promise<{ locale: string; code: string }>;
+}
+
+/** DTC JSON data only has fr+en — map all other locales to EN fallback */
+function dtcLang(locale: string): "fr" | "en" {
+  return locale === "fr" ? "fr" : "en";
 }
 
 export async function generateStaticParams() {
@@ -26,10 +32,11 @@ export async function generateMetadata({
 }: CodePageProps): Promise<Metadata> {
   const { locale, code } = await params;
   const dtc = getDTCByCode(code);
-  const lang = locale === "en" ? "en" : "fr";
+  const lang = dtcLang(locale);
+  const t = await getTranslations({ locale, namespace: "codes" });
 
   if (!dtc) {
-    return { title: locale === "en" ? "Code not found | AutoDiag EU" : "Code introuvable | AutoDiag EU" };
+    return { title: t("codeNotFound") };
   }
 
   const name = dtc.name[lang] ?? dtc.name.fr;
@@ -52,16 +59,15 @@ export default async function CodePage({ params }: CodePageProps) {
   }
 
   const relatedDTCs = getRelatedDTCs(dtc.code);
-  const isEn = locale === "en";
+  const t = await getTranslations({ locale, namespace: "codes" });
+  const lang = dtcLang(locale);
+  const faqData = dtc.faq[lang] ?? dtc.faq.fr;
 
   const breadcrumbItems = [
-    { label: isEn ? "Home" : "Accueil", href: `/${locale}` },
-    { label: isEn ? "Fault codes" : "Codes defaut", href: `/${locale}/codes` },
+    { label: t("breadcrumbHome"), href: `/${locale}` },
+    { label: t("breadcrumbCodes"), href: `/${locale}/codes` },
     { label: dtc.code, href: `/${locale}/codes/${dtc.code.toLowerCase()}` },
   ];
-
-  const lang = isEn ? "en" : "fr";
-  const faqData = dtc.faq[lang] ?? dtc.faq.fr;
 
   const faqSchema = {
     "@context": "https://schema.org" as const,

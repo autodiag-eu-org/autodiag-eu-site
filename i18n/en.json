@@ -350,7 +350,15 @@
     "vehicleSpecific": "Vehicle-specific details",
     "faqTitle": "Frequently asked questions",
     "clearSearch": "Clear search",
-    "resultCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}} out of {total} codes"
+    "resultCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}} out of {total} codes",
+    "metaTitle": "OBD2 Fault Code Encyclopedia — AutoDiag EU",
+    "metaDescription": "250 OBD2 fault codes documented with causes, repair costs by country and solutions. Search your fault code and understand what your car is trying to tell you.",
+    "pageTitle": "OBD2",
+    "pageTitleAccent": "Fault Code Encyclopedia",
+    "pageSubtitle": "250 codes documented with causes, costs and solutions",
+    "breadcrumbHome": "Home",
+    "breadcrumbCodes": "Fault codes",
+    "codeNotFound": "Code not found | AutoDiag EU"
   },
   "compatibility": {
     "title": "Is your vehicle compatible?",

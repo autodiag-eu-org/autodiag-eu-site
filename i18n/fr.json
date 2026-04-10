@@ -349,7 +349,15 @@
     "vehicleSpecific": "Specificites par vehicule",
     "faqTitle": "Questions frequentes",
     "clearSearch": "Effacer la recherche",
-    "resultCount": "{count, plural, =0 {Aucun resultat} =1 {1 resultat} other {# resultats}} sur {total} codes"
+    "resultCount": "{count, plural, =0 {Aucun resultat} =1 {1 resultat} other {# resultats}} sur {total} codes",
+    "metaTitle": "Encyclopedie des codes defaut OBD2 — AutoDiag EU",
+    "metaDescription": "250 codes defaut OBD2 documentes avec causes, couts de reparation par pays et solutions. Recherchez votre code defaut et comprenez ce que votre voiture essaie de vous dire.",
+    "pageTitle": "Encyclopedie des",
+    "pageTitleAccent": "codes defaut OBD2",
+    "pageSubtitle": "250 codes documentes avec causes, couts et solutions",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbCodes": "Codes defaut",
+    "codeNotFound": "Code introuvable | AutoDiag EU"
   },
   "compatibility": {
     "title": "Votre vehicule est-il compatible ?",
