@@ -64,6 +64,16 @@ import { Article5BruitsMoteur } from "./fr/5-bruits-moteur";
 import { ArticleOBD2Comprendre } from "./fr/obd2-comprendre";
 import { ArticleAutodiagVsGarage } from "./fr/autodiag-vs-garage";
 
+/* EN SEO long-tail series */
+import { ArticleDieselMOT2026 } from "./en/diesel-mot-preparation-2026-complete-guide";
+import { ArticleMostExpensiveRepairs2026 } from "./en/most-expensive-car-repairs-2026-how-to-avoid";
+import { ArticleBuyingUsedCarChecks } from "./en/buying-used-car-essential-checks";
+import { ArticleESPWarningLight } from "./en/esp-warning-light-causes-repair-cost";
+import { ArticleOilWarningLight } from "./en/oil-warning-light-keep-driving-or-stop";
+import { ArticleExcessiveFuelConsumption } from "./en/excessive-fuel-consumption-causes-obd2";
+import { ArticleCloggedCatalyticConverter } from "./en/clogged-catalytic-converter-symptoms-diagnosis";
+import { ArticleCarBatteryWeaknessSigns } from "./en/car-battery-weakness-signs-before-failure";
+
 /* EN combined tech series */
 import { ArticleTripleDiagnosisTech } from "./en/triple-diagnosis-sound-vision-obd2-work-together";
 import { ArticleOBD2AloneNotEnough } from "./en/why-obd2-scanner-alone-not-enough-2026";
@@ -210,6 +220,15 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
+  /* EN SEO long-tail series */
+  "diesel-mot-preparation-2026-complete-guide": ArticleDieselMOT2026,
+  "most-expensive-car-repairs-2026-how-to-avoid": ArticleMostExpensiveRepairs2026,
+  "buying-used-car-essential-checks": ArticleBuyingUsedCarChecks,
+  "esp-warning-light-causes-repair-cost": ArticleESPWarningLight,
+  "oil-warning-light-keep-driving-or-stop": ArticleOilWarningLight,
+  "excessive-fuel-consumption-causes-obd2": ArticleExcessiveFuelConsumption,
+  "clogged-catalytic-converter-symptoms-diagnosis": ArticleCloggedCatalyticConverter,
+  "car-battery-weakness-signs-before-failure": ArticleCarBatteryWeaknessSigns,
   /* EN combined tech series */
   "triple-diagnosis-sound-vision-obd2-work-together": ArticleTripleDiagnosisTech,
   "why-obd2-scanner-alone-not-enough-2026": ArticleOBD2AloneNotEnough,

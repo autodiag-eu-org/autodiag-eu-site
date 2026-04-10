@@ -567,6 +567,94 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "diesel-mot-preparation-2026-complete-guide",
+    title: "Diesel MOT preparation 2026: the complete guide",
+    description:
+      "Emissions, DPF, EGR, AdBlue: the checklist to pass your diesel MOT first time in 2026. Real costs and OBD2 pre-checks at home.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Practical Guide",
+    locale: "en",
+  },
+  {
+    slug: "most-expensive-car-repairs-2026-how-to-avoid",
+    title: "Most expensive car repairs in 2026 and how to avoid them",
+    description:
+      "The top 10 ruinous faults of 2026, their early warning signs, and how preventive diagnostics catch 80% of them before the invoice explodes.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Repair Costs",
+    locale: "en",
+  },
+  {
+    slug: "buying-used-car-essential-checks",
+    title: "Buying a used car: the essential checks in 2026",
+    description:
+      "The full 30-minute inspection checklist before handing over cash. OBD2, sound scan, paperwork, bodywork, tyres and test drive.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Used Car Buying",
+    locale: "en",
+  },
+  {
+    slug: "esp-warning-light-causes-repair-cost",
+    title: "ESP warning light: causes, diagnosis and repair cost",
+    description:
+      "Wheel speed, yaw, steering angle, hydraulic block: the 5 causes of an ESP warning light and real 2026 repair cost bands.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "oil-warning-light-keep-driving-or-stop",
+    title: "Oil warning light: keep driving or stop immediately?",
+    description:
+      "Red vs amber: the only warning light where colour decides between a 80 GBP service and a 6000 GBP rebuild. The 5-step emergency procedure.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "excessive-fuel-consumption-causes-obd2",
+    title: "Excessive fuel consumption: causes and OBD2 diagnosis",
+    description:
+      "Fuel trims, MAF, lambda, EGR, tyres, driving style: the complete OBD2 method to find overconsumption in under an hour.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "clogged-catalytic-converter-symptoms-diagnosis",
+    title: "Clogged catalytic converter: symptoms, diagnosis and solutions",
+    description:
+      "Back-pressure measurement, root causes, cleaning attempts and replacement cost. How to tell a clogged cat from a dead cat and fix the real problem.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "car-battery-weakness-signs-before-failure",
+    title: "Car battery: weakness signs to spot before it strands you",
+    description:
+      "Slow crank, dim lights, erratic electronics: the 8 weak-battery signals plus simple multimeter tests to anticipate failure before it happens.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
     slug: "triple-diagnosis-sound-vision-obd2-work-together",
     title: "Triple diagnosis: how sound, vision and OBD2 work together",
     description:
@@ -1386,27 +1474,35 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
 const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "preparer-controle-technique-diesel-2026-guide",
+    en: "diesel-mot-preparation-2026-complete-guide",
   },
   {
     fr: "pannes-les-plus-cheres-2026-comment-eviter",
+    en: "most-expensive-car-repairs-2026-how-to-avoid",
   },
   {
     fr: "acheter-voiture-occasion-verifications-essentielles",
+    en: "buying-used-car-essential-checks",
   },
   {
     fr: "voyant-esp-allume-causes-cout-reparation",
+    en: "esp-warning-light-causes-repair-cost",
   },
   {
     fr: "voyant-huile-allume-rouler-ou-arreter",
+    en: "oil-warning-light-keep-driving-or-stop",
   },
   {
     fr: "consommation-excessive-carburant-causes-obd2",
+    en: "excessive-fuel-consumption-causes-obd2",
   },
   {
     fr: "catalyseur-bouche-symptomes-diagnostic-solutions",
+    en: "clogged-catalytic-converter-symptoms-diagnosis",
   },
   {
     fr: "batterie-voiture-signes-faiblesse-avant-panne",
+    en: "car-battery-weakness-signs-before-failure",
   },
   {
     fr: "triple-diagnostic-son-vision-obd2-se-completent",
