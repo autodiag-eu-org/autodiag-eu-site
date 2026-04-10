@@ -1,5 +1,15 @@
 import type { JSX } from "react";
 
+/* FR SEO long-tail series */
+import { ArticlePreparerCTDiesel2026 } from "./fr/preparer-controle-technique-diesel-2026-guide";
+import { ArticlePannesPlusCheres2026 } from "./fr/pannes-les-plus-cheres-2026-comment-eviter";
+import { ArticleAcheterOccasionVerifs } from "./fr/acheter-voiture-occasion-verifications-essentielles";
+import { ArticleVoyantESPAllume } from "./fr/voyant-esp-allume-causes-cout-reparation";
+import { ArticleVoyantHuileAllume } from "./fr/voyant-huile-allume-rouler-ou-arreter";
+import { ArticleConsommationExcessiveCarburant } from "./fr/consommation-excessive-carburant-causes-obd2";
+import { ArticleCatalyseurBouche } from "./fr/catalyseur-bouche-symptomes-diagnostic-solutions";
+import { ArticleBatterieFaiblesse } from "./fr/batterie-voiture-signes-faiblesse-avant-panne";
+
 /* FR combined tech series */
 import { ArticleTripleDiagnostic } from "./fr/triple-diagnostic-son-vision-obd2-se-completent";
 import { ArticlePourquoiOBD2Insuffisant } from "./fr/pourquoi-scanner-obd2-seul-ne-suffit-plus-2026";
@@ -145,6 +155,15 @@ import { ArticlePTLerCodigosOBD2Telemovel } from "./pt/ler-codigos-obd2-telemove
 import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
 export const articleComponents: Record<string, () => JSX.Element> = {
+  /* FR SEO long-tail series */
+  "preparer-controle-technique-diesel-2026-guide": ArticlePreparerCTDiesel2026,
+  "pannes-les-plus-cheres-2026-comment-eviter": ArticlePannesPlusCheres2026,
+  "acheter-voiture-occasion-verifications-essentielles": ArticleAcheterOccasionVerifs,
+  "voyant-esp-allume-causes-cout-reparation": ArticleVoyantESPAllume,
+  "voyant-huile-allume-rouler-ou-arreter": ArticleVoyantHuileAllume,
+  "consommation-excessive-carburant-causes-obd2": ArticleConsommationExcessiveCarburant,
+  "catalyseur-bouche-symptomes-diagnostic-solutions": ArticleCatalyseurBouche,
+  "batterie-voiture-signes-faiblesse-avant-panne": ArticleBatterieFaiblesse,
   /* FR combined tech series */
   "triple-diagnostic-son-vision-obd2-se-completent": ArticleTripleDiagnostic,
   "pourquoi-scanner-obd2-seul-ne-suffit-plus-2026": ArticlePourquoiOBD2Insuffisant,

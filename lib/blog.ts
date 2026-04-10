@@ -16,6 +16,94 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "preparer-controle-technique-diesel-2026-guide",
+    title: "Preparer le controle technique diesel 2026 : guide complet",
+    description:
+      "Seuils opacimetrie, FAP, AdBlue, fuites echappement : checklist complete en 14 jours pour eviter la contre-visite diesel en 2026. Couts reparation inclus.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Guide pratique",
+    locale: "fr",
+  },
+  {
+    slug: "pannes-les-plus-cheres-2026-comment-eviter",
+    title: "Les pannes automobiles les plus cheres en 2026 et comment les eviter",
+    description:
+      "Top 10 des pannes a 4 chiffres : turbo, FAP, DSG, EGR, distribution, catalyseur, joint culasse, batterie HV, ABS, clim. Fourchettes de prix et prevention.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Couts reparation",
+    locale: "fr",
+  },
+  {
+    slug: "acheter-voiture-occasion-verifications-essentielles",
+    title: "Acheter une voiture d'occasion : les verifications essentielles en 2026",
+    description:
+      "Checklist complete : historique VIN, inspection visuelle, scan OBD2, scan sonore, essai routier. 30 minutes qui evitent 80% des mauvaises affaires.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Achat occasion",
+    locale: "fr",
+  },
+  {
+    slug: "voyant-esp-allume-causes-cout-reparation",
+    title: "Voyant ESP allume : causes, diagnostic et cout de reparation",
+    description:
+      "Capteur vitesse roue, angle volant, lacet, contacteur stop, bloc hydraulique : les 5 causes d'un voyant ESP avec fourchettes de prix et codes OBD2.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "voyant-huile-allume-rouler-ou-arreter",
+    title: "Voyant huile allume : rouler ou s'arreter immediatement ?",
+    description:
+      "Voyant rouge = arret immediat, voyant orange = rappel vidange. La regle qui sauve les moteurs. Procedure d'urgence en 5 etapes et causes typiques detaillees.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "consommation-excessive-carburant-causes-obd2",
+    title: "Consommation excessive de carburant : causes et diagnostic OBD2",
+    description:
+      "Fuel trims, MAF, lambda, injecteurs, EGR, FAP, style de conduite : checklist complete pour identifier la cause d'une surconsommation en moins d'une heure.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "catalyseur-bouche-symptomes-diagnostic-solutions",
+    title: "Catalyseur bouche : symptomes, diagnostic et solutions",
+    description:
+      "Catalyseur bouche vs inefficace, test de contre-pression, causes amont, nettoyage ou remplacement : guide complet pour distinguer et resoudre.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "batterie-voiture-signes-faiblesse-avant-panne",
+    title: "Batterie de voiture : signes de faiblesse avant la panne totale",
+    description:
+      "Demarrage lent, Start/Stop HS, horloge qui saute, tension basse : 5 signes avant-coureurs et la methode pour tester votre batterie avec un simple multimetre.",
+    date: "2026-04-15",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
     slug: "triple-diagnostic-son-vision-obd2-se-completent",
     title: "Triple diagnostic : comment le son, la vision et l'OBD2 se completent",
     description:
@@ -1296,6 +1384,30 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
  * translations of the same article across locales.
  */
 const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "preparer-controle-technique-diesel-2026-guide",
+  },
+  {
+    fr: "pannes-les-plus-cheres-2026-comment-eviter",
+  },
+  {
+    fr: "acheter-voiture-occasion-verifications-essentielles",
+  },
+  {
+    fr: "voyant-esp-allume-causes-cout-reparation",
+  },
+  {
+    fr: "voyant-huile-allume-rouler-ou-arreter",
+  },
+  {
+    fr: "consommation-excessive-carburant-causes-obd2",
+  },
+  {
+    fr: "catalyseur-bouche-symptomes-diagnostic-solutions",
+  },
+  {
+    fr: "batterie-voiture-signes-faiblesse-avant-panne",
+  },
   {
     fr: "triple-diagnostic-son-vision-obd2-se-completent",
     en: "triple-diagnosis-sound-vision-obd2-work-together",
