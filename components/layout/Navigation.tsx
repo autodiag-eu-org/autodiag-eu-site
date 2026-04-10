@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
+import { Link } from '@/lib/i18n';
 import { useTranslations } from 'next-intl';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import MobileMenu from './MobileMenu';
