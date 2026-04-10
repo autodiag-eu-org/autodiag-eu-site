@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 const dtcCodes = require('./data/dtc/dtc_codes.json');
 
-const SITE_URL = 'https://autodiag-eu.com';
+const SITE_URL = 'https://www.autodiag-eu.com';
 const locales = ['fr', 'en', 'de', 'es', 'pt'];
 const X_DEFAULT = 'fr';
 

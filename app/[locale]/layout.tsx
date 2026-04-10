@@ -8,7 +8,7 @@ import CookieConsent from "@/components/shared/CookieConsent";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import "../globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag-eu.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.autodiag-eu.com";
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -26,18 +26,20 @@ export async function generateMetadata({
     description: t("siteDescription"),
     metadataBase: new URL(SITE_URL),
     alternates: {
+      canonical: `${SITE_URL}/${locale}`,
       languages: {
-        "fr": `${SITE_URL}/fr`,
-        "en-GB": `${SITE_URL}/en`,
-        "de": `${SITE_URL}/de`,
-        "es": `${SITE_URL}/es`,
-        "pt": `${SITE_URL}/pt`,
+        fr: `${SITE_URL}/fr`,
+        en: `${SITE_URL}/en`,
+        de: `${SITE_URL}/de`,
+        es: `${SITE_URL}/es`,
+        pt: `${SITE_URL}/pt`,
         "x-default": `${SITE_URL}/fr`,
       },
     },
     openGraph: {
       title: t("siteTitle"),
       description: t("ogDescription"),
+      url: `${SITE_URL}/${locale}`,
       siteName: "AutoDiag EU",
       locale,
       type: "website",
