@@ -13,10 +13,29 @@ interface DTCCardProps {
   locale?: string;
 }
 
+const COST_KEYS: Record<string, "fr" | "de" | "ch" | "es" | "pt" | "gb"> = {
+  fr: "fr", en: "gb", de: "de", es: "es", pt: "pt",
+};
+
+const CAN_DRIVE_YES: Record<string, string> = {
+  fr: "Peut rouler", en: "Safe to drive", de: "Fahrbar",
+  es: "Se puede conducir", pt: "Pode circular",
+};
+const CAN_DRIVE_NO: Record<string, string> = {
+  fr: "Arreter le vehicule", en: "Stop the vehicle", de: "Fahrzeug anhalten",
+  es: "Detener el vehiculo", pt: "Parar o veiculo",
+};
+const MAIN_CAUSE: Record<string, string> = {
+  fr: "Cause principale :", en: "Main cause:", de: "Hauptursache:",
+  es: "Causa principal:", pt: "Causa principal:",
+};
+const CURRENCY_MAP: Record<string, string | undefined> = {
+  en: "GBP", de: undefined, es: undefined, pt: undefined, fr: undefined,
+};
+
 export default function DTCCard({ dtc, index, locale = "fr" }: DTCCardProps) {
   const firstCause = dtc.causes[0];
-  const isEn = locale === "en";
-  const costKey = isEn ? "gb" : "fr";
+  const costKey = COST_KEYS[locale] ?? "fr";
 
   return (
     <motion.div
@@ -71,8 +90,8 @@ export default function DTCCard({ dtc, index, locale = "fr" }: DTCCardProps) {
               </svg>
             )}
             {dtc.canDrive
-              ? (isEn ? "Safe to drive" : "Peut rouler")
-              : (isEn ? "Stop the vehicle" : "Arreter le vehicule")}
+              ? (CAN_DRIVE_YES[locale] ?? CAN_DRIVE_YES.fr)
+              : (CAN_DRIVE_NO[locale] ?? CAN_DRIVE_NO.fr)}
           </span>
 
           <span className="rounded-md border border-border px-2 py-0.5 text-xs text-secondary">
@@ -83,7 +102,7 @@ export default function DTCCard({ dtc, index, locale = "fr" }: DTCCardProps) {
         {firstCause && (
           <div className="border-t border-border pt-3">
             <p className="mb-1 text-xs text-secondary">
-              {isEn ? "Main cause:" : "Cause principale :"}
+              {MAIN_CAUSE[locale] ?? MAIN_CAUSE.fr}
             </p>
             <p className="text-xs font-medium text-white/80">
               {getLocalised(firstCause.name, locale)}
@@ -92,7 +111,7 @@ export default function DTCCard({ dtc, index, locale = "fr" }: DTCCardProps) {
               <CostRange
                 min={firstCause.costMin[costKey] ?? firstCause.costMin.fr}
                 max={firstCause.costMax[costKey] ?? firstCause.costMax.fr}
-                currency={isEn ? "GBP" : undefined}
+                currency={CURRENCY_MAP[locale]}
               />
             </div>
           </div>

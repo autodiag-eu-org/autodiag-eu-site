@@ -47,9 +47,9 @@ function ChevronIcon({ open }: { open: boolean }) {
 
 export default function DTCDetail({ dtc, relatedDTCs, locale = "fr" }: DTCDetailProps) {
   const t = useTranslations('dtcDetail');
-  const isEn = locale === "en";
-  const countries = isEn ? COUNTRY_KEYS_EN : COUNTRY_KEYS;
-  const defaultCountry: CountryKey = isEn ? "gb" : "fr";
+  const isEN = locale === "en";
+  const countries = isEN ? COUNTRY_KEYS_EN : COUNTRY_KEYS;
+  const defaultCountry: CountryKey = isEN ? "gb" : "fr";
 
   const [selectedCountry, setSelectedCountry] = useState<CountryKey>(defaultCountry);
   const [expandedCauses, setExpandedCauses] = useState<Record<number, boolean>>(
@@ -72,9 +72,13 @@ export default function DTCDetail({ dtc, relatedDTCs, locale = "fr" }: DTCDetail
   const name = getLocalised(dtc.name, locale);
   const description = getLocalised(dtc.description, locale);
   const symptoms = getLocalisedArray(dtc.symptoms, locale);
-  const faqData = (isEn && dtc.faq.en) ? dtc.faq.en : dtc.faq.fr;
+  const faqLocaleKey = locale as keyof typeof dtc.faq;
+  const faqData = dtc.faq[faqLocaleKey] ?? dtc.faq.en ?? dtc.faq.fr;
 
-  const numberFormat = isEn ? "en-GB" : "fr-FR";
+  const NUMBER_FORMATS: Record<string, string> = {
+    fr: "fr-FR", en: "en-GB", de: "de-DE", es: "es-ES", pt: "pt-PT",
+  };
+  const numberFormat = NUMBER_FORMATS[locale] ?? "fr-FR";
 
   return (
     <article className="mx-auto max-w-4xl">
@@ -141,7 +145,7 @@ export default function DTCDetail({ dtc, relatedDTCs, locale = "fr" }: DTCDetail
       </section>
 
       {/* MOT fail notice (EN only) */}
-      {isEn && dtc.motFail && (
+      {isEN && dtc.motFail && (
         <section className="mb-10">
           <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
             <h3 className="mb-2 text-lg font-bold text-amber-400">

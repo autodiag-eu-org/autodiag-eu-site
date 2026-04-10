@@ -1,6 +1,6 @@
 /**
  * DTC utility functions — search, filter, and retrieve diagnostic trouble codes
- * Supports FR and EN locales
+ * Supports FR, EN, DE, ES, PT locales
  */
 
 import dtcCodesData from "@/data/dtc/dtc_codes.json";
@@ -14,8 +14,24 @@ interface CountryPrices {
   gb?: number;
 }
 
+interface LocalisedString {
+  fr: string;
+  en?: string;
+  de?: string;
+  es?: string;
+  pt?: string;
+}
+
+interface LocalisedStringArray {
+  fr: string[];
+  en?: string[];
+  de?: string[];
+  es?: string[];
+  pt?: string[];
+}
+
 interface DTCCause {
-  name: { fr: string; en?: string };
+  name: LocalisedString;
   costMin: CountryPrices;
   costMax: CountryPrices;
 }
@@ -25,17 +41,25 @@ interface DTCFaqEntry {
   answer: string;
 }
 
+interface LocalisedFaq {
+  fr: DTCFaqEntry[];
+  en?: DTCFaqEntry[];
+  de?: DTCFaqEntry[];
+  es?: DTCFaqEntry[];
+  pt?: DTCFaqEntry[];
+}
+
 export interface DTCCode {
   code: string;
-  name: { fr: string; en?: string };
-  description: { fr: string; en?: string };
+  name: LocalisedString;
+  description: LocalisedString;
   severity: "low" | "medium" | "high" | "critical";
   canDrive: boolean;
   category: string;
   causes: DTCCause[];
-  symptoms: { fr: string[]; en?: string[] };
+  symptoms: LocalisedStringArray;
   relatedCodes: string[];
-  faq: { fr: DTCFaqEntry[]; en?: DTCFaqEntry[] };
+  faq: LocalisedFaq;
   motFail?: string;
 }
 
@@ -131,24 +155,29 @@ export function getRelatedDTCs(code: string): DTCCode[] {
 }
 
 /**
- * Helper to get localised text from a field that has {fr, en?} shape.
- * Falls back to FR if the requested locale is not available.
+ * Helper to get localised text from a multilingual field.
+ * Falls back: requested locale → EN → FR.
  */
 export function getLocalised(
-  field: { fr: string; en?: string },
+  field: LocalisedString,
   locale: string
 ): string {
-  if (locale === "en" && field.en) return field.en;
+  const value = field[locale as keyof LocalisedString];
+  if (value) return value;
+  if (field.en) return field.en;
   return field.fr;
 }
 
 /**
- * Helper to get localised array from a field that has {fr: string[], en?: string[]} shape.
+ * Helper to get localised array from a multilingual field.
+ * Falls back: requested locale → EN → FR.
  */
 export function getLocalisedArray(
-  field: { fr: string[]; en?: string[] },
+  field: LocalisedStringArray,
   locale: string
 ): string[] {
-  if (locale === "en" && field.en) return field.en;
+  const value = field[locale as keyof LocalisedStringArray];
+  if (value) return value;
+  if (field.en) return field.en;
   return field.fr;
 }

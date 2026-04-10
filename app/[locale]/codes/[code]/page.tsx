@@ -12,9 +12,12 @@ interface CodePageProps {
   params: Promise<{ locale: string; code: string }>;
 }
 
-/** DTC JSON data only has fr+en — map all other locales to EN fallback */
-function dtcLang(locale: string): "fr" | "en" {
-  return locale === "fr" ? "fr" : "en";
+/** Map locale to DTC data language key */
+function dtcLang(locale: string): "fr" | "en" | "de" | "es" | "pt" {
+  if (locale === "fr" || locale === "en" || locale === "de" || locale === "es" || locale === "pt") {
+    return locale;
+  }
+  return "en";
 }
 
 export async function generateStaticParams() {
