@@ -678,6 +678,7 @@
     "compatibilityTitle": "Pruefen Sie die Kompatibilitaet Ihres Fahrzeugs",
     "compatibilityResult": "Ihr {brand} {model} ist mit AutoDiag EU kompatibel. Das Protokoll {protocol} unterstuetzt das Auslesen des Codes {code} und {pidsSupported} Echtzeit-PIDs.",
     "relatedTitle": "Verwandte Codes",
+    "sameCategoryTitle": "Weitere Codes in dieser Kategorie",
     "faqTitle": "Haeufig gestellte Fragen",
     "ctaTitle": "Fuer eine praezise Diagnose Ihres Fahrzeugs",
     "ctaDescription": "Scannen Sie Ihr Auto mit AutoDiag EU — Fehlerspeicher in Echtzeit auslesen, KI-Klangdiagnose und vieles mehr.",

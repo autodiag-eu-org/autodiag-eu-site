@@ -678,6 +678,7 @@
     "compatibilityTitle": "Verifier la compatibilite de votre vehicule",
     "compatibilityResult": "Votre {brand} {model} est compatible avec AutoDiag EU. Le protocole {protocol} permet la lecture du code {code} et {pidsSupported} PIDs en temps reel.",
     "relatedTitle": "Codes associes",
+    "sameCategoryTitle": "Plus de codes dans cette categorie",
     "faqTitle": "Questions frequentes",
     "ctaTitle": "Pour un diagnostic precis de votre vehicule",
     "ctaDescription": "Scannez votre voiture avec AutoDiag EU — lecture des codes DTC en temps reel, scan audio IA et bien plus encore.",

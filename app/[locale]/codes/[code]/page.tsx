@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllCodes, getDTCByCode, getRelatedDTCs } from "@/lib/dtc";
+import {
+  getAllCodes,
+  getDTCByCode,
+  getRelatedDTCs,
+  getSameCategoryDTCs,
+} from "@/lib/dtc";
 import { generateDTCMetadata } from "@/lib/seo";
 import { locales } from "@/lib/i18n";
 import { getTranslations } from "next-intl/server";
@@ -62,6 +67,7 @@ export default async function CodePage({ params }: CodePageProps) {
   }
 
   const relatedDTCs = getRelatedDTCs(dtc.code);
+  const sameCategoryDTCs = getSameCategoryDTCs(dtc.code, 5);
   const t = await getTranslations({ locale, namespace: "codes" });
   const lang = dtcLang(locale);
   const faqData = dtc.faq[lang] ?? dtc.faq.fr;
@@ -89,7 +95,12 @@ export default async function CodePage({ params }: CodePageProps) {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <Breadcrumbs items={breadcrumbItems} />
       <SchemaMarkup type="FAQPage" data={faqSchema} />
-      <DTCDetail dtc={dtc} relatedDTCs={relatedDTCs} locale={locale} />
+      <DTCDetail
+        dtc={dtc}
+        relatedDTCs={relatedDTCs}
+        sameCategoryDTCs={sameCategoryDTCs}
+        locale={locale}
+      />
     </div>
   );
 }

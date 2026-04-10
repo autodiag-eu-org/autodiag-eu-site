@@ -155,6 +155,28 @@ export function getRelatedDTCs(code: string): DTCCode[] {
 }
 
 /**
+ * Get other DTC entries from the same category, excluding the code itself
+ * and any already-curated related codes to avoid duplication on the page.
+ */
+export function getSameCategoryDTCs(code: string, limit = 5): DTCCode[] {
+  const dtc = getDTCByCode(code);
+  if (!dtc) return [];
+
+  const excluded = new Set<string>([
+    dtc.code.toUpperCase(),
+    ...dtc.relatedCodes.map((c) => c.toUpperCase()),
+  ]);
+
+  return dtcCodes
+    .filter(
+      (entry) =>
+        entry.category.toLowerCase() === dtc.category.toLowerCase() &&
+        !excluded.has(entry.code.toUpperCase())
+    )
+    .slice(0, limit);
+}
+
+/**
  * Helper to get localised text from a multilingual field.
  * Falls back: requested locale → EN → FR.
  */

@@ -15,6 +15,7 @@ import type { VehicleCompatibility } from "@/lib/vehicles";
 interface DTCDetailProps {
   dtc: DTCCode;
   relatedDTCs: DTCCode[];
+  sameCategoryDTCs?: DTCCode[];
   locale?: string;
 }
 
@@ -45,7 +46,12 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-export default function DTCDetail({ dtc, relatedDTCs, locale = "fr" }: DTCDetailProps) {
+export default function DTCDetail({
+  dtc,
+  relatedDTCs,
+  sameCategoryDTCs = [],
+  locale = "fr",
+}: DTCDetailProps) {
   const t = useTranslations('dtcDetail');
   const isEN = locale === "en";
   const countries = isEN ? COUNTRY_KEYS_EN : COUNTRY_KEYS;
@@ -365,6 +371,41 @@ export default function DTCDetail({ dtc, relatedDTCs, locale = "fr" }: DTCDetail
                   )}
                 </AnimatePresence>
               </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Same-category codes (internal linking for SEO) */}
+      {sameCategoryDTCs.length > 0 && (
+        <section className="mb-10">
+          <h3 className="mb-4 text-xl font-bold">
+            {t('sameCategoryTitle')}
+          </h3>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {sameCategoryDTCs.map((entry) => (
+              <Link
+                key={entry.code}
+                href={`/${locale}/codes/${entry.code.toLowerCase()}`}
+                className="group flex items-center gap-3 rounded-xl border border-border bg-glass p-4 backdrop-blur-md transition-all hover:border-cyan/30 hover:bg-cyan/5"
+              >
+                <span className="font-bold text-gradient">{entry.code}</span>
+                <span className="flex-1 text-sm text-secondary group-hover:text-white">
+                  {getLocalised(entry.name, locale)}
+                </span>
+                <svg
+                  className="h-4 w-4 shrink-0 text-secondary transition-colors group-hover:text-cyan"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </Link>
             ))}
           </div>
         </section>

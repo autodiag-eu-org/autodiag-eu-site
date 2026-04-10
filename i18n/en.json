@@ -680,6 +680,7 @@
     "compatibilityTitle": "Check your vehicle's compatibility",
     "compatibilityResult": "Your {brand} {model} is compatible with AutoDiag EU. The {protocol} protocol supports reading code {code} and {pidsSupported} real-time PIDs.",
     "relatedTitle": "Related codes",
+    "sameCategoryTitle": "More codes in this category",
     "faqTitle": "Frequently asked questions",
     "ctaTitle": "For a precise diagnostic of your vehicle",
     "ctaDescription": "Scan your car with AutoDiag EU — real-time fault code reading, AI audio scan and much more.",
