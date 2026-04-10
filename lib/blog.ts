@@ -105,6 +105,17 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "top-10-common-fault-codes-europe",
+    title: "Top 10 most common OBD2 fault codes in Europe",
+    description:
+      "The top 10 OBD2 fault codes seen on European cars: P0420, P0171, P0300 and 7 more. Causes, repair costs and concrete solutions.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Fault Codes",
+    locale: "en",
+  },
+  {
     slug: "mot-preparation-guide-2026",
     title: "MOT preparation guide 2026 — pass first time",
     description:
@@ -379,6 +390,10 @@ const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "preparer-controle-technique-2026",
     en: "mot-preparation-guide-2026",
+  },
+  {
+    fr: "10-codes-defaut-frequents-europe",
+    en: "top-10-common-fault-codes-europe",
   },
   {
     fr: "comment-lire-code-defaut-obd2",

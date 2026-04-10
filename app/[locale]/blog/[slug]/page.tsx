@@ -13,6 +13,7 @@ import {
 import {
   ArticleCheckEngineLightWhatToDo,
   ArticleMOTPreparationGuide2026,
+  ArticleTop10CommonFaultCodesEurope,
 } from "./en-articles-v2";
 import {
   ArticleTop10MOTFailureReasons,
@@ -1676,6 +1677,7 @@ const articleComponents: Record<string, () => React.JSX.Element> = {
   /* EN articles */
   "check-engine-light-what-to-do": ArticleCheckEngineLightWhatToDo,
   "mot-preparation-guide-2026": ArticleMOTPreparationGuide2026,
+  "top-10-common-fault-codes-europe": ArticleTop10CommonFaultCodesEurope,
   "top-10-mot-failure-reasons-2026": ArticleTop10MOTFailureReasons,
   "how-to-prepare-car-for-mot": ArticleHowToPrepareCarForMOT,
   "best-obd2-app-uk-2026": ArticleBestOBD2AppUK2026,
