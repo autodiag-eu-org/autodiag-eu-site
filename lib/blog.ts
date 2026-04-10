@@ -116,6 +116,17 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "read-obd2-codes-phone",
+    title: "How to read OBD2 codes with your phone",
+    description:
+      "Complete tutorial to read OBD2 fault codes with a smartphone and a GBP 22 ELM327 Bluetooth adapter. Step by step, no technical skill needed.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Tutorial",
+    locale: "en",
+  },
+  {
     slug: "top-10-common-fault-codes-europe",
     title: "Top 10 most common OBD2 fault codes in Europe",
     description:
@@ -405,6 +416,10 @@ const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "10-codes-defaut-frequents-europe",
     en: "top-10-common-fault-codes-europe",
+  },
+  {
+    fr: "lire-codes-obd2-telephone",
+    en: "read-obd2-codes-phone",
   },
   {
     fr: "comment-lire-code-defaut-obd2",
