@@ -16,6 +16,17 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "lire-codes-obd2-telephone",
+    title: "Comment lire les codes OBD2 avec son telephone",
+    description:
+      "Tutoriel complet pour lire les codes defaut OBD2 de votre voiture avec un smartphone et un dongle ELM327 a 25 euros. Etape par etape.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Tutoriel",
+    locale: "fr",
+  },
+  {
     slug: "10-codes-defaut-frequents-europe",
     title: "Les 10 codes defaut OBD2 les plus frequents en Europe",
     description:
