@@ -31,7 +31,9 @@ export async function generateMetadata({
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
-  const posts = getBlogPostsByLocale(locale);
+  const posts = getBlogPostsByLocale(locale)
+    .slice()
+    .sort((a, b) => b.date.localeCompare(a.date));
   const t = await getTranslations({ locale, namespace: "blog" });
   const dateLocale = DATE_LOCALES[locale] ?? "fr-FR";
 

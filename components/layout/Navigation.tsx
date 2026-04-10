@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { key: 'compatibility', href: '/compatibilite' },
   { key: 'demo', href: '/demo' },
   { key: 'pricing', href: '/prix' },
+  { key: 'blog', href: '/blog' },
 ] as const;
 
 export default function Navigation() {
