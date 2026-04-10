@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface Garage {
   name: string;
@@ -35,6 +36,7 @@ const EXAMPLE_GARAGES: Garage[] = [
 ];
 
 export default function GarageMap() {
+  const t = useTranslations('garagesPage');
   const [search, setSearch] = useState('');
 
   return (
@@ -42,14 +44,14 @@ export default function GarageMap() {
       {/* Search input */}
       <div className="relative">
         <label htmlFor="garage-search" className="sr-only">
-          Rechercher par ville ou code postal
+          {t('searchLabel')}
         </label>
         <input
           id="garage-search"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Entrez une ville ou un code postal..."
+          placeholder={t('searchPlaceholder')}
           className="w-full rounded-xl border border-border bg-surface px-5 py-4 pl-12 text-white placeholder:text-secondary/60 focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/20 transition-all"
         />
         <svg
@@ -87,12 +89,10 @@ export default function GarageMap() {
             </svg>
           </div>
           <h3 className="mb-3 text-xl font-bold text-white">
-            Carte disponible prochainement
+            {t('mapComingSoon')}
           </h3>
           <p className="max-w-md text-secondary">
-            La carte interactive avec geolocalisation sera activee
-            prochainement. En attendant, decouvrez les garages de votre
-            region ci-dessous.
+            {t('mapComingSoonDesc')}
           </p>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function GarageMap() {
       {/* Garage list */}
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-white">
-          Garages pres de Boncourt (Jura, Suisse)
+          {t('nearbyTitle')}
         </h3>
 
         {EXAMPLE_GARAGES.map((garage) => (
@@ -153,9 +153,8 @@ export default function GarageMap() {
                 type="button"
                 disabled
                 className="shrink-0 rounded-xl border border-border bg-surface px-5 py-2.5 text-sm font-medium text-secondary cursor-not-allowed opacity-50"
-                aria-label={`Itineraire vers ${garage.name} — bientot disponible`}
               >
-                Itineraire
+                {t('directions')}
               </button>
             </div>
           </div>
@@ -165,11 +164,10 @@ export default function GarageMap() {
       {/* Info note */}
       <div className="rounded-2xl border border-cyan/20 bg-cyan/5 p-6 text-center">
         <p className="mb-2 text-sm text-secondary">
-          La carte interactive avec geolocalisation sera activee prochainement.
+          {t('comingSoonNote')}
         </p>
         <p className="text-sm font-medium text-white">
-          En attendant, utilisez AutoDiag EU pour diagnostiquer votre vehicule
-          vous-meme — c&apos;est gratuit au lancement.
+          {t('selfDiagNote')}
         </p>
       </div>
     </div>

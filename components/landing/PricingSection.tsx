@@ -1,36 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const freePlan = {
-  name: "Gratuit",
-  price: "0",
-  currency: "CHF",
-  features: [
-    "Scan audio moteur : 1 scan / semaine",
-    "Scan audio habitacle : 1 scan / semaine",
-    "Lecture codes DTC : illimitee",
-    "Live data : 4 PIDs basiques (RPM, vitesse, temperature, charge)",
-    "IA mecanicien : 3 questions / jour",
-    "Historique : 7 derniers jours",
-  ],
-};
-
-const premiumPlan = {
-  name: "Premium",
-  price: "49",
-  currency: "CHF/an",
-  features: [
-    "Tout en illimite",
-    "Effacement codes DTC",
-    "Devis + couts reparation",
-    "Pre-controle technique 5 pays",
-    "Export PDF rapports",
-    "Drive Test sans dongle",
-    "Tous les PIDs en live data",
-    "Historique illimite",
-  ],
-};
+import { useTranslations } from "next-intl";
 
 function CheckIcon() {
   return (
@@ -49,7 +20,33 @@ function CheckIcon() {
   );
 }
 
+const FREE_FEATURE_KEYS = [
+  "featureScanAudio",
+  "featureScanCabin",
+  "featureDTC",
+  "featureLiveData",
+  "featureAI",
+  "featureHistory",
+] as const;
+
+const PREMIUM_FEATURE_KEYS = [
+  "featureScanAudio",
+  "featureScanCabin",
+  "featureDTC",
+  "featureLiveData",
+  "featureAI",
+  "featureHistory",
+  "featureErase",
+  "featureQuote",
+  "featureCT",
+  "featureExport",
+  "featureDriveTest",
+] as const;
+
 export default function PricingSection() {
+  const t = useTranslations('pricing');
+  const tc = useTranslations('common');
+
   return (
     <section className="mx-auto max-w-4xl px-6 py-20 sm:py-28">
       <motion.div
@@ -60,9 +57,11 @@ export default function PricingSection() {
         className="text-center"
       >
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Simple, transparent,{" "}
-          <span className="text-gradient">sans surprise</span>
+          {t('title')}
         </h2>
+        <p className="mt-3 text-secondary">
+          {t('subtitle')}
+        </p>
       </motion.div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -74,16 +73,17 @@ export default function PricingSection() {
           transition={{ duration: 0.5 }}
           className="glass flex flex-col rounded-2xl border border-border p-8 backdrop-blur-md transition-all hover:border-border/60"
         >
-          <h3 className="text-xl font-bold">{freePlan.name}</h3>
+          <h3 className="text-xl font-bold">{t('freeTitle')}</h3>
+          <p className="mt-1 text-sm text-secondary">{t('freeSubtitle')}</p>
           <div className="mt-4 flex items-baseline gap-1">
-            <span className="text-4xl font-bold">{freePlan.price}</span>
-            <span className="text-secondary">{freePlan.currency}</span>
+            <span className="text-4xl font-bold">0</span>
+            <span className="text-secondary">CHF</span>
           </div>
           <ul className="mt-8 flex-1 space-y-3">
-            {freePlan.features.map((f) => (
-              <li key={f} className="flex items-start gap-2 text-sm text-secondary">
+            {FREE_FEATURE_KEYS.map((key) => (
+              <li key={key} className="flex items-start gap-2 text-sm text-secondary">
                 <CheckIcon />
-                {f}
+                {t(key)} : {t(`${key}Free`)}
               </li>
             ))}
           </ul>
@@ -91,7 +91,7 @@ export default function PricingSection() {
             href="#beta"
             className="mt-8 block rounded-full border border-border py-3 text-center font-semibold transition-colors hover:border-cyan/40 hover:text-cyan"
           >
-            Commencer gratuitement
+            {t('ctaFree')}
           </a>
         </motion.div>
 
@@ -104,23 +104,23 @@ export default function PricingSection() {
           className="glass relative flex flex-col rounded-2xl border border-cyan/40 p-8 shadow-[0_0_30px_rgba(0,229,255,0.08)] backdrop-blur-md"
         >
           <span className="absolute -top-3 right-6 rounded-full bg-cyan px-4 py-1 text-xs font-bold text-black">
-            Recommande
+            {tc('recommended')}
           </span>
-          <h3 className="text-xl font-bold">{premiumPlan.name}</h3>
+          <h3 className="text-xl font-bold">{t('premiumTitle')}</h3>
+          <p className="mt-1 text-sm text-secondary">{t('premiumSubtitle')}</p>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-4xl font-bold text-gradient">
-              {premiumPlan.price}
+              {t('price')}
             </span>
-            <span className="text-secondary">{premiumPlan.currency}</span>
           </div>
           <p className="mt-2 text-sm text-cyan/80">
-            7 jours d&apos;essai gratuit
+            {t('trial')}
           </p>
           <ul className="mt-8 flex-1 space-y-3">
-            {premiumPlan.features.map((f) => (
-              <li key={f} className="flex items-start gap-2 text-sm">
+            {PREMIUM_FEATURE_KEYS.map((key) => (
+              <li key={key} className="flex items-start gap-2 text-sm">
                 <CheckIcon />
-                {f}
+                {t(key)} : {t(`${key}Premium`)}
               </li>
             ))}
           </ul>
@@ -129,7 +129,7 @@ export default function PricingSection() {
             className="group relative mt-8 block overflow-hidden rounded-full bg-green py-3 text-center font-semibold text-black transition-shadow hover:shadow-[0_0_30px_rgba(0,200,83,0.4)]"
           >
             <span className="relative z-10">
-              Commencer l&apos;essai gratuit
+              {t('ctaPremium')}
             </span>
             <span
               aria-hidden="true"
@@ -140,8 +140,7 @@ export default function PricingSection() {
       </div>
 
       <p className="mt-8 text-center text-sm text-secondary">
-        Paiement via Google Play — pas de carte bancaire requise pour
-        l&apos;essai
+        {t('paymentNote')} — {t('trialNote')}
       </p>
     </section>
   );

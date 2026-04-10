@@ -2,25 +2,20 @@
 
 import { motion } from "framer-motion";
 import { type FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 import HoneypotField from "@/components/shared/HoneypotField";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-const countries = [
-  "France",
-  "Allemagne",
-  "Suisse",
-  "Espagne",
-  "Portugal",
-  "Autre",
-];
+const COUNTRY_CODES = ["fr", "de", "ch", "es", "pt", "it", "be", "nl", "at", "lu", "other"] as const;
 
 export default function BetaForm() {
+  const t = useTranslations('beta');
   const [status, setStatus] = useState<Status>("idle");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [vehicle, setVehicle] = useState("");
-  const [country, setCountry] = useState("France");
+  const [country, setCountry] = useState("fr");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -60,12 +55,11 @@ export default function BetaForm() {
         className="glass rounded-2xl border border-border p-8 backdrop-blur-md sm:p-10"
       >
         <h2 className="text-center text-2xl font-bold sm:text-3xl">
-          Rejoignez les{" "}
-          <span className="text-gradient">premiers testeurs</span>
+          {t('title')}
         </h2>
 
         <p className="mt-3 text-center text-sm text-secondary">
-          Acces anticipe a l&apos;app — places limitees
+          {t('subtitle')}
         </p>
 
         {status === "success" ? (
@@ -75,10 +69,7 @@ export default function BetaForm() {
             className="mt-8 rounded-xl border border-green/30 bg-green/10 p-6 text-center"
           >
             <p className="text-lg font-semibold text-green">
-              Inscription enregistree !
-            </p>
-            <p className="mt-2 text-sm text-secondary">
-              Vous recevrez un email avec le lien d&apos;installation.
+              {t('success')}
             </p>
           </motion.div>
         ) : (
@@ -90,7 +81,7 @@ export default function BetaForm() {
                 htmlFor="beta-name"
                 className="mb-1.5 block text-sm font-medium"
               >
-                Nom <span className="text-red-400">*</span>
+                {t('nameLabel')} <span className="text-red-400">*</span>
               </label>
               <input
                 id="beta-name"
@@ -99,7 +90,7 @@ export default function BetaForm() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-white placeholder:text-secondary/50 focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan/30"
-                placeholder="Votre nom"
+                placeholder={t('namePlaceholder')}
               />
             </div>
 
@@ -108,7 +99,7 @@ export default function BetaForm() {
                 htmlFor="beta-email"
                 className="mb-1.5 block text-sm font-medium"
               >
-                Email <span className="text-red-400">*</span>
+                {t('emailLabel')} <span className="text-red-400">*</span>
               </label>
               <input
                 id="beta-email"
@@ -117,7 +108,7 @@ export default function BetaForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-white placeholder:text-secondary/50 focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan/30"
-                placeholder="votre.email@gmail.com"
+                placeholder={t('emailPlaceholder')}
               />
             </div>
 
@@ -126,8 +117,7 @@ export default function BetaForm() {
                 htmlFor="beta-vehicle"
                 className="mb-1.5 block text-sm font-medium"
               >
-                Vehicule{" "}
-                <span className="text-secondary">(optionnel)</span>
+                {t('vehicleLabel')}
               </label>
               <input
                 id="beta-vehicle"
@@ -135,7 +125,7 @@ export default function BetaForm() {
                 value={vehicle}
                 onChange={(e) => setVehicle(e.target.value)}
                 className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-white placeholder:text-secondary/50 focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan/30"
-                placeholder="ex: BMW 530d 2018"
+                placeholder={t('vehiclePlaceholder')}
               />
             </div>
 
@@ -144,7 +134,7 @@ export default function BetaForm() {
                 htmlFor="beta-country"
                 className="mb-1.5 block text-sm font-medium"
               >
-                Pays <span className="text-red-400">*</span>
+                {t('countryLabel')} <span className="text-red-400">*</span>
               </label>
               <select
                 id="beta-country"
@@ -153,9 +143,9 @@ export default function BetaForm() {
                 onChange={(e) => setCountry(e.target.value)}
                 className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-white focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan/30"
               >
-                {countries.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
+                {COUNTRY_CODES.map((code) => (
+                  <option key={code} value={code}>
+                    {t(`countries.${code}`)}
                   </option>
                 ))}
               </select>
@@ -163,8 +153,7 @@ export default function BetaForm() {
 
             <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3">
               <p className="text-sm text-amber-200">
-                <strong>Important :</strong> vous aurez besoin d&apos;un compte
-                Google (Gmail) pour installer l&apos;app.
+                {t('gmailWarning')}
               </p>
             </div>
 
@@ -175,8 +164,8 @@ export default function BetaForm() {
             >
               <span className="relative z-10">
                 {status === "loading"
-                  ? "Envoi en cours..."
-                  : "Rejoindre la beta"}
+                  ? t('submitting')
+                  : t('submit')}
               </span>
               <span
                 aria-hidden="true"
@@ -186,13 +175,7 @@ export default function BetaForm() {
 
             {status === "error" && (
               <p className="text-center text-sm text-red-400">
-                Une erreur est survenue. Contactez-nous a{" "}
-                <a
-                  href="mailto:info@autodiag-eu.com"
-                  className="underline hover:text-cyan"
-                >
-                  info@autodiag-eu.com
-                </a>
+                {t('error')}
               </p>
             )}
           </form>

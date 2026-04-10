@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import ShareButton from "@/components/shared/ShareButton";
 
 import frData from "@/data/ct/fr.json";
@@ -32,7 +33,7 @@ type CheckStatus = "unchecked" | "ok" | "warning" | "problem";
 interface CountryOption {
   code: string;
   flag: string;
-  label: string;
+  i18nKey: string;
   shortLabel: string;
   data: CTData;
 }
@@ -40,11 +41,11 @@ interface CountryOption {
 /* ──────────────── Constants ──────────────── */
 
 const COUNTRIES: CountryOption[] = [
-  { code: "FR", flag: "\uD83C\uDDEB\uD83C\uDDF7", label: "France — CT", shortLabel: "CT", data: frData as CTData },
-  { code: "DE", flag: "\uD83C\uDDE9\uD83C\uDDEA", label: "Allemagne — TUV", shortLabel: "TUV", data: deData as CTData },
-  { code: "CH", flag: "\uD83C\uDDE8\uD83C\uDDED", label: "Suisse — MFK", shortLabel: "MFK", data: chData as CTData },
-  { code: "ES", flag: "\uD83C\uDDEA\uD83C\uDDF8", label: "Espagne — ITV", shortLabel: "ITV", data: esData as CTData },
-  { code: "PT", flag: "\uD83C\uDDF5\uD83C\uDDF9", label: "Portugal — IPO", shortLabel: "IPO", data: ptData as CTData },
+  { code: "FR", flag: "\uD83C\uDDEB\uD83C\uDDF7", i18nKey: "france", shortLabel: "CT", data: frData as CTData },
+  { code: "DE", flag: "\uD83C\uDDE9\uD83C\uDDEA", i18nKey: "germany", shortLabel: "TUeV", data: deData as CTData },
+  { code: "CH", flag: "\uD83C\uDDE8\uD83C\uDDED", i18nKey: "switzerland", shortLabel: "MFK", data: chData as CTData },
+  { code: "ES", flag: "\uD83C\uDDEA\uD83C\uDDF8", i18nKey: "spain", shortLabel: "ITV", data: esData as CTData },
+  { code: "PT", flag: "\uD83C\uDDF5\uD83C\uDDF9", i18nKey: "portugal", shortLabel: "IPO", data: ptData as CTData },
 ];
 
 const STATUS_CYCLE: CheckStatus[] = ["unchecked", "ok", "warning", "problem"];
@@ -93,22 +94,17 @@ function StatusIcon({ status }: { status: CheckStatus }) {
   }
 }
 
-function statusLabel(status: CheckStatus): string {
-  switch (status) {
-    case "ok":
-      return "Verifie";
-    case "warning":
-      return "A verifier";
-    case "problem":
-      return "Probleme";
-    default:
-      return "Non verifie";
-  }
-}
+const STATUS_KEY_MAP: Record<CheckStatus, string> = {
+  unchecked: "statusUnchecked",
+  ok: "statusOk",
+  warning: "statusWarning",
+  problem: "statusProblem",
+};
 
 /* ──────────────── Component ──────────────── */
 
 export default function CTChecklist() {
+  const t = useTranslations('technicalControl');
   const [selectedCountry, setSelectedCountry] = useState<string>("FR");
   const [statuses, setStatuses] = useState<Record<string, Record<string, CheckStatus>>>({});
 
@@ -166,15 +162,15 @@ export default function CTChecklist() {
   /* ── Share text ── */
   const shareText = useMemo(() => {
     const lines = [
-      `Pre-controle technique ${country.data.name}`,
-      `${counts.ok} OK / ${counts.warning} A verifier / ${counts.problem} Probleme(s)`,
-      `${counts.checked}/${counts.total} points verifies`,
+      `${t('shareTitle')} — ${country.data.name}`,
+      `${counts.ok} ${t('ok')} / ${counts.warning} ${t('toCheck')} / ${counts.problem} ${t('problems')}`,
+      t('pointsChecked', { checked: counts.checked, total: counts.total }),
     ];
     if (allChecked && !hasProblems) {
-      lines.push("Vehicule pret pour le controle technique !");
+      lines.push(t('shareReady'));
     }
     return lines.join("\n");
-  }, [country, counts, allChecked, hasProblems]);
+  }, [t, country, counts, allChecked, hasProblems]);
 
   return (
     <div className="space-y-8">
@@ -191,10 +187,10 @@ export default function CTChecklist() {
                 : "border border-border bg-glass text-secondary hover:border-cyan/30 hover:text-white"
             }`}
           >
-            <span className="text-xl" role="img" aria-label={c.label}>
+            <span className="text-xl" role="img" aria-label={t(c.i18nKey)}>
               {c.flag}
             </span>
-            <span className="hidden sm:inline">{c.label}</span>
+            <span className="hidden sm:inline">{t(c.i18nKey)}</span>
             <span className="sm:hidden">{c.shortLabel}</span>
           </button>
         ))}
@@ -210,10 +206,10 @@ export default function CTChecklist() {
       >
         <h3 className="text-lg font-bold">{country.data.name}</h3>
         <p className="mt-1 text-sm text-secondary">
-          <span className="font-medium text-white">Organisme :</span> {country.data.authority}
+          <span className="font-medium text-white">{t('authority')} :</span> {country.data.authority}
         </p>
         <p className="text-sm text-secondary">
-          <span className="font-medium text-white">Frequence :</span> {country.data.frequency}
+          <span className="font-medium text-white">{t('frequencyLabel')} :</span> {country.data.frequency}
         </p>
       </motion.div>
 
@@ -221,7 +217,7 @@ export default function CTChecklist() {
       <div className="space-y-2">
         <div className="flex items-center justify-between text-sm">
           <span className="text-secondary">
-            {counts.checked}/{counts.total} points verifies
+            {t('pointsChecked', { checked: counts.checked, total: counts.total })}
           </span>
           <span className="font-medium text-cyan">{progressPct}%</span>
         </div>
@@ -268,7 +264,7 @@ export default function CTChecklist() {
                           <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
                           </svg>
-                          Verifiable avec AutoDiag EU
+                          {t('verifiedWithApp')}
                         </span>
                       )}
                     </div>
@@ -276,7 +272,7 @@ export default function CTChecklist() {
                       {point.description}
                     </p>
                     <span className="mt-2 inline-block text-xs font-medium text-secondary/70 group-hover:text-secondary">
-                      Cliquez pour changer : {statusLabel(status)}
+                      {t('clickToChange', { status: t(STATUS_KEY_MAP[status]) })}
                     </span>
                   </div>
                 </div>
@@ -293,28 +289,28 @@ export default function CTChecklist() {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-4 rounded-2xl border border-border bg-glass p-6 backdrop-blur-md"
         >
-          <h3 className="text-lg font-bold">Resultat</h3>
+          <h3 className="text-lg font-bold">{t('resultLabel')}</h3>
 
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-green" />
               <span className="text-sm">
                 <span className="font-semibold text-green">{counts.ok}</span>{" "}
-                <span className="text-secondary">OK</span>
+                <span className="text-secondary">{t('ok')}</span>
               </span>
             </div>
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-orange-400" />
               <span className="text-sm">
                 <span className="font-semibold text-orange-400">{counts.warning}</span>{" "}
-                <span className="text-secondary">A verifier</span>
+                <span className="text-secondary">{t('toCheck')}</span>
               </span>
             </div>
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-red-400" />
               <span className="text-sm">
                 <span className="font-semibold text-red-400">{counts.problem}</span>{" "}
-                <span className="text-secondary">Probleme(s)</span>
+                <span className="text-secondary">{t('problems')}</span>
               </span>
             </div>
           </div>
@@ -332,10 +328,10 @@ export default function CTChecklist() {
             >
               <p className="text-sm font-medium leading-relaxed">
                 {hasProblems
-                  ? "Nous vous recommandons de faire verifier ces points avant le controle technique."
+                  ? t('verdictProblem')
                   : hasWarnings
-                  ? "Quelques points meritent une attention avant le passage au controle technique."
-                  : "Votre vehicule semble pret pour le controle technique !"}
+                  ? t('verdictWarning')
+                  : t('verdictReady')}
               </p>
             </div>
           )}
@@ -349,10 +345,10 @@ export default function CTChecklist() {
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan to-green px-6 py-3 text-sm font-semibold text-black transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(0,229,255,0.4)]"
             >
               <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-in-out group-hover:translate-x-full" />
-              <span className="relative">Faites un diagnostic complet avec AutoDiag EU</span>
+              <span className="relative">{t('ctaFullDiag')}</span>
             </a>
             <ShareButton
-              title="Pre-controle technique — AutoDiag EU"
+              title={t('shareTitle')}
               text={shareText}
             />
           </div>
