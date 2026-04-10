@@ -449,10 +449,15 @@
   },
   "blog": {
     "title": "El blog de AutoDiag EU",
-    "subtitle": "Consejos, tutoriales y novedades para entender mejor tu coche.",
+    "subtitle": "Guias practicas y consejos de mecanico, explicados de forma sencilla. Sin jerga, solo lo esencial.",
     "readMore": "Leer mas",
     "publishedOn": "Publicado el",
-    "readingTime": "min de lectura"
+    "readingTime": "min de lectura",
+    "metaTitle": "Blog AutoDiag EU — Guias y consejos para tu coche",
+    "metaDescription": "Guias practicas, tutoriales OBD2 y consejos de mecanica. Aprende a diagnosticar tu coche como un profesional.",
+    "titlePrefix": "El blog ",
+    "titleSuffix": "",
+    "minRead": "min de lectura"
   },
   "stethoscope": {
     "title": "El Estetoscopio",

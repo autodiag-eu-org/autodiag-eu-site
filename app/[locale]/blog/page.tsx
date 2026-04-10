@@ -2,19 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { generatePageMetadata } from "@/lib/seo";
 import { getBlogPostsByLocale } from "@/lib/blog";
+import { getTranslations } from "next-intl/server";
 
 interface BlogPageProps {
   params: Promise<{ locale: string }>;
 }
 
+const DATE_LOCALES: Record<string, string> = {
+  fr: "fr-FR",
+  en: "en-GB",
+  de: "de-DE",
+  es: "es-ES",
+  pt: "pt-PT",
+};
+
 export async function generateMetadata({
   params,
 }: BlogPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
   return generatePageMetadata({
-    title: "Blog AutoDiag EU — Guides et conseils automobile",
-    description:
-      "Guides pratiques, tutoriels OBD2 et conseils mecanique. Apprenez a diagnostiquer votre voiture comme un pro, explique simplement.",
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     locale,
     path: "blog",
   });
@@ -22,21 +31,20 @@ export async function generateMetadata({
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
-  const isEN = locale === "en";
   const posts = getBlogPostsByLocale(locale);
+  const t = await getTranslations({ locale, namespace: "blog" });
+  const dateLocale = DATE_LOCALES[locale] ?? "fr-FR";
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
         <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-          {isEN ? "The " : "Le blog "}
+          {t("titlePrefix")}
           <span className="text-gradient">AutoDiag EU</span>
-          {isEN ? " blog" : ""}
+          {t("titleSuffix")}
         </h1>
         <p className="mt-4 text-lg text-secondary">
-          {isEN
-            ? "Practical guides and mechanic tips, explained simply. No jargon, just the essentials."
-            : "Des guides pratiques et des conseils de mecanicien, expliques simplement. Pas de jargon, que du concret."}
+          {t("subtitle")}
         </p>
       </div>
 
@@ -52,7 +60,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 {post.category}
               </span>
               <span>
-                {post.readingTime} {isEN ? "min read" : "min de lecture"}
+                {post.readingTime} {t("minRead")}
               </span>
             </div>
             <h2 className="mb-2 text-lg font-semibold leading-tight transition-colors group-hover:text-cyan">
@@ -65,7 +73,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
               <span>{post.author}</span>
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString(
-                  isEN ? "en-GB" : "fr-FR",
+                  dateLocale,
                   {
                     day: "numeric",
                     month: "long",

@@ -453,7 +453,12 @@
     "subtitle": "Tips, tutorials and news to help you understand your car better.",
     "readMore": "Read more",
     "publishedOn": "Published on",
-    "readingTime": "min read"
+    "readingTime": "min read",
+    "metaTitle": "AutoDiag EU Blog — Car Guides & Tips",
+    "metaDescription": "Practical guides, OBD2 tutorials and mechanic tips. Learn to diagnose your car like a pro, explained simply.",
+    "titlePrefix": "The ",
+    "titleSuffix": " blog",
+    "minRead": "min read"
   },
   "stethoscope": {
     "title": "The Stethoscope",

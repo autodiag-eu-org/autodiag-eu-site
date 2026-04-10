@@ -11,6 +11,27 @@ import {
   ArticleOBD2FaultCodesExplainedUK,
   ArticleCarDiagnosticAppVsGarageUK,
 } from "./en-articles";
+import {
+  ArticleDEOBD2FehlercodesLesen,
+  ArticleDETUVVorbereitung,
+  ArticleDE5Motorgerausche,
+  ArticleDEOBD2Verstehen,
+  ArticleDEAutodiagVsWerkstatt,
+} from "./de-articles";
+import {
+  ArticleESCodigosFalloOBD2,
+  ArticleESPrepararITV,
+  ArticleES5RuidosMotor,
+  ArticleESOBD2Entender,
+  ArticleESAutodiagVsTaller,
+} from "./es-articles";
+import {
+  ArticlePTCodigosErroOBD2,
+  ArticlePTPrepararIPO,
+  ArticlePT5RuidosMotor,
+  ArticlePTOBD2Compreender,
+  ArticlePTAutodiagVsOficina,
+} from "./pt-articles";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
 interface BlogPostPageProps {
@@ -1642,6 +1663,24 @@ const articleComponents: Record<string, () => React.JSX.Element> = {
   "best-obd2-app-uk-2026": ArticleBestOBD2AppUK2026,
   "obd2-fault-codes-explained-uk": ArticleOBD2FaultCodesExplainedUK,
   "car-diagnostic-app-vs-garage-uk": ArticleCarDiagnosticAppVsGarageUK,
+  /* DE articles */
+  "obd2-fehlercodes-lesen-anleitung": ArticleDEOBD2FehlercodesLesen,
+  "tuv-vorbereitung-checkliste": ArticleDETUVVorbereitung,
+  "5-motorgerausche-nicht-ignorieren": ArticleDE5Motorgerausche,
+  "obd2-verstehen-in-5-minuten": ArticleDEOBD2Verstehen,
+  "autodiag-vs-werkstatt-ersparnisse": ArticleDEAutodiagVsWerkstatt,
+  /* ES articles */
+  "como-leer-codigos-fallo-obd2": ArticleESCodigosFalloOBD2,
+  "preparar-itv-lista-completa": ArticleESPrepararITV,
+  "5-ruidos-motor-no-ignorar": ArticleES5RuidosMotor,
+  "obd2-entender-en-5-minutos": ArticleESOBD2Entender,
+  "autodiag-vs-taller-ahorros": ArticleESAutodiagVsTaller,
+  /* PT articles */
+  "como-ler-codigos-erro-obd2": ArticlePTCodigosErroOBD2,
+  "preparar-ipo-lista-completa": ArticlePTPrepararIPO,
+  "5-ruidos-motor-nao-ignorar": ArticlePT5RuidosMotor,
+  "obd2-compreender-em-5-minutos": ArticlePTOBD2Compreender,
+  "autodiag-vs-oficina-poupancas": ArticlePTAutodiagVsOficina,
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

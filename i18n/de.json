@@ -449,10 +449,15 @@
   },
   "blog": {
     "title": "Der AutoDiag EU Blog",
-    "subtitle": "Tipps, Anleitungen und Neuigkeiten, um Ihr Auto besser zu verstehen.",
+    "subtitle": "Praktische Anleitungen und Mechaniker-Tipps, einfach erklart. Kein Fachjargon, nur das Wesentliche.",
     "readMore": "Weiterlesen",
     "publishedOn": "Veroeffentlicht am",
-    "readingTime": "Min. Lesezeit"
+    "readingTime": "Min. Lesezeit",
+    "metaTitle": "AutoDiag EU Blog — Anleitungen und Tipps rund ums Auto",
+    "metaDescription": "Praktische Anleitungen, OBD2-Tutorials und Mechaniker-Tipps. Lernen Sie, Ihr Auto wie ein Profi zu diagnostizieren.",
+    "titlePrefix": "Der ",
+    "titleSuffix": "-Blog",
+    "minRead": "Min. Lesezeit"
   },
   "stethoscope": {
     "title": "Das Stethoskop",
