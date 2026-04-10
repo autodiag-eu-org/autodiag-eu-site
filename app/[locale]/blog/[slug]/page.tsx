@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { generatePageMetadata } from "@/lib/seo";
-import { getBlogPost, getAllBlogParams } from "@/lib/blog";
+import { generateArticleMetadata } from "@/lib/seo";
+import { getBlogPost, getAllBlogParams, getBlogAlternates } from "@/lib/blog";
+import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import {
   ArticleTop10MOTFailureReasons,
   ArticleHowToPrepareCarForMOT,
@@ -49,11 +50,14 @@ export async function generateMetadata({
   const post = getBlogPost(slug);
   if (!post) return { title: "Article introuvable | AutoDiag EU" };
 
-  return generatePageMetadata({
+  return generateArticleMetadata({
     title: post.title,
     description: post.description,
     locale,
-    path: `blog/${post.slug}`,
+    slug: post.slug,
+    datePublished: post.date,
+    author: post.author,
+    alternateSlugs: getBlogAlternates(post.slug),
   });
 }
 
@@ -1684,12 +1688,50 @@ const articleComponents: Record<string, () => React.JSX.Element> = {
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
 
   const ArticleComponent = articleComponents[slug];
-  if (!ArticleComponent) {
+  const post = getBlogPost(slug);
+  if (!ArticleComponent || !post) {
     notFound();
   }
 
-  return <ArticleComponent />;
+  const siteUrl = "https://www.autodiag-eu.com";
+  const articleUrl = `${siteUrl}/${locale}/blog/${post.slug}`;
+  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(
+    post.title
+  )}&description=${encodeURIComponent(post.description)}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org" as const,
+    "@type": "Article" as const,
+    headline: post.title,
+    description: post.description,
+    author: {
+      "@type": "Person" as const,
+      name: post.author,
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    image: ogImage,
+    mainEntityOfPage: {
+      "@type": "WebPage" as const,
+      "@id": articleUrl,
+    },
+    publisher: {
+      "@type": "Organization" as const,
+      name: "AutoDiag EU",
+      logo: {
+        "@type": "ImageObject" as const,
+        url: `${siteUrl}/images/icon-192.png`,
+      },
+    },
+  };
+
+  return (
+    <>
+      <SchemaMarkup type="Article" data={articleSchema} />
+      <ArticleComponent />
+    </>
+  );
 }

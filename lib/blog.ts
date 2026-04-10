@@ -311,3 +311,55 @@ export function getAllBlogSlugs(): string[] {
 export function getAllBlogParams(): { locale: string; slug: string }[] {
   return blogPosts.map((post) => ({ locale: post.locale, slug: post.slug }));
 }
+
+/**
+ * Blog translation groups — each inner array lists slugs that are
+ * translations of the same article across locales.
+ */
+const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "comment-lire-code-defaut-obd2",
+    en: "obd2-fault-codes-explained-uk",
+    de: "obd2-fehlercodes-lesen-anleitung",
+    es: "como-leer-codigos-fallo-obd2",
+    pt: "como-ler-codigos-erro-obd2",
+  },
+  {
+    fr: "preparer-controle-technique",
+    en: "how-to-prepare-car-for-mot",
+    de: "tuv-vorbereitung-checkliste",
+    es: "preparar-itv-lista-completa",
+    pt: "preparar-ipo-lista-completa",
+  },
+  {
+    fr: "5-bruits-moteur-a-ne-pas-ignorer",
+    de: "5-motorgerausche-nicht-ignorieren",
+    es: "5-ruidos-motor-no-ignorar",
+    pt: "5-ruidos-motor-nao-ignorar",
+  },
+  {
+    fr: "obd2-comprendre-en-5-minutes",
+    de: "obd2-verstehen-in-5-minuten",
+    es: "obd2-entender-en-5-minutos",
+    pt: "obd2-compreender-em-5-minutos",
+  },
+  {
+    fr: "autodiag-vs-garage-economies",
+    en: "car-diagnostic-app-vs-garage-uk",
+    de: "autodiag-vs-werkstatt-ersparnisse",
+    es: "autodiag-vs-taller-ahorros",
+    pt: "autodiag-vs-oficina-poupancas",
+  },
+];
+
+/**
+ * Return the per-locale alternate slugs for a given blog post, or
+ * undefined if the post is a standalone article with no translations.
+ */
+export function getBlogAlternates(
+  slug: string
+): Record<string, string> | undefined {
+  return blogTranslationGroups.find((group) =>
+    Object.values(group).includes(slug)
+  );
+}

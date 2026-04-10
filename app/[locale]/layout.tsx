@@ -6,6 +6,9 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/shared/CookieConsent";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import SchemaMarkup, {
+  buildOrganizationSchema,
+} from "@/components/shared/SchemaMarkup";
 import "../globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.autodiag-eu.com";
@@ -20,6 +23,10 @@ export async function generateMetadata({
 }: LocaleLayoutProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "seo" });
+
+  const ogImage = `${SITE_URL}/api/og?title=${encodeURIComponent(
+    t("siteTitle")
+  )}&description=${encodeURIComponent(t("ogDescription"))}`;
 
   return {
     title: t("siteTitle"),
@@ -43,11 +50,20 @@ export async function generateMetadata({
       siteName: "AutoDiag EU",
       locale,
       type: "website",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: t("siteTitle"),
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("siteTitle"),
       description: t("ogDescription"),
+      images: [ogImage],
     },
   };
 }
@@ -58,6 +74,7 @@ export default async function LocaleLayout({
 }: LocaleLayoutProps) {
   const { locale } = await params;
   const messages = await getMessages();
+  const organizationSchema = buildOrganizationSchema(locale);
 
   return (
     <html lang={locale === "en" ? "en-GB" : locale} className="dark">
@@ -69,6 +86,7 @@ export default async function LocaleLayout({
         <link rel="apple-touch-icon" href="/images/icon-192.png" />
       </head>
       <body className="min-h-screen bg-[#050510] text-white antialiased font-sans">
+        <SchemaMarkup type="Organization" data={organizationSchema} />
         <NextIntlClientProvider messages={messages}>
           <Navigation />
           <main className="flex-1">{children}</main>

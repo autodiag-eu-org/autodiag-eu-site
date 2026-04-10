@@ -17,6 +17,7 @@ interface OrganizationSchema {
     '@type': 'Person';
     name: string;
   };
+  sameAs?: string[];
 }
 
 interface FAQPageSchema {
@@ -44,6 +45,10 @@ interface ArticleSchema {
   datePublished?: string;
   dateModified?: string;
   image?: string;
+  mainEntityOfPage?: {
+    '@type': 'WebPage';
+    '@id': string;
+  };
   publisher?: {
     '@type': 'Organization';
     name: string;
@@ -61,25 +66,41 @@ interface SchemaMarkupProps {
   data: SchemaData;
 }
 
-const DEFAULT_ORGANIZATION: OrganizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'AutoDiag EU Sarl',
-  url: 'https://autodiag-eu.com',
-  description: 'Intelligent car diagnostics',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Route du Jura 10',
-    addressLocality: 'Boncourt',
-    postalCode: '2926',
-    addressCountry: 'CH',
-  },
-  email: 'info@autodiag-eu.com',
-  founder: {
-    '@type': 'Person',
-    name: 'Reda Kaouani',
-  },
+const ORG_DESCRIPTIONS: Record<string, string> = {
+  fr: 'Diagnostic automobile intelligent. Scan audio IA, lecture de codes de défaut OBD2, compatibilité 677 véhicules européens.',
+  en: 'Intelligent car diagnostics. AI audio scan, OBD2 fault code reader, 677 European vehicles supported.',
+  de: 'Intelligente Fahrzeugdiagnose. KI-Audioscan, OBD2-Fehlercodeleser, 677 europäische Fahrzeuge unterstützt.',
+  es: 'Diagnóstico automovilístico inteligente. Escaneo de audio IA, lector de códigos de avería OBD2, 677 vehículos europeos compatibles.',
+  pt: 'Diagnóstico automóvel inteligente. Análise áudio IA, leitor de códigos de erro OBD2, 677 veículos europeus compatíveis.',
 };
+
+/**
+ * Build a locale-aware Organization schema for AutoDiag EU.
+ */
+export function buildOrganizationSchema(locale: string): OrganizationSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'AutoDiag EU Sarl',
+    url: 'https://www.autodiag-eu.com',
+    logo: 'https://www.autodiag-eu.com/images/icon-192.png',
+    description: ORG_DESCRIPTIONS[locale] ?? ORG_DESCRIPTIONS.en,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Route du Jura 10',
+      addressLocality: 'Boncourt',
+      postalCode: '2926',
+      addressCountry: 'CH',
+    },
+    email: 'info@autodiag-eu.com',
+    founder: {
+      '@type': 'Person',
+      name: 'Reda Kaouani',
+    },
+  };
+}
+
+const DEFAULT_ORGANIZATION: OrganizationSchema = buildOrganizationSchema('en');
 
 export { DEFAULT_ORGANIZATION };
 

@@ -238,7 +238,8 @@
     "madeIn": "Entwickelt in der Schweiz",
     "contact": "Kontakt: info@autodiag-eu.com",
     "address": "Route du Jura 10, 2926 Boncourt, Schweiz",
-    "manageChoices": "Meine Einstellungen verwalten"
+    "manageChoices": "Meine Einstellungen verwalten",
+    "topCodesTitle": "Haeufige Fehlercodes"
   },
   "cta": {
     "scanFree": "Scannen Sie Ihr Auto kostenlos",
