@@ -127,6 +127,17 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "p0420-catalytic-converter-cost",
+    title: "P0420 catalytic converter repair cost",
+    description:
+      "Real 2026 UK price grid for a P0420 repair: lambda sensor, aftermarket catalyst, OEM, labour and traps to avoid when quoted.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Repair Costs",
+    locale: "en",
+  },
+  {
     slug: "read-obd2-codes-phone",
     title: "How to read OBD2 codes with your phone",
     description:
@@ -431,6 +442,10 @@ const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "lire-codes-obd2-telephone",
     en: "read-obd2-codes-phone",
+  },
+  {
+    fr: "cout-reparation-catalyseur-p0420",
+    en: "p0420-catalytic-converter-cost",
   },
   {
     fr: "comment-lire-code-defaut-obd2",
