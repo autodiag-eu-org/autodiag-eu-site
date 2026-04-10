@@ -40,3 +40,53 @@
 - Test terrain Ford C-Max + BMW F11
 - Configurer Resend noreply@autodiag-eu.com
 - Passer app Closed Testing Play Store
+
+## ADDENDUM — Fin de session
+
+### SEO technique (commits cf9dcc6 + 0ab148c)
+- lib/seo.ts : buildAlternates() 5 locales (était 2)
+- Uniformisation en-GB → en partout
+- Alignement www dans sitemap
+- Homepage canonical ajouté
+- og:image branché via /api/og/route.tsx sur toutes les pages
+- Organization JSON-LD injecté dans layout (traduit 5 langues)
+- Article JSON-LD sur pages blog + og:type "article"
+- BreadcrumbList sur pages DTC
+- next.config.ts : images.unoptimized retiré
+- Footer : section "Top 10 fault codes" avec liens internes
+- Sitemap resoumis dans Google Search Console par Reda
+
+### Fixes multi-agent (commit 408785d)
+- Tâche fantôme 3b2cb12e : completed_at fixé
+- Tâche orpheline 1099999a : CANCELLED
+- Watchdog : domaine autodiag.eu → autodiag-eu.com
+- NSSM redémarré par Reda
+
+### Diagnostic crons
+- 14 crons configurés, tous fonctionnels
+- 8 crons système : monitoring/alertes (pas de missions)
+- 6 crons veille : fenêtre 07:00-07:15 UTC uniquement
+- Aucun cron ne lance de missions autonomes — agents inactifs sans commande Telegram ou webhook
+
+### Bilan complet session 10 avril 2026
+- i18n site : 50 clés utilisées → 754 clés × 5 langues
+- 16+ composants migrés en 5 vagues
+- Navigation locale-aware (next-intl Link)
+- Devise dynamique EUR/GBP/CHF par géolocalisation Vercel
+- 250 DTC traduits nativement DE/ES/PT (JSON 1.5→2.8 MB)
+- 15 articles blog DE/ES/PT
+- Pages DTC + légales migrées de isEn → locale-aware
+- Sitemap 251 → 1357 URLs avec hreflang
+- SEO technique complet (schema, og:image, canonicals, alternates)
+- 3 bugs multi-agent fixés
+- Document STRATEGIE_SEO_MARKETING_AUTODIAG_EU.md créé (knowledge)
+- Pages SSG : 1281, 0 erreur TSC
+
+### Roadmap prochaine session
+- CRITIQUE : Régénérer clés API exposées
+- APP MOBILE prérequis Play Store :
+  1. Traduction app toutes langues (EN 100% + DE + ES + PT)
+  2. Fix bugs scan moteur + habitacle (diagnostic à faire)
+  3. Build propre → upload Play Store Closed Testing
+- BUSINESS : Business plan Creapole (PECO) + email Marmy
+- CONTENU : 50 pages long-tail SEO (doc stratégie dans knowledge)
