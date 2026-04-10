@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import questionsData from "@/data/quiz/questions.json";
 
 /* ------------------------------------------------------------------ */
@@ -26,29 +27,13 @@ const TIMER_SECONDS = 30;
 /*  Verdict helper                                                     */
 /* ------------------------------------------------------------------ */
 
-function getVerdict(score: number): { title: string; text: string } {
-  if (score === 15) {
-    return {
-      title: "Expert automobile",
-      text: "Impressionnant ! Vous connaissez la mecanique sur le bout des doigts. Meme un garagiste serait bluffé.",
-    };
-  }
-  if (score >= 11) {
-    return {
-      title: "Passionne confirme",
-      text: "Tres beau score ! Vous avez de solides connaissances automobiles. Encore quelques details a peaufiner.",
-    };
-  }
-  if (score >= 6) {
-    return {
-      title: "Amateur eclaire",
-      text: "Pas mal du tout ! Vous avez les bases, mais il reste de belles choses a decouvrir sur l'automobile.",
-    };
-  }
-  return {
-    title: "Novice",
-    text: "C'est un debut ! L'automobile est un monde passionnant — continuez a apprendre avec AutoDiag EU.",
-  };
+type VerdictKey = "expert" | "enthusiast" | "amateur" | "novice";
+
+function getVerdictKey(score: number): VerdictKey {
+  if (score === 15) return "expert";
+  if (score >= 11) return "enthusiast";
+  if (score >= 6) return "amateur";
+  return "novice";
 }
 
 /* ------------------------------------------------------------------ */
@@ -97,6 +82,7 @@ function TimerRing({ seconds }: { seconds: number }) {
 /* ------------------------------------------------------------------ */
 
 export default function CarQuiz() {
+  const t = useTranslations('quiz');
   const [phase, setPhase] = useState<Phase>("playing");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -164,8 +150,9 @@ export default function CarQuiz() {
   }, []);
 
   const shareResult = useCallback(() => {
-    const verdict = getVerdict(score);
-    const text = `Quiz Voiture AutoDiag EU — ${score}/${TOTAL} : "${verdict.title}" ! Testez vos connaissances sur autodiag-eu.com`;
+    const verdictKey = getVerdictKey(score);
+    const verdictTitle = t(`verdict${verdictKey.charAt(0).toUpperCase() + verdictKey.slice(1)}Title`);
+    const text = t('shareText', { score, total: TOTAL, verdict: verdictTitle });
     if (navigator.share) {
       navigator.share({ text }).catch(() => {
         /* user cancelled */
@@ -175,11 +162,13 @@ export default function CarQuiz() {
         /* fallback */
       });
     }
-  }, [score]);
+  }, [score, t]);
 
   /* ---- RESULT ---- */
   if (phase === "result") {
-    const verdict = getVerdict(score);
+    const verdictKey = getVerdictKey(score);
+    const verdictTitle = t(`verdict${verdictKey.charAt(0).toUpperCase() + verdictKey.slice(1)}Title`);
+    const verdictText = t(`verdict${verdictKey.charAt(0).toUpperCase() + verdictKey.slice(1)}Text`);
     const pct = Math.round((score / TOTAL) * 100);
 
     return (
@@ -192,7 +181,7 @@ export default function CarQuiz() {
           border: "1px solid rgba(255,255,255,0.08)",
         }}
       >
-        <h2 className="text-2xl font-bold text-white mb-2">Quiz termine</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">{t('finished')}</h2>
 
         <div className="my-6">
           <span
@@ -205,7 +194,7 @@ export default function CarQuiz() {
           >
             {score}/{TOTAL}
           </span>
-          <p className="mt-2 text-sm text-[#8a90b0]">{pct}% de bonnes reponses</p>
+          <p className="mt-2 text-sm text-[#8a90b0]">{t('correctPercent', { pct })}</p>
         </div>
 
         <div
@@ -215,10 +204,10 @@ export default function CarQuiz() {
             color: "#00e5ff",
           }}
         >
-          {verdict.title}
+          {verdictTitle}
         </div>
 
-        <p className="text-[#8a90b0] mb-8">{verdict.text}</p>
+        <p className="text-[#8a90b0] mb-8">{verdictText}</p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <motion.button
@@ -228,7 +217,7 @@ export default function CarQuiz() {
             className="rounded-xl px-6 py-3 font-semibold text-white"
             style={{ background: "rgba(255,255,255,0.08)" }}
           >
-            Recommencer
+            {t('retry')}
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -239,7 +228,7 @@ export default function CarQuiz() {
               background: "linear-gradient(to right, #00e5ff, #00c853)",
             }}
           >
-            Partager mon score
+            {t('share')}
           </motion.button>
         </div>
       </motion.div>
@@ -252,11 +241,11 @@ export default function CarQuiz() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <span className="text-sm text-[#8a90b0]">
-          Question {currentIndex + 1}/{TOTAL}
+          {t('question')} {currentIndex + 1}/{TOTAL}
         </span>
         <div className="flex items-center gap-4">
           <span className="text-sm font-semibold text-white">
-            Score : {score}
+            {t('scoreLabel')} : {score}
           </span>
           <TimerRing seconds={timer} />
         </div>
@@ -352,7 +341,7 @@ export default function CarQuiz() {
                   }}
                 >
                   <h3 className="text-sm font-bold text-[#00e5ff] mb-1">
-                    Explication
+                    {t('explanation')}
                   </h3>
                   <p className="text-sm text-[#8a90b0] leading-relaxed">
                     {question.explanation}
@@ -371,8 +360,8 @@ export default function CarQuiz() {
                     }}
                   >
                     {currentIndex < TOTAL - 1
-                      ? "Question suivante"
-                      : "Voir le resultat"}
+                      ? t('nextQuestion')
+                      : t('seeResult')}
                   </motion.button>
                 </div>
               </motion.div>

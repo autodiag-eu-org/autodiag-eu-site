@@ -2,107 +2,75 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-interface Cause {
-  label: string;
+interface CauseCost {
   costMin: number;
   costMax: number;
 }
 
-interface Symptom {
-  id: string;
-  icon: string;
-  label: string;
-  causes: Cause[];
-}
+const SYMPTOM_IDS = [
+  "voyant",
+  "surchauffe",
+  "fumee",
+  "bruit",
+  "demarrage",
+  "conso",
+  "vibrations",
+  "puissance",
+] as const;
 
-const symptoms: Symptom[] = [
-  {
-    id: "voyant",
-    icon: "🔶",
-    label: "Voyant moteur",
-    causes: [
-      { label: "Sonde lambda defaillante", costMin: 120, costMax: 350 },
-      { label: "Catalyseur fatigue", costMin: 400, costMax: 1500 },
-      { label: "Vanne EGR encrassee", costMin: 150, costMax: 500 },
-    ],
-  },
-  {
-    id: "surchauffe",
-    icon: "🌡️",
-    label: "Surchauffe",
-    causes: [
-      { label: "Thermostat bloque", costMin: 80, costMax: 250 },
-      { label: "Pompe a eau fatiguee", costMin: 200, costMax: 600 },
-      { label: "Radiateur perce", costMin: 250, costMax: 700 },
-    ],
-  },
-  {
-    id: "fumee",
-    icon: "💨",
-    label: "Fumee anormale",
-    causes: [
-      { label: "Joints de queue de soupape uses", costMin: 400, costMax: 1200 },
-      { label: "Turbo qui lache", costMin: 800, costMax: 2500 },
-      { label: "Injecteur defaillant", costMin: 200, costMax: 600 },
-    ],
-  },
-  {
-    id: "bruit",
-    icon: "🔊",
-    label: "Bruit suspect",
-    causes: [
-      { label: "Roulement de roue use", costMin: 150, costMax: 400 },
-      { label: "Courroie accessoire fatiguee", costMin: 80, costMax: 200 },
-      { label: "Silent-bloc moteur casse", costMin: 120, costMax: 350 },
-    ],
-  },
-  {
-    id: "demarrage",
-    icon: "🔑",
-    label: "Demarrage difficile",
-    causes: [
-      { label: "Batterie en fin de vie", costMin: 80, costMax: 250 },
-      { label: "Demarreur fatigue", costMin: 200, costMax: 500 },
-      { label: "Bougies de prechauffage (diesel)", costMin: 60, costMax: 200 },
-    ],
-  },
-  {
-    id: "conso",
-    icon: "⛽",
-    label: "Surconsommation",
-    causes: [
-      { label: "Filtre a air encrasse", costMin: 15, costMax: 50 },
-      { label: "Sonde temperature defaillante", costMin: 60, costMax: 180 },
-      { label: "Pression pneus insuffisante", costMin: 0, costMax: 10 },
-    ],
-  },
-  {
-    id: "vibrations",
-    icon: "📳",
-    label: "Vibrations",
-    causes: [
-      { label: "Disque de frein voile", costMin: 150, costMax: 400 },
-      { label: "Cardan use", costMin: 200, costMax: 600 },
-      { label: "Equilibrage roues", costMin: 30, costMax: 80 },
-    ],
-  },
-  {
-    id: "puissance",
-    icon: "⚡",
-    label: "Perte de puissance",
-    causes: [
-      { label: "Filtre a particules sature", costMin: 300, costMax: 1500 },
-      { label: "Turbo en perte de charge", costMin: 600, costMax: 2500 },
-      { label: "Debitmetre defaillant", costMin: 100, costMax: 350 },
-    ],
-  },
-];
+const SYMPTOM_ICONS = ["🔶", "🌡️", "💨", "🔊", "🔑", "⛽", "📳", "⚡"];
+
+const SYMPTOM_CAUSES: Record<string, CauseCost[]> = {
+  voyant: [
+    { costMin: 120, costMax: 350 },
+    { costMin: 400, costMax: 1500 },
+    { costMin: 150, costMax: 500 },
+  ],
+  surchauffe: [
+    { costMin: 80, costMax: 250 },
+    { costMin: 200, costMax: 600 },
+    { costMin: 250, costMax: 700 },
+  ],
+  fumee: [
+    { costMin: 400, costMax: 1200 },
+    { costMin: 800, costMax: 2500 },
+    { costMin: 200, costMax: 600 },
+  ],
+  bruit: [
+    { costMin: 150, costMax: 400 },
+    { costMin: 80, costMax: 200 },
+    { costMin: 120, costMax: 350 },
+  ],
+  demarrage: [
+    { costMin: 80, costMax: 250 },
+    { costMin: 200, costMax: 500 },
+    { costMin: 60, costMax: 200 },
+  ],
+  conso: [
+    { costMin: 15, costMax: 50 },
+    { costMin: 60, costMax: 180 },
+    { costMin: 0, costMax: 10 },
+  ],
+  vibrations: [
+    { costMin: 150, costMax: 400 },
+    { costMin: 200, costMax: 600 },
+    { costMin: 30, costMax: 80 },
+  ],
+  puissance: [
+    { costMin: 300, costMax: 1500 },
+    { costMin: 600, costMax: 2500 },
+    { costMin: 100, costMax: 350 },
+  ],
+};
 
 export default function DiagnosticExpress() {
+  const t = useTranslations('diagnosticExpress');
   const [selected, setSelected] = useState<string | null>(null);
 
-  const active = symptoms.find((s) => s.id === selected);
+  const activeId = SYMPTOM_IDS.find((id) => id === selected);
+  const activeCauses = activeId ? SYMPTOM_CAUSES[activeId] : null;
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
@@ -114,44 +82,43 @@ export default function DiagnosticExpress() {
         className="text-center"
       >
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Diagnostic Express —{" "}
-          <span className="text-gradient">trouvez la panne en 3 clics</span>
+          {t('title')}{" "}
+          <span className="text-gradient">{t('titleHighlight')}</span>
         </h2>
         <p className="mt-3 text-secondary">
-          Selectionnez un symptome pour voir les causes probables et les couts
-          estimes
+          {t('subtitle')}
         </p>
       </motion.div>
 
       <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {symptoms.map((symptom, i) => (
+        {SYMPTOM_IDS.map((id, i) => (
           <motion.button
-            key={symptom.id}
+            key={id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.06 }}
             onClick={() =>
-              setSelected(selected === symptom.id ? null : symptom.id)
+              setSelected(selected === id ? null : id)
             }
             className={`glass flex flex-col items-center gap-2 rounded-xl border p-4 text-center backdrop-blur-md transition-all hover:-translate-y-0.5 ${
-              selected === symptom.id
+              selected === id
                 ? "border-cyan shadow-[0_0_20px_rgba(0,229,255,0.15)]"
                 : "border-border hover:border-cyan/30"
             }`}
           >
             <span className="text-2xl" aria-hidden="true">
-              {symptom.icon}
+              {SYMPTOM_ICONS[i]}
             </span>
-            <span className="text-sm font-medium">{symptom.label}</span>
+            <span className="text-sm font-medium">{t(id)}</span>
           </motion.button>
         ))}
       </div>
 
       <AnimatePresence mode="wait">
-        {active && (
+        {activeId && activeCauses && (
           <motion.div
-            key={active.id}
+            key={activeId}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -160,19 +127,19 @@ export default function DiagnosticExpress() {
           >
             <div className="glass mt-6 rounded-2xl border border-border p-6 backdrop-blur-md">
               <h3 className="mb-4 text-lg font-semibold">
-                Causes probables pour :{" "}
-                <span className="text-cyan">{active.label}</span>
+                {t('causesFor')}{" "}
+                <span className="text-cyan">{t(activeId)}</span>
               </h3>
               <div className="space-y-3">
-                {active.causes.map((cause, i) => (
+                {activeCauses.map((cause, i) => (
                   <motion.div
-                    key={cause.label}
+                    key={i}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                     className="flex items-center justify-between rounded-lg border border-border bg-surface/50 px-4 py-3"
                   >
-                    <span className="text-sm sm:text-base">{cause.label}</span>
+                    <span className="text-sm sm:text-base">{t(`${activeId}Cause${i}`)}</span>
                     <span className="shrink-0 rounded-full bg-glass px-3 py-1 text-sm font-medium text-cyan">
                       {cause.costMin}&nbsp;-&nbsp;{cause.costMax}&nbsp;EUR
                     </span>
@@ -184,7 +151,7 @@ export default function DiagnosticExpress() {
                   href="#beta"
                   className="inline-flex items-center gap-2 rounded-full bg-green px-6 py-3 font-semibold text-black transition-shadow hover:shadow-[0_0_20px_rgba(0,200,83,0.3)]"
                 >
-                  Pour un diagnostic precis → telecharger AutoDiag EU
+                  {t('cta')}
                 </a>
               </div>
             </div>
