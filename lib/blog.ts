@@ -16,6 +16,72 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "triple-diagnostic-son-vision-obd2-se-completent",
+    title: "Triple diagnostic : comment le son, la vision et l'OBD2 se completent",
+    description:
+      "Le scan sonore entend ce que l'OBD2 ignore, la Vision IA voit ce que le son rate, le code defaut confirme ce que les deux autres suspectent. Trois sources, une verite.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Technologie",
+    locale: "fr",
+  },
+  {
+    slug: "pourquoi-scanner-obd2-seul-ne-suffit-plus-2026",
+    title: "Pourquoi un scanner OBD2 seul ne suffit plus en 2026",
+    description:
+      "35 a 45% des pannes mecaniques modernes ne declenchent aucun code defaut. Roulements, suspension, fuites turbo : tout ce que le calculateur ne voit pas.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Strategie",
+    locale: "fr",
+  },
+  {
+    slug: "diagnostic-automobile-futur-dans-votre-poche",
+    title: "Le futur du diagnostic automobile est deja dans votre poche",
+    description:
+      "Microphone, camera, accelerometre, GPS : six capteurs que votre smartphone possede deja et qui, avec les bons algorithmes, remplacent un outil de diagnostic professionnel.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Technologie",
+    locale: "fr",
+  },
+  {
+    slug: "autodiag-eu-vs-outils-traditionnels-comparaison",
+    title: "AutoDiag EU face aux outils traditionnels : comparaison honnete",
+    description:
+      "Torque Pro, Car Scanner, EOBD Facile, Bosch KTS, Launch X431 : ce que chacun fait bien et ce que seul AutoDiag EU propose (scan sonore SVM et Vision IA).",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Comparaison",
+    locale: "fr",
+  },
+  {
+    slug: "score-sante-vehicule-comment-calculer-note-100",
+    title: "Score de sante vehicule : comment on calcule votre note sur 100",
+    description:
+      "100 points au depart, penalites pondereees par confiance et gravite, fusion OBD2 plus son plus vision, historisation dans le temps. Transparence totale sur l'algorithme.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Technologie",
+    locale: "fr",
+  },
+  {
+    slug: "diagnostic-preventif-economiser-milliers-euros",
+    title: "Diagnostic preventif : comment economiser plusieurs milliers d'euros par an",
+    description:
+      "5 cas reels chiffres : lambda, distribution, turbo, amortisseurs, injecteurs. Bilan annuel concret : 760 euros depenses, 3650 euros economises, marge 2890 euros.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Economies",
+    locale: "fr",
+  },
+  {
     slug: "vision-ia-detecter-fuites-sous-voiture-telephone",
     title: "Vision IA : detecter les fuites sous votre voiture avec un telephone",
     description:
@@ -1164,6 +1230,24 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
  * translations of the same article across locales.
  */
 const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "triple-diagnostic-son-vision-obd2-se-completent",
+  },
+  {
+    fr: "pourquoi-scanner-obd2-seul-ne-suffit-plus-2026",
+  },
+  {
+    fr: "diagnostic-automobile-futur-dans-votre-poche",
+  },
+  {
+    fr: "autodiag-eu-vs-outils-traditionnels-comparaison",
+  },
+  {
+    fr: "score-sante-vehicule-comment-calculer-note-100",
+  },
+  {
+    fr: "diagnostic-preventif-economiser-milliers-euros",
+  },
   {
     fr: "vision-ia-detecter-fuites-sous-voiture-telephone",
     en: "vision-ai-detect-leaks-under-car-with-phone",

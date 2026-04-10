@@ -1,5 +1,13 @@
 import type { JSX } from "react";
 
+/* FR combined tech series */
+import { ArticleTripleDiagnostic } from "./fr/triple-diagnostic-son-vision-obd2-se-completent";
+import { ArticlePourquoiOBD2Insuffisant } from "./fr/pourquoi-scanner-obd2-seul-ne-suffit-plus-2026";
+import { ArticleDiagnosticFuturPoche } from "./fr/diagnostic-automobile-futur-dans-votre-poche";
+import { ArticleAutoDiagVsTraditionnels } from "./fr/autodiag-eu-vs-outils-traditionnels-comparaison";
+import { ArticleScoreSanteVehicule } from "./fr/score-sante-vehicule-comment-calculer-note-100";
+import { ArticleDiagnosticPreventifEconomies } from "./fr/diagnostic-preventif-economiser-milliers-euros";
+
 /* FR vision AI series */
 import { ArticleVisionFuitesSousVoiture } from "./fr/vision-ia-detecter-fuites-sous-voiture-telephone";
 import { ArticleUsurePrematureePneus } from "./fr/usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas";
@@ -129,6 +137,13 @@ import { ArticlePTLerCodigosOBD2Telemovel } from "./pt/ler-codigos-obd2-telemove
 import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
 export const articleComponents: Record<string, () => JSX.Element> = {
+  /* FR combined tech series */
+  "triple-diagnostic-son-vision-obd2-se-completent": ArticleTripleDiagnostic,
+  "pourquoi-scanner-obd2-seul-ne-suffit-plus-2026": ArticlePourquoiOBD2Insuffisant,
+  "diagnostic-automobile-futur-dans-votre-poche": ArticleDiagnosticFuturPoche,
+  "autodiag-eu-vs-outils-traditionnels-comparaison": ArticleAutoDiagVsTraditionnels,
+  "score-sante-vehicule-comment-calculer-note-100": ArticleScoreSanteVehicule,
+  "diagnostic-preventif-economiser-milliers-euros": ArticleDiagnosticPreventifEconomies,
   /* FR vision AI series */
   "vision-ia-detecter-fuites-sous-voiture-telephone": ArticleVisionFuitesSousVoiture,
   "usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas": ArticleUsurePrematureePneus,
