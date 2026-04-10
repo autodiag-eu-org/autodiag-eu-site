@@ -2,21 +2,21 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 /* ──────────────── Types ──────────────── */
 
 interface SimStep {
   id: number;
-  label: string;
   durationMs: number;
 }
 
 const STEPS: SimStep[] = [
-  { id: 1, label: "Connexion Bluetooth...", durationMs: 5000 },
-  { id: 2, label: "Initialisation ELM327...", durationMs: 5000 },
-  { id: 3, label: "Scan en cours...", durationMs: 10000 },
-  { id: 4, label: "Alerte detectee", durationMs: 5000 },
-  { id: 5, label: "Score sante", durationMs: 5000 },
+  { id: 1, durationMs: 5000 },
+  { id: 2, durationMs: 5000 },
+  { id: 3, durationMs: 10000 },
+  { id: 4, durationMs: 5000 },
+  { id: 5, durationMs: 5000 },
 ];
 
 const TOTAL_DURATION = 30000;
@@ -148,6 +148,7 @@ function AnimatedDots() {
 /* ──────────────── Main component ──────────────── */
 
 export default function AppSimulator() {
+  const t = useTranslations('appSimulator');
   const [currentStep, setCurrentStep] = useState(1);
   const [stepProgress, setStepProgress] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
@@ -228,10 +229,10 @@ export default function AppSimulator() {
                           </svg>
                         </div>
                         <p className="text-sm font-medium text-white">
-                          Connexion Bluetooth<AnimatedDots />
+                          {t('btConnecting')}<AnimatedDots />
                         </p>
                         <p className="mt-2 text-xs text-secondary">
-                          Recherche du dongle ELM327
+                          {t('btSearching')}
                         </p>
                       </>
                     ) : (
@@ -241,7 +242,7 @@ export default function AppSimulator() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <p className="text-sm font-semibold text-green">Connecte !</p>
+                        <p className="text-sm font-semibold text-green">{t('btConnected')}</p>
                         <p className="mt-1 text-xs text-secondary">VGate iCar Pro 2S</p>
                       </>
                     )}
@@ -261,7 +262,7 @@ export default function AppSimulator() {
                     {!stepDone ? (
                       <>
                         <p className="mb-4 text-sm font-medium text-white">
-                          Initialisation ELM327<AnimatedDots />
+                          {t('elmInit')}<AnimatedDots />
                         </p>
                         <div className="w-full max-w-[200px]">
                           <div className="h-2.5 overflow-hidden rounded-full bg-white/5">
@@ -276,8 +277,8 @@ export default function AppSimulator() {
                         <div className="mt-4 space-y-1 text-[11px] text-secondary">
                           <p>{stepProgress > 0.1 ? "\u2713" : "\u25CB"} ATZ — Reset</p>
                           <p>{stepProgress > 0.3 ? "\u2713" : "\u25CB"} ATE0 — Echo Off</p>
-                          <p>{stepProgress > 0.5 ? "\u2713" : "\u25CB"} ATSP0 — Protocole auto</p>
-                          <p>{stepProgress > 0.7 ? "\u2713" : "\u25CB"} 0100 — PIDs supportes</p>
+                          <p>{stepProgress > 0.5 ? "\u2713" : "\u25CB"} ATSP0 — {t('elmAutoProtocol')}</p>
+                          <p>{stepProgress > 0.7 ? "\u2713" : "\u25CB"} 0100 — {t('elmSupportedPids')}</p>
                         </div>
                       </>
                     ) : (
@@ -287,8 +288,8 @@ export default function AppSimulator() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <p className="text-sm font-semibold text-green">Pret !</p>
-                        <p className="mt-1 text-xs text-secondary">Protocole ISO 15765-4 (CAN)</p>
+                        <p className="text-sm font-semibold text-green">{t('elmReady')}</p>
+                        <p className="mt-1 text-xs text-secondary">{t('elmProtocol')}</p>
                       </>
                     )}
                   </motion.div>
@@ -305,23 +306,23 @@ export default function AppSimulator() {
                     className="pt-6"
                   >
                     <p className="mb-1 text-center text-sm font-medium text-white">
-                      Scan en cours<AnimatedDots />
+                      {t('scanInProgress')}<AnimatedDots />
                     </p>
                     <p className="mb-5 text-center text-[11px] text-secondary">
-                      Lecture des capteurs du vehicule
+                      {t('scanReadingSensors')}
                     </p>
 
                     <div className="space-y-4 rounded-xl border border-border bg-white/[0.02] p-4">
                       <AnimatedGauge
                         label="RPM"
                         value={780}
-                        unit="tr/min"
+                        unit={t('gaugeRpmUnit')}
                         max={8000}
                         color="#00e5ff"
                         progress={stepProgress}
                       />
                       <AnimatedGauge
-                        label="Temperature"
+                        label={t('gaugeTemp')}
                         value={87}
                         unit="\u00B0C"
                         max={120}
@@ -329,7 +330,7 @@ export default function AppSimulator() {
                         progress={stepProgress}
                       />
                       <AnimatedGauge
-                        label="Vitesse"
+                        label={t('gaugeSpeed')}
                         value={0}
                         unit="km/h"
                         max={250}
@@ -337,7 +338,7 @@ export default function AppSimulator() {
                         progress={stepProgress}
                       />
                       <AnimatedGauge
-                        label="Batterie"
+                        label={t('gaugeBattery')}
                         value={142}
                         unit="V"
                         max={160}
@@ -347,7 +348,7 @@ export default function AppSimulator() {
                     </div>
 
                     <p className="mt-3 text-center text-[10px] text-secondary">
-                      {Math.round(stepProgress * 47)} codes verifies
+                      {t('scanCodesChecked', { count: Math.round(stepProgress * 47) })}
                     </p>
                   </motion.div>
                 )}
@@ -379,7 +380,7 @@ export default function AppSimulator() {
                     </motion.div>
 
                     <p className="text-sm font-semibold text-orange-400">
-                      Alerte detectee
+                      {t('alertDetected')}
                     </p>
 
                     {stepProgress > 0.3 && (
@@ -390,15 +391,15 @@ export default function AppSimulator() {
                       >
                         <div className="flex items-center gap-2">
                           <span className="rounded-md bg-orange-400/20 px-2 py-0.5 text-[11px] font-semibold text-orange-400">
-                            MOYENNE
+                            {t('alertSeverity')}
                           </span>
                         </div>
                         <p className="mt-2 text-sm font-bold text-white">P0420</p>
                         <p className="mt-1 text-xs text-secondary">
-                          Efficacite catalyseur en dessous du seuil
+                          {t('alertP0420Name')}
                         </p>
                         <p className="mt-2 text-[11px] text-secondary">
-                          Votre catalyseur fatigue un peu — on vous explique quoi faire.
+                          {t('alertP0420Desc')}
                         </p>
                       </motion.div>
                     )}
@@ -416,7 +417,7 @@ export default function AppSimulator() {
                     className="flex flex-col items-center pt-10"
                   >
                     <p className="mb-4 text-sm font-medium text-white">
-                      Score de sante
+                      {t('healthScore')}
                     </p>
 
                     <CircularScore score={84} progress={stepProgress} />
@@ -429,32 +430,32 @@ export default function AppSimulator() {
                       >
                         <div className="rounded-xl border border-border bg-white/[0.02] p-3 text-center">
                           <p className="text-xs font-medium text-white">
-                            Votre vehicule necessite une attention
+                            {t('healthNeedsAttention')}
                           </p>
                           <p className="mt-1 text-[11px] text-secondary">
-                            1 code defaut detecte — le reste est en bonne sante
+                            {t('healthSummary')}
                           </p>
                         </div>
 
                         <div className="mt-3 space-y-2">
                           <div className="flex items-center gap-2 text-[11px]">
                             <span className="h-2 w-2 rounded-full bg-green" />
-                            <span className="text-secondary">Moteur</span>
+                            <span className="text-secondary">{t('systemEngine')}</span>
                             <span className="ml-auto font-medium text-green">OK</span>
                           </div>
                           <div className="flex items-center gap-2 text-[11px]">
                             <span className="h-2 w-2 rounded-full bg-green" />
-                            <span className="text-secondary">Transmission</span>
+                            <span className="text-secondary">{t('systemTransmission')}</span>
                             <span className="ml-auto font-medium text-green">OK</span>
                           </div>
                           <div className="flex items-center gap-2 text-[11px]">
                             <span className="h-2 w-2 rounded-full bg-orange-400" />
-                            <span className="text-secondary">Emissions</span>
+                            <span className="text-secondary">{t('systemEmissions')}</span>
                             <span className="ml-auto font-medium text-orange-400">P0420</span>
                           </div>
                           <div className="flex items-center gap-2 text-[11px]">
                             <span className="h-2 w-2 rounded-full bg-green" />
-                            <span className="text-secondary">Electrique</span>
+                            <span className="text-secondary">{t('systemElectrical')}</span>
                             <span className="ml-auto font-medium text-green">OK</span>
                           </div>
                         </div>
@@ -498,14 +499,14 @@ export default function AppSimulator() {
                 <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
                 </svg>
-                Mettre en pause
+                {t('pause')}
               </>
             ) : (
               <>
                 <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
-                Reprendre
+                {t('resume')}
               </>
             )}
           </button>
@@ -514,15 +515,15 @@ export default function AppSimulator() {
 
       {/* ── Feature bullets ── */}
       <div className="mx-auto grid max-w-2xl gap-4 sm:grid-cols-3">
-        {[
+        {([
           {
             icon: (
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
               </svg>
             ),
-            title: "Scan audio IA",
-            desc: "Ecoutez votre moteur avec notre IA",
+            titleKey: "featureAudioTitle",
+            descKey: "featureAudioDesc",
           },
           {
             icon: (
@@ -530,8 +531,8 @@ export default function AppSimulator() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25h.008M21 12.75V6.375c0-.621-.504-1.125-1.125-1.125H3.375C2.754 5.25 2.25 5.754 2.25 6.375v6.375m18.75 0h-18" />
               </svg>
             ),
-            title: "677 vehicules",
-            desc: "Compatible avec toutes les marques europeennes",
+            titleKey: "featureVehiclesTitle",
+            descKey: "featureVehiclesDesc",
           },
           {
             icon: (
@@ -539,19 +540,19 @@ export default function AppSimulator() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
             ),
-            title: "Pre-CT 5 pays",
-            desc: "France, Allemagne, Suisse, Espagne, Portugal",
+            titleKey: "featureCtTitle",
+            descKey: "featureCtDesc",
           },
-        ].map((feature) => (
+        ] as const).map((feature) => (
           <div
-            key={feature.title}
+            key={feature.titleKey}
             className="rounded-xl border border-border bg-glass p-4 text-center backdrop-blur-md"
           >
             <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-cyan/10 text-cyan">
               {feature.icon}
             </div>
-            <h4 className="text-sm font-semibold">{feature.title}</h4>
-            <p className="mt-1 text-xs text-secondary">{feature.desc}</p>
+            <h4 className="text-sm font-semibold">{t(feature.titleKey)}</h4>
+            <p className="mt-1 text-xs text-secondary">{t(feature.descKey)}</p>
           </div>
         ))}
       </div>
@@ -578,7 +579,7 @@ export default function AppSimulator() {
             <path d="M15.48 14.87L11.95 11.44L1.57 21.78C1.97 22.2 2.62 22.26 3.36 21.83L15.48 14.87Z" />
             <path d="M15.48 7.95L3.36 1.05C2.62 0.62 1.97 0.68 1.57 1.1L11.95 11.44L15.48 7.95Z" />
           </svg>
-          <span className="relative">Essayez vous-meme — telecharger AutoDiag EU</span>
+          <span className="relative">{t('cta')}</span>
         </a>
       </div>
     </div>

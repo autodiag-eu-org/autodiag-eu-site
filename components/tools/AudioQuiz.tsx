@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -9,10 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface SoundEntry {
   id: string;
-  label: string;
-  description: string;
   isDefective: boolean;
-  explanation: string;
   /** Visual waveform pattern — array of 12 bar heights (0-100) */
   waveform: number[];
 }
@@ -23,8 +21,6 @@ interface Round {
 }
 
 interface Level {
-  name: string;
-  tag: string;
   rounds: [Round, Round, Round];
 }
 
@@ -36,290 +32,85 @@ type Phase = "menu" | "playing" | "result";
 
 const LEVELS: Level[] = [
   {
-    name: "Debutant",
-    tag: "Facile",
     rounds: [
       {
         roundIndex: 0,
         sounds: [
-          {
-            id: "d1a",
-            label: "Echantillon A",
-            description: "Moteur normal — ralenti regulier et stable",
-            isDefective: false,
-            explanation: "",
-            waveform: [30, 35, 32, 34, 30, 33, 31, 35, 32, 30, 34, 31],
-          },
-          {
-            id: "d1b",
-            label: "Echantillon B",
-            description: "Cliquetis metallique — bruit repetitif anormal",
-            isDefective: true,
-            explanation:
-              "Ce cliquetis metallique provient generalement d'un jeu excessif dans les poussoirs hydrauliques ou d'un probleme de lubrification. Un bruit de type 'tic-tic-tic' rapide est un signe classique a ne pas ignorer.",
-            waveform: [20, 85, 15, 90, 20, 80, 18, 88, 22, 85, 15, 90],
-          },
-          {
-            id: "d1c",
-            label: "Echantillon C",
-            description: "Moteur normal — acceleration progressive douce",
-            isDefective: false,
-            explanation: "",
-            waveform: [25, 30, 38, 42, 50, 55, 60, 65, 62, 58, 55, 50],
-          },
+          { id: "d1a", isDefective: false, waveform: [30, 35, 32, 34, 30, 33, 31, 35, 32, 30, 34, 31] },
+          { id: "d1b", isDefective: true, waveform: [20, 85, 15, 90, 20, 80, 18, 88, 22, 85, 15, 90] },
+          { id: "d1c", isDefective: false, waveform: [25, 30, 38, 42, 50, 55, 60, 65, 62, 58, 55, 50] },
         ],
       },
       {
         roundIndex: 1,
         sounds: [
-          {
-            id: "d2a",
-            label: "Echantillon A",
-            description: "Roulement use — grondement sourd continu",
-            isDefective: true,
-            explanation:
-              "Ce grondement sourd qui augmente avec la vitesse est typique d'un roulement de roue use. Il produit un bruit grave et continu, souvent plus audible en virage quand la charge se deplace.",
-            waveform: [55, 60, 58, 62, 65, 60, 63, 58, 61, 64, 59, 62],
-          },
-          {
-            id: "d2b",
-            label: "Echantillon B",
-            description: "Moteur diesel normal — claquement regulier du diesel",
-            isDefective: false,
-            explanation: "",
-            waveform: [40, 50, 38, 48, 40, 52, 38, 50, 42, 48, 40, 50],
-          },
-          {
-            id: "d2c",
-            label: "Echantillon C",
-            description: "Moteur normal — ralenti chaud apres conduite",
-            isDefective: false,
-            explanation: "",
-            waveform: [28, 32, 30, 34, 29, 33, 31, 28, 32, 30, 34, 29],
-          },
+          { id: "d2a", isDefective: true, waveform: [55, 60, 58, 62, 65, 60, 63, 58, 61, 64, 59, 62] },
+          { id: "d2b", isDefective: false, waveform: [40, 50, 38, 48, 40, 52, 38, 50, 42, 48, 40, 50] },
+          { id: "d2c", isDefective: false, waveform: [28, 32, 30, 34, 29, 33, 31, 28, 32, 30, 34, 29] },
         ],
       },
       {
         roundIndex: 2,
         sounds: [
-          {
-            id: "d3a",
-            label: "Echantillon A",
-            description: "Moteur normal — regime stable a 2000 tr/min",
-            isDefective: false,
-            explanation: "",
-            waveform: [45, 48, 44, 47, 46, 48, 44, 47, 45, 48, 44, 46],
-          },
-          {
-            id: "d3b",
-            label: "Echantillon B",
-            description: "Moteur normal — deceleration progressive",
-            isDefective: false,
-            explanation: "",
-            waveform: [60, 55, 50, 45, 40, 38, 35, 32, 30, 28, 26, 25],
-          },
-          {
-            id: "d3c",
-            label: "Echantillon C",
-            description: "Courroie usee — sifflement aigu au demarrage",
-            isDefective: true,
-            explanation:
-              "Ce sifflement aigu au demarrage est cause par une courroie d'accessoires usee ou detendue qui patine sur les poulies. Le bruit est souvent plus prononce par temps froid ou humide.",
-            waveform: [10, 70, 75, 80, 60, 40, 30, 25, 20, 72, 78, 35],
-          },
+          { id: "d3a", isDefective: false, waveform: [45, 48, 44, 47, 46, 48, 44, 47, 45, 48, 44, 46] },
+          { id: "d3b", isDefective: false, waveform: [60, 55, 50, 45, 40, 38, 35, 32, 30, 28, 26, 25] },
+          { id: "d3c", isDefective: true, waveform: [10, 70, 75, 80, 60, 40, 30, 25, 20, 72, 78, 35] },
         ],
       },
     ],
   },
   {
-    name: "Intermediaire",
-    tag: "Moyen",
     rounds: [
       {
         roundIndex: 0,
         sounds: [
-          {
-            id: "i1a",
-            label: "Echantillon A",
-            description: "Moteur essence normal — regime 3000 tr/min constant",
-            isDefective: false,
-            explanation: "",
-            waveform: [50, 52, 48, 53, 50, 51, 49, 52, 50, 53, 48, 51],
-          },
-          {
-            id: "i1b",
-            label: "Echantillon B",
-            description: "Injecteur defaillant — claquement irregulier",
-            isDefective: true,
-            explanation:
-              "Ce claquement irregulier provient d'un injecteur qui ne pulverise plus correctement le carburant. Contrairement au bruit normal des injecteurs (regulier et discret), celui-ci est plus fort et arythmique, signe d'une obstruction partielle.",
-            waveform: [30, 70, 35, 25, 80, 30, 75, 25, 35, 85, 28, 40],
-          },
-          {
-            id: "i1c",
-            label: "Echantillon C",
-            description: "Moteur diesel normal — montee en regime progressive",
-            isDefective: false,
-            explanation: "",
-            waveform: [35, 40, 45, 48, 52, 55, 58, 60, 58, 55, 52, 50],
-          },
+          { id: "i1a", isDefective: false, waveform: [50, 52, 48, 53, 50, 51, 49, 52, 50, 53, 48, 51] },
+          { id: "i1b", isDefective: true, waveform: [30, 70, 35, 25, 80, 30, 75, 25, 35, 85, 28, 40] },
+          { id: "i1c", isDefective: false, waveform: [35, 40, 45, 48, 52, 55, 58, 60, 58, 55, 52, 50] },
         ],
       },
       {
         roundIndex: 1,
         sounds: [
-          {
-            id: "i2a",
-            label: "Echantillon A",
-            description: "Moteur turbo normal — souffle regulier a l'acceleration",
-            isDefective: false,
-            explanation: "",
-            waveform: [30, 35, 42, 50, 58, 65, 70, 68, 62, 55, 48, 40],
-          },
-          {
-            id: "i2b",
-            label: "Echantillon B",
-            description: "Moteur normal — retour au ralenti apres acceleration",
-            isDefective: false,
-            explanation: "",
-            waveform: [65, 58, 50, 42, 38, 35, 33, 31, 30, 30, 31, 30],
-          },
-          {
-            id: "i2c",
-            label: "Echantillon C",
-            description: "Fuite echappement — souffle rauque et irregulier",
-            isDefective: true,
-            explanation:
-              "Ce souffle rauque accompagne d'un bruit de 'pfuitt' est typique d'une fuite au niveau du collecteur d'echappement ou d'un joint defaillant. Le son est plus audible a froid et peut s'attenuer legerement a chaud lorsque les metaux se dilatent.",
-            waveform: [45, 60, 35, 70, 40, 65, 50, 72, 38, 68, 42, 60],
-          },
+          { id: "i2a", isDefective: false, waveform: [30, 35, 42, 50, 58, 65, 70, 68, 62, 55, 48, 40] },
+          { id: "i2b", isDefective: false, waveform: [65, 58, 50, 42, 38, 35, 33, 31, 30, 30, 31, 30] },
+          { id: "i2c", isDefective: true, waveform: [45, 60, 35, 70, 40, 65, 50, 72, 38, 68, 42, 60] },
         ],
       },
       {
         roundIndex: 2,
         sounds: [
-          {
-            id: "i3a",
-            label: "Echantillon A",
-            description: "Pompe a eau fatiguee — grincement sous le capot",
-            isDefective: true,
-            explanation:
-              "Ce grincement provient du roulement interne de la pompe a eau qui s'use. Si on le neglige, la pompe peut se bloquer et entrainer une surchauffe moteur. Un remplacement preventif est recommande.",
-            waveform: [40, 55, 65, 50, 70, 45, 68, 55, 72, 48, 60, 55],
-          },
-          {
-            id: "i3b",
-            label: "Echantillon B",
-            description: "Moteur normal — demarrage a froid typique",
-            isDefective: false,
-            explanation: "",
-            waveform: [60, 55, 50, 45, 40, 38, 36, 34, 33, 32, 31, 30],
-          },
-          {
-            id: "i3c",
-            label: "Echantillon C",
-            description: "Moteur V6 normal — ronronnement grave et regulier",
-            isDefective: false,
-            explanation: "",
-            waveform: [42, 45, 43, 46, 44, 45, 43, 46, 42, 45, 44, 43],
-          },
+          { id: "i3a", isDefective: true, waveform: [40, 55, 65, 50, 70, 45, 68, 55, 72, 48, 60, 55] },
+          { id: "i3b", isDefective: false, waveform: [60, 55, 50, 45, 40, 38, 36, 34, 33, 32, 31, 30] },
+          { id: "i3c", isDefective: false, waveform: [42, 45, 43, 46, 44, 45, 43, 46, 42, 45, 44, 43] },
         ],
       },
     ],
   },
   {
-    name: "Expert",
-    tag: "Difficile",
     rounds: [
       {
         roundIndex: 0,
         sounds: [
-          {
-            id: "e1a",
-            label: "Echantillon A",
-            description: "Moteur diesel normal — ralenti avec leger claquement typique",
-            isDefective: false,
-            explanation: "",
-            waveform: [38, 48, 36, 50, 40, 46, 38, 50, 42, 48, 36, 48],
-          },
-          {
-            id: "e1b",
-            label: "Echantillon B",
-            description: "Moteur diesel normal — regime stabilise 2500 tr/min",
-            isDefective: false,
-            explanation: "",
-            waveform: [52, 55, 53, 56, 52, 54, 53, 55, 52, 56, 53, 54],
-          },
-          {
-            id: "e1c",
-            label: "Echantillon C",
-            description: "Turbo siffle — bruit de sifflement aigu a l'acceleration",
-            isDefective: true,
-            explanation:
-              "Ce sifflement aigu a l'acceleration est cause par un jeu excessif dans l'axe du turbocompresseur. Contrairement au leger souffle normal d'un turbo sain, ce sifflement metallique indique une usure avancee des paliers. A ce stade, le turbo peut lacher a tout moment.",
-            waveform: [30, 35, 50, 72, 85, 90, 88, 82, 70, 55, 40, 35],
-          },
+          { id: "e1a", isDefective: false, waveform: [38, 48, 36, 50, 40, 46, 38, 50, 42, 48, 36, 48] },
+          { id: "e1b", isDefective: false, waveform: [52, 55, 53, 56, 52, 54, 53, 55, 52, 56, 53, 54] },
+          { id: "e1c", isDefective: true, waveform: [30, 35, 50, 72, 85, 90, 88, 82, 70, 55, 40, 35] },
         ],
       },
       {
         roundIndex: 1,
         sounds: [
-          {
-            id: "e2a",
-            label: "Echantillon A",
-            description: "Bielle cognee — cognement sourd et rythmique",
-            isDefective: true,
-            explanation:
-              "Ce cognement sourd et lourd, synchrone avec le regime moteur, indique un jeu excessif au niveau d'une bielle. C'est l'un des bruits les plus graves : il annonce souvent une casse moteur imminente. Arretez le moteur et faites remorquer le vehicule.",
-            waveform: [25, 75, 30, 78, 28, 80, 25, 76, 30, 82, 26, 78],
-          },
-          {
-            id: "e2b",
-            label: "Echantillon B",
-            description: "Moteur 4 cylindres normal — acceleration franche",
-            isDefective: false,
-            explanation: "",
-            waveform: [35, 42, 50, 58, 65, 70, 72, 68, 62, 58, 55, 52],
-          },
-          {
-            id: "e2c",
-            label: "Echantillon C",
-            description: "Moteur normal — ralenti avec climatisation active",
-            isDefective: false,
-            explanation: "",
-            waveform: [34, 38, 36, 40, 35, 39, 37, 38, 36, 40, 34, 38],
-          },
+          { id: "e2a", isDefective: true, waveform: [25, 75, 30, 78, 28, 80, 25, 76, 30, 82, 26, 78] },
+          { id: "e2b", isDefective: false, waveform: [35, 42, 50, 58, 65, 70, 72, 68, 62, 58, 55, 52] },
+          { id: "e2c", isDefective: false, waveform: [34, 38, 36, 40, 35, 39, 37, 38, 36, 40, 34, 38] },
         ],
       },
       {
         roundIndex: 2,
         sounds: [
-          {
-            id: "e3a",
-            label: "Echantillon A",
-            description: "Moteur normal — deceleration avec frein moteur",
-            isDefective: false,
-            explanation: "",
-            waveform: [70, 62, 55, 48, 42, 38, 35, 33, 32, 30, 30, 30],
-          },
-          {
-            id: "e3b",
-            label: "Echantillon B",
-            description: "Moteur TSI normal — ralenti avec leger bourdonnement pompe HP",
-            isDefective: false,
-            explanation: "",
-            waveform: [32, 36, 34, 38, 33, 37, 35, 36, 34, 38, 32, 36],
-          },
-          {
-            id: "e3c",
-            label: "Echantillon C",
-            description:
-              "Chaine de distribution etiree — cliquetis metallique rapide a froid",
-            isDefective: true,
-            explanation:
-              "Ce cliquetis rapide et metallique au demarrage a froid, qui s'attenue legerement a chaud, est typique d'une chaine de distribution etiree. Le tendeur ne compense plus suffisamment le jeu. C'est un probleme serieux : une chaine qui saute peut detruire le moteur.",
-            waveform: [70, 30, 75, 25, 72, 28, 68, 32, 65, 35, 60, 38],
-          },
+          { id: "e3a", isDefective: false, waveform: [70, 62, 55, 48, 42, 38, 35, 33, 32, 30, 30, 30] },
+          { id: "e3b", isDefective: false, waveform: [32, 36, 34, 38, 33, 37, 35, 36, 34, 38, 32, 36] },
+          { id: "e3c", isDefective: true, waveform: [70, 30, 75, 25, 72, 28, 68, 32, 65, 35, 60, 38] },
         ],
       },
     ],
@@ -428,10 +219,29 @@ function Confetti() {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Helpers                                                            */
+/* ------------------------------------------------------------------ */
+
+const SAMPLE_LETTERS = ["A", "B", "C"] as const;
+
+function getSampleLabel(t: ReturnType<typeof useTranslations>, index: number): string {
+  const letter = SAMPLE_LETTERS[index] ?? "A";
+  return t(`sample${letter}`);
+}
+
+function getVerdictKey(score: number): string {
+  if (score === 3) return "verdict3";
+  if (score === 2) return "verdict2";
+  if (score === 1) return "verdict1";
+  return "verdict0";
+}
+
+/* ------------------------------------------------------------------ */
 /*  Main component                                                     */
 /* ------------------------------------------------------------------ */
 
 export default function AudioQuiz() {
+  const t = useTranslations("audioQuiz");
   const [phase, setPhase] = useState<Phase>("menu");
   const [levelIndex, setLevelIndex] = useState(0);
   const [roundIndex, setRoundIndex] = useState(0);
@@ -444,12 +254,13 @@ export default function AudioQuiz() {
   const round = level.rounds[roundIndex];
   const isAnswered = selected !== null;
   const correctSound = round.sounds.find((s) => s.isDefective);
+  const levelName = t(`level${levelIndex}Name`);
 
   /* Reset playing animation after 3s */
   useEffect(() => {
     if (!playingId) return;
-    const t = setTimeout(() => setPlayingId(null), 3000);
-    return () => clearTimeout(t);
+    const timer = setTimeout(() => setPlayingId(null), 3000);
+    return () => clearTimeout(timer);
   }, [playingId]);
 
   const startLevel = useCallback((idx: number) => {
@@ -491,7 +302,7 @@ export default function AudioQuiz() {
   }, []);
 
   const shareResult = useCallback(() => {
-    const text = `Stethoscope Virtuel AutoDiag EU — Niveau ${level.name} : ${score}/3 bonnes reponses ! Testez votre oreille de mecanicien sur autodiag-eu.com`;
+    const text = t("shareText", { level: levelName, score: String(score) });
     if (navigator.share) {
       navigator.share({ text }).catch(() => {
         /* user cancelled */
@@ -501,21 +312,20 @@ export default function AudioQuiz() {
         /* fallback */
       });
     }
-  }, [level.name, score]);
+  }, [t, levelName, score]);
 
   /* ---- MENU ---- */
   if (phase === "menu") {
     return (
       <div className="space-y-8">
         <p className="text-[#8a90b0] text-center max-w-2xl mx-auto">
-          Ecoutez les echantillons sonores et identifiez celui qui presente un
-          defaut. Trois niveaux pour tester votre oreille de mecanicien.
+          {t("menuIntro")}
         </p>
 
         <div className="grid gap-6 sm:grid-cols-3">
-          {LEVELS.map((lvl, idx) => (
+          {LEVELS.map((_, idx) => (
             <motion.button
-              key={lvl.name}
+              key={idx}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => startLevel(idx)}
@@ -535,11 +345,11 @@ export default function AudioQuiz() {
                     idx === 0 ? "#00c853" : idx === 1 ? "#00e5ff" : "#ff6d00",
                 }}
               >
-                {lvl.tag}
+                {t(`level${idx}Tag`)}
               </span>
-              <h3 className="text-xl font-bold text-white">{lvl.name}</h3>
+              <h3 className="text-xl font-bold text-white">{t(`level${idx}Name`)}</h3>
               <p className="mt-1 text-sm text-[#8a90b0]">
-                3 manches — identifiez le son defectueux
+                {t("roundDesc")}
               </p>
             </motion.button>
           ))}
@@ -550,15 +360,6 @@ export default function AudioQuiz() {
 
   /* ---- RESULT ---- */
   if (phase === "result") {
-    const verdict =
-      score === 3
-        ? "Parfait ! Vous avez l'oreille absolue du mecanicien."
-        : score === 2
-          ? "Tres bien ! Encore un petit effort pour la perfection."
-          : score === 1
-            ? "Pas mal, mais votre oreille a besoin d'entrainement."
-            : "Aie ! Il est temps de se familiariser avec les bruits moteur.";
-
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -569,7 +370,7 @@ export default function AudioQuiz() {
         {showConfetti && <Confetti />}
 
         <h2 className="text-2xl font-bold text-white mb-2">
-          Niveau {level.name} termine
+          {t("levelComplete", { name: levelName })}
         </h2>
         <div className="my-6">
           <span
@@ -583,7 +384,7 @@ export default function AudioQuiz() {
             {score}/3
           </span>
         </div>
-        <p className="text-[#8a90b0] mb-8">{verdict}</p>
+        <p className="text-[#8a90b0] mb-8">{t(getVerdictKey(score))}</p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <motion.button
@@ -593,7 +394,7 @@ export default function AudioQuiz() {
             className="rounded-xl px-6 py-3 font-semibold text-white"
             style={{ background: "rgba(255,255,255,0.08)" }}
           >
-            Retour aux niveaux
+            {t("backToLevels")}
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -602,7 +403,7 @@ export default function AudioQuiz() {
             className="rounded-xl px-6 py-3 font-semibold text-black"
             style={{ background: "linear-gradient(to right, #00e5ff, #00c853)" }}
           >
-            Partager mon score
+            {t("shareScore")}
           </motion.button>
         </div>
       </motion.div>
@@ -623,23 +424,24 @@ export default function AudioQuiz() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-[#8a90b0]">
-            Niveau {level.name} — Manche {roundIndex + 1}/3
+            {t("levelRound", { level: levelName, round: String(roundIndex + 1) })}
           </span>
           <span className="text-sm font-semibold text-white">
-            Score : {score}/{roundIndex + (isAnswered ? 1 : 0)}
+            {t("scoreDisplay", { score: String(score), total: String(roundIndex + (isAnswered ? 1 : 0)) })}
           </span>
         </div>
         <ProgressBar current={roundIndex} total={3} />
 
         <h2 className="text-xl font-bold text-white text-center">
-          Quel echantillon presente un defaut ?
+          {t("questionTitle")}
         </h2>
 
         {/* Sound cards */}
         <div className="grid gap-4 sm:grid-cols-3">
-          {round.sounds.map((sound) => {
+          {round.sounds.map((sound, soundIndex) => {
             const isCorrect = sound.isDefective;
             const isChosen = selected === sound.id;
+            const sampleLabel = getSampleLabel(t, soundIndex);
             let borderColor = "rgba(255,255,255,0.08)";
             if (isAnswered) {
               if (isCorrect) borderColor = "#00c853";
@@ -658,7 +460,7 @@ export default function AudioQuiz() {
                 }}
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-white">{sound.label}</span>
+                  <span className="font-semibold text-white">{sampleLabel}</span>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -670,7 +472,7 @@ export default function AudioQuiz() {
                           ? "linear-gradient(135deg, #00e5ff, #00c853)"
                           : "rgba(255,255,255,0.08)",
                     }}
-                    aria-label={`Ecouter ${sound.label}`}
+                    aria-label={t("listenAria", { label: sampleLabel })}
                   >
                     <svg
                       width="16"
@@ -695,7 +497,7 @@ export default function AudioQuiz() {
                   active={playingId === sound.id}
                 />
 
-                <p className="text-sm text-[#8a90b0]">{sound.description}</p>
+                <p className="text-sm text-[#8a90b0]">{t(`desc_${sound.id}`)}</p>
 
                 {/* Answer button */}
                 <motion.button
@@ -724,9 +526,9 @@ export default function AudioQuiz() {
                 >
                   {isAnswered
                     ? isCorrect
-                      ? "Defectueux"
-                      : "Normal"
-                    : "Choisir"}
+                      ? t("defective")
+                      : t("normal")
+                    : t("choose")}
                 </motion.button>
               </motion.div>
             );
@@ -747,10 +549,10 @@ export default function AudioQuiz() {
               }}
             >
               <h3 className="text-sm font-bold text-[#00e5ff] mb-2">
-                Explication
+                {t("explanation")}
               </h3>
               <p className="text-sm text-[#8a90b0] leading-relaxed">
-                {correctSound.explanation}
+                {t(`expl_${correctSound.id}`)}
               </p>
 
               <div className="mt-4 flex justify-end">
@@ -763,7 +565,7 @@ export default function AudioQuiz() {
                     background: "linear-gradient(to right, #00e5ff, #00c853)",
                   }}
                 >
-                  {roundIndex < 2 ? "Manche suivante" : "Voir le resultat"}
+                  {roundIndex < 2 ? t("nextRound") : t("seeResult")}
                 </motion.button>
               </div>
             </motion.div>
