@@ -238,6 +238,61 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- DE articles ---- */
   {
+    slug: "motorkontrollleuchte-leuchtet-was-tun",
+    title: "Motorkontrollleuchte leuchtet — was tun?",
+    description:
+      "Schritt-fuer-Schritt Anleitung bei leuchtender Motorkontrollleuchte: Farben, Fehlercodes, Sofortmassnahmen und wann Sie in die Werkstatt muessen.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Ratgeber",
+    locale: "de",
+  },
+  {
+    slug: "tuev-vorbereitung-2026",
+    title: "TUeV-Vorbereitung 2026: Beim ersten Mal bestehen",
+    description:
+      "Checkliste 2026 fuer die Hauptuntersuchung: OBD-Vordiagnose, Abgasuntersuchung, Bremsen, Beleuchtung und wie Sie teure Nachpruefungen vermeiden.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "TUeV-Ratgeber",
+    locale: "de",
+  },
+  {
+    slug: "10-haeufigste-fehlercodes-europa",
+    title: "Die 10 haeufigsten OBD2-Fehlercodes in Europa",
+    description:
+      "Top 10 OBD2-Fehlercodes auf europaeischen Fahrzeugen: P0420, P0171, P0300 und 7 weitere. Ursachen, Reparaturkosten und konkrete Loesungen.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Fehlercodes",
+    locale: "de",
+  },
+  {
+    slug: "obd2-codes-mit-handy-auslesen",
+    title: "OBD2-Codes mit dem Handy auslesen",
+    description:
+      "Vollstaendige Anleitung zum Auslesen von OBD2-Fehlercodes mit einem Smartphone und einem ELM327-Bluetooth-Adapter fuer 25 Euro. Schritt fuer Schritt.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Anleitung",
+    locale: "de",
+  },
+  {
+    slug: "katalysator-reparatur-kosten-p0420",
+    title: "Katalysator-Reparatur P0420: Was kostet es wirklich?",
+    description:
+      "Echte Preistabelle 2026 fuer eine P0420-Reparatur in Deutschland: Lambdasonde, Nachruest-Katalysator, Original, Arbeitszeit und Fallen beim Kostenvoranschlag.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Reparaturkosten",
+    locale: "de",
+  },
+  {
     slug: "obd2-fehlercodes-lesen-anleitung",
     title: "OBD2-Fehlercodes lesen — vollstandige Anleitung",
     description:
@@ -430,22 +485,27 @@ const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "voyant-moteur-allume-que-faire",
     en: "check-engine-light-what-to-do",
+    de: "motorkontrollleuchte-leuchtet-was-tun",
   },
   {
     fr: "preparer-controle-technique-2026",
     en: "mot-preparation-guide-2026",
+    de: "tuev-vorbereitung-2026",
   },
   {
     fr: "10-codes-defaut-frequents-europe",
     en: "top-10-common-fault-codes-europe",
+    de: "10-haeufigste-fehlercodes-europa",
   },
   {
     fr: "lire-codes-obd2-telephone",
     en: "read-obd2-codes-phone",
+    de: "obd2-codes-mit-handy-auslesen",
   },
   {
     fr: "cout-reparation-catalyseur-p0420",
     en: "p0420-catalytic-converter-cost",
+    de: "katalysator-reparatur-kosten-p0420",
   },
   {
     fr: "comment-lire-code-defaut-obd2",

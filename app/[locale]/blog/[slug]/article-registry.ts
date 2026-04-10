@@ -34,6 +34,11 @@ import { ArticleDETUVVorbereitung } from "./de/tuv-vorbereitung";
 import { ArticleDE5Motorgerausche } from "./de/5-motorgerausche";
 import { ArticleDEOBD2Verstehen } from "./de/obd2-verstehen";
 import { ArticleDEAutodiagVsWerkstatt } from "./de/autodiag-vs-werkstatt";
+import { ArticleDEMotorkontrollleuchte } from "./de/motorkontrollleuchte-was-tun";
+import { ArticleDETUVVorbereitung2026 } from "./de/tuv-vorbereitung-2026";
+import { ArticleDE10HaeufigsteFehlercodes } from "./de/10-haeufigste-fehlercodes-europa";
+import { ArticleDEOBD2CodesHandy } from "./de/obd2-codes-handy-auslesen";
+import { ArticleDEKatalysatorKostenP0420 } from "./de/katalysator-kosten-p0420";
 
 /* ES */
 import { ArticleESCodigosFalloOBD2 } from "./es/codigos-fallo-obd2";
@@ -78,6 +83,11 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-motorgerausche-nicht-ignorieren": ArticleDE5Motorgerausche,
   "obd2-verstehen-in-5-minuten": ArticleDEOBD2Verstehen,
   "autodiag-vs-werkstatt-ersparnisse": ArticleDEAutodiagVsWerkstatt,
+  "motorkontrollleuchte-leuchtet-was-tun": ArticleDEMotorkontrollleuchte,
+  "tuev-vorbereitung-2026": ArticleDETUVVorbereitung2026,
+  "10-haeufigste-fehlercodes-europa": ArticleDE10HaeufigsteFehlercodes,
+  "obd2-codes-mit-handy-auslesen": ArticleDEOBD2CodesHandy,
+  "katalysator-reparatur-kosten-p0420": ArticleDEKatalysatorKostenP0420,
   /* ES articles */
   "como-leer-codigos-fallo-obd2": ArticleESCodigosFalloOBD2,
   "preparar-itv-lista-completa": ArticleESPrepararITV,
