@@ -46,6 +46,16 @@ import { Article5BruitsMoteur } from "./fr/5-bruits-moteur";
 import { ArticleOBD2Comprendre } from "./fr/obd2-comprendre";
 import { ArticleAutodiagVsGarage } from "./fr/autodiag-vs-garage";
 
+/* EN vision AI series */
+import { ArticleVisionLeaksUnderCar } from "./en/vision-ai-detect-leaks-under-car-with-phone";
+import { ArticleTyreWearAI } from "./en/premature-tyre-wear-ai-sees-what-you-dont-notice";
+import { ArticleScanNumberPlate } from "./en/scan-number-plate-instant-vehicle-identification";
+import { ArticleCorrosionVisionAI } from "./en/detect-corrosion-rust-vision-ai-before-mot";
+import { ArticleVisualCheckup5Points } from "./en/ai-visual-checkup-5-points-healthy-vehicle";
+import { ArticleFluidColourReveals } from "./en/oil-brake-fluid-coolant-leak-colour-reveals-fault";
+import { ArticleScanVIN } from "./en/scan-vin-decode-car-complete-history";
+import { ArticleBrakePadDiscWearVision } from "./en/brake-pad-disc-wear-vision-ai-detects";
+
 /* EN cabin sound scan series */
 import { Article7CabinNoises } from "./en/7-cabin-noises-never-ignore";
 import { ArticleBrakeSquealing } from "./en/brake-squealing-normal-wear-or-danger";
@@ -158,6 +168,15 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
+  /* EN vision AI series */
+  "vision-ai-detect-leaks-under-car-with-phone": ArticleVisionLeaksUnderCar,
+  "premature-tyre-wear-ai-sees-what-you-dont-notice": ArticleTyreWearAI,
+  "scan-number-plate-instant-vehicle-identification": ArticleScanNumberPlate,
+  "detect-corrosion-rust-vision-ai-before-mot": ArticleCorrosionVisionAI,
+  "ai-visual-checkup-5-points-healthy-vehicle": ArticleVisualCheckup5Points,
+  "oil-brake-fluid-coolant-leak-colour-reveals-fault": ArticleFluidColourReveals,
+  "scan-vin-decode-car-complete-history": ArticleScanVIN,
+  "brake-pad-disc-wear-vision-ai-detects": ArticleBrakePadDiscWearVision,
   /* EN cabin sound scan series */
   "7-cabin-noises-never-ignore": Article7CabinNoises,
   "brake-squealing-normal-wear-or-danger": ArticleBrakeSquealing,

@@ -413,6 +413,94 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "vision-ai-detect-leaks-under-car-with-phone",
+    title: "Vision AI: spot the leak under your car with just a phone",
+    description:
+      "Photograph a stain on the ground, Vision AI identifies the fluid (oil, coolant, brake, ATF), grades severity and tells you whether it is safe to drive.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Vision AI",
+    locale: "en",
+  },
+  {
+    slug: "premature-tyre-wear-ai-sees-what-you-dont-notice",
+    title: "Premature tyre wear: AI sees what you do not notice",
+    description:
+      "Centre, shoulder, cupping, camber: 5 wear patterns and their mechanical root cause. Vision AI measures residual depth from a single photo.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Visual Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "scan-number-plate-instant-vehicle-identification",
+    title: "Scan a number plate: instant vehicle identification",
+    description:
+      "Plate OCR in 2 seconds: make, model, year, fuel, Euro standard. Perfect for vetting a used-car advert before you even drive there.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Used Car Buying",
+    locale: "en",
+  },
+  {
+    slug: "detect-corrosion-rust-vision-ai-before-mot",
+    title: "Detect corrosion with Vision AI before your MOT",
+    description:
+      "4 rust levels graded by AI: surface, active, imminent perforation, structural. Anticipate the MOT 6 months ahead and save up to 1000 GBP.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
+    slug: "ai-visual-checkup-5-points-healthy-vehicle",
+    title: "AI visual checkup in five points: keeping your vehicle healthy",
+    description:
+      "A 5-minute monthly routine: ground, tyres, pads, under the bonnet, lights. Vision AI guides every shot and generates a single report.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
+    slug: "oil-brake-fluid-coolant-leak-colour-reveals-fault",
+    title: "Oil, brake fluid or coolant leak: the colour reveals the fault",
+    description:
+      "Complete colour catalogue of car fluids: brown oil, green/pink/orange coolant, clear brake, red ATF. Each colour, each fault.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Visual Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "scan-vin-decode-car-complete-history",
+    title: "Scan the VIN: decode a car's complete history",
+    description:
+      "17-character VIN OCR: maker, year, engine, mileage history, manufacturer recalls, service. Spot a clocked odometer in 3 seconds.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Used Car Buying",
+    locale: "en",
+  },
+  {
+    slug: "brake-pad-disc-wear-vision-ai-detects",
+    title: "Brake pad and disc wear: what Vision AI detects through the spokes",
+    description:
+      "Pad thickness measurement through the spokes, detection of scored discs, blueing and glazing. Plan the change and save 250 to 500 GBP.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Vision AI",
+    locale: "en",
+  },
+  {
     slug: "7-cabin-noises-never-ignore",
     title: "7 cabin noises you should never ignore",
     description:
@@ -1078,27 +1166,35 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
 const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "vision-ia-detecter-fuites-sous-voiture-telephone",
+    en: "vision-ai-detect-leaks-under-car-with-phone",
   },
   {
     fr: "usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas",
+    en: "premature-tyre-wear-ai-sees-what-you-dont-notice",
   },
   {
     fr: "scanner-plaque-immatriculation-identification-instantanee",
+    en: "scan-number-plate-instant-vehicle-identification",
   },
   {
     fr: "detecter-corrosion-rouille-vision-ia-avant-ct",
+    en: "detect-corrosion-rust-vision-ai-before-mot",
   },
   {
     fr: "checkup-visuel-ia-5-points-vehicule-sain",
+    en: "ai-visual-checkup-5-points-healthy-vehicle",
   },
   {
     fr: "fuite-huile-liquide-frein-coolant-couleur-revele-panne",
+    en: "oil-brake-fluid-coolant-leak-colour-reveals-fault",
   },
   {
     fr: "scanner-vin-decoder-historique-complet-voiture",
+    en: "scan-vin-decode-car-complete-history",
   },
   {
     fr: "usure-plaquettes-disques-vision-ia-detecte",
+    en: "brake-pad-disc-wear-vision-ai-detects",
   },
   {
     fr: "7-bruits-habitacle-jamais-ignorer",
