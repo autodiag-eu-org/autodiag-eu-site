@@ -30,7 +30,7 @@ interface ErrorPageProps {
 }
 
 export default function ErrorPage({ error, reset }: ErrorPageProps) {
-  const locale = useMemo(detectLocale, []);
+  const locale = useMemo(() => detectLocale(), []);
   const t = messagesMap[locale]?.error ?? frMessages.error;
 
   useEffect(() => {

@@ -28,7 +28,7 @@ echo ""
 
 # 3. ESLint (Next 16 removed "next lint" — use eslint directly)
 echo "[3/4] ESLint..."
-if npx eslint . --ext .ts,.tsx 2>&1; then
+if npx eslint . 2>&1; then
   echo "  ✓ eslint passed"
 else
   echo "  ✗ eslint FAILED"
