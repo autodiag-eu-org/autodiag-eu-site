@@ -66,7 +66,7 @@ const DEFAULT_ORGANIZATION: OrganizationSchema = {
   '@type': 'Organization',
   name: 'AutoDiag EU Sarl',
   url: 'https://autodiag-eu.com',
-  description: 'Diagnostic automobile intelligent',
+  description: 'Intelligent car diagnostics',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Route du Jura 10',

@@ -2,161 +2,71 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-interface PlanFeature {
-  name: string;
-  free: string;
-  premium: string;
-}
+/* ── Plan features — keys reference the pricing namespace ── */
 
-const planFeatures: PlanFeature[] = [
-  { name: "Scan audio moteur IA", free: "1 / semaine", premium: "Illimite" },
-  { name: "Scan audio habitacle", free: "1 / semaine", premium: "Illimite" },
-  { name: "Lecture codes DTC", free: "Illimitee", premium: "Illimitee" },
-  {
-    name: "Live data OBD2",
-    free: "4 PIDs basiques",
-    premium: "Tous les PIDs",
-  },
-  { name: "IA mecanicien", free: "3 questions / jour", premium: "Illimite" },
-  {
-    name: "Historique diagnostics",
-    free: "7 derniers jours",
-    premium: "Illimite",
-  },
-  { name: "Effacement codes DTC", free: "—", premium: "Illimite" },
-  {
-    name: "Devis + couts reparation",
-    free: "—",
-    premium: "5 pays (FR, DE, CH, ES, PT)",
-  },
-  {
-    name: "Pre-controle technique",
-    free: "—",
-    premium: "5 pays",
-  },
-  { name: "Export PDF rapports", free: "—", premium: "Illimite" },
-  {
-    name: "Drive Test sans dongle",
-    free: "—",
-    premium: "Accelerometre + GPS + micro",
-  },
-  { name: "Historique illimite", free: "—", premium: "Illimite" },
-];
+const PLAN_FEATURE_KEYS = [
+  "ScanAudio",
+  "ScanCabin",
+  "DTC",
+  "LiveData",
+  "AI",
+  "History",
+  "Erase",
+  "Quote",
+  "CT",
+  "Export",
+  "DriveTest",
+] as const;
 
-interface CompetitorRow {
-  feature: string;
-  autodiag: string;
-  carly: string;
-  carScanner: string;
-  obdeleven: string;
-}
+/* Features that have a non-dash free value */
+const FREE_INCLUDED = new Set([
+  "ScanAudio",
+  "ScanCabin",
+  "DTC",
+  "LiveData",
+  "AI",
+  "History",
+]);
 
-const competitorData: CompetitorRow[] = [
-  {
-    feature: "Prix annuel",
-    autodiag: "Gratuit / 49 CHF",
-    carly: "59,99 EUR",
-    carScanner: "5,99 EUR/an",
-    obdeleven: "49,99 EUR",
-  },
-  {
-    feature: "Scan audio moteur IA",
-    autodiag: "Oui",
-    carly: "Non",
-    carScanner: "Non",
-    obdeleven: "Non",
-  },
-  {
-    feature: "Vision IA / OCR",
-    autodiag: "Oui",
-    carly: "Non",
-    carScanner: "Non",
-    obdeleven: "Non",
-  },
-  {
-    feature: "Drive Test sans dongle",
-    autodiag: "Oui",
-    carly: "Non",
-    carScanner: "Non",
-    obdeleven: "Non",
-  },
-  {
-    feature: "IA mecanicien personnalisee",
-    autodiag: "Oui",
-    carly: "Non",
-    carScanner: "Non",
-    obdeleven: "Non",
-  },
-  {
-    feature: "Pre-controle technique 5 pays",
-    autodiag: "Oui",
-    carly: "Non",
-    carScanner: "Non",
-    obdeleven: "Non",
-  },
-  {
-    feature: "Lecture codes DTC",
-    autodiag: "Oui",
-    carly: "Oui",
-    carScanner: "Oui",
-    obdeleven: "Oui",
-  },
-  {
-    feature: "Live data OBD2",
-    autodiag: "Oui",
-    carly: "Oui",
-    carScanner: "Oui",
-    obdeleven: "Oui",
-  },
-  {
-    feature: "Effacement DTC",
-    autodiag: "Premium",
-    carly: "Oui",
-    carScanner: "Premium",
-    obdeleven: "Oui",
-  },
-  {
-    feature: "Fusion capteurs telephone",
-    autodiag: "Oui",
-    carly: "Non",
-    carScanner: "Non",
-    obdeleven: "Non",
-  },
-];
+/* ── Competitor comparison — structural data only ── */
 
-interface FaqItem {
-  question: string;
-  answer: string;
-}
+const COMPETITOR_KEYS = [
+  "annualPrice",
+  "scanAudio",
+  "visionAI",
+  "driveTest",
+  "aiMechanic",
+  "preCT",
+  "dtcRead",
+  "liveData",
+  "dtcClear",
+  "sensorFusion",
+] as const;
 
-const faqItems: FaqItem[] = [
-  {
-    question: "AutoDiag EU est-il vraiment gratuit ?",
-    answer:
-      "Oui, la version gratuite est genereuse : lecture illimitee des codes DTC, 1 scan audio par semaine, 4 PIDs en live data et 3 questions IA par jour. Elle couvre largement les besoins d'un proprietaire qui veut comprendre un voyant allume.",
-  },
-  {
-    question: "Qu'est-ce que j'obtiens de plus avec Premium ?",
-    answer:
-      "Premium deverrouille tout : scans audio et habitacle illimites, tous les PIDs en temps reel, effacement des codes DTC, devis reparation par pays, pre-controle technique 5 pays, Drive Test sans dongle, export PDF et historique illimite. C'est l'outil complet du passionne.",
-  },
-  {
-    question: "Comment fonctionne l'essai gratuit de 7 jours ?",
-    answer:
-      "Des l'installation, vous avez acces a toutes les fonctionnalites Premium pendant 7 jours. Pas besoin de carte bancaire. A la fin de la periode, vous basculez sur le plan gratuit si vous ne souscrivez pas.",
-  },
-  {
-    question: "Comment se fait le paiement ?",
-    answer:
-      "Exclusivement via Google Play Billing. Pas de Stripe, pas de paiement direct sur le site. L'abonnement se renouvelle automatiquement et peut etre annule a tout moment depuis le Play Store.",
-  },
-  {
-    question: "Puis-je me faire rembourser ?",
-    answer:
-      "Google Play offre un remboursement automatique dans les 48 heures. Au-dela, contactez-nous a info@autodiag-eu.com et nous traiterons votre demande sous 14 jours conformement au droit de retractation UE.",
-  },
-];
+/** Static competitor values (prices/numbers don't translate) */
+const COMPETITOR_VALUES: Record<
+  string,
+  { carly: string; carScanner: string; obdeleven: string }
+> = {
+  annualPrice: { carly: "59,99 EUR", carScanner: "5,99 EUR/an", obdeleven: "49,99 EUR" },
+  scanAudio: { carly: "—", carScanner: "—", obdeleven: "—" },
+  visionAI: { carly: "—", carScanner: "—", obdeleven: "—" },
+  driveTest: { carly: "—", carScanner: "—", obdeleven: "—" },
+  aiMechanic: { carly: "—", carScanner: "—", obdeleven: "—" },
+  preCT: { carly: "—", carScanner: "—", obdeleven: "—" },
+  dtcRead: { carly: "✓", carScanner: "✓", obdeleven: "✓" },
+  liveData: { carly: "✓", carScanner: "✓", obdeleven: "✓" },
+  dtcClear: { carly: "✓", carScanner: "Premium", obdeleven: "✓" },
+  sensorFusion: { carly: "—", carScanner: "—", obdeleven: "—" },
+};
+
+/* ── FAQ keys ── */
+
+const FAQ_KEYS = ["freeReally", "premiumMore", "trialHow", "payment", "refund"] as const;
+
+/* ── Icons ── */
 
 function CheckIcon() {
   return (
@@ -194,7 +104,10 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
+/* ── Main component ── */
+
 export default function PrixClient() {
+  const t = useTranslations("pricing");
   const [expandedFaq, setExpandedFaq] = useState<Record<number, boolean>>({});
 
   const toggleFaq = (index: number) => {
@@ -207,66 +120,66 @@ export default function PrixClient() {
       <div className="grid gap-6 sm:grid-cols-2">
         {/* Free */}
         <div className="glass flex flex-col rounded-2xl border border-border p-8 backdrop-blur-md transition-all hover:border-border/60">
-          <h2 className="text-xl font-bold">Gratuit</h2>
+          <h2 className="text-xl font-bold">{t("freeTitle")}</h2>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-4xl font-bold">0</span>
             <span className="text-secondary">CHF</span>
           </div>
           <p className="mt-2 text-sm text-secondary">
-            Tout ce qu&apos;il faut pour comprendre votre voiture
+            {t("freeDesc")}
           </p>
           <ul className="mt-8 flex-1 space-y-3">
-            {planFeatures
-              .filter((f) => f.free !== "—")
-              .map((f) => (
-                <li
-                  key={f.name}
-                  className="flex items-start gap-2 text-sm text-secondary"
-                >
-                  <CheckIcon />
-                  <span>
-                    {f.name}
-                    {f.free !== "Illimitee" && f.free !== "Illimite" && (
-                      <span className="text-secondary/60"> — {f.free}</span>
-                    )}
-                  </span>
-                </li>
-              ))}
+            {PLAN_FEATURE_KEYS.filter((k) => FREE_INCLUDED.has(k)).map((k) => (
+              <li
+                key={k}
+                className="flex items-start gap-2 text-sm text-secondary"
+              >
+                <CheckIcon />
+                <span>
+                  {t(`feature${k}`)}
+                  {t(`feature${k}Free`) !== t(`feature${k}Premium`) && (
+                    <span className="text-secondary/60">
+                      {" "}
+                      — {t(`feature${k}Free`)}
+                    </span>
+                  )}
+                </span>
+              </li>
+            ))}
           </ul>
           <a
             href="#beta"
             className="mt-8 block rounded-full border border-border py-3 text-center font-semibold transition-colors hover:border-cyan/40 hover:text-cyan"
           >
-            Commencer gratuitement
+            {t("ctaFree")}
           </a>
         </div>
 
         {/* Premium */}
         <div className="glass relative flex flex-col rounded-2xl border border-cyan/40 p-8 shadow-[0_0_30px_rgba(0,229,255,0.08)] backdrop-blur-md">
           <span className="absolute -top-3 right-6 rounded-full bg-cyan px-4 py-1 text-xs font-bold text-black">
-            Recommande
+            {t("recommended")}
           </span>
-          <h2 className="text-xl font-bold">Premium</h2>
+          <h2 className="text-xl font-bold">{t("premiumTitle")}</h2>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-4xl font-bold text-gradient">49</span>
-            <span className="text-secondary">CHF / an</span>
+            <span className="text-secondary">{t("priceUnit")}</span>
           </div>
           <p className="mt-2 text-sm text-cyan/80">
-            7 jours d&apos;essai gratuit — sans carte bancaire
+            {t("premiumTrialDesc")}
           </p>
           <ul className="mt-8 flex-1 space-y-3">
-            {planFeatures.map((f) => (
-              <li key={f.name} className="flex items-start gap-2 text-sm">
+            {PLAN_FEATURE_KEYS.map((k) => (
+              <li key={k} className="flex items-start gap-2 text-sm">
                 <CheckIcon />
                 <span>
-                  {f.name}
-                  {f.premium !== "Illimite" &&
-                    f.premium !== "Illimitee" && (
-                      <span className="text-secondary/60">
-                        {" "}
-                        — {f.premium}
-                      </span>
-                    )}
+                  {t(`feature${k}`)}
+                  {t(`feature${k}Premium`) !== t("unlimited") && (
+                    <span className="text-secondary/60">
+                      {" "}
+                      — {t(`feature${k}Premium`)}
+                    </span>
+                  )}
                 </span>
               </li>
             ))}
@@ -276,7 +189,7 @@ export default function PrixClient() {
             className="group relative mt-8 block overflow-hidden rounded-full bg-green py-3 text-center font-semibold text-black transition-shadow hover:shadow-[0_0_30px_rgba(0,200,83,0.4)]"
           >
             <span className="relative z-10">
-              Commencer l&apos;essai gratuit
+              {t("ctaPremium")}
             </span>
             <span
               aria-hidden="true"
@@ -289,32 +202,32 @@ export default function PrixClient() {
       {/* Feature comparison table */}
       <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
         <h2 className="mb-6 text-xl font-bold">
-          Comparaison detaillee des plans
+          {t("comparisonTitle")}
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border">
                 <th className="pb-3 pr-4 text-left font-semibold text-secondary">
-                  Fonctionnalite
+                  {t("featureLabel")}
                 </th>
                 <th className="pb-3 px-4 text-center font-semibold text-secondary">
-                  Gratuit
+                  {t("freeTitle")}
                 </th>
                 <th className="pb-3 pl-4 text-center font-semibold text-cyan">
-                  Premium
+                  {t("premiumTitle")}
                 </th>
               </tr>
             </thead>
             <tbody>
-              {planFeatures.map((f) => (
-                <tr key={f.name} className="border-b border-border/50">
-                  <td className="py-3 pr-4 font-medium">{f.name}</td>
+              {PLAN_FEATURE_KEYS.map((k) => (
+                <tr key={k} className="border-b border-border/50">
+                  <td className="py-3 pr-4 font-medium">{t(`feature${k}`)}</td>
                   <td className="py-3 px-4 text-center text-secondary">
-                    {f.free}
+                    {FREE_INCLUDED.has(k) ? t(`feature${k}Free`) : "—"}
                   </td>
                   <td className="py-3 pl-4 text-center font-medium text-green">
-                    {f.premium}
+                    {t(`feature${k}Premium`)}
                   </td>
                 </tr>
               ))}
@@ -326,19 +239,17 @@ export default function PrixClient() {
       {/* Competitor comparison */}
       <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
         <h2 className="mb-2 text-xl font-bold">
-          AutoDiag EU vs la concurrence
+          {t("vsTitle")}
         </h2>
         <p className="mb-6 text-sm text-secondary">
-          Ce qui nous rend unique : le scan audio IA, la vision IA, le
-          diagnostic sans dongle et la fusion capteurs — aucun concurrent ne
-          propose ces fonctionnalites.
+          {t("vsSubtitle")}
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border">
                 <th className="pb-3 pr-4 text-left font-semibold text-secondary">
-                  Fonctionnalite
+                  {t("featureLabel")}
                 </th>
                 <th className="pb-3 px-3 text-center font-semibold text-cyan">
                   AutoDiag EU
@@ -355,23 +266,26 @@ export default function PrixClient() {
               </tr>
             </thead>
             <tbody>
-              {competitorData.map((row) => (
-                <tr key={row.feature} className="border-b border-border/50">
-                  <td className="py-3 pr-4 font-medium">{row.feature}</td>
-                  <td className="py-3 px-3 text-center font-medium text-green">
-                    {row.autodiag}
-                  </td>
-                  <td className="py-3 px-3 text-center text-secondary">
-                    {row.carly}
-                  </td>
-                  <td className="py-3 px-3 text-center text-secondary">
-                    {row.carScanner}
-                  </td>
-                  <td className="py-3 pl-3 text-center text-secondary">
-                    {row.obdeleven}
-                  </td>
-                </tr>
-              ))}
+              {COMPETITOR_KEYS.map((k) => {
+                const vals = COMPETITOR_VALUES[k];
+                return (
+                  <tr key={k} className="border-b border-border/50">
+                    <td className="py-3 pr-4 font-medium">{t(`comp_${k}`)}</td>
+                    <td className="py-3 px-3 text-center font-medium text-green">
+                      {t(`comp_${k}_autodiag`)}
+                    </td>
+                    <td className="py-3 px-3 text-center text-secondary">
+                      {vals.carly}
+                    </td>
+                    <td className="py-3 px-3 text-center text-secondary">
+                      {vals.carScanner}
+                    </td>
+                    <td className="py-3 pl-3 text-center text-secondary">
+                      {vals.obdeleven}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -379,11 +293,11 @@ export default function PrixClient() {
 
       {/* FAQ */}
       <div>
-        <h2 className="mb-6 text-xl font-bold">Questions sur les tarifs</h2>
+        <h2 className="mb-6 text-xl font-bold">{t("faqTitle")}</h2>
         <div className="space-y-3">
-          {faqItems.map((item, index) => (
+          {FAQ_KEYS.map((k, index) => (
             <div
-              key={index}
+              key={k}
               className="rounded-xl border border-border bg-glass backdrop-blur-md"
             >
               <button
@@ -392,7 +306,7 @@ export default function PrixClient() {
                 className="flex w-full items-center justify-between gap-3 p-5 text-left"
                 aria-expanded={expandedFaq[index] ?? false}
               >
-                <span className="font-semibold">{item.question}</span>
+                <span className="font-semibold">{t(`faq_${k}_q`)}</span>
                 <ChevronIcon open={expandedFaq[index] ?? false} />
               </button>
               <AnimatePresence>
@@ -406,7 +320,7 @@ export default function PrixClient() {
                   >
                     <div className="border-t border-border px-5 pb-5 pt-4">
                       <p className="text-secondary leading-relaxed">
-                        {item.answer}
+                        {t(`faq_${k}_a`)}
                       </p>
                     </div>
                   </motion.div>
@@ -420,24 +334,23 @@ export default function PrixClient() {
       {/* CTA */}
       <div className="rounded-2xl border border-cyan/20 bg-gradient-to-br from-cyan/5 to-green/5 p-8 text-center">
         <h2 className="mb-2 text-xl font-bold">
-          Pret a essayer ?
+          {t("readyTitle")}
         </h2>
         <p className="mb-6 text-secondary">
-          7 jours gratuits, pas de carte bancaire, annulation en un clic.
+          {t("readyDesc")}
         </p>
         <a
           href="#beta"
           className="group relative inline-block overflow-hidden rounded-full bg-green px-8 py-3 font-semibold text-black transition-shadow hover:shadow-[0_0_30px_rgba(0,200,83,0.4)]"
         >
-          <span className="relative z-10">Commencer l&apos;essai gratuit</span>
+          <span className="relative z-10">{t("ctaPremium")}</span>
           <span
             aria-hidden="true"
             className="shimmer pointer-events-none absolute inset-0"
           />
         </a>
         <p className="mt-4 text-sm text-secondary">
-          Paiement via Google Play — pas de carte bancaire requise pour
-          l&apos;essai
+          {t("paymentNote")}
         </p>
       </div>
     </div>

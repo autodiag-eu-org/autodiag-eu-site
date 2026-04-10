@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata } from '@/lib/seo';
 
 interface ComparaisonPageProps {
@@ -10,11 +11,11 @@ export async function generateMetadata({
   params,
 }: ComparaisonPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'comparison' });
   return {
     ...generatePageMetadata({
-      title: 'AutoDiag EU vs la concurrence — pourquoi nous choisir',
-      description:
-        'Comparatif complet AutoDiag EU vs Carly, Car Scanner, OBDeleven. Scan audio IA moteur, vision AI, diagnostic sans dongle — des fonctions uniques en 2026.',
+      title: t('metaTitle'),
+      description: t('metaDescription'),
       locale,
       path: 'comparaison',
     }),
@@ -31,154 +32,37 @@ export async function generateMetadata({
   };
 }
 
-interface ComparisonRow {
-  feature: string;
-  autodiag: string;
-  carly: string;
-  carscanner: string;
-  obdeleven: string;
-  isUnique: boolean;
-}
+/* ── Structural data — text comes from i18n ── */
 
-const COMPARISON_DATA: ComparisonRow[] = [
-  {
-    feature: 'Scan audio IA moteur',
-    autodiag: 'Oui (91,3%)',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Scan audio habitacle',
-    autodiag: 'Oui (75%)',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Vision AI / OCR',
-    autodiag: 'Oui',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'IA mecanicien (Claude)',
-    autodiag: 'Oui',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Diagnostic sans dongle',
-    autodiag: 'Oui',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Pre-controle technique 5 pays',
-    autodiag: 'Oui',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Devis automatique',
-    autodiag: 'Oui',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Fusion multi-capteurs',
-    autodiag: 'Oui (94%)',
-    carly: '—',
-    carscanner: '—',
-    obdeleven: '—',
-    isUnique: true,
-  },
-  {
-    feature: 'Lecture codes DTC',
-    autodiag: 'Oui',
-    carly: 'Oui',
-    carscanner: 'Oui',
-    obdeleven: 'Oui',
-    isUnique: false,
-  },
-  {
-    feature: 'Donnees en direct (live data)',
-    autodiag: 'Oui',
-    carly: 'Oui',
-    carscanner: 'Oui',
-    obdeleven: 'Oui',
-    isUnique: false,
-  },
-  {
-    feature: 'Effacement codes DTC',
-    autodiag: 'Oui',
-    carly: 'Oui',
-    carscanner: 'Oui',
-    obdeleven: 'Oui',
-    isUnique: false,
-  },
-  {
-    feature: 'Prix annuel',
-    autodiag: '49 CHF',
-    carly: '59,99 EUR',
-    carscanner: '5,99 EUR/an',
-    obdeleven: '49,99 EUR',
-    isUnique: false,
-  },
-  {
-    feature: 'Langues europeennes',
-    autodiag: '5',
-    carly: '18',
-    carscanner: '40+',
-    obdeleven: '12',
-    isUnique: false,
-  },
-];
+const COMPARISON_KEYS = [
+  'scanAudio', 'scanCabin', 'visionAI', 'aiMechanic', 'noDongle',
+  'preCT', 'autoQuote', 'multiSensor', 'dtcRead', 'liveData',
+  'dtcClear', 'annualPrice', 'languages',
+] as const;
 
-interface UniqueCard {
-  title: string;
-  description: string;
-  icon: 'audio' | 'vision' | 'phone' | 'fusion';
-}
+const UNIQUE_SET = new Set([
+  'scanAudio', 'scanCabin', 'visionAI', 'aiMechanic',
+  'noDongle', 'preCT', 'autoQuote', 'multiSensor',
+]);
 
-const UNIQUE_CARDS: UniqueCard[] = [
-  {
-    title: 'Scan audio IA',
-    description:
-      'Notre intelligence artificielle ecoute votre moteur et detecte 11 types de pannes par le son, avec 91,3% de precision. Aucun concurrent ne propose cette technologie.',
-    icon: 'audio',
-  },
-  {
-    title: 'Vision AI / OCR',
-    description:
-      'Prenez en photo un code, une piece, un voyant — notre IA identifie et explique instantanement. Reconnaissance visuelle integree au diagnostic.',
-    icon: 'vision',
-  },
-  {
-    title: 'Diagnostic sans dongle',
-    description:
-      'Pas besoin d\'acheter un dongle OBD2. Le Drive Test utilise l\'accelerometre, le gyroscope, le GPS et le micro de votre telephone pour diagnostiquer.',
-    icon: 'phone',
-  },
-  {
-    title: 'Fusion multi-capteurs',
-    description:
-      'Audio + OBD2 + capteurs du telephone = un diagnostic combine a 94% de precision. Plus les sources sont nombreuses, plus le resultat est fiable.',
-    icon: 'fusion',
-  },
-];
+/** Competitor values — prices/numbers/dashes don't translate */
+const COMPETITOR_DATA: Record<string, { carly: string; carscanner: string; obdeleven: string }> = {
+  scanAudio: { carly: '—', carscanner: '—', obdeleven: '—' },
+  scanCabin: { carly: '—', carscanner: '—', obdeleven: '—' },
+  visionAI: { carly: '—', carscanner: '—', obdeleven: '—' },
+  aiMechanic: { carly: '—', carscanner: '—', obdeleven: '—' },
+  noDongle: { carly: '—', carscanner: '—', obdeleven: '—' },
+  preCT: { carly: '—', carscanner: '—', obdeleven: '—' },
+  autoQuote: { carly: '—', carscanner: '—', obdeleven: '—' },
+  multiSensor: { carly: '—', carscanner: '—', obdeleven: '—' },
+  dtcRead: { carly: '✓', carscanner: '✓', obdeleven: '✓' },
+  liveData: { carly: '✓', carscanner: '✓', obdeleven: '✓' },
+  dtcClear: { carly: '✓', carscanner: '✓', obdeleven: '✓' },
+  annualPrice: { carly: '59,99 EUR', carscanner: '5,99 EUR/an', obdeleven: '49,99 EUR' },
+  languages: { carly: '18', carscanner: '40+', obdeleven: '12' },
+};
+
+const UNIQUE_ICON_KEYS = ['audio', 'vision', 'phone', 'fusion'] as const;
 
 function CheckIcon() {
   return (
@@ -205,7 +89,7 @@ function DashIcon() {
   );
 }
 
-function CardIcon({ type }: { type: UniqueCard['icon'] }) {
+function CardIcon({ type }: { type: typeof UNIQUE_ICON_KEYS[number] }) {
   const iconClass = 'h-8 w-8 text-cyan';
   switch (type) {
     case 'audio':
@@ -241,20 +125,19 @@ function CardIcon({ type }: { type: UniqueCard['icon'] }) {
   }
 }
 
-export default function ComparaisonPage() {
+export default async function ComparaisonPage() {
+  const t = await getTranslations('comparison');
+
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="mb-14 text-center">
         <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-          AutoDiag EU vs la concurrence —{' '}
-          <span className="text-gradient">pourquoi nous choisir</span>
+          {t('pageTitle')}{' '}
+          <span className="text-gradient">{t('pageTitleAccent')}</span>
         </h1>
         <p className="mx-auto max-w-3xl text-lg text-secondary">
-          Les apps OBD2 classiques lisent des codes et affichent des donnees.
-          AutoDiag EU va bien plus loin : scan audio IA, vision artificielle,
-          diagnostic sans dongle, et fusion multi-capteurs. Comparez par
-          vous-meme.
+          {t('pageSubtitle')}
         </p>
       </div>
 
@@ -264,7 +147,7 @@ export default function ComparaisonPage() {
           <thead>
             <tr className="border-b border-border">
               <th className="px-6 py-5 text-sm font-medium text-secondary">
-                Fonctionnalite
+                {t('tableHeaderFeature')}
               </th>
               <th className="border-l border-cyan/30 bg-cyan/5 px-6 py-5 text-sm font-bold text-cyan">
                 AutoDiag EU
@@ -281,51 +164,55 @@ export default function ComparaisonPage() {
             </tr>
           </thead>
           <tbody>
-            {COMPARISON_DATA.map((row, index) => (
-              <tr
-                key={row.feature}
-                className={`border-b border-border/50 ${
-                  index % 2 === 0 ? '' : 'bg-white/[0.01]'
-                }`}
-              >
-                <td className="px-6 py-4 text-sm font-medium text-white">
-                  {row.feature}
-                </td>
-                <td className="border-l border-cyan/30 bg-cyan/5 px-6 py-4 text-sm">
-                  {row.isUnique ? (
-                    <span className="inline-flex items-center gap-2">
-                      <CheckIcon />
-                      <span className="font-medium text-green">
-                        {row.autodiag}
+            {COMPARISON_KEYS.map((key, index) => {
+              const isUnique = UNIQUE_SET.has(key);
+              const comp = COMPETITOR_DATA[key];
+              return (
+                <tr
+                  key={key}
+                  className={`border-b border-border/50 ${
+                    index % 2 === 0 ? '' : 'bg-white/[0.01]'
+                  }`}
+                >
+                  <td className="px-6 py-4 text-sm font-medium text-white">
+                    {t(`row_${key}`)}
+                  </td>
+                  <td className="border-l border-cyan/30 bg-cyan/5 px-6 py-4 text-sm">
+                    {isUnique ? (
+                      <span className="inline-flex items-center gap-2">
+                        <CheckIcon />
+                        <span className="font-medium text-green">
+                          {t(`row_${key}_autodiag`)}
+                        </span>
                       </span>
-                    </span>
-                  ) : (
-                    <span className="text-white">{row.autodiag}</span>
-                  )}
-                </td>
-                <td className="px-6 py-4 text-sm">
-                  {row.carly === '—' ? (
-                    <DashIcon />
-                  ) : (
-                    <span className="text-secondary">{row.carly}</span>
-                  )}
-                </td>
-                <td className="px-6 py-4 text-sm">
-                  {row.carscanner === '—' ? (
-                    <DashIcon />
-                  ) : (
-                    <span className="text-secondary">{row.carscanner}</span>
-                  )}
-                </td>
-                <td className="px-6 py-4 text-sm">
-                  {row.obdeleven === '—' ? (
-                    <DashIcon />
-                  ) : (
-                    <span className="text-secondary">{row.obdeleven}</span>
-                  )}
-                </td>
-              </tr>
-            ))}
+                    ) : (
+                      <span className="text-white">{t(`row_${key}_autodiag`)}</span>
+                    )}
+                  </td>
+                  <td className="px-6 py-4 text-sm">
+                    {comp.carly === '—' ? (
+                      <DashIcon />
+                    ) : (
+                      <span className="text-secondary">{comp.carly}</span>
+                    )}
+                  </td>
+                  <td className="px-6 py-4 text-sm">
+                    {comp.carscanner === '—' ? (
+                      <DashIcon />
+                    ) : (
+                      <span className="text-secondary">{comp.carscanner}</span>
+                    )}
+                  </td>
+                  <td className="px-6 py-4 text-sm">
+                    {comp.obdeleven === '—' ? (
+                      <DashIcon />
+                    ) : (
+                      <span className="text-secondary">{comp.obdeleven}</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -333,22 +220,22 @@ export default function ComparaisonPage() {
       {/* Unique selling points */}
       <div className="mb-16">
         <h2 className="mb-8 text-center text-2xl font-bold sm:text-3xl">
-          Ce qui nous rend <span className="text-gradient">uniques</span>
+          {t('uniqueTitle')} <span className="text-gradient">{t('uniqueTitleAccent')}</span>
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
-          {UNIQUE_CARDS.map((card) => (
+          {UNIQUE_ICON_KEYS.map((icon) => (
             <div
-              key={card.title}
+              key={icon}
               className="rounded-2xl border border-border bg-glass backdrop-blur-sm p-8 transition-all hover:border-cyan/20"
             >
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-cyan/10">
-                <CardIcon type={card.icon} />
+                <CardIcon type={icon} />
               </div>
               <h3 className="mb-3 text-lg font-bold text-white">
-                {card.title}
+                {t(`unique_${icon}_title`)}
               </h3>
               <p className="text-sm leading-relaxed text-secondary">
-                {card.description}
+                {t(`unique_${icon}_desc`)}
               </p>
             </div>
           ))}
@@ -358,17 +245,16 @@ export default function ComparaisonPage() {
       {/* CTA */}
       <div className="rounded-2xl border border-cyan/20 bg-cyan/5 p-10 text-center">
         <h2 className="mb-3 text-2xl font-bold">
-          Pret a essayer la difference ?
+          {t('ctaTitle')}
         </h2>
         <p className="mb-6 text-secondary">
-          Rejoignez la beta gratuite et decouvrez un diagnostic auto qui va
-          vraiment plus loin.
+          {t('ctaSubtitle')}
         </p>
         <Link
           href="/fr#beta"
           className="inline-block rounded-xl bg-gradient-to-r from-cyan to-green px-8 py-3.5 font-semibold text-black transition-transform hover:scale-105"
         >
-          Essayez AutoDiag EU gratuitement
+          {t('ctaButton')}
         </Link>
       </div>
     </section>

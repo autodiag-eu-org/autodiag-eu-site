@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/shared/CookieConsent";
@@ -10,40 +10,44 @@ import "../globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://autodiag-eu.com";
 
-export const metadata: Metadata = {
-  title: "AutoDiag EU — Diagnostic automobile intelligent",
-  description:
-    "La seule app qui ecoute votre moteur. Diagnostic OBD2, scan audio IA, 250 codes DTC, 677 vehicules compatibles. Gratuit au lancement.",
-  metadataBase: new URL(SITE_URL),
-  alternates: {
-    languages: {
-      "fr": `${SITE_URL}/fr`,
-      "en-GB": `${SITE_URL}/en`,
-      "de": `${SITE_URL}/de`,
-      "es": `${SITE_URL}/es`,
-      "pt": `${SITE_URL}/pt`,
-      "x-default": `${SITE_URL}/fr`,
-    },
-  },
-  openGraph: {
-    title: "AutoDiag EU — Diagnostic automobile intelligent",
-    description:
-      "La seule app qui ecoute votre moteur. Scan audio IA, lecture codes DTC, compatibilite 677 vehicules europeens.",
-    siteName: "AutoDiag EU",
-    locale: "fr",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AutoDiag EU — Diagnostic automobile intelligent",
-    description:
-      "La seule app qui ecoute votre moteur. Scan audio IA, lecture codes DTC, compatibilite 677 vehicules europeens.",
-  },
-};
-
 interface LocaleLayoutProps {
   children: ReactNode;
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: LocaleLayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+
+  return {
+    title: t("siteTitle"),
+    description: t("siteDescription"),
+    metadataBase: new URL(SITE_URL),
+    alternates: {
+      languages: {
+        "fr": `${SITE_URL}/fr`,
+        "en-GB": `${SITE_URL}/en`,
+        "de": `${SITE_URL}/de`,
+        "es": `${SITE_URL}/es`,
+        "pt": `${SITE_URL}/pt`,
+        "x-default": `${SITE_URL}/fr`,
+      },
+    },
+    openGraph: {
+      title: t("siteTitle"),
+      description: t("ogDescription"),
+      siteName: "AutoDiag EU",
+      locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("siteTitle"),
+      description: t("ogDescription"),
+    },
+  };
 }
 
 export default async function LocaleLayout({

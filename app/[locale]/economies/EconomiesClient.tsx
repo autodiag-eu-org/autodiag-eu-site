@@ -2,26 +2,27 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type CountryKey = "fr" | "de" | "ch" | "es" | "pt";
 
 interface CountryConfig {
   key: CountryKey;
-  label: string;
   currency: string;
   diagCost: number;
   premiumPrice: number;
 }
 
 const countriesConfig: CountryConfig[] = [
-  { key: "fr", label: "France", currency: "EUR", diagCost: 80, premiumPrice: 45 },
-  { key: "de", label: "Allemagne", currency: "EUR", diagCost: 120, premiumPrice: 45 },
-  { key: "ch", label: "Suisse", currency: "CHF", diagCost: 150, premiumPrice: 49 },
-  { key: "es", label: "Espagne", currency: "EUR", diagCost: 60, premiumPrice: 45 },
-  { key: "pt", label: "Portugal", currency: "EUR", diagCost: 50, premiumPrice: 45 },
+  { key: "fr", currency: "EUR", diagCost: 80, premiumPrice: 45 },
+  { key: "de", currency: "EUR", diagCost: 120, premiumPrice: 45 },
+  { key: "ch", currency: "CHF", diagCost: 150, premiumPrice: 49 },
+  { key: "es", currency: "EUR", diagCost: 60, premiumPrice: 45 },
+  { key: "pt", currency: "EUR", diagCost: 50, premiumPrice: 45 },
 ];
 
 export default function EconomiesClient() {
+  const t = useTranslations("savings");
   const [selectedCountry, setSelectedCountry] = useState<CountryKey>("fr");
   const [visitsPerYear, setVisitsPerYear] = useState(3);
 
@@ -57,7 +58,7 @@ export default function EconomiesClient() {
               htmlFor="country-select"
               className="mb-2 block text-sm font-medium text-secondary"
             >
-              Votre pays
+              {t("countryLabel")}
             </label>
             <select
               id="country-select"
@@ -69,7 +70,7 @@ export default function EconomiesClient() {
             >
               {countriesConfig.map((c) => (
                 <option key={c.key} value={c.key}>
-                  {c.label}
+                  {t(`country_${c.key}`)}
                 </option>
               ))}
             </select>
@@ -80,7 +81,7 @@ export default function EconomiesClient() {
               htmlFor="visits-slider"
               className="mb-2 block text-sm font-medium text-secondary"
             >
-              Diagnostics par an :{" "}
+              {t("diagsPerYear")}{" "}
               <span className="font-bold text-white">{visitsPerYear}</span>
             </label>
             <input
@@ -103,14 +104,14 @@ export default function EconomiesClient() {
 
       {/* Bar chart comparison */}
       <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
-        <h2 className="mb-6 text-xl font-bold">Comparaison annuelle</h2>
+        <h2 className="mb-6 text-xl font-bold">{t("annualComparison")}</h2>
 
         <div className="space-y-6">
           {/* Garage bar */}
           <div>
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm font-medium text-secondary">
-                Garage ({visitsPerYear} diagnostic{visitsPerYear > 1 ? "s" : ""})
+                {t("garageLabel", { count: visitsPerYear })}
               </span>
               <span className="text-sm font-bold text-red-400">
                 {formatPrice(garageCostYear)}
@@ -132,7 +133,7 @@ export default function EconomiesClient() {
           <div>
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm font-medium text-secondary">
-                AutoDiag EU Premium (illimite)
+                {t("premiumLabel")}
               </span>
               <span className="text-sm font-bold text-green">
                 {formatPrice(premiumCostYear)}
@@ -154,7 +155,7 @@ export default function EconomiesClient() {
           <div>
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm font-medium text-secondary">
-                AutoDiag EU Gratuit (limite)
+                {t("freeLabel")}
               </span>
               <span className="text-sm font-bold text-cyan">
                 0 {country.currency}
@@ -175,22 +176,22 @@ export default function EconomiesClient() {
       {/* Stats cards */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
-          label="Economie annuelle"
+          label={t("savingsYearLabel")}
           value={formatPrice(savingsYear)}
           accent="cyan"
         />
         <StatCard
-          label="Economie sur 3 ans"
+          label={t("savings3YearsLabel")}
           value={formatPrice(savings3Years)}
           accent="green"
         />
         <StatCard
-          label="Cout / diagnostic garage"
+          label={t("costPerDiagGarageLabel")}
           value={formatPrice(costPerDiagGarage)}
           accent="red"
         />
         <StatCard
-          label="Cout / diagnostic Premium"
+          label={t("costPerDiagPremiumLabel")}
           value={formatPrice(costPerDiagPremium)}
           accent="green"
         />
@@ -198,47 +199,32 @@ export default function EconomiesClient() {
 
       {/* Details */}
       <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
-        <h2 className="mb-4 text-xl font-bold">Comment sont calcules ces chiffres ?</h2>
+        <h2 className="mb-4 text-xl font-bold">{t("howCalculatedTitle")}</h2>
         <div className="space-y-4 text-secondary leading-relaxed">
+          <p>{t("howCalculatedP1")}</p>
           <p>
-            Le cout moyen d&apos;un diagnostic OBD2 en garage varie selon les
-            pays : environ {countriesConfig[0].diagCost} EUR en France,{" "}
-            {countriesConfig[1].diagCost} EUR en Allemagne,{" "}
-            {countriesConfig[2].diagCost} CHF en Suisse,{" "}
-            {countriesConfig[3].diagCost} EUR en Espagne et{" "}
-            {countriesConfig[4].diagCost} EUR au Portugal. Ces chiffres
-            correspondent aux tarifs constates en 2025-2026 pour une lecture de
-            codes defaut avec interpretation basique.
+            {t("howCalculatedP2", {
+              price: String(country.premiumPrice),
+              currency: country.currency,
+            })}
           </p>
-          <p>
-            Avec AutoDiag EU Premium a{" "}
-            {country.premiumPrice} {country.currency}/an, vous avez un nombre
-            illimite de diagnostics : lecture et effacement des codes DTC,
-            donnees en temps reel, scan audio IA, devis reparation et bien plus
-            encore.
-          </p>
-          <p>
-            La version gratuite permet deja de lire les codes DTC sans limite,
-            avec 1 scan audio par semaine et 3 questions IA par jour — souvent
-            suffisant pour un usage ponctuel.
-          </p>
+          <p>{t("howCalculatedP3")}</p>
         </div>
       </div>
 
       {/* CTA */}
       <div className="rounded-2xl border border-cyan/20 bg-gradient-to-br from-cyan/5 to-green/5 p-8 text-center">
         <h2 className="mb-2 text-xl font-bold">
-          Pret a faire des economies ?
+          {t("ctaTitle")}
         </h2>
         <p className="mb-6 text-secondary">
-          Rejoignez les testeurs beta et diagnostiquez votre voiture
-          gratuitement.
+          {t("ctaDesc")}
         </p>
         <a
           href="#beta"
           className="group relative inline-block overflow-hidden rounded-full bg-green px-8 py-3 font-semibold text-black transition-shadow hover:shadow-[0_0_30px_rgba(0,200,83,0.4)]"
         >
-          <span className="relative z-10">Telecharger AutoDiag EU</span>
+          <span className="relative z-10">{t("ctaButton")}</span>
           <span
             aria-hidden="true"
             className="shimmer pointer-events-none absolute inset-0"

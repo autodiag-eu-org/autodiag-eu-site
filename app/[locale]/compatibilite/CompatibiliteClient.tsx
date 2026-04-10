@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import VehicleSelector from "@/components/tools/VehicleSelector";
 import type { VehicleCompatibility } from "@/lib/vehicles";
 
 export default function CompatibiliteClient() {
+  const t = useTranslations("compatibility");
   const [result, setResult] = useState<VehicleCompatibility | null>(null);
 
   return (
@@ -17,46 +19,46 @@ export default function CompatibiliteClient() {
             <span className="text-gradient">
               {result.brand} {result.model}
             </span>{" "}
-            — Resultat detaille
+            — {t("detailTitle")}
           </h2>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Protocol */}
             <div className="rounded-xl border border-border p-5">
               <p className="text-xs font-medium uppercase tracking-wider text-secondary">
-                Protocole OBD2
+                {t("protocol")}
               </p>
               <p className="mt-2 text-2xl font-bold text-gradient">
                 {result.protocol}
               </p>
               <p className="mt-1 text-sm text-secondary">
-                Protocole de communication vehicule
+                {t("protocolDesc")}
               </p>
             </div>
 
             {/* PIDs */}
             <div className="rounded-xl border border-border p-5">
               <p className="text-xs font-medium uppercase tracking-wider text-secondary">
-                PIDs supportes
+                {t("pidsSupported")}
               </p>
               <p className="mt-2 text-2xl font-bold text-gradient">
                 {result.pidsSupported}
               </p>
               <p className="mt-1 text-sm text-secondary">
-                Parametres lisibles en temps reel
+                {t("pidsDesc")}
               </p>
             </div>
 
             {/* Years */}
             <div className="rounded-xl border border-border p-5">
               <p className="text-xs font-medium uppercase tracking-wider text-secondary">
-                Annees couvertes
+                {t("yearsCovered")}
               </p>
               <p className="mt-2 text-2xl font-bold text-gradient">
                 {result.yearFrom} — {result.yearTo}
               </p>
               <p className="mt-1 text-sm text-secondary">
-                Generations compatibles
+                {t("yearsCoveredDesc")}
               </p>
             </div>
           </div>
@@ -64,23 +66,23 @@ export default function CompatibiliteClient() {
           {/* Feature matrix */}
           <div className="mt-8">
             <h3 className="mb-4 text-lg font-bold">
-              Matrice de fonctionnalites
+              {t("featureMatrix")}
             </h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <FeatureItem
-                label="Lecture codes DTC"
+                label={t("dtcRead")}
                 supported={result.features.dtcRead}
               />
               <FeatureItem
-                label="Effacement codes DTC"
+                label={t("dtcClear")}
                 supported={result.features.dtcClear}
               />
               <FeatureItem
-                label="Donnees en temps reel"
+                label={t("liveData")}
                 supported={result.features.liveData}
               />
               <FeatureItem
-                label="ABS / ESP"
+                label={t("absEsp")}
                 supported={result.features.absEsp}
               />
             </div>
@@ -89,14 +91,13 @@ export default function CompatibiliteClient() {
           {/* CTA */}
           <div className="mt-8 rounded-xl border border-cyan/20 bg-gradient-to-br from-cyan/5 to-green/5 p-6 text-center">
             <p className="mb-4 text-secondary">
-              Votre {result.brand} {result.model} est compatible avec AutoDiag
-              EU
+              {t("compatibleCTA", { brand: result.brand, model: result.model })}
             </p>
             <a
               href="#beta"
               className="group relative inline-block overflow-hidden rounded-full bg-green px-8 py-3 font-semibold text-black transition-shadow hover:shadow-[0_0_30px_rgba(0,200,83,0.4)]"
             >
-              <span className="relative z-10">Telecharger gratuitement</span>
+              <span className="relative z-10">{t("downloadFree")}</span>
               <span
                 aria-hidden="true"
                 className="shimmer pointer-events-none absolute inset-0"
@@ -109,32 +110,13 @@ export default function CompatibiliteClient() {
       {/* Info section */}
       <div className="rounded-2xl border border-border bg-glass p-6 backdrop-blur-md">
         <h2 className="mb-4 text-xl font-bold">
-          Comment fonctionne la compatibilite OBD2 ?
+          {t("howTitle")}
         </h2>
         <div className="space-y-4 text-secondary leading-relaxed">
-          <p>
-            La prise OBD2 est obligatoire sur tous les vehicules essence vendus
-            en Europe depuis 2001 et diesel depuis 2003. Elle se situe
-            generalement sous le volant, pres de la colonne de direction.
-          </p>
-          <p>
-            AutoDiag EU communique avec votre vehicule via un dongle ELM327
-            Bluetooth (BLE). Le protocole de communication varie selon le
-            constructeur — CAN 11 bits pour la majorite des vehicules modernes,
-            KWP2000 pour certains vehicules plus anciens.
-          </p>
-          <p>
-            Le nombre de PIDs (parametres lisibles) depend de l&apos;electronique
-            embarquee. Plus votre vehicule est recent, plus le nombre de donnees
-            accessibles est important : temperature moteur, regime, vitesse,
-            pression turbo, temperature de l&apos;huile et bien d&apos;autres.
-          </p>
-          <p>
-            Meme sans dongle OBD2, vous pouvez utiliser les fonctionnalites
-            uniques d&apos;AutoDiag EU : le scan audio IA ecoute votre moteur
-            pour detecter 11 types de pannes, et la vision IA reconnait les
-            pieces et codes instantanement.
-          </p>
+          <p>{t("howParagraph1")}</p>
+          <p>{t("howParagraph2")}</p>
+          <p>{t("howParagraph3")}</p>
+          <p>{t("howParagraph4")}</p>
         </div>
       </div>
     </div>
