@@ -349,6 +349,61 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- ES articles ---- */
   {
+    slug: "testigo-motor-encendido-que-hacer",
+    title: "Testigo del motor encendido: \u00bfque hacer?",
+    description:
+      "Guia paso a paso ante el testigo del motor encendido: colores, codigos de averia, reflejos inmediatos y cuando ir al taller.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Guia practica",
+    locale: "es",
+  },
+  {
+    slug: "preparar-itv-2026",
+    title: "Preparar la ITV 2026: guia completa",
+    description:
+      "Checklist 2026 para pasar la ITV a la primera: pre-diagnostico OBD, emisiones diesel, frenado, iluminacion y contra-inspecciones.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Guia ITV",
+    locale: "es",
+  },
+  {
+    slug: "10-codigos-averia-frecuentes-europa",
+    title: "Los 10 codigos de averia OBD2 mas frecuentes en Europa",
+    description:
+      "Top 10 de codigos de averia OBD2 en coches europeos: P0420, P0171, P0300 y 7 mas. Causas, costes de reparacion y soluciones concretas.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Codigos averia",
+    locale: "es",
+  },
+  {
+    slug: "leer-codigos-obd2-con-movil",
+    title: "Como leer codigos OBD2 con tu movil",
+    description:
+      "Tutorial completo para leer los codigos de averia OBD2 de tu coche con un smartphone y un adaptador ELM327 de 25 euros. Paso a paso.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Tutorial",
+    locale: "es",
+  },
+  {
+    slug: "coste-reparacion-catalizador-p0420",
+    title: "\u00bfCuanto cuesta reparar un catalizador P0420?",
+    description:
+      "Tabla de precios real 2026 para reparar un codigo P0420 en Espana: sonda lambda, catalizador adaptable, original, mano de obra y trampas a evitar.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Costes reparacion",
+    locale: "es",
+  },
+  {
     slug: "como-leer-codigos-fallo-obd2",
     title: "Como leer un codigo de fallo OBD2 — guia completa",
     description:
@@ -486,26 +541,31 @@ const blogTranslationGroups: Array<Record<string, string>> = [
     fr: "voyant-moteur-allume-que-faire",
     en: "check-engine-light-what-to-do",
     de: "motorkontrollleuchte-leuchtet-was-tun",
+    es: "testigo-motor-encendido-que-hacer",
   },
   {
     fr: "preparer-controle-technique-2026",
     en: "mot-preparation-guide-2026",
     de: "tuev-vorbereitung-2026",
+    es: "preparar-itv-2026",
   },
   {
     fr: "10-codes-defaut-frequents-europe",
     en: "top-10-common-fault-codes-europe",
     de: "10-haeufigste-fehlercodes-europa",
+    es: "10-codigos-averia-frecuentes-europa",
   },
   {
     fr: "lire-codes-obd2-telephone",
     en: "read-obd2-codes-phone",
     de: "obd2-codes-mit-handy-auslesen",
+    es: "leer-codigos-obd2-con-movil",
   },
   {
     fr: "cout-reparation-catalyseur-p0420",
     en: "p0420-catalytic-converter-cost",
     de: "katalysator-reparatur-kosten-p0420",
+    es: "coste-reparacion-catalizador-p0420",
   },
   {
     fr: "comment-lire-code-defaut-obd2",

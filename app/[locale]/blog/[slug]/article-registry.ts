@@ -46,6 +46,11 @@ import { ArticleESPrepararITV } from "./es/preparar-itv";
 import { ArticleES5RuidosMotor } from "./es/5-ruidos-motor";
 import { ArticleESOBD2Entender } from "./es/obd2-entender";
 import { ArticleESAutodiagVsTaller } from "./es/autodiag-vs-taller";
+import { ArticleESTestigoMotorQueHacer } from "./es/testigo-motor-que-hacer";
+import { ArticleESPrepararITV2026 } from "./es/preparar-itv-2026";
+import { ArticleES10CodigosAveria } from "./es/10-codigos-averia-europa";
+import { ArticleESLeerCodigosOBD2Movil } from "./es/leer-codigos-obd2-movil";
+import { ArticleESCosteCatalizadorP0420 } from "./es/coste-catalizador-p0420";
 
 /* PT */
 import { ArticlePTCodigosErroOBD2 } from "./pt/codigos-erro-obd2";
@@ -94,6 +99,11 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-ruidos-motor-no-ignorar": ArticleES5RuidosMotor,
   "obd2-entender-en-5-minutos": ArticleESOBD2Entender,
   "autodiag-vs-taller-ahorros": ArticleESAutodiagVsTaller,
+  "testigo-motor-encendido-que-hacer": ArticleESTestigoMotorQueHacer,
+  "preparar-itv-2026": ArticleESPrepararITV2026,
+  "10-codigos-averia-frecuentes-europa": ArticleES10CodigosAveria,
+  "leer-codigos-obd2-con-movil": ArticleESLeerCodigosOBD2Movil,
+  "coste-reparacion-catalizador-p0420": ArticleESCosteCatalizadorP0420,
   /* PT articles */
   "como-ler-codigos-erro-obd2": ArticlePTCodigosErroOBD2,
   "preparar-ipo-lista-completa": ArticlePTPrepararIPO,
