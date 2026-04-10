@@ -237,6 +237,116 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "your-engine-speaks-ai-fault-detection-by-sound",
+    title: "Your engine speaks: how AI translates its sounds into a diagnosis",
+    description:
+      "How AutoDiag EU's AI decodes the sounds your engine makes. 91.3% SVM accuracy, 56 features, 11 fault classes and a 7-layer pipeline explained simply.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Sound Scan",
+    locale: "en",
+  },
+  {
+    slug: "11-engine-faults-detectable-by-sound-analysis",
+    title: "11 engine faults detectable by AI sound analysis",
+    description:
+      "Complete list of the 11 fault classes detected by AutoDiag EU sound scan. Signatures, risks, repair costs and early-detection ROI.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "inaudible-sounds-ai-catches-what-your-ear-misses",
+    title: "Inaudible sounds: what AI catches that your ear misses",
+    description:
+      "Why a smartphone mic captures far more than your ear. Ultrasounds, infrasounds, subtle harmonics: AI sees what you cannot hear.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Technology",
+    locale: "en",
+  },
+  {
+    slug: "engine-knocking-noise-causes-ai-diagnosis",
+    title: "Engine knocking noise: causes, risks and AI diagnosis",
+    description:
+      "The three families of engine knock: combustion knock, piston slap, rod knock. Spectral signatures, risks and how AI distinguishes them with 91.3% precision.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "prevent-engine-failure-preventive-sound-diagnosis",
+    title: "Prevent engine failure with preventive sound diagnosis",
+    description:
+      "70% of engine failures show detectable signs three months before. Full method for monthly sound monitoring to avoid the expensive bills.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
+    slug: "worn-timing-belt-detect-by-sound-before-it-snaps",
+    title: "Worn timing belt: detect it by sound before it snaps",
+    description:
+      "Why a snapped timing belt costs GBP 1700-6500 and how sound scan detects wear before failure. The 3 detectable degradation phases explained.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
+    slug: "worn-engine-bearing-ai-hears-what-you-cant",
+    title: "Worn engine bearing: what AI hears before you can",
+    description:
+      "Rod, main and cam bearings: spectral signatures and early detection. The difference between a GBP 500 and a GBP 5000 repair.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "turbo-whistle-imminent-failure-or-normal",
+    title: "Turbo whistle: imminent failure or normal noise?",
+    description:
+      "How to tell a normal turbo whistle from a fault sign. The 4 abnormal causes, spectral fingerprints and early vs late detection cost.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "how-our-svm-works-technology-behind-sound-scanning",
+    title: "How our SVM works: the technology behind sound scanning",
+    description:
+      "Deep technical dive into the AutoDiag EU pipeline: 7 layers, 56 features, RBF-kernel SVM, 91.3% accuracy. Why an SVM and not a deep neural network.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Technology",
+    locale: "en",
+  },
+  {
+    slug: "diesel-vs-petrol-sound-diagnosis-differences",
+    title: "Diesel vs petrol: why their sound diagnosis is different",
+    description:
+      "Opposite spectral signatures, specific faults, different OBD2 codes: how the AI adapts its analysis to the fuel type of your engine.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
     slug: "p0420-catalytic-converter-cost",
     title: "P0420 catalytic converter repair cost",
     description:
@@ -704,33 +814,43 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
 const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "votre-moteur-parle-detection-pannes-par-son",
+    en: "your-engine-speaks-ai-fault-detection-by-sound",
   },
   {
     fr: "11-pannes-detectables-analyse-sonore-moteur",
+    en: "11-engine-faults-detectable-by-sound-analysis",
   },
   {
     fr: "sons-inaudibles-ia-detecte-ce-que-oreille-ne-peut-pas",
+    en: "inaudible-sounds-ai-catches-what-your-ear-misses",
   },
   {
     fr: "bruit-claquement-moteur-causes-diagnostic-ia",
+    en: "engine-knocking-noise-causes-ai-diagnosis",
   },
   {
     fr: "prevenir-casse-moteur-diagnostic-sonore-preventif",
+    en: "prevent-engine-failure-preventive-sound-diagnosis",
   },
   {
     fr: "courroie-distribution-usee-detecter-par-son",
+    en: "worn-timing-belt-detect-by-sound-before-it-snaps",
   },
   {
     fr: "roulement-moteur-fatigue-ia-entend",
+    en: "worn-engine-bearing-ai-hears-what-you-cant",
   },
   {
     fr: "turbo-qui-siffle-panne-ou-normal",
+    en: "turbo-whistle-imminent-failure-or-normal",
   },
   {
     fr: "comment-fonctionne-svm-technologie-scan-sonore",
+    en: "how-our-svm-works-technology-behind-sound-scanning",
   },
   {
     fr: "diesel-vs-essence-diagnostic-sonore-ia",
+    en: "diesel-vs-petrol-sound-diagnosis-differences",
   },
   {
     fr: "voyant-moteur-allume-que-faire",

@@ -26,6 +26,18 @@ import { Article5BruitsMoteur } from "./fr/5-bruits-moteur";
 import { ArticleOBD2Comprendre } from "./fr/obd2-comprendre";
 import { ArticleAutodiagVsGarage } from "./fr/autodiag-vs-garage";
 
+/* EN sound scan series */
+import { ArticleYourEngineSpeaks } from "./en/your-engine-speaks-ai-fault-detection-by-sound";
+import { Article11EngineFaultsSound } from "./en/11-engine-faults-detectable-by-sound-analysis";
+import { ArticleInaudibleSounds } from "./en/inaudible-sounds-ai-catches-what-your-ear-misses";
+import { ArticleEngineKnocking } from "./en/engine-knocking-noise-causes-ai-diagnosis";
+import { ArticlePreventEngineFailure } from "./en/prevent-engine-failure-preventive-sound-diagnosis";
+import { ArticleTimingBeltSound } from "./en/worn-timing-belt-detect-by-sound-before-it-snaps";
+import { ArticleBearingWearAI } from "./en/worn-engine-bearing-ai-hears-what-you-cant";
+import { ArticleTurboWhistle } from "./en/turbo-whistle-imminent-failure-or-normal";
+import { ArticleHowSVMWorks } from "./en/how-our-svm-works-technology-behind-sound-scanning";
+import { ArticleDieselVsPetrolSound } from "./en/diesel-vs-petrol-sound-diagnosis-differences";
+
 /* EN v2 */
 import { ArticleCheckEngineLightWhatToDo } from "./en/check-engine-light";
 import { ArticleMOTPreparationGuide2026 } from "./en/mot-preparation-guide-2026";
@@ -99,6 +111,16 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
   /* EN articles */
+  "your-engine-speaks-ai-fault-detection-by-sound": ArticleYourEngineSpeaks,
+  "11-engine-faults-detectable-by-sound-analysis": Article11EngineFaultsSound,
+  "inaudible-sounds-ai-catches-what-your-ear-misses": ArticleInaudibleSounds,
+  "engine-knocking-noise-causes-ai-diagnosis": ArticleEngineKnocking,
+  "prevent-engine-failure-preventive-sound-diagnosis": ArticlePreventEngineFailure,
+  "worn-timing-belt-detect-by-sound-before-it-snaps": ArticleTimingBeltSound,
+  "worn-engine-bearing-ai-hears-what-you-cant": ArticleBearingWearAI,
+  "turbo-whistle-imminent-failure-or-normal": ArticleTurboWhistle,
+  "how-our-svm-works-technology-behind-sound-scanning": ArticleHowSVMWorks,
+  "diesel-vs-petrol-sound-diagnosis-differences": ArticleDieselVsPetrolSound,
   "check-engine-light-what-to-do": ArticleCheckEngineLightWhatToDo,
   "mot-preparation-guide-2026": ArticleMOTPreparationGuide2026,
   "top-10-common-fault-codes-europe": ArticleTop10CommonFaultCodesEurope,
