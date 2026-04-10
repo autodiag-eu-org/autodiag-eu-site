@@ -16,6 +16,17 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "cout-reparation-catalyseur-p0420",
+    title: "Combien coute une reparation catalyseur P0420 ?",
+    description:
+      "Grille de prix reelle 2026 pour la reparation d'un code P0420 : sonde lambda, catalyseur adaptable, constructeur, main d'oeuvre et pieges a eviter.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Couts reparation",
+    locale: "fr",
+  },
+  {
     slug: "lire-codes-obd2-telephone",
     title: "Comment lire les codes OBD2 avec son telephone",
     description:

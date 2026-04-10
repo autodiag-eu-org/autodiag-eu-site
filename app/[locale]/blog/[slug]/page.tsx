@@ -10,6 +10,7 @@ import {
   ArticlePreparerCT2026,
   Article10CodesDefautFrequentsEurope,
   ArticleLireCodesOBD2Telephone,
+  ArticleCoutReparationCatalyseurP0420,
 } from "./fr-articles-v2";
 import {
   ArticleCheckEngineLightWhatToDo,
@@ -1672,6 +1673,7 @@ const articleComponents: Record<string, () => React.JSX.Element> = {
   "preparer-controle-technique-2026": ArticlePreparerCT2026,
   "10-codes-defaut-frequents-europe": Article10CodesDefautFrequentsEurope,
   "lire-codes-obd2-telephone": ArticleLireCodesOBD2Telephone,
+  "cout-reparation-catalyseur-p0420": ArticleCoutReparationCatalyseurP0420,
   "comment-lire-code-defaut-obd2": ArticleCommentLireCodeDefautOBD2,
   "preparer-controle-technique": ArticlePreparerControleTechnique,
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,
