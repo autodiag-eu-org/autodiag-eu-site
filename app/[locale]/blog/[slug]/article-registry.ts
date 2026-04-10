@@ -1,5 +1,15 @@
 import type { JSX } from "react";
 
+/* FR vision AI series */
+import { ArticleVisionFuitesSousVoiture } from "./fr/vision-ia-detecter-fuites-sous-voiture-telephone";
+import { ArticleUsurePrematureePneus } from "./fr/usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas";
+import { ArticleScannerPlaque } from "./fr/scanner-plaque-immatriculation-identification-instantanee";
+import { ArticleCorrosionVisionIA } from "./fr/detecter-corrosion-rouille-vision-ia-avant-ct";
+import { ArticleCheckup5Points } from "./fr/checkup-visuel-ia-5-points-vehicule-sain";
+import { ArticleFuiteCouleurRevele } from "./fr/fuite-huile-liquide-frein-coolant-couleur-revele-panne";
+import { ArticleScannerVIN } from "./fr/scanner-vin-decoder-historique-complet-voiture";
+import { ArticleUsurePlaquettesVision } from "./fr/usure-plaquettes-disques-vision-ia-detecte";
+
 /* FR cabin sound scan series */
 import { Article7BruitsHabitacle } from "./fr/7-bruits-habitacle-jamais-ignorer";
 import { ArticleGrincementFreins } from "./fr/grincement-freins-usure-normale-ou-danger";
@@ -109,6 +119,15 @@ import { ArticlePTLerCodigosOBD2Telemovel } from "./pt/ler-codigos-obd2-telemove
 import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
 export const articleComponents: Record<string, () => JSX.Element> = {
+  /* FR vision AI series */
+  "vision-ia-detecter-fuites-sous-voiture-telephone": ArticleVisionFuitesSousVoiture,
+  "usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas": ArticleUsurePrematureePneus,
+  "scanner-plaque-immatriculation-identification-instantanee": ArticleScannerPlaque,
+  "detecter-corrosion-rouille-vision-ia-avant-ct": ArticleCorrosionVisionIA,
+  "checkup-visuel-ia-5-points-vehicule-sain": ArticleCheckup5Points,
+  "fuite-huile-liquide-frein-coolant-couleur-revele-panne": ArticleFuiteCouleurRevele,
+  "scanner-vin-decoder-historique-complet-voiture": ArticleScannerVIN,
+  "usure-plaquettes-disques-vision-ia-detecte": ArticleUsurePlaquettesVision,
   /* FR cabin sound scan series */
   "7-bruits-habitacle-jamais-ignorer": Article7BruitsHabitacle,
   "grincement-freins-usure-normale-ou-danger": ArticleGrincementFreins,

@@ -16,6 +16,94 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "vision-ia-detecter-fuites-sous-voiture-telephone",
+    title: "Vision IA : detecter les fuites sous votre voiture avec un telephone",
+    description:
+      "Photographiez une tache au sol, la Vision IA identifie le liquide (huile, coolant, frein, ATF), mesure la gravite et vous dit si vous pouvez rouler ou non.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Vision IA",
+    locale: "fr",
+  },
+  {
+    slug: "usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas",
+    title: "Usure prematuree des pneus : l'IA voit ce que vous ne remarquez pas",
+    description:
+      "Usure centrale, epaules, cupping, carrossage : 5 motifs d'usure et leur cause mecanique. La Vision IA mesure la profondeur residuelle via photo.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic visuel",
+    locale: "fr",
+  },
+  {
+    slug: "scanner-plaque-immatriculation-identification-instantanee",
+    title: "Scanner une plaque d'immatriculation : identification instantanee du vehicule",
+    description:
+      "OCR plaque en 2 secondes : marque, modele, annee, carburant, Euro. Parfait pour verifier une annonce d'occasion avant de se deplacer.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Achat occasion",
+    locale: "fr",
+  },
+  {
+    slug: "detecter-corrosion-rouille-vision-ia-avant-ct",
+    title: "Detecter la corrosion avec la Vision IA avant le controle technique",
+    description:
+      "4 niveaux de rouille classes par l'IA : superficielle, active, perforation imminente, structurelle. Anticiper le CT 6 mois avant, economie jusqu'a 1200 euros.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
+    slug: "checkup-visuel-ia-5-points-vehicule-sain",
+    title: "Checkup visuel IA en cinq points : garder votre vehicule en bonne sante",
+    description:
+      "Routine mensuelle de 5 minutes : sol, pneus, plaquettes, sous le capot, eclairage. La Vision IA guide chaque cliche et genere un rapport complet.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
+    slug: "fuite-huile-liquide-frein-coolant-couleur-revele-panne",
+    title: "Fuite d'huile, de liquide de frein ou de coolant : la couleur revele la panne",
+    description:
+      "Catalogue chromatique complet des liquides auto : huile brune, coolant vert/rose/orange, frein transparent, ATF rouge. Chaque couleur, chaque panne.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic visuel",
+    locale: "fr",
+  },
+  {
+    slug: "scanner-vin-decoder-historique-complet-voiture",
+    title: "Scanner le VIN : decoder l'historique complet d'une voiture",
+    description:
+      "OCR VIN 17 caracteres : constructeur, annee, motorisation, historique kilometrique, rappels constructeur, entretien. Detecter un compteur trafique en 3 secondes.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Achat occasion",
+    locale: "fr",
+  },
+  {
+    slug: "usure-plaquettes-disques-vision-ia-detecte",
+    title: "Usure des plaquettes et disques : ce que la Vision IA detecte a travers les rayons",
+    description:
+      "Mesure d'epaisseur de plaquette a travers les rayons, detection de disque scored, bleuissement et vitrification. Anticiper le changement pour 300 a 600 euros economises.",
+    date: "2026-04-13",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Vision IA",
+    locale: "fr",
+  },
+  {
     slug: "7-bruits-habitacle-jamais-ignorer",
     title: "7 bruits d'habitacle a ne jamais ignorer",
     description:
@@ -988,6 +1076,30 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
  * translations of the same article across locales.
  */
 const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "vision-ia-detecter-fuites-sous-voiture-telephone",
+  },
+  {
+    fr: "usure-prematuree-pneus-ia-voit-ce-que-vous-ne-remarquez-pas",
+  },
+  {
+    fr: "scanner-plaque-immatriculation-identification-instantanee",
+  },
+  {
+    fr: "detecter-corrosion-rouille-vision-ia-avant-ct",
+  },
+  {
+    fr: "checkup-visuel-ia-5-points-vehicule-sain",
+  },
+  {
+    fr: "fuite-huile-liquide-frein-coolant-couleur-revele-panne",
+  },
+  {
+    fr: "scanner-vin-decoder-historique-complet-voiture",
+  },
+  {
+    fr: "usure-plaquettes-disques-vision-ia-detecte",
+  },
   {
     fr: "7-bruits-habitacle-jamais-ignorer",
     en: "7-cabin-noises-never-ignore",
