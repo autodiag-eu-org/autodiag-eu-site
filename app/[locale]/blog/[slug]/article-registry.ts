@@ -36,6 +36,16 @@ import { Article5BruitsMoteur } from "./fr/5-bruits-moteur";
 import { ArticleOBD2Comprendre } from "./fr/obd2-comprendre";
 import { ArticleAutodiagVsGarage } from "./fr/autodiag-vs-garage";
 
+/* EN cabin sound scan series */
+import { Article7CabinNoises } from "./en/7-cabin-noises-never-ignore";
+import { ArticleBrakeSquealing } from "./en/brake-squealing-normal-wear-or-danger";
+import { ArticleSuspensionNoise } from "./en/suspension-noise-ai-identifies-failing-shock";
+import { ArticleSteeringClunk } from "./en/steering-clunk-ball-joint-rack-cv-joint";
+import { ArticleWheelBearingNoise } from "./en/wheel-bearing-noise-detect-wear-before-mot";
+import { ArticleHVACWhistling } from "./en/hvac-whistling-diagnosing-ac-noises";
+import { ArticleInvisibleWearCascade } from "./en/invisible-wear-tired-component-damages-another";
+import { ArticlePreventiveSoundCheck } from "./en/preventive-sound-check-avoid-cascade-repair-bill";
+
 /* EN sound scan series */
 import { ArticleYourEngineSpeaks } from "./en/your-engine-speaks-ai-fault-detection-by-sound";
 import { Article11EngineFaultsSound } from "./en/11-engine-faults-detectable-by-sound-analysis";
@@ -129,6 +139,15 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
+  /* EN cabin sound scan series */
+  "7-cabin-noises-never-ignore": Article7CabinNoises,
+  "brake-squealing-normal-wear-or-danger": ArticleBrakeSquealing,
+  "suspension-noise-ai-identifies-failing-shock": ArticleSuspensionNoise,
+  "steering-clunk-ball-joint-rack-cv-joint": ArticleSteeringClunk,
+  "wheel-bearing-noise-detect-wear-before-mot": ArticleWheelBearingNoise,
+  "hvac-whistling-diagnosing-ac-noises": ArticleHVACWhistling,
+  "invisible-wear-tired-component-damages-another": ArticleInvisibleWearCascade,
+  "preventive-sound-check-avoid-cascade-repair-bill": ArticlePreventiveSoundCheck,
   /* EN articles */
   "your-engine-speaks-ai-fault-detection-by-sound": ArticleYourEngineSpeaks,
   "11-engine-faults-detectable-by-sound-analysis": Article11EngineFaultsSound,

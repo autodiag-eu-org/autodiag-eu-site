@@ -325,6 +325,94 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "7-cabin-noises-never-ignore",
+    title: "7 cabin noises you should never ignore",
+    description:
+      "Squeal, clunk, drone, whistle: 7 cabin noises and what each one predicts. The 7-class SVM at 75.05% catches what your ear no longer notices.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Cabin Sound Scan",
+    locale: "en",
+  },
+  {
+    slug: "brake-squealing-normal-wear-or-danger",
+    title: "Brake squealing: normal wear or real danger?",
+    description:
+      "Wear indicator, glazing, corrosion, sticky caliper: 4 causes of brake squeal. How Cabin Sound Scan separates them and stops the disc-caliper cascade.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Safety",
+    locale: "en",
+  },
+  {
+    slug: "suspension-noise-ai-identifies-failing-shock",
+    title: "Suspension noise: how AI identifies a failing shock absorber",
+    description:
+      "Knock, rebound, creak: AI separates the 3 families of suspension noise. Early shock detection to stop the tyre-alignment-rack cascade.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "en",
+  },
+  {
+    slug: "steering-clunk-ball-joint-rack-cv-joint",
+    title: "Steering clunk: ball joint, rack or CV joint?",
+    description:
+      "CV at low speed, ball joint over bumps, rack in a straight line: pinpointing the source of a steering clunk with cabin sound scan.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Safety",
+    locale: "en",
+  },
+  {
+    slug: "wheel-bearing-noise-detect-wear-before-mot",
+    title: "Wheel bearing noise: detect the wear before your MOT",
+    description:
+      "Drone that rises with speed, side-load modulation: the signs of a tired bearing. Scan protocol and preventive detection two weeks before your MOT.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
+    slug: "hvac-whistling-diagnosing-ac-noises",
+    title: "HVAC whistling: diagnosing the noises from your cabin AC",
+    description:
+      "Cabin filter, blower bearing, AC compressor clutch: 4 causes of HVAC whistling. Early catch and savings up to 800 pounds.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Cabin Sound Scan",
+    locale: "en",
+  },
+  {
+    slug: "invisible-wear-tired-component-damages-another",
+    title: "Invisible wear: when a tired component damages another",
+    description:
+      "The mechanical cascade effect explained: engine mount that cracks the manifold, shock that kills the rack. How sound scan cuts the chain at the root.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
+    slug: "preventive-sound-check-avoid-cascade-repair-bill",
+    title: "Preventive sound check: avoiding the cascade repair bill before the MOT",
+    description:
+      "Complete sound scan protocol two weeks before MOT, CT, TUV, ITV or IPO. 5 targeted recordings, interpretation grid and average 120-pound savings per cycle.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Prevention",
+    locale: "en",
+  },
+  {
     slug: "your-engine-speaks-ai-fault-detection-by-sound",
     title: "Your engine speaks: how AI translates its sounds into a diagnosis",
     description:
@@ -902,27 +990,35 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
 const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "7-bruits-habitacle-jamais-ignorer",
+    en: "7-cabin-noises-never-ignore",
   },
   {
     fr: "grincement-freins-usure-normale-ou-danger",
+    en: "brake-squealing-normal-wear-or-danger",
   },
   {
     fr: "bruit-suspension-ia-identifie-amortisseur",
+    en: "suspension-noise-ai-identifies-failing-shock",
   },
   {
     fr: "claquement-direction-rotule-cremaillere-cardan",
+    en: "steering-clunk-ball-joint-rack-cv-joint",
   },
   {
     fr: "bruit-roulement-roue-detecter-usure-avant-ct",
+    en: "wheel-bearing-noise-detect-wear-before-mot",
   },
   {
     fr: "sifflement-ventilation-diagnostic-climatisation",
+    en: "hvac-whistling-diagnosing-ac-noises",
   },
   {
     fr: "usure-invisible-composant-fatigue-endommage-autre",
+    en: "invisible-wear-tired-component-damages-another",
   },
   {
     fr: "controle-preventif-son-eviter-facture-cascade",
+    en: "preventive-sound-check-avoid-cascade-repair-bill",
   },
   {
     fr: "votre-moteur-parle-detection-pannes-par-son",
