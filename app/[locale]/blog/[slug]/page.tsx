@@ -9,7 +9,10 @@ import {
   ArticleVoyantMoteurQueFaire,
   ArticlePreparerCT2026,
 } from "./fr-articles-v2";
-import { ArticleCheckEngineLightWhatToDo } from "./en-articles-v2";
+import {
+  ArticleCheckEngineLightWhatToDo,
+  ArticleMOTPreparationGuide2026,
+} from "./en-articles-v2";
 import {
   ArticleTop10MOTFailureReasons,
   ArticleHowToPrepareCarForMOT,
@@ -1670,6 +1673,7 @@ const articleComponents: Record<string, () => React.JSX.Element> = {
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
   /* EN articles */
   "check-engine-light-what-to-do": ArticleCheckEngineLightWhatToDo,
+  "mot-preparation-guide-2026": ArticleMOTPreparationGuide2026,
   "top-10-mot-failure-reasons-2026": ArticleTop10MOTFailureReasons,
   "how-to-prepare-car-for-mot": ArticleHowToPrepareCarForMOT,
   "best-obd2-app-uk-2026": ArticleBestOBD2AppUK2026,

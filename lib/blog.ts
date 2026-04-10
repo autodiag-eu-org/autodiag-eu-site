@@ -94,6 +94,17 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "mot-preparation-guide-2026",
+    title: "MOT preparation guide 2026 — pass first time",
+    description:
+      "Step-by-step 2026 MOT preparation guide: OBD pre-scan, diesel emissions, brakes, lighting and how to avoid costly retests.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "MOT Guide",
+    locale: "en",
+  },
+  {
     slug: "check-engine-light-what-to-do",
     title: "Check engine light on: what to do?",
     description:
@@ -353,6 +364,10 @@ const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "voyant-moteur-allume-que-faire",
     en: "check-engine-light-what-to-do",
+  },
+  {
+    fr: "preparer-controle-technique-2026",
+    en: "mot-preparation-guide-2026",
   },
   {
     fr: "comment-lire-code-defaut-obd2",
