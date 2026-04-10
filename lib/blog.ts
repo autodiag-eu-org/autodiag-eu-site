@@ -16,6 +16,17 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "preparer-controle-technique-2026",
+    title: "Preparer son controle technique 2026 : guide complet",
+    description:
+      "Checklist 2026 pour reussir votre controle technique du premier coup : pre-diagnostic OBD, emissions diesel, freinage, eclairage et contre-visites.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Controle technique",
+    locale: "fr",
+  },
+  {
     slug: "voyant-moteur-allume-que-faire",
     title: "Voyant moteur allume : que faire ?",
     description:
