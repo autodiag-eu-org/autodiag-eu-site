@@ -1,5 +1,17 @@
 import type { JSX } from "react";
 
+/* FR sound scan series */
+import { ArticleSonMoteurParle } from "./fr/votre-moteur-parle-detection-pannes-par-son";
+import { Article11PannesSonores } from "./fr/11-pannes-detectables-analyse-sonore-moteur";
+import { ArticleSonsInaudibles } from "./fr/sons-inaudibles-ia-detecte-ce-que-oreille-ne-peut-pas";
+import { ArticleClaquementMoteur } from "./fr/bruit-claquement-moteur-causes-diagnostic-ia";
+import { ArticlePreventionCasseMoteur } from "./fr/prevenir-casse-moteur-diagnostic-sonore-preventif";
+import { ArticleCourroieDistributionSon } from "./fr/courroie-distribution-usee-detecter-par-son";
+import { ArticleRoulementMoteurFatigue } from "./fr/roulement-moteur-fatigue-ia-entend";
+import { ArticleTurboQuiSiffle } from "./fr/turbo-qui-siffle-panne-ou-normal";
+import { ArticleCommentFonctionneSVM } from "./fr/comment-fonctionne-svm-technologie-scan-sonore";
+import { ArticleDieselVsEssenceSon } from "./fr/diesel-vs-essence-diagnostic-sonore-ia";
+
 /* FR v2 */
 import { ArticleVoyantMoteurQueFaire } from "./fr/voyant-moteur-que-faire";
 import { ArticlePreparerCT2026 } from "./fr/preparer-ct-2026";
@@ -66,6 +78,16 @@ import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
 export const articleComponents: Record<string, () => JSX.Element> = {
   /* FR articles */
+  "votre-moteur-parle-detection-pannes-par-son": ArticleSonMoteurParle,
+  "11-pannes-detectables-analyse-sonore-moteur": Article11PannesSonores,
+  "sons-inaudibles-ia-detecte-ce-que-oreille-ne-peut-pas": ArticleSonsInaudibles,
+  "bruit-claquement-moteur-causes-diagnostic-ia": ArticleClaquementMoteur,
+  "prevenir-casse-moteur-diagnostic-sonore-preventif": ArticlePreventionCasseMoteur,
+  "courroie-distribution-usee-detecter-par-son": ArticleCourroieDistributionSon,
+  "roulement-moteur-fatigue-ia-entend": ArticleRoulementMoteurFatigue,
+  "turbo-qui-siffle-panne-ou-normal": ArticleTurboQuiSiffle,
+  "comment-fonctionne-svm-technologie-scan-sonore": ArticleCommentFonctionneSVM,
+  "diesel-vs-essence-diagnostic-sonore-ia": ArticleDieselVsEssenceSon,
   "voyant-moteur-allume-que-faire": ArticleVoyantMoteurQueFaire,
   "preparer-controle-technique-2026": ArticlePreparerCT2026,
   "10-codes-defaut-frequents-europe": Article10CodesDefautFrequentsEurope,

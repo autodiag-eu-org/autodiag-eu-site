@@ -16,6 +16,116 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "votre-moteur-parle-detection-pannes-par-son",
+    title: "Votre moteur vous parle : comment l'IA traduit ses bruits en diagnostic",
+    description:
+      "Comment l'IA AutoDiag EU decode les sons de votre moteur. SVM 91.3%, 56 caracteristiques, 11 classes de pannes, pipeline en 7 couches explique simplement.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Scan sonore",
+    locale: "fr",
+  },
+  {
+    slug: "11-pannes-detectables-analyse-sonore-moteur",
+    title: "11 pannes moteur detectables par analyse sonore IA",
+    description:
+      "Liste complete des 11 classes de pannes detectees par scan sonore AutoDiag EU. Signatures, risques, couts de reparation et retour sur investissement preventif.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "sons-inaudibles-ia-detecte-ce-que-oreille-ne-peut-pas",
+    title: "Les sons inaudibles : ce que l'IA detecte que votre oreille rate",
+    description:
+      "Pourquoi un micro de smartphone capte bien plus que votre oreille. Ultrasons, infrasons, harmoniques subtiles : l'IA voit ce que vous n'entendez pas.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Technologie",
+    locale: "fr",
+  },
+  {
+    slug: "bruit-claquement-moteur-causes-diagnostic-ia",
+    title: "Claquement moteur : causes, risques et diagnostic par IA",
+    description:
+      "Les trois familles de claquement moteur : knock, piston slap, rod knock. Signatures spectrales, risques et comment l'IA les distingue avec 91.3% de precision.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "prevenir-casse-moteur-diagnostic-sonore-preventif",
+    title: "Prevenir la casse moteur grace au diagnostic sonore preventif",
+    description:
+      "70% des casses moteur donnent des signes detectables trois mois avant. Methode complete pour mettre en place un suivi sonore mensuel et eviter les grosses factures.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
+    slug: "courroie-distribution-usee-detecter-par-son",
+    title: "Courroie de distribution usee : la detecter par le son",
+    description:
+      "Pourquoi une distribution qui casse coute 2000 a 8000 euros et comment le scan sonore detecte les signes d'usure avant la casse. Les 3 phases de degradation.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
+    slug: "roulement-moteur-fatigue-ia-entend",
+    title: "Roulement moteur fatigue : ce que l'IA entend avant vous",
+    description:
+      "Coussinets de bielle, vilebrequin, arbre a cames : signatures spectrales et detection precoce. La difference entre 500 et 5000 euros de reparation.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "turbo-qui-siffle-panne-ou-normal",
+    title: "Turbo qui siffle : panne imminente ou bruit normal ?",
+    description:
+      "Comment distinguer un sifflement turbo normal d'un signe de panne. Les 4 causes anormales, signatures spectrales et cout de detection precoce vs tardive.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "comment-fonctionne-svm-technologie-scan-sonore",
+    title: "Comment fonctionne notre SVM : la technologie du scan sonore",
+    description:
+      "Plongee technique dans le pipeline AutoDiag EU : 7 couches, 56 caracteristiques, SVM kernel RBF, 91.3% de precision. Pourquoi un SVM et pas un reseau de neurones.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Technologie",
+    locale: "fr",
+  },
+  {
+    slug: "diesel-vs-essence-diagnostic-sonore-ia",
+    title: "Diesel vs essence : pourquoi leur diagnostic sonore est different",
+    description:
+      "Signatures spectrales opposees, pannes specifiques, codes OBD2 differents : comment l'IA adapte son analyse selon le type de carburant de votre moteur.",
+    date: "2026-04-11",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
     slug: "cout-reparation-catalyseur-p0420",
     title: "Combien coute une reparation catalyseur P0420 ?",
     description:
@@ -592,6 +702,36 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
  * translations of the same article across locales.
  */
 const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "votre-moteur-parle-detection-pannes-par-son",
+  },
+  {
+    fr: "11-pannes-detectables-analyse-sonore-moteur",
+  },
+  {
+    fr: "sons-inaudibles-ia-detecte-ce-que-oreille-ne-peut-pas",
+  },
+  {
+    fr: "bruit-claquement-moteur-causes-diagnostic-ia",
+  },
+  {
+    fr: "prevenir-casse-moteur-diagnostic-sonore-preventif",
+  },
+  {
+    fr: "courroie-distribution-usee-detecter-par-son",
+  },
+  {
+    fr: "roulement-moteur-fatigue-ia-entend",
+  },
+  {
+    fr: "turbo-qui-siffle-panne-ou-normal",
+  },
+  {
+    fr: "comment-fonctionne-svm-technologie-scan-sonore",
+  },
+  {
+    fr: "diesel-vs-essence-diagnostic-sonore-ia",
+  },
   {
     fr: "voyant-moteur-allume-que-faire",
     en: "check-engine-light-what-to-do",
