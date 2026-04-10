@@ -1,5 +1,15 @@
 import type { JSX } from "react";
 
+/* FR cabin sound scan series */
+import { Article7BruitsHabitacle } from "./fr/7-bruits-habitacle-jamais-ignorer";
+import { ArticleGrincementFreins } from "./fr/grincement-freins-usure-normale-ou-danger";
+import { ArticleBruitSuspension } from "./fr/bruit-suspension-ia-identifie-amortisseur";
+import { ArticleClaquementDirection } from "./fr/claquement-direction-rotule-cremaillere-cardan";
+import { ArticleRoulementRoue } from "./fr/bruit-roulement-roue-detecter-usure-avant-ct";
+import { ArticleSifflementVentilation } from "./fr/sifflement-ventilation-diagnostic-climatisation";
+import { ArticleUsureInvisibleCascade } from "./fr/usure-invisible-composant-fatigue-endommage-autre";
+import { ArticleControlePreventifSon } from "./fr/controle-preventif-son-eviter-facture-cascade";
+
 /* FR sound scan series */
 import { ArticleSonMoteurParle } from "./fr/votre-moteur-parle-detection-pannes-par-son";
 import { Article11PannesSonores } from "./fr/11-pannes-detectables-analyse-sonore-moteur";
@@ -89,6 +99,15 @@ import { ArticlePTLerCodigosOBD2Telemovel } from "./pt/ler-codigos-obd2-telemove
 import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
 export const articleComponents: Record<string, () => JSX.Element> = {
+  /* FR cabin sound scan series */
+  "7-bruits-habitacle-jamais-ignorer": Article7BruitsHabitacle,
+  "grincement-freins-usure-normale-ou-danger": ArticleGrincementFreins,
+  "bruit-suspension-ia-identifie-amortisseur": ArticleBruitSuspension,
+  "claquement-direction-rotule-cremaillere-cardan": ArticleClaquementDirection,
+  "bruit-roulement-roue-detecter-usure-avant-ct": ArticleRoulementRoue,
+  "sifflement-ventilation-diagnostic-climatisation": ArticleSifflementVentilation,
+  "usure-invisible-composant-fatigue-endommage-autre": ArticleUsureInvisibleCascade,
+  "controle-preventif-son-eviter-facture-cascade": ArticleControlePreventifSon,
   /* FR articles */
   "votre-moteur-parle-detection-pannes-par-son": ArticleSonMoteurParle,
   "11-pannes-detectables-analyse-sonore-moteur": Article11PannesSonores,

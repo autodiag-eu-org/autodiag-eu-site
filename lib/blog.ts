@@ -16,6 +16,94 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "7-bruits-habitacle-jamais-ignorer",
+    title: "7 bruits d'habitacle a ne jamais ignorer",
+    description:
+      "Grincement, claquement, grondement, sifflement : 7 bruits d'habitacle et ce qu'ils annoncent. Le SVM 7 classes 75.05% detecte ce que votre oreille ne percoit plus.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Scan sonore habitacle",
+    locale: "fr",
+  },
+  {
+    slug: "grincement-freins-usure-normale-ou-danger",
+    title: "Grincement de freins : usure normale ou vrai danger ?",
+    description:
+      "Temoin d'usure, vitrification, corrosion, etrier colle : 4 causes de grincement de frein. Comment le Scan Sonore les distingue et coupe l'effet cascade disque-etrier.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Securite",
+    locale: "fr",
+  },
+  {
+    slug: "bruit-suspension-ia-identifie-amortisseur",
+    title: "Bruit de suspension : comment l'IA identifie l'amortisseur fatigue",
+    description:
+      "Claquement, rebond, grincement : l'IA separe les 3 familles de bruits de suspension. Detection precoce d'amortisseur pour eviter la cascade pneu-geometrie-cremaillere.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Diagnostic",
+    locale: "fr",
+  },
+  {
+    slug: "claquement-direction-rotule-cremaillere-cardan",
+    title: "Claquement dans la direction : rotule, cremaillere ou cardan ?",
+    description:
+      "Cardan a basse vitesse, rotule sur bosse, cremaillere en ligne droite : identifier l'origine d'un claquement de direction avec le scan sonore habitacle.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Securite",
+    locale: "fr",
+  },
+  {
+    slug: "bruit-roulement-roue-detecter-usure-avant-ct",
+    title: "Bruit de roulement de roue : detecter l'usure avant le CT",
+    description:
+      "Grondement qui monte avec la vitesse, modulation en virage : les signes d'un roulement fatigue. Protocole de scan et detection preventive deux semaines avant le controle technique.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
+    slug: "sifflement-ventilation-diagnostic-climatisation",
+    title: "Sifflement de ventilation : diagnostic des bruits de climatisation",
+    description:
+      "Filtre habitacle, roulement de soufflante, embrayage compresseur clim : 4 causes de sifflement de ventilation. Detection precoce et economie jusqu'a 900 euros.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Scan sonore habitacle",
+    locale: "fr",
+  },
+  {
+    slug: "usure-invisible-composant-fatigue-endommage-autre",
+    title: "Usure invisible : quand une piece fatiguee en endommage une autre",
+    description:
+      "Effet cascade mecanique explique : support moteur qui fissure le collecteur, amortisseur qui tue la cremaillere. Comment le scan sonore coupe la chaine a la racine.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
+    slug: "controle-preventif-son-eviter-facture-cascade",
+    title: "Controle preventif sonore : eviter la facture en cascade avant le CT",
+    description:
+      "Protocole complet de scan sonore deux semaines avant le CT, TUV, MOT, ITV ou IPO. 5 enregistrements cibles, grille d'interpretation et economie moyenne de 150 euros par cycle.",
+    date: "2026-04-12",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Prevention",
+    locale: "fr",
+  },
+  {
     slug: "votre-moteur-parle-detection-pannes-par-son",
     title: "Votre moteur vous parle : comment l'IA traduit ses bruits en diagnostic",
     description:
@@ -812,6 +900,30 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
  * translations of the same article across locales.
  */
 const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "7-bruits-habitacle-jamais-ignorer",
+  },
+  {
+    fr: "grincement-freins-usure-normale-ou-danger",
+  },
+  {
+    fr: "bruit-suspension-ia-identifie-amortisseur",
+  },
+  {
+    fr: "claquement-direction-rotule-cremaillere-cardan",
+  },
+  {
+    fr: "bruit-roulement-roue-detecter-usure-avant-ct",
+  },
+  {
+    fr: "sifflement-ventilation-diagnostic-climatisation",
+  },
+  {
+    fr: "usure-invisible-composant-fatigue-endommage-autre",
+  },
+  {
+    fr: "controle-preventif-son-eviter-facture-cascade",
+  },
   {
     fr: "votre-moteur-parle-detection-pannes-par-son",
     en: "your-engine-speaks-ai-fault-detection-by-sound",
