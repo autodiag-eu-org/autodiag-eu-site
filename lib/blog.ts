@@ -83,6 +83,17 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "check-engine-light-what-to-do",
+    title: "Check engine light on: what to do?",
+    description:
+      "Step-by-step guide to reacting to a check engine light: colours, fault codes, immediate checks, and when to visit a garage.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Practical Guide",
+    locale: "en",
+  },
+  {
     slug: "top-10-mot-failure-reasons-2026",
     title: "Top 10 MOT Failure Reasons in 2026 — And How to Avoid Them",
     description:
@@ -328,6 +339,10 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
  * translations of the same article across locales.
  */
 const blogTranslationGroups: Array<Record<string, string>> = [
+  {
+    fr: "voyant-moteur-allume-que-faire",
+    en: "check-engine-light-what-to-do",
+  },
   {
     fr: "comment-lire-code-defaut-obd2",
     en: "obd2-fault-codes-explained-uk",

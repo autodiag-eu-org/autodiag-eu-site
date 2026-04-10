@@ -6,6 +6,7 @@ import { generateArticleMetadata } from "@/lib/seo";
 import { getBlogPost, getAllBlogParams, getBlogAlternates } from "@/lib/blog";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import { ArticleVoyantMoteurQueFaire } from "./fr-articles-v2";
+import { ArticleCheckEngineLightWhatToDo } from "./en-articles-v2";
 import {
   ArticleTop10MOTFailureReasons,
   ArticleHowToPrepareCarForMOT,
@@ -1664,6 +1665,7 @@ const articleComponents: Record<string, () => React.JSX.Element> = {
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
   /* EN articles */
+  "check-engine-light-what-to-do": ArticleCheckEngineLightWhatToDo,
   "top-10-mot-failure-reasons-2026": ArticleTop10MOTFailureReasons,
   "how-to-prepare-car-for-mot": ArticleHowToPrepareCarForMOT,
   "best-obd2-app-uk-2026": ArticleBestOBD2AppUK2026,
