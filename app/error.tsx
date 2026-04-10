@@ -1,8 +1,28 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Link from "next/link";
 import { captureException } from "@/lib/sentry";
+
+import frMessages from "@/i18n/fr.json";
+import enMessages from "@/i18n/en.json";
+import deMessages from "@/i18n/de.json";
+import esMessages from "@/i18n/es.json";
+import ptMessages from "@/i18n/pt.json";
+
+const messagesMap: Record<string, typeof frMessages> = {
+  fr: frMessages,
+  en: enMessages,
+  de: deMessages,
+  es: esMessages,
+  pt: ptMessages,
+};
+
+function detectLocale(): string {
+  if (typeof window === "undefined") return "fr";
+  const seg = window.location.pathname.split("/")[1];
+  return seg && seg in messagesMap ? seg : "fr";
+}
 
 interface ErrorPageProps {
   error: Error & { digest?: string };
@@ -10,9 +30,13 @@ interface ErrorPageProps {
 }
 
 export default function ErrorPage({ error, reset }: ErrorPageProps) {
+  const locale = useMemo(detectLocale, []);
+  const t = messagesMap[locale]?.error ?? frMessages.error;
+
   useEffect(() => {
     captureException(error, { digest: error.digest });
   }, [error]);
+
   return (
     <main className="min-h-screen bg-bg flex items-center justify-center px-4">
       <div className="text-center max-w-lg">
@@ -41,12 +65,11 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Oups, quelque chose a cal&eacute;
+          {t.title}
         </h1>
 
         <p className="text-secondary text-lg mb-8">
-          Notre moteur de recherche a un petit souci. R&eacute;essayez dans un
-          instant.
+          {t.description}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -57,33 +80,23 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
               background: "linear-gradient(135deg, #00e5ff, #00c853)",
             }}
           >
-            R&eacute;essayer
+            {t.cta}
           </button>
 
           <Link
-            href="/fr"
+            href={`/${locale}`}
             className="px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105"
             style={{
               background: "rgba(255,255,255,0.08)",
               border: "1px solid rgba(255,255,255,0.12)",
             }}
           >
-            Retour a l&apos;accueil
+            {messagesMap[locale]?.common?.back ?? "Retour"}
           </Link>
         </div>
 
         <p className="mt-10 text-secondary/60 text-sm">
-          Si le probl&egrave;me persiste, contactez-nous :&nbsp;
-          <a
-            href="mailto:info@autodiag-eu.com"
-            className="text-cyan underline hover:no-underline"
-          >
-            info@autodiag-eu.com
-          </a>
-        </p>
-
-        <p className="mt-6 text-secondary/40 text-xs">
-          AutoDiag EU &mdash; Le diagnostic auto intelligent
+          {t.contact}
         </p>
       </div>
     </main>

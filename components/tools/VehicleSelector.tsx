@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import type { VehicleCompatibility } from "@/lib/vehicles";
 import brandsData from "@/data/vehicles/brands.json";
 import modelsData from "@/data/vehicles/models.json";
@@ -51,6 +52,7 @@ function findCompatibility(
 }
 
 export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
+  const t = useTranslations('compatibility');
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
@@ -113,7 +115,7 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
             htmlFor="brand-select"
             className="mb-1.5 block text-sm font-medium text-secondary"
           >
-            Marque
+            {t('brandLabel')}
           </label>
           <select
             id="brand-select"
@@ -121,7 +123,7 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
             onChange={handleBrandChange}
             className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-white transition-colors focus:border-cyan/50 focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
-            <option value="">Choisir une marque</option>
+            <option value="">{t('brandPlaceholder')}</option>
             {brands.map((b) => (
               <option key={b.name} value={b.name}>
                 {b.name} ({b.modelsCount})
@@ -135,7 +137,7 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
             htmlFor="model-select"
             className="mb-1.5 block text-sm font-medium text-secondary"
           >
-            Modele
+            {t('modelLabel')}
           </label>
           <select
             id="model-select"
@@ -144,7 +146,7 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
             disabled={!selectedBrand}
             className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-white transition-colors focus:border-cyan/50 focus:outline-none focus:ring-2 focus:ring-cyan/20 disabled:opacity-50"
           >
-            <option value="">Choisir un modele</option>
+            <option value="">{t('modelPlaceholder')}</option>
             {availableModels.map((m) => (
               <option key={m} value={m}>
                 {m}
@@ -158,7 +160,7 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
             htmlFor="year-select"
             className="mb-1.5 block text-sm font-medium text-secondary"
           >
-            Annee
+            {t('yearLabel')}
           </label>
           <select
             id="year-select"
@@ -167,7 +169,7 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
             disabled={!selectedModel}
             className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-white transition-colors focus:border-cyan/50 focus:outline-none focus:ring-2 focus:ring-cyan/20 disabled:opacity-50"
           >
-            <option value="">Choisir une annee</option>
+            <option value="">{t('yearPlaceholder')}</option>
             {availableYears.map((y) => (
               <option key={y} value={y}>
                 {y}
@@ -180,36 +182,36 @@ export default function VehicleSelector({ onSelect }: VehicleSelectorProps) {
       {result && (
         <div className="mt-6 rounded-xl border border-cyan/20 bg-cyan/5 p-5">
           <h4 className="mb-3 text-sm font-bold text-cyan">
-            Resultat de compatibilite
+            {t('resultTitle')}
           </h4>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <p className="text-xs text-secondary">Protocole OBD2</p>
+              <p className="text-xs text-secondary">{t('protocol')}</p>
               <p className="mt-0.5 text-sm font-semibold">{result.protocol}</p>
             </div>
             <div>
-              <p className="text-xs text-secondary">PIDs supportes</p>
+              <p className="text-xs text-secondary">{t('pidsSupported')}</p>
               <p className="mt-0.5 text-sm font-semibold">
                 {result.pidsSupported}
               </p>
             </div>
             <div>
-              <p className="text-xs text-secondary">Annees couvertes</p>
+              <p className="text-xs text-secondary">{t('yearsCovered')}</p>
               <p className="mt-0.5 text-sm font-semibold">
                 {result.yearFrom} — {result.yearTo}
               </p>
             </div>
             <div>
-              <p className="text-xs text-secondary">Fonctionnalites</p>
+              <p className="text-xs text-secondary">{t('featuresLabel')}</p>
               <div className="mt-1 flex flex-wrap gap-1.5">
                 {result.features.dtcRead && (
                   <span className="rounded-md bg-emerald-500/15 px-2 py-0.5 text-xs text-emerald-400">
-                    Lecture DTC
+                    {t('dtcRead')}
                   </span>
                 )}
                 {result.features.dtcClear && (
                   <span className="rounded-md bg-emerald-500/15 px-2 py-0.5 text-xs text-emerald-400">
-                    Effacement DTC
+                    {t('dtcClear')}
                   </span>
                 )}
                 {result.features.liveData && (

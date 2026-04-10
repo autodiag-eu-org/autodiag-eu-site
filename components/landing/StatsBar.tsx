@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface StatItemProps {
   target: number;
@@ -61,14 +62,16 @@ function StatItem({ target, label, suffix, index }: StatItemProps) {
   );
 }
 
-const stats: { target: number; label: string; suffix?: string }[] = [
-  { target: 677, label: "vehicules compatibles" },
-  { target: 250, label: "codes DTC documentes" },
-  { target: 5, label: "langues europeennes" },
-  { target: 34, label: "pays couverts" },
-];
-
 export default function StatsBar() {
+  const t = useTranslations('stats');
+
+  const stats: { target: number; label: string; suffix?: string }[] = [
+    { target: 677, label: t('vehiclesLabel') },
+    { target: 250, label: t('codesLabel') },
+    { target: 5, label: t('languagesLabel') },
+    { target: 34, label: t('countriesLabel') },
+  ];
+
   return (
     <section className="relative z-10 mx-auto max-w-5xl px-6 py-12">
       <div className="glass rounded-2xl border border-border backdrop-blur-md">

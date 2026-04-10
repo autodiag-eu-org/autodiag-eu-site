@@ -295,7 +295,9 @@
     "costByCountry": "Custo por pais",
     "relatedCodes": "Codigos relacionados",
     "vehicleSpecific": "Particularidades por veiculo",
-    "faqTitle": "Perguntas frequentes"
+    "faqTitle": "Perguntas frequentes",
+    "clearSearch": "Limpar pesquisa",
+    "resultCount": "{count, plural, =0 {Sem resultados} =1 {1 resultado} other {# resultados}} de {total} codigos"
   },
   "compatibility": {
     "title": "O seu veiculo e compativel?",
@@ -310,7 +312,12 @@
     "compatible": "Compativel com AutoDiag EU",
     "notCompatible": "Nao compativel de momento",
     "protocol": "Protocolo OBD2",
-    "pidsSupported": "PIDs suportados"
+    "pidsSupported": "PIDs suportados",
+    "resultTitle": "Resultado de compatibilidade",
+    "yearsCovered": "Anos cobertos",
+    "featuresLabel": "Funcionalidades",
+    "dtcRead": "Leitura de codigos",
+    "dtcClear": "Apagar codigos"
   },
   "demo": {
     "title": "Descubra AutoDiag EU em acao",

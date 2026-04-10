@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface DTCSearchProps {
   onSearch: (query: string) => void;
@@ -20,6 +21,7 @@ export default function DTCSearch({
   const [query, setQuery] = useState(initialQuery);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isActive = query.length > 0;
+  const t = useTranslations('codes');
 
   const debouncedSearch = useCallback(
     (value: string) => {
@@ -97,16 +99,16 @@ export default function DTCSearch({
           type="text"
           value={query}
           onChange={handleChange}
-          placeholder="Rechercher un code (ex : P0420, catalyseur, voyant moteur...)"
+          placeholder={t('searchPlaceholder')}
           className="w-full rounded-xl border border-border bg-glass py-3.5 pl-12 pr-12 text-white placeholder:text-secondary/60 backdrop-blur-md transition-all focus:border-cyan/50 focus:outline-none focus:ring-2 focus:ring-cyan/20"
-          aria-label="Rechercher un code defaut"
+          aria-label={t('searchPlaceholder')}
         />
         {query && (
           <button
             type="button"
             onClick={handleClear}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-secondary transition-colors hover:text-white"
-            aria-label="Effacer la recherche"
+            aria-label={t('clearSearch')}
           >
             <svg
               className="h-5 w-5"
@@ -125,8 +127,7 @@ export default function DTCSearch({
       </div>
       {isActive && (
         <p className="mt-3 text-sm text-secondary">
-          {resultCount} {resultCount <= 1 ? "resultat" : "resultats"} sur{" "}
-          {totalCount} codes
+          {t('resultCount', { count: resultCount, total: totalCount })}
         </p>
       )}
     </div>
