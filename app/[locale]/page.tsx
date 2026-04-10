@@ -7,6 +7,10 @@ import BetaForm from "@/components/landing/BetaForm";
 import IOSWaitlist from "@/components/landing/IOSWaitlist";
 import TestimonialSection from "@/components/landing/TestimonialSection";
 import DongleRecommendation from "@/components/shared/DongleRecommendation";
+import SchemaMarkup, {
+  buildSoftwareApplicationSchema,
+  buildWebSiteSchema,
+} from "@/components/shared/SchemaMarkup";
 
 interface LandingPageProps {
   params: Promise<{ locale: string }>;
@@ -14,9 +18,13 @@ interface LandingPageProps {
 
 export default async function LandingPage({ params }: LandingPageProps) {
   const { locale } = await params;
+  const softwareAppSchema = buildSoftwareApplicationSchema(locale);
+  const webSiteSchema = buildWebSiteSchema(locale);
 
   return (
     <main className="min-h-screen bg-bg">
+      <SchemaMarkup type="SoftwareApplication" data={softwareAppSchema} />
+      <SchemaMarkup type="WebSite" data={webSiteSchema} />
       <section id="hero">
         <HeroSection />
       </section>

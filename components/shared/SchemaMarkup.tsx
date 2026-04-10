@@ -20,6 +20,46 @@ interface OrganizationSchema {
   sameAs?: string[];
 }
 
+interface SoftwareApplicationSchema {
+  '@context': 'https://schema.org';
+  '@type': 'SoftwareApplication';
+  name: string;
+  description: string;
+  operatingSystem: string;
+  applicationCategory: string;
+  url: string;
+  image?: string;
+  offers: {
+    '@type': 'Offer';
+    price: string;
+    priceCurrency: string;
+  };
+  publisher: {
+    '@type': 'Organization';
+    name: string;
+  };
+}
+
+interface WebSiteSchema {
+  '@context': 'https://schema.org';
+  '@type': 'WebSite';
+  name: string;
+  url: string;
+  inLanguage: string;
+  publisher: {
+    '@type': 'Organization';
+    name: string;
+  };
+  potentialAction: {
+    '@type': 'SearchAction';
+    target: {
+      '@type': 'EntryPoint';
+      urlTemplate: string;
+    };
+    'query-input': string;
+  };
+}
+
 interface FAQPageSchema {
   '@context': 'https://schema.org';
   '@type': 'FAQPage';
@@ -59,12 +99,27 @@ interface ArticleSchema {
   };
 }
 
-type SchemaData = OrganizationSchema | FAQPageSchema | ArticleSchema;
+type SchemaData =
+  | OrganizationSchema
+  | FAQPageSchema
+  | ArticleSchema
+  | SoftwareApplicationSchema
+  | WebSiteSchema;
 
 interface SchemaMarkupProps {
-  type: 'Organization' | 'FAQPage' | 'Article';
+  type:
+    | 'Organization'
+    | 'FAQPage'
+    | 'Article'
+    | 'SoftwareApplication'
+    | 'WebSite';
   data: SchemaData;
 }
+
+const SITE_URL = 'https://www.autodiag-eu.com';
+const PLAY_STORE_URL =
+  process.env.NEXT_PUBLIC_PLAY_STORE_URL ??
+  'https://play.google.com/store/apps/details?id=com.autodiag.eu';
 
 const ORG_DESCRIPTIONS: Record<string, string> = {
   fr: 'Diagnostic automobile intelligent. Scan audio IA, lecture de codes de défaut OBD2, compatibilité 677 véhicules européens.',
@@ -96,6 +151,70 @@ export function buildOrganizationSchema(locale: string): OrganizationSchema {
     founder: {
       '@type': 'Person',
       name: 'Reda Kaouani',
+    },
+    sameAs: [PLAY_STORE_URL],
+  };
+}
+
+const APP_NAMES: Record<string, string> = {
+  fr: 'AutoDiag EU — Diagnostic auto',
+  en: 'AutoDiag EU — Car Diagnostics',
+  de: 'AutoDiag EU — Fahrzeugdiagnose',
+  es: 'AutoDiag EU — Diagnostico auto',
+  pt: 'AutoDiag EU — Diagnostico auto',
+};
+
+/**
+ * Build a SoftwareApplication schema for the AutoDiag EU Android app.
+ * Free tier = price "0" per Google's guidance.
+ */
+export function buildSoftwareApplicationSchema(
+  locale: string
+): SoftwareApplicationSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: APP_NAMES[locale] ?? APP_NAMES.en,
+    description: ORG_DESCRIPTIONS[locale] ?? ORG_DESCRIPTIONS.en,
+    operatingSystem: 'Android',
+    applicationCategory: 'UtilitiesApplication',
+    url: PLAY_STORE_URL,
+    image: `${SITE_URL}/images/icon-192.png`,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'EUR',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'AutoDiag EU Sarl',
+    },
+  };
+}
+
+/**
+ * Build a WebSite schema with SearchAction potentialAction
+ * so Google can show a sitelinks search box for autodiag-eu.com.
+ * The search target points to /{locale}/codes?q={query} (DTC search).
+ */
+export function buildWebSiteSchema(locale: string): WebSiteSchema {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'AutoDiag EU',
+    url: `${SITE_URL}/${locale}`,
+    inLanguage: locale,
+    publisher: {
+      '@type': 'Organization',
+      name: 'AutoDiag EU Sarl',
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/${locale}/codes?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
   };
 }
