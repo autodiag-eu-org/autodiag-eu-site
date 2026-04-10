@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { type FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function IOSWaitlist() {
+  const t = useTranslations("iosWaitlist");
   const [status, setStatus] = useState<Status>("idle");
   const [email, setEmail] = useState("");
 
@@ -50,10 +52,10 @@ export default function IOSWaitlist() {
         </svg>
 
         <h2 className="mt-4 text-xl font-bold sm:text-2xl">
-          iOS arrive <span className="text-gradient">bientot</span>
+          {t("title")} <span className="text-gradient">{t("titleAccent")}</span>
         </h2>
         <p className="mt-2 text-sm text-secondary">
-          Laissez votre email, on vous previent des le lancement
+          {t("subtitle")}
         </p>
 
         {status === "success" ? (
@@ -62,7 +64,7 @@ export default function IOSWaitlist() {
             animate={{ opacity: 1 }}
             className="mt-6 text-sm font-medium text-green"
           >
-            Vous serez prevenu des le lancement iOS !
+            {t("success")}
           </motion.p>
         ) : (
           <form
@@ -74,7 +76,7 @@ export default function IOSWaitlist() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="votre.email@example.com"
+              placeholder={t("emailPlaceholder")}
               className="flex-1 rounded-lg border border-border bg-surface px-4 py-2.5 text-white placeholder:text-secondary/50 focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan/30"
             />
             <button
@@ -82,20 +84,14 @@ export default function IOSWaitlist() {
               disabled={status === "loading"}
               className="shrink-0 rounded-lg bg-white/10 px-6 py-2.5 font-semibold text-white transition-colors hover:bg-white/20 disabled:opacity-60"
             >
-              {status === "loading" ? "..." : "Me notifier"}
+              {status === "loading" ? "..." : t("submit")}
             </button>
           </form>
         )}
 
         {status === "error" && (
           <p className="mt-3 text-sm text-red-400">
-            Erreur — reessayez ou contactez{" "}
-            <a
-              href="mailto:info@autodiag-eu.com"
-              className="underline hover:text-cyan"
-            >
-              info@autodiag-eu.com
-            </a>
+            {t("error")}
           </p>
         )}
       </motion.div>

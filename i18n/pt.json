@@ -213,12 +213,13 @@
     }
   },
   "iosWaitlist": {
-    "title": "Em breve no iPhone",
-    "subtitle": "A app chega ao iOS. Deixe o seu email para ser notificado.",
-    "emailPlaceholder": "seu@email.pt",
-    "submit": "Notificar-me",
-    "success": "Sera notificado assim que a versao iOS estiver disponivel!",
-    "error": "Erro ao inscrever-se."
+    "title": "iOS chega",
+    "subtitle": "Deixe o seu email e avisamo-lo quando lançarmos",
+    "emailPlaceholder": "seu.email@exemplo.pt",
+    "submit": "Avisar-me",
+    "success": "Sera avisado assim que o iOS estiver disponivel!",
+    "error": "Erro — tente novamente ou contacte info@autodiag-eu.com",
+    "titleAccent": "em breve"
   },
   "footer": {
     "tagline": "Diagnostico automovel inteligente",
@@ -824,5 +825,11 @@
     "ctaTitle": "Pronto para passar ao proximo nivel?",
     "ctaSubtitle": "Experimente a AutoDiag EU gratuitamente e descubra o que outras apps nao conseguem fazer.",
     "ctaButton": "Juntar-me a beta gratuita"
+  },
+  "testimonials": {
+    "title": "O que dizem os",
+    "titleAccent": "nossos utilizadores",
+    "comingSoonNote": "Opinioes disponiveis em breve — lançamos em abril de 2026",
+    "comingSoon": "Em breve disponivel"
   }
 }
