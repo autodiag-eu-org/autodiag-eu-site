@@ -58,6 +58,11 @@ import { ArticlePTPrepararIPO } from "./pt/preparar-ipo";
 import { ArticlePT5RuidosMotor } from "./pt/5-ruidos-motor";
 import { ArticlePTOBD2Compreender } from "./pt/obd2-compreender";
 import { ArticlePTAutodiagVsOficina } from "./pt/autodiag-vs-oficina";
+import { ArticlePTLuzMotorQueFazer } from "./pt/luz-motor-que-fazer";
+import { ArticlePTPrepararInspecao2026 } from "./pt/preparar-inspecao-2026";
+import { ArticlePT10CodigosErroEuropa } from "./pt/10-codigos-erro-europa";
+import { ArticlePTLerCodigosOBD2Telemovel } from "./pt/ler-codigos-obd2-telemovel";
+import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
 export const articleComponents: Record<string, () => JSX.Element> = {
   /* FR articles */
@@ -110,4 +115,9 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-ruidos-motor-nao-ignorar": ArticlePT5RuidosMotor,
   "obd2-compreender-em-5-minutos": ArticlePTOBD2Compreender,
   "autodiag-vs-oficina-poupancas": ArticlePTAutodiagVsOficina,
+  "luz-motor-acesa-o-que-fazer": ArticlePTLuzMotorQueFazer,
+  "preparar-inspecao-2026": ArticlePTPrepararInspecao2026,
+  "10-codigos-erro-frequentes-europa": ArticlePT10CodigosErroEuropa,
+  "ler-codigos-obd2-com-telemovel": ArticlePTLerCodigosOBD2Telemovel,
+  "custo-reparacao-catalisador-p0420": ArticlePTCustoCatalisadorP0420,
 };

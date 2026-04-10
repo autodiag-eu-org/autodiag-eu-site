@@ -460,6 +460,61 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- PT articles ---- */
   {
+    slug: "luz-motor-acesa-o-que-fazer",
+    title: "Luz do motor acesa: o que fazer?",
+    description:
+      "Guia passo a passo para a luz do motor acesa: cores, codigos de erro, reflexos imediatos e quando levar a oficina.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Guia pratico",
+    locale: "pt",
+  },
+  {
+    slug: "preparar-inspecao-2026",
+    title: "Preparar a inspecao 2026: guia completo",
+    description:
+      "Checklist 2026 para passar a IPO a primeira: pre-diagnostico OBD, emissoes diesel, travagem, iluminacao e reinspeccoes.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Guia IPO",
+    locale: "pt",
+  },
+  {
+    slug: "10-codigos-erro-frequentes-europa",
+    title: "Os 10 codigos de erro OBD2 mais frequentes na Europa",
+    description:
+      "Top 10 codigos de erro OBD2 em carros europeus: P0420, P0171, P0300 e mais 7. Causas, custos de reparacao e solucoes concretas.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Codigos erro",
+    locale: "pt",
+  },
+  {
+    slug: "ler-codigos-obd2-com-telemovel",
+    title: "Como ler codigos OBD2 com o telemovel",
+    description:
+      "Tutorial completo para ler os codigos de erro OBD2 do seu carro com um smartphone e um adaptador ELM327 de 25 euros. Passo a passo.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Tutorial",
+    locale: "pt",
+  },
+  {
+    slug: "custo-reparacao-catalisador-p0420",
+    title: "Custo de reparacao catalisador P0420",
+    description:
+      "Tabela de precos real 2026 para reparar um codigo P0420 em Portugal: sonda lambda, catalisador adaptavel, original, mao-de-obra e armadilhas a evitar.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Custos reparacao",
+    locale: "pt",
+  },
+  {
     slug: "como-ler-codigos-erro-obd2",
     title: "Como ler um codigo de erro OBD2 — guia completo",
     description:
@@ -542,30 +597,35 @@ const blogTranslationGroups: Array<Record<string, string>> = [
     en: "check-engine-light-what-to-do",
     de: "motorkontrollleuchte-leuchtet-was-tun",
     es: "testigo-motor-encendido-que-hacer",
+    pt: "luz-motor-acesa-o-que-fazer",
   },
   {
     fr: "preparer-controle-technique-2026",
     en: "mot-preparation-guide-2026",
     de: "tuev-vorbereitung-2026",
     es: "preparar-itv-2026",
+    pt: "preparar-inspecao-2026",
   },
   {
     fr: "10-codes-defaut-frequents-europe",
     en: "top-10-common-fault-codes-europe",
     de: "10-haeufigste-fehlercodes-europa",
     es: "10-codigos-averia-frecuentes-europa",
+    pt: "10-codigos-erro-frequentes-europa",
   },
   {
     fr: "lire-codes-obd2-telephone",
     en: "read-obd2-codes-phone",
     de: "obd2-codes-mit-handy-auslesen",
     es: "leer-codigos-obd2-con-movil",
+    pt: "ler-codigos-obd2-com-telemovel",
   },
   {
     fr: "cout-reparation-catalyseur-p0420",
     en: "p0420-catalytic-converter-cost",
     de: "katalysator-reparatur-kosten-p0420",
     es: "coste-reparacion-catalizador-p0420",
+    pt: "custo-reparacao-catalisador-p0420",
   },
   {
     fr: "comment-lire-code-defaut-obd2",
