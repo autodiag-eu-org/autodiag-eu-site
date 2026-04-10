@@ -16,6 +16,17 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "10-codes-defaut-frequents-europe",
+    title: "Les 10 codes defaut OBD2 les plus frequents en Europe",
+    description:
+      "Top 10 des codes defaut OBD2 rencontres en Europe : P0420, P0171, P0300 et 7 autres. Causes, couts de reparation et solutions concretes.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 11,
+    category: "Codes defaut",
+    locale: "fr",
+  },
+  {
     slug: "preparer-controle-technique-2026",
     title: "Preparer son controle technique 2026 : guide complet",
     description:
