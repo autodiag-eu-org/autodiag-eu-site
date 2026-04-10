@@ -9,7 +9,7 @@ export async function generateMetadata({
   params,
 }: MentionsLegalesPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
   return generatePageMetadata({
     title: isEn
       ? "Legal Notice — Impressum"
@@ -26,7 +26,7 @@ export default async function MentionsLegalesPage({
   params,
 }: MentionsLegalesPageProps) {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
 
   if (isEn) {
     return (

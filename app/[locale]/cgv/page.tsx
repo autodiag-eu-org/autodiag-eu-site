@@ -9,7 +9,7 @@ export async function generateMetadata({
   params,
 }: CGVPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
   return generatePageMetadata({
     title: isEn
       ? "Terms and Conditions"
@@ -24,7 +24,7 @@ export async function generateMetadata({
 
 export default async function CGVPage({ params }: CGVPageProps) {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
 
   if (isEn) {
     return (

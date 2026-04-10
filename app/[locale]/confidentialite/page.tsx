@@ -9,7 +9,7 @@ export async function generateMetadata({
   params,
 }: ConfidentialitePageProps): Promise<Metadata> {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
   return generatePageMetadata({
     title: isEn
       ? "Privacy Policy — UK GDPR & Swiss nDSG"
@@ -26,7 +26,7 @@ export default async function ConfidentialitePage({
   params,
 }: ConfidentialitePageProps) {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
 
   if (isEn) {
     return (

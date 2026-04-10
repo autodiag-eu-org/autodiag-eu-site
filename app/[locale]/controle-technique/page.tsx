@@ -10,7 +10,7 @@ export async function generateMetadata({
   params,
 }: CTPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
   return generatePageMetadata({
     title: isEn
       ? "Pre-MOT / Vehicle Inspection Check — CT, TUV, MFK, ITV, IPO, MOT"
@@ -25,7 +25,7 @@ export async function generateMetadata({
 
 export default async function ControleTechniquePage({ params }: CTPageProps) {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">

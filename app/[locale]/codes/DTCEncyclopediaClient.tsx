@@ -14,7 +14,7 @@ interface DTCEncyclopediaClientProps {
 function DTCEncyclopediaContent({ initialCodes, locale = "fr" }: DTCEncyclopediaClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("tous");
-  const isEn = locale === "en";
+  const isEn = locale !== "fr";
 
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
