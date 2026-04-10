@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { generateArticleMetadata } from "@/lib/seo";
 import { getBlogPost, getAllBlogParams, getBlogAlternates } from "@/lib/blog";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
+import { ArticleVoyantMoteurQueFaire } from "./fr-articles-v2";
 import {
   ArticleTop10MOTFailureReasons,
   ArticleHowToPrepareCarForMOT,
@@ -1656,6 +1657,7 @@ function ArticleAutodiagVsGarage() {
 
 const articleComponents: Record<string, () => React.JSX.Element> = {
   /* FR articles */
+  "voyant-moteur-allume-que-faire": ArticleVoyantMoteurQueFaire,
   "comment-lire-code-defaut-obd2": ArticleCommentLireCodeDefautOBD2,
   "preparer-controle-technique": ArticlePreparerControleTechnique,
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,

@@ -16,6 +16,17 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   /* ---- FR articles ---- */
   {
+    slug: "voyant-moteur-allume-que-faire",
+    title: "Voyant moteur allume : que faire ?",
+    description:
+      "Guide complet pour reagir face a un voyant moteur allume : couleurs, codes defaut, reflexes immediats et cas ou aller au garage.",
+    date: "2026-04-10",
+    author: "Reda Kaouani",
+    readingTime: 8,
+    category: "Guide pratique",
+    locale: "fr",
+  },
+  {
     slug: "comment-lire-code-defaut-obd2",
     title: "Comment lire un code defaut OBD2 — guide complet",
     description:
