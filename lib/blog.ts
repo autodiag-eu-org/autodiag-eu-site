@@ -479,6 +479,72 @@ export const blogPosts: BlogPost[] = [
   },
   /* ---- EN articles ---- */
   {
+    slug: "triple-diagnosis-sound-vision-obd2-work-together",
+    title: "Triple diagnosis: how sound, vision and OBD2 work together",
+    description:
+      "Sound scanning hears what OBD2 ignores, Vision AI sees what sound misses, fault codes confirm what the other two suspect. Three sources, one truth.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Technology",
+    locale: "en",
+  },
+  {
+    slug: "why-obd2-scanner-alone-not-enough-2026",
+    title: "Why an OBD2 scanner alone is not enough in 2026",
+    description:
+      "35 to 45% of modern mechanical faults never trigger a DTC. Bearings, suspension, turbo leaks: everything the ECU does not see.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Strategy",
+    locale: "en",
+  },
+  {
+    slug: "future-car-diagnostics-already-in-your-pocket",
+    title: "The future of car diagnostics is already in your pocket",
+    description:
+      "Microphone, camera, accelerometer, GPS: six sensors your smartphone already has and which, with the right algorithms, replace a professional diagnostic tool.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Technology",
+    locale: "en",
+  },
+  {
+    slug: "autodiag-eu-vs-traditional-tools-comparison",
+    title: "AutoDiag EU versus traditional tools: an honest comparison",
+    description:
+      "Torque Pro, Car Scanner, EOBD Facile, Bosch KTS, Launch X431: what each does well and what only AutoDiag EU offers (SVM sound scanning and Vision AI).",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Comparison",
+    locale: "en",
+  },
+  {
+    slug: "vehicle-health-score-how-we-calculate-rating",
+    title: "Vehicle health score: how we calculate your rating out of 100",
+    description:
+      "Start at 100, confidence-weighted penalties, OBD2 plus sound plus vision fusion, timeline archived. Full transparency on the algorithm.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 9,
+    category: "Technology",
+    locale: "en",
+  },
+  {
+    slug: "preventive-diagnostics-save-thousands-per-year",
+    title: "Preventive diagnostics: how to save thousands of pounds per year",
+    description:
+      "5 priced real cases: lambda, timing, turbo, shocks, injectors. Concrete yearly ledger: 650 GBP spent, 3220 GBP saved, net margin 2570 GBP.",
+    date: "2026-04-14",
+    author: "Reda Kaouani",
+    readingTime: 10,
+    category: "Savings",
+    locale: "en",
+  },
+  {
     slug: "vision-ai-detect-leaks-under-car-with-phone",
     title: "Vision AI: spot the leak under your car with just a phone",
     description:
@@ -1232,21 +1298,27 @@ export function getAllBlogParams(): { locale: string; slug: string }[] {
 const blogTranslationGroups: Array<Record<string, string>> = [
   {
     fr: "triple-diagnostic-son-vision-obd2-se-completent",
+    en: "triple-diagnosis-sound-vision-obd2-work-together",
   },
   {
     fr: "pourquoi-scanner-obd2-seul-ne-suffit-plus-2026",
+    en: "why-obd2-scanner-alone-not-enough-2026",
   },
   {
     fr: "diagnostic-automobile-futur-dans-votre-poche",
+    en: "future-car-diagnostics-already-in-your-pocket",
   },
   {
     fr: "autodiag-eu-vs-outils-traditionnels-comparaison",
+    en: "autodiag-eu-vs-traditional-tools-comparison",
   },
   {
     fr: "score-sante-vehicule-comment-calculer-note-100",
+    en: "vehicle-health-score-how-we-calculate-rating",
   },
   {
     fr: "diagnostic-preventif-economiser-milliers-euros",
+    en: "preventive-diagnostics-save-thousands-per-year",
   },
   {
     fr: "vision-ia-detecter-fuites-sous-voiture-telephone",

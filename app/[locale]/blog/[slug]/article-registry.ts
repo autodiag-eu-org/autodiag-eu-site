@@ -54,6 +54,14 @@ import { Article5BruitsMoteur } from "./fr/5-bruits-moteur";
 import { ArticleOBD2Comprendre } from "./fr/obd2-comprendre";
 import { ArticleAutodiagVsGarage } from "./fr/autodiag-vs-garage";
 
+/* EN combined tech series */
+import { ArticleTripleDiagnosisTech } from "./en/triple-diagnosis-sound-vision-obd2-work-together";
+import { ArticleOBD2AloneNotEnough } from "./en/why-obd2-scanner-alone-not-enough-2026";
+import { ArticleFutureCarDiagnosticsPocket } from "./en/future-car-diagnostics-already-in-your-pocket";
+import { ArticleAutoDiagVsTraditionalTools } from "./en/autodiag-eu-vs-traditional-tools-comparison";
+import { ArticleVehicleHealthScore } from "./en/vehicle-health-score-how-we-calculate-rating";
+import { ArticlePreventiveDiagnosticsSavings } from "./en/preventive-diagnostics-save-thousands-per-year";
+
 /* EN vision AI series */
 import { ArticleVisionLeaksUnderCar } from "./en/vision-ai-detect-leaks-under-car-with-phone";
 import { ArticleTyreWearAI } from "./en/premature-tyre-wear-ai-sees-what-you-dont-notice";
@@ -183,6 +191,13 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "5-bruits-moteur-a-ne-pas-ignorer": Article5BruitsMoteur,
   "obd2-comprendre-en-5-minutes": ArticleOBD2Comprendre,
   "autodiag-vs-garage-economies": ArticleAutodiagVsGarage,
+  /* EN combined tech series */
+  "triple-diagnosis-sound-vision-obd2-work-together": ArticleTripleDiagnosisTech,
+  "why-obd2-scanner-alone-not-enough-2026": ArticleOBD2AloneNotEnough,
+  "future-car-diagnostics-already-in-your-pocket": ArticleFutureCarDiagnosticsPocket,
+  "autodiag-eu-vs-traditional-tools-comparison": ArticleAutoDiagVsTraditionalTools,
+  "vehicle-health-score-how-we-calculate-rating": ArticleVehicleHealthScore,
+  "preventive-diagnostics-save-thousands-per-year": ArticlePreventiveDiagnosticsSavings,
   /* EN vision AI series */
   "vision-ai-detect-leaks-under-car-with-phone": ArticleVisionLeaksUnderCar,
   "premature-tyre-wear-ai-sees-what-you-dont-notice": ArticleTyreWearAI,
