@@ -200,6 +200,42 @@ import { ArticlePTScanearMatricula } from "./pt/scanear-matricula-identificacao-
 import { ArticlePTSonsInaudiveis } from "./pt/sons-inaudiveis-ia-deteta-o-que-ouvido-nao-consegue";
 import { ArticlePTTurboAAssobiar } from "./pt/turbo-a-assobiar-avaria-ou-normal";
 
+/* DE translations batch 2 (10 articles) */
+import { ArticleDE7Innenraumgeraeusche } from "./de/7-innenraumgeraeusche-niemals-ignorieren";
+import { ArticleDEVorbeugendeKlangpruefung } from "./de/vorbeugende-klangpruefung-kaskadenrechnung-vermeiden";
+import { ArticleDEDreifachdiagnose } from "./de/dreifachdiagnose-klang-vision-obd2-ergaenzen-sich";
+import { ArticleDEMotorschadenVermeiden } from "./de/motorschaden-vermeiden-vorbeugende-klangdiagnose";
+import { ArticleDEVorzeitigerReifenverschleiss } from "./de/vorzeitiger-reifenverschleiss-ki-sieht-was-sie-nicht-bemerken";
+import { ArticleDEOellampeLeuchtet } from "./de/oellampe-leuchtet-weiterfahren-oder-stoppen";
+import { ArticleDEUnsichtbarerVerschleiss } from "./de/unsichtbarer-verschleiss-ein-teil-zerstoert-ein-anderes";
+import { ArticleDEMotorKlopfgeraeusch } from "./de/motor-klopfgeraeusch-ursachen-ki-diagnose";
+import { ArticleDETeuerstePannen2026 } from "./de/teuerste-pannen-2026-wie-vermeiden";
+import { ArticleDEAutodiagVsHerkoemmlicheWerkzeuge } from "./de/autodiag-eu-vs-herkoemmliche-werkzeuge-vergleich";
+
+/* ES translations batch 2 (10 articles) */
+import { ArticleES7RuidosHabitaculo } from "./es/7-ruidos-habitaculo-nunca-ignorar";
+import { ArticleESControlPreventivoSonido } from "./es/control-preventivo-sonido-evitar-factura-cascada";
+import { ArticleESTripleDiagnostico } from "./es/triple-diagnostico-sonido-vision-obd2-se-complementan";
+import { ArticleESPrevenirRoturaMotor } from "./es/prevenir-rotura-motor-diagnostico-sonoro-preventivo";
+import { ArticleESDesgastePrematuroNeumaticos } from "./es/desgaste-prematuro-neumaticos-ia-ve-lo-que-no-notas";
+import { ArticleESTestigoAceite } from "./es/testigo-aceite-encendido-seguir-o-parar";
+import { ArticleESDesgasteInvisible } from "./es/desgaste-invisible-pieza-cansada-dana-otra";
+import { ArticleESGolpeteoMotor } from "./es/golpeteo-motor-causas-diagnostico-ia";
+import { ArticleESAveriasMasCaras2026 } from "./es/averias-mas-caras-2026-como-evitarlas";
+import { ArticleESAutodiagVsTradicionales } from "./es/autodiag-eu-vs-herramientas-tradicionales-comparacion";
+
+/* PT translations batch 2 (10 articles) */
+import { ArticlePT7RuidosHabitaculo } from "./pt/7-ruidos-interior-carro-nao-ignorar";
+import { ArticlePTControloPreventivoSom } from "./pt/controlo-preventivo-som-evitar-fatura-cascata";
+import { ArticlePTTriploDiagnostico } from "./pt/triplo-diagnostico-som-visao-obd2-completam-se";
+import { ArticlePTPrevenirAvariaMotor } from "./pt/prevenir-avaria-motor-diagnostico-sonoro-preventivo";
+import { ArticlePTDesgastePrematuroPneus } from "./pt/desgaste-prematuro-pneus-ia-ve-o-que-nao-nota";
+import { ArticlePTLuzOleoAcesa } from "./pt/luz-oleo-acesa-continuar-ou-parar";
+import { ArticlePTDesgasteInvisivel } from "./pt/desgaste-invisivel-peca-cansada-danifica-outra";
+import { ArticlePTBatidaMotor } from "./pt/batida-motor-causas-diagnostico-ia";
+import { ArticlePTAvariasMaisCaras2026 } from "./pt/avarias-mais-caras-2026-como-evitar";
+import { ArticlePTAutodiagVsTradicionais } from "./pt/autodiag-eu-vs-ferramentas-tradicionais-comparacao";
+
 export const articleComponents: Record<string, () => JSX.Element> = {
   /* FR SEO long-tail series */
   "preparer-controle-technique-diesel-2026-guide": ArticlePreparerCTDiesel2026,
@@ -374,4 +410,37 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "scanear-matricula-identificacao-instantanea-veiculo": ArticlePTScanearMatricula,
   "sons-inaudiveis-ia-deteta-o-que-ouvido-nao-consegue": ArticlePTSonsInaudiveis,
   "turbo-a-assobiar-avaria-ou-normal": ArticlePTTurboAAssobiar,
+  /* DE batch 2 */
+  "7-innenraumgeraeusche-niemals-ignorieren": ArticleDE7Innenraumgeraeusche,
+  "vorbeugende-klangpruefung-kaskadenrechnung-vermeiden": ArticleDEVorbeugendeKlangpruefung,
+  "dreifachdiagnose-klang-vision-obd2-ergaenzen-sich": ArticleDEDreifachdiagnose,
+  "motorschaden-vermeiden-vorbeugende-klangdiagnose": ArticleDEMotorschadenVermeiden,
+  "vorzeitiger-reifenverschleiss-ki-sieht-was-sie-nicht-bemerken": ArticleDEVorzeitigerReifenverschleiss,
+  "oellampe-leuchtet-weiterfahren-oder-stoppen": ArticleDEOellampeLeuchtet,
+  "unsichtbarer-verschleiss-ein-teil-zerstoert-ein-anderes": ArticleDEUnsichtbarerVerschleiss,
+  "motor-klopfgeraeusch-ursachen-ki-diagnose": ArticleDEMotorKlopfgeraeusch,
+  "teuerste-pannen-2026-wie-vermeiden": ArticleDETeuerstePannen2026,
+  "autodiag-eu-vs-herkoemmliche-werkzeuge-vergleich": ArticleDEAutodiagVsHerkoemmlicheWerkzeuge,
+  /* ES batch 2 */
+  "7-ruidos-habitaculo-nunca-ignorar": ArticleES7RuidosHabitaculo,
+  "control-preventivo-sonido-evitar-factura-cascada": ArticleESControlPreventivoSonido,
+  "triple-diagnostico-sonido-vision-obd2-se-complementan": ArticleESTripleDiagnostico,
+  "prevenir-rotura-motor-diagnostico-sonoro-preventivo": ArticleESPrevenirRoturaMotor,
+  "desgaste-prematuro-neumaticos-ia-ve-lo-que-no-notas": ArticleESDesgastePrematuroNeumaticos,
+  "testigo-aceite-encendido-seguir-o-parar": ArticleESTestigoAceite,
+  "desgaste-invisible-pieza-cansada-dana-otra": ArticleESDesgasteInvisible,
+  "golpeteo-motor-causas-diagnostico-ia": ArticleESGolpeteoMotor,
+  "averias-mas-caras-2026-como-evitarlas": ArticleESAveriasMasCaras2026,
+  "autodiag-eu-vs-herramientas-tradicionales-comparacion": ArticleESAutodiagVsTradicionales,
+  /* PT batch 2 */
+  "7-ruidos-interior-carro-nao-ignorar": ArticlePT7RuidosHabitaculo,
+  "controlo-preventivo-som-evitar-fatura-cascata": ArticlePTControloPreventivoSom,
+  "triplo-diagnostico-som-visao-obd2-completam-se": ArticlePTTriploDiagnostico,
+  "prevenir-avaria-motor-diagnostico-sonoro-preventivo": ArticlePTPrevenirAvariaMotor,
+  "desgaste-prematuro-pneus-ia-ve-o-que-nao-nota": ArticlePTDesgastePrematuroPneus,
+  "luz-oleo-acesa-continuar-ou-parar": ArticlePTLuzOleoAcesa,
+  "desgaste-invisivel-peca-cansada-danifica-outra": ArticlePTDesgasteInvisivel,
+  "batida-motor-causas-diagnostico-ia": ArticlePTBatidaMotor,
+  "avarias-mais-caras-2026-como-evitar": ArticlePTAvariasMaisCaras2026,
+  "autodiag-eu-vs-ferramentas-tradicionais-comparacao": ArticlePTAutodiagVsTradicionais,
 };
