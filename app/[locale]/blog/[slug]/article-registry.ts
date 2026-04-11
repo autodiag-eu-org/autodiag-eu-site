@@ -236,6 +236,42 @@ import { ArticlePTBatidaMotor } from "./pt/batida-motor-causas-diagnostico-ia";
 import { ArticlePTAvariasMaisCaras2026 } from "./pt/avarias-mais-caras-2026-como-evitar";
 import { ArticlePTAutodiagVsTradicionais } from "./pt/autodiag-eu-vs-ferramentas-tradicionais-comparacao";
 
+/* DE translations batch 3 (10 articles) */
+import { ArticleDEDieselTUVVorbereitung2026 } from "./de/diesel-tuev-vorbereitung-2026-leitfaden";
+import { ArticleDEGebrauchtwagenKaufen } from "./de/gebrauchtwagen-kaufen-wichtige-pruefungen";
+import { ArticleDEHoherKraftstoffverbrauch } from "./de/hoher-kraftstoffverbrauch-ursachen-obd2";
+import { ArticleDEVerstopfterKatalysator } from "./de/verstopfter-katalysator-symptome-diagnose-loesungen";
+import { ArticleDEAutobatterieSchwaeche } from "./de/autobatterie-schwaechezeichen-vor-ausfall";
+import { ArticleDEDiagnoseZukunftTasche } from "./de/kfz-diagnose-zukunft-in-ihrer-tasche";
+import { ArticleDEFahrzeugGesundheitsscore } from "./de/fahrzeug-gesundheitsscore-berechnung-100-punkte";
+import { ArticleDEVorbeugendeDiagnose } from "./de/vorbeugende-diagnose-tausende-euro-sparen";
+import { ArticleDEKIVisionLeckagen } from "./de/ki-vision-leckagen-unter-auto-mit-handy-erkennen";
+import { ArticleDEKorrosionKIVision } from "./de/korrosion-rost-ki-vision-vor-tuev-erkennen";
+
+/* ES translations batch 3 (10 articles) */
+import { ArticleESPrepararITVDiesel2026 } from "./es/preparar-itv-diesel-2026-guia";
+import { ArticleESComprarSegundaManoVerifs } from "./es/comprar-coche-segunda-mano-verificaciones-esenciales";
+import { ArticleESConsumoExcesivoCombustible } from "./es/consumo-excesivo-combustible-causas-obd2";
+import { ArticleESCatalizadorObstruido } from "./es/catalizador-obstruido-sintomas-diagnostico-soluciones";
+import { ArticleESBateriaDebilidad } from "./es/bateria-coche-signos-debilidad-antes-averia";
+import { ArticleESDiagnosticoFuturoBolsillo } from "./es/diagnostico-automovil-futuro-en-tu-bolsillo";
+import { ArticleESPuntuacionSaludVehiculo } from "./es/puntuacion-salud-vehiculo-calculo-nota-100";
+import { ArticleESDiagnosticoPreventivo } from "./es/diagnostico-preventivo-ahorrar-miles-euros";
+import { ArticleESVisionFugasBajoCoche } from "./es/vision-ia-detectar-fugas-bajo-coche-movil";
+import { ArticleESCorrosionVisionIA } from "./es/detectar-corrosion-oxido-vision-ia-antes-itv";
+
+/* PT translations batch 3 (10 articles) */
+import { ArticlePTPrepararIPODiesel2026 } from "./pt/preparar-ipo-diesel-2026-guia";
+import { ArticlePTComprarUsadoVerifs } from "./pt/comprar-carro-usado-verificacoes-essenciais";
+import { ArticlePTConsumoExcessivoCombustivel } from "./pt/consumo-excessivo-combustivel-causas-obd2";
+import { ArticlePTCatalisadorEntupido } from "./pt/catalisador-entupido-sintomas-diagnostico-solucoes";
+import { ArticlePTBateriaFraqueza } from "./pt/bateria-carro-sinais-fraqueza-antes-avaria";
+import { ArticlePTDiagnosticoFuturoBolso } from "./pt/diagnostico-automovel-futuro-no-seu-bolso";
+import { ArticlePTPontuacaoSaudeVeiculo } from "./pt/pontuacao-saude-veiculo-calculo-nota-100";
+import { ArticlePTDiagnosticoPreventivo } from "./pt/diagnostico-preventivo-poupar-milhares-euros";
+import { ArticlePTVisaoIAFugasSobCarro } from "./pt/visao-ia-detetar-fugas-sob-carro-telemovel";
+import { ArticlePTCorrosaoVisaoIA } from "./pt/detetar-corrosao-ferrugem-visao-ia-antes-ipo";
+
 export const articleComponents: Record<string, () => JSX.Element> = {
   /* FR SEO long-tail series */
   "preparer-controle-technique-diesel-2026-guide": ArticlePreparerCTDiesel2026,
@@ -443,4 +479,37 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "batida-motor-causas-diagnostico-ia": ArticlePTBatidaMotor,
   "avarias-mais-caras-2026-como-evitar": ArticlePTAvariasMaisCaras2026,
   "autodiag-eu-vs-ferramentas-tradicionais-comparacao": ArticlePTAutodiagVsTradicionais,
+  /* DE batch 3 */
+  "diesel-tuev-vorbereitung-2026-leitfaden": ArticleDEDieselTUVVorbereitung2026,
+  "gebrauchtwagen-kaufen-wichtige-pruefungen": ArticleDEGebrauchtwagenKaufen,
+  "hoher-kraftstoffverbrauch-ursachen-obd2": ArticleDEHoherKraftstoffverbrauch,
+  "verstopfter-katalysator-symptome-diagnose-loesungen": ArticleDEVerstopfterKatalysator,
+  "autobatterie-schwaechezeichen-vor-ausfall": ArticleDEAutobatterieSchwaeche,
+  "kfz-diagnose-zukunft-in-ihrer-tasche": ArticleDEDiagnoseZukunftTasche,
+  "fahrzeug-gesundheitsscore-berechnung-100-punkte": ArticleDEFahrzeugGesundheitsscore,
+  "vorbeugende-diagnose-tausende-euro-sparen": ArticleDEVorbeugendeDiagnose,
+  "ki-vision-leckagen-unter-auto-mit-handy-erkennen": ArticleDEKIVisionLeckagen,
+  "korrosion-rost-ki-vision-vor-tuev-erkennen": ArticleDEKorrosionKIVision,
+  /* ES batch 3 */
+  "preparar-itv-diesel-2026-guia": ArticleESPrepararITVDiesel2026,
+  "comprar-coche-segunda-mano-verificaciones-esenciales": ArticleESComprarSegundaManoVerifs,
+  "consumo-excesivo-combustible-causas-obd2": ArticleESConsumoExcesivoCombustible,
+  "catalizador-obstruido-sintomas-diagnostico-soluciones": ArticleESCatalizadorObstruido,
+  "bateria-coche-signos-debilidad-antes-averia": ArticleESBateriaDebilidad,
+  "diagnostico-automovil-futuro-en-tu-bolsillo": ArticleESDiagnosticoFuturoBolsillo,
+  "puntuacion-salud-vehiculo-calculo-nota-100": ArticleESPuntuacionSaludVehiculo,
+  "diagnostico-preventivo-ahorrar-miles-euros": ArticleESDiagnosticoPreventivo,
+  "vision-ia-detectar-fugas-bajo-coche-movil": ArticleESVisionFugasBajoCoche,
+  "detectar-corrosion-oxido-vision-ia-antes-itv": ArticleESCorrosionVisionIA,
+  /* PT batch 3 */
+  "preparar-ipo-diesel-2026-guia": ArticlePTPrepararIPODiesel2026,
+  "comprar-carro-usado-verificacoes-essenciais": ArticlePTComprarUsadoVerifs,
+  "consumo-excessivo-combustivel-causas-obd2": ArticlePTConsumoExcessivoCombustivel,
+  "catalisador-entupido-sintomas-diagnostico-solucoes": ArticlePTCatalisadorEntupido,
+  "bateria-carro-sinais-fraqueza-antes-avaria": ArticlePTBateriaFraqueza,
+  "diagnostico-automovel-futuro-no-seu-bolso": ArticlePTDiagnosticoFuturoBolso,
+  "pontuacao-saude-veiculo-calculo-nota-100": ArticlePTPontuacaoSaudeVeiculo,
+  "diagnostico-preventivo-poupar-milhares-euros": ArticlePTDiagnosticoPreventivo,
+  "visao-ia-detetar-fugas-sob-carro-telemovel": ArticlePTVisaoIAFugasSobCarro,
+  "detetar-corrosao-ferrugem-visao-ia-antes-ipo": ArticlePTCorrosaoVisaoIA,
 };
