@@ -272,6 +272,42 @@ import { ArticlePTDiagnosticoPreventivo } from "./pt/diagnostico-preventivo-poup
 import { ArticlePTVisaoIAFugasSobCarro } from "./pt/visao-ia-detetar-fugas-sob-carro-telemovel";
 import { ArticlePTCorrosaoVisaoIA } from "./pt/detetar-corrosao-ferrugem-visao-ia-antes-ipo";
 
+/* DE batch 4 */
+import { ArticleDECheckup5Punkte } from "./de/ki-sichtpruefung-5-punkte-gesundes-fahrzeug";
+import { ArticleDEFluessigkeitFarbeVerraet } from "./de/oel-bremsfluessigkeit-kuehlmittel-farbe-verraet-defekt";
+import { ArticleDEVINScannen } from "./de/vin-scannen-komplette-fahrzeughistorie-dekodieren";
+import { ArticleDEBremsbelagVerschleissKI } from "./de/bremsbelag-bremsscheiben-verschleiss-ki-vision-erkennt";
+import { ArticleDEMotorSpricht } from "./de/ihr-motor-spricht-ki-pannenerkennung-durch-klang";
+import { ArticleDE11PannenKlang } from "./de/11-motorpannen-erkennbar-durch-klanganalyse";
+import { ArticleDEZahnriemenKlang } from "./de/verschlissener-zahnriemen-durch-klang-erkennen";
+import { ArticleDEMotorlagerMuede } from "./de/muedes-motorlager-ki-hoert-es";
+import { ArticleDEWieSVMFunktioniert } from "./de/wie-svm-funktioniert-technologie-hinter-klangscan";
+import { ArticleDEDieselVsBenziner } from "./de/diesel-vs-benziner-ki-klangdiagnose-unterschiede";
+
+/* ES batch 4 */
+import { ArticleESChequeo5Puntos } from "./es/chequeo-visual-ia-5-puntos-vehiculo-sano";
+import { ArticleESFugaColorRevela } from "./es/fuga-aceite-liquido-frenos-refrigerante-color-revela-averia";
+import { ArticleESEscanearVIN } from "./es/escanear-vin-decodificar-historial-completo-coche";
+import { ArticleESDesgastePastillasVision } from "./es/desgaste-pastillas-discos-vision-ia-detecta";
+import { ArticleESMotorHabla } from "./es/tu-motor-habla-deteccion-averias-por-sonido";
+import { ArticleES11AveriasSonoras } from "./es/11-averias-motor-detectables-analisis-sonoro";
+import { ArticleESCorreaDistribucionSonido } from "./es/correa-distribucion-desgastada-detectar-por-sonido";
+import { ArticleESRodamientoMotorFatigado } from "./es/rodamiento-motor-fatigado-ia-lo-escucha";
+import { ArticleESComoFuncionaSVM } from "./es/como-funciona-svm-tecnologia-escaneo-sonoro";
+import { ArticleESDieselVsGasolinaSon } from "./es/diesel-vs-gasolina-diagnostico-sonoro-ia-diferencias";
+
+/* PT batch 4 */
+import { ArticlePTCheckup5Pontos } from "./pt/checkup-visual-ia-5-pontos-veiculo-saudavel";
+import { ArticlePTFugaCorRevela } from "./pt/fuga-oleo-liquido-travoes-refrigerante-cor-revela-avaria";
+import { ArticlePTScanearVIN } from "./pt/scanear-vin-descodificar-historico-completo-carro";
+import { ArticlePTDesgastePastilhasVisao } from "./pt/desgaste-pastilhas-discos-visao-ia-deteta";
+import { ArticlePTMotorFala } from "./pt/o-seu-motor-fala-detecao-avarias-por-som";
+import { ArticlePT11AvariasSonoras } from "./pt/11-avarias-motor-detetaveis-analise-sonora";
+import { ArticlePTCorreiaDistribuicaoSom } from "./pt/correia-distribuicao-gasta-detetar-pelo-som";
+import { ArticlePTChumaceiraFatigada } from "./pt/chumaceira-motor-fatigada-ia-ouve-a";
+import { ArticlePTComoFuncionaSVM } from "./pt/como-funciona-svm-tecnologia-scan-sonoro";
+import { ArticlePTDieselVsGasolinaSom } from "./pt/diesel-vs-gasolina-diagnostico-sonoro-ia-diferencas";
+
 export const articleComponents: Record<string, () => JSX.Element> = {
   /* FR SEO long-tail series */
   "preparer-controle-technique-diesel-2026-guide": ArticlePreparerCTDiesel2026,
@@ -512,4 +548,37 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "diagnostico-preventivo-poupar-milhares-euros": ArticlePTDiagnosticoPreventivo,
   "visao-ia-detetar-fugas-sob-carro-telemovel": ArticlePTVisaoIAFugasSobCarro,
   "detetar-corrosao-ferrugem-visao-ia-antes-ipo": ArticlePTCorrosaoVisaoIA,
+  /* DE batch 4 */
+  "ki-sichtpruefung-5-punkte-gesundes-fahrzeug": ArticleDECheckup5Punkte,
+  "oel-bremsfluessigkeit-kuehlmittel-farbe-verraet-defekt": ArticleDEFluessigkeitFarbeVerraet,
+  "vin-scannen-komplette-fahrzeughistorie-dekodieren": ArticleDEVINScannen,
+  "bremsbelag-bremsscheiben-verschleiss-ki-vision-erkennt": ArticleDEBremsbelagVerschleissKI,
+  "ihr-motor-spricht-ki-pannenerkennung-durch-klang": ArticleDEMotorSpricht,
+  "11-motorpannen-erkennbar-durch-klanganalyse": ArticleDE11PannenKlang,
+  "verschlissener-zahnriemen-durch-klang-erkennen": ArticleDEZahnriemenKlang,
+  "muedes-motorlager-ki-hoert-es": ArticleDEMotorlagerMuede,
+  "wie-svm-funktioniert-technologie-hinter-klangscan": ArticleDEWieSVMFunktioniert,
+  "diesel-vs-benziner-ki-klangdiagnose-unterschiede": ArticleDEDieselVsBenziner,
+  /* ES batch 4 */
+  "chequeo-visual-ia-5-puntos-vehiculo-sano": ArticleESChequeo5Puntos,
+  "fuga-aceite-liquido-frenos-refrigerante-color-revela-averia": ArticleESFugaColorRevela,
+  "escanear-vin-decodificar-historial-completo-coche": ArticleESEscanearVIN,
+  "desgaste-pastillas-discos-vision-ia-detecta": ArticleESDesgastePastillasVision,
+  "tu-motor-habla-deteccion-averias-por-sonido": ArticleESMotorHabla,
+  "11-averias-motor-detectables-analisis-sonoro": ArticleES11AveriasSonoras,
+  "correa-distribucion-desgastada-detectar-por-sonido": ArticleESCorreaDistribucionSonido,
+  "rodamiento-motor-fatigado-ia-lo-escucha": ArticleESRodamientoMotorFatigado,
+  "como-funciona-svm-tecnologia-escaneo-sonoro": ArticleESComoFuncionaSVM,
+  "diesel-vs-gasolina-diagnostico-sonoro-ia-diferencias": ArticleESDieselVsGasolinaSon,
+  /* PT batch 4 */
+  "checkup-visual-ia-5-pontos-veiculo-saudavel": ArticlePTCheckup5Pontos,
+  "fuga-oleo-liquido-travoes-refrigerante-cor-revela-avaria": ArticlePTFugaCorRevela,
+  "scanear-vin-descodificar-historico-completo-carro": ArticlePTScanearVIN,
+  "desgaste-pastilhas-discos-visao-ia-deteta": ArticlePTDesgastePastilhasVisao,
+  "o-seu-motor-fala-detecao-avarias-por-som": ArticlePTMotorFala,
+  "11-avarias-motor-detetaveis-analise-sonora": ArticlePT11AvariasSonoras,
+  "correia-distribuicao-gasta-detetar-pelo-som": ArticlePTCorreiaDistribuicaoSom,
+  "chumaceira-motor-fatigada-ia-ouve-a": ArticlePTChumaceiraFatigada,
+  "como-funciona-svm-tecnologia-scan-sonoro": ArticlePTComoFuncionaSVM,
+  "diesel-vs-gasolina-diagnostico-sonoro-ia-diferencas": ArticlePTDieselVsGasolinaSom,
 };
