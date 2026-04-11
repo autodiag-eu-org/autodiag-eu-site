@@ -164,6 +164,42 @@ import { ArticlePT10CodigosErroEuropa } from "./pt/10-codigos-erro-europa";
 import { ArticlePTLerCodigosOBD2Telemovel } from "./pt/ler-codigos-obd2-telemovel";
 import { ArticlePTCustoCatalisadorP0420 } from "./pt/custo-catalisador-p0420";
 
+/* DE translations batch 10 articles */
+import { ArticleDERadlagergeraeusch } from "./de/radlagergeraeusch-vor-tuev-erkennen";
+import { ArticleDELueftungspfeifen } from "./de/lueftungspfeifen-klimaanlage-diagnose";
+import { ArticleDEBremsenquietschen } from "./de/bremsenquietschen-normal-oder-gefahr";
+import { ArticleDELenkungsklopfen } from "./de/lenkungsklopfen-traggelenk-lenkgetriebe-antriebswelle";
+import { ArticleDEFahrwerksgeraeusch } from "./de/fahrwerksgeraeusch-ki-erkennt-stossdaempfer";
+import { ArticleDEESPLeuchte } from "./de/esp-leuchte-ursachen-reparaturkosten";
+import { ArticleDEOBD2Unzureichend2026 } from "./de/warum-obd2-scanner-allein-nicht-mehr-ausreicht-2026";
+import { ArticleDEKennzeichenScannen } from "./de/kennzeichen-scannen-sofortige-fahrzeugidentifikation";
+import { ArticleDESonsInaudibles } from "./de/unhoerbare-geraeusche-ki-erkennt-was-ohr-nicht-hoert";
+import { ArticleDETurboPfeift } from "./de/pfeifender-turbo-defekt-oder-normal";
+
+/* ES translations batch 10 articles */
+import { ArticleESRodamientoRueda } from "./es/ruido-rodamiento-rueda-antes-itv";
+import { ArticleESSilbidoVentilacion } from "./es/silbido-ventilacion-diagnostico-climatizacion";
+import { ArticleESChirridoFrenos } from "./es/chirrido-frenos-desgaste-normal-o-peligro";
+import { ArticleESGolpeteoDireccion } from "./es/golpeteo-direccion-rotula-cremallera-junta";
+import { ArticleESRuidoSuspension } from "./es/ruido-suspension-ia-identifica-amortiguador";
+import { ArticleESTestigoESP } from "./es/testigo-esp-encendido-causas-coste-reparacion";
+import { ArticleESOBD2NoBasta2026 } from "./es/por-que-escaner-obd2-solo-no-basta-2026";
+import { ArticleESEscanearMatricula } from "./es/escanear-matricula-identificacion-instantanea-vehiculo";
+import { ArticleESSonidosInaudibles } from "./es/sonidos-inaudibles-ia-detecta-lo-que-oido-no-puede";
+import { ArticleESTurboSilbando } from "./es/turbo-silbando-averia-o-normal";
+
+/* PT translations batch 10 articles */
+import { ArticlePTRolamentoRoda } from "./pt/ruido-rolamento-roda-antes-ipo";
+import { ArticlePTAssobioVentilacao } from "./pt/assobio-ventilacao-diagnostico-climatizacao";
+import { ArticlePTChiarTravoes } from "./pt/chiar-travoes-desgaste-normal-ou-perigo";
+import { ArticlePTBatidaDirecao } from "./pt/batida-direcao-rotula-cremalheira-semi-eixo";
+import { ArticlePTRuidoSuspensao } from "./pt/ruido-suspensao-ia-identifica-amortecedor";
+import { ArticlePTLuzESP } from "./pt/luz-esp-acesa-causas-custo-reparacao";
+import { ArticlePTOBD2NaoBasta2026 } from "./pt/porque-scanner-obd2-sozinho-nao-basta-2026";
+import { ArticlePTScanearMatricula } from "./pt/scanear-matricula-identificacao-instantanea-veiculo";
+import { ArticlePTSonsInaudiveis } from "./pt/sons-inaudiveis-ia-deteta-o-que-ouvido-nao-consegue";
+import { ArticlePTTurboAAssobiar } from "./pt/turbo-a-assobiar-avaria-ou-normal";
+
 export const articleComponents: Record<string, () => JSX.Element> = {
   /* FR SEO long-tail series */
   "preparer-controle-technique-diesel-2026-guide": ArticlePreparerCTDiesel2026,
@@ -286,6 +322,16 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "10-haeufigste-fehlercodes-europa": ArticleDE10HaeufigsteFehlercodes,
   "obd2-codes-mit-handy-auslesen": ArticleDEOBD2CodesHandy,
   "katalysator-reparatur-kosten-p0420": ArticleDEKatalysatorKostenP0420,
+  "radlagergeraeusch-vor-tuev-erkennen": ArticleDERadlagergeraeusch,
+  "lueftungspfeifen-klimaanlage-diagnose": ArticleDELueftungspfeifen,
+  "bremsenquietschen-normal-oder-gefahr": ArticleDEBremsenquietschen,
+  "lenkungsklopfen-traggelenk-lenkgetriebe-antriebswelle": ArticleDELenkungsklopfen,
+  "fahrwerksgeraeusch-ki-erkennt-stossdaempfer": ArticleDEFahrwerksgeraeusch,
+  "esp-leuchte-ursachen-reparaturkosten": ArticleDEESPLeuchte,
+  "warum-obd2-scanner-allein-nicht-mehr-ausreicht-2026": ArticleDEOBD2Unzureichend2026,
+  "kennzeichen-scannen-sofortige-fahrzeugidentifikation": ArticleDEKennzeichenScannen,
+  "unhoerbare-geraeusche-ki-erkennt-was-ohr-nicht-hoert": ArticleDESonsInaudibles,
+  "pfeifender-turbo-defekt-oder-normal": ArticleDETurboPfeift,
   /* ES articles */
   "como-leer-codigos-fallo-obd2": ArticleESCodigosFalloOBD2,
   "preparar-itv-lista-completa": ArticleESPrepararITV,
@@ -297,6 +343,16 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "10-codigos-averia-frecuentes-europa": ArticleES10CodigosAveria,
   "leer-codigos-obd2-con-movil": ArticleESLeerCodigosOBD2Movil,
   "coste-reparacion-catalizador-p0420": ArticleESCosteCatalizadorP0420,
+  "ruido-rodamiento-rueda-antes-itv": ArticleESRodamientoRueda,
+  "silbido-ventilacion-diagnostico-climatizacion": ArticleESSilbidoVentilacion,
+  "chirrido-frenos-desgaste-normal-o-peligro": ArticleESChirridoFrenos,
+  "golpeteo-direccion-rotula-cremallera-junta": ArticleESGolpeteoDireccion,
+  "ruido-suspension-ia-identifica-amortiguador": ArticleESRuidoSuspension,
+  "testigo-esp-encendido-causas-coste-reparacion": ArticleESTestigoESP,
+  "por-que-escaner-obd2-solo-no-basta-2026": ArticleESOBD2NoBasta2026,
+  "escanear-matricula-identificacion-instantanea-vehiculo": ArticleESEscanearMatricula,
+  "sonidos-inaudibles-ia-detecta-lo-que-oido-no-puede": ArticleESSonidosInaudibles,
+  "turbo-silbando-averia-o-normal": ArticleESTurboSilbando,
   /* PT articles */
   "como-ler-codigos-erro-obd2": ArticlePTCodigosErroOBD2,
   "preparar-ipo-lista-completa": ArticlePTPrepararIPO,
@@ -308,4 +364,14 @@ export const articleComponents: Record<string, () => JSX.Element> = {
   "10-codigos-erro-frequentes-europa": ArticlePT10CodigosErroEuropa,
   "ler-codigos-obd2-com-telemovel": ArticlePTLerCodigosOBD2Telemovel,
   "custo-reparacao-catalisador-p0420": ArticlePTCustoCatalisadorP0420,
+  "ruido-rolamento-roda-antes-ipo": ArticlePTRolamentoRoda,
+  "assobio-ventilacao-diagnostico-climatizacao": ArticlePTAssobioVentilacao,
+  "chiar-travoes-desgaste-normal-ou-perigo": ArticlePTChiarTravoes,
+  "batida-direcao-rotula-cremalheira-semi-eixo": ArticlePTBatidaDirecao,
+  "ruido-suspensao-ia-identifica-amortecedor": ArticlePTRuidoSuspensao,
+  "luz-esp-acesa-causas-custo-reparacao": ArticlePTLuzESP,
+  "porque-scanner-obd2-sozinho-nao-basta-2026": ArticlePTOBD2NaoBasta2026,
+  "scanear-matricula-identificacao-instantanea-veiculo": ArticlePTScanearMatricula,
+  "sons-inaudiveis-ia-deteta-o-que-ouvido-nao-consegue": ArticlePTSonsInaudiveis,
+  "turbo-a-assobiar-avaria-ou-normal": ArticlePTTurboAAssobiar,
 };

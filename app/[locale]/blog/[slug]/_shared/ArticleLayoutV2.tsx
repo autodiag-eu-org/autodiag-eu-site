@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
-type Locale = "fr" | "en";
+type Locale = "fr" | "en" | "de" | "es" | "pt";
 
 interface LocaleLabels {
   home: string;
@@ -47,6 +47,54 @@ const LABELS: Record<Locale, LocaleLabels> = {
       </>
     ),
     ctaButton: "Download the free app",
+  },
+  de: {
+    home: "Startseite",
+    backToBlog: "Zurueck zum Blog",
+    by: "Von",
+    dateLocale: "de-DE",
+    minRead: "Min. Lesezeit",
+    ctaTitle: "Diagnostizieren Sie Ihr Auto in 2 Minuten",
+    ctaBody: (
+      <>
+        Laden Sie AutoDiag EU herunter, lesen Sie Ihre Fehlercodes, hoeren
+        Sie Ihren Motor mit KI ab und verstehen Sie, was wirklich unter der
+        Haube passiert. Kostenlos, keine Kreditkarte erforderlich.
+      </>
+    ),
+    ctaButton: "App kostenlos herunterladen",
+  },
+  es: {
+    home: "Inicio",
+    backToBlog: "Volver al blog",
+    by: "Por",
+    dateLocale: "es-ES",
+    minRead: "min de lectura",
+    ctaTitle: "Diagnostica tu coche en 2 minutos",
+    ctaBody: (
+      <>
+        Descarga AutoDiag EU para leer los codigos de fallo, escuchar tu
+        motor con IA y entender lo que realmente pasa bajo el capo. Gratis,
+        sin tarjeta de credito.
+      </>
+    ),
+    ctaButton: "Descargar la app gratis",
+  },
+  pt: {
+    home: "Inicio",
+    backToBlog: "Voltar ao blog",
+    by: "Por",
+    dateLocale: "pt-PT",
+    minRead: "min de leitura",
+    ctaTitle: "Diagnostique o seu carro em 2 minutos",
+    ctaBody: (
+      <>
+        Descarregue o AutoDiag EU para ler os codigos de avaria, ouvir o
+        seu motor com IA e perceber o que se passa debaixo do capo. Gratis,
+        sem cartao de credito.
+      </>
+    ),
+    ctaButton: "Descarregar a app gratis",
   },
 };
 
