@@ -28,25 +28,27 @@ export async function generateMetadata({
     t("siteTitle")
   )}&description=${encodeURIComponent(t("ogDescription"))}`;
 
+  const localeUrl = locale === "fr" ? `${SITE_URL}/` : `${SITE_URL}/${locale}`;
+
   return {
     title: t("siteTitle"),
     description: t("siteDescription"),
     metadataBase: new URL(SITE_URL),
     alternates: {
-      canonical: `${SITE_URL}/${locale}`,
+      canonical: localeUrl,
       languages: {
-        fr: `${SITE_URL}/fr`,
+        fr: `${SITE_URL}/`,
         en: `${SITE_URL}/en`,
         de: `${SITE_URL}/de`,
         es: `${SITE_URL}/es`,
         pt: `${SITE_URL}/pt`,
-        "x-default": `${SITE_URL}/fr`,
+        "x-default": `${SITE_URL}/`,
       },
     },
     openGraph: {
       title: t("siteTitle"),
       description: t("ogDescription"),
-      url: `${SITE_URL}/${locale}`,
+      url: localeUrl,
       siteName: "AutoDiag EU",
       locale,
       type: "website",
