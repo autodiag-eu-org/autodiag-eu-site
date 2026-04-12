@@ -5,6 +5,16 @@ const SITE_URL = 'https://www.autodiag-eu.com';
 const locales = ['fr', 'en', 'de', 'es', 'pt'];
 const X_DEFAULT = 'fr';
 
+// With next-intl localePrefix: 'as-needed', the default locale (fr) is served
+// at the root without a prefix. All other locales keep their prefix.
+// e.g. FR homepage = /, EN homepage = /en, FR codes page = /codes, EN = /en/codes
+function localePath(locale, pagePath) {
+  if (locale === X_DEFAULT) {
+    return pagePath === '' ? '/' : pagePath;
+  }
+  return `/${locale}${pagePath}`;
+}
+
 // Static pages that exist for all locales
 const staticPages = [
   '',
@@ -83,12 +93,12 @@ const blogGroups = [
  */
 function buildAlternates(pagePath) {
   const refs = locales.map((l) => ({
-    href: `${SITE_URL}/${l}${pagePath}`,
+    href: `${SITE_URL}${localePath(l, pagePath)}`,
     hreflang: l,
     hrefIsAbsolute: true,
   }));
   refs.push({
-    href: `${SITE_URL}/${X_DEFAULT}${pagePath}`,
+    href: `${SITE_URL}${localePath(X_DEFAULT, pagePath)}`,
     hreflang: 'x-default',
     hrefIsAbsolute: true,
   });
@@ -101,14 +111,14 @@ function buildAlternates(pagePath) {
  */
 function buildBlogAlternates(group) {
   const refs = group.map((entry) => ({
-    href: `${SITE_URL}/${entry.locale}/blog/${entry.slug}`,
+    href: `${SITE_URL}${localePath(entry.locale, `/blog/${entry.slug}`)}`,
     hreflang: entry.locale,
     hrefIsAbsolute: true,
   }));
   const defaultEntry =
     group.find((e) => e.locale === X_DEFAULT) ?? group[0];
   refs.push({
-    href: `${SITE_URL}/${defaultEntry.locale}/blog/${defaultEntry.slug}`,
+    href: `${SITE_URL}${localePath(defaultEntry.locale, `/blog/${defaultEntry.slug}`)}`,
     hreflang: 'x-default',
     hrefIsAbsolute: true,
   });
@@ -128,7 +138,7 @@ const config = {
       const alternates = buildAlternates(page);
       for (const locale of locales) {
         paths.push({
-          loc: `/${locale}${page}`,
+          loc: localePath(locale, page),
           changefreq: 'weekly',
           priority: page === '' ? 1.0 : 0.7,
           lastmod: now,
@@ -158,7 +168,7 @@ const config = {
       const alternates = buildAlternates(pagePath);
       for (const locale of locales) {
         paths.push({
-          loc: `/${locale}${pagePath}`,
+          loc: localePath(locale, pagePath),
           changefreq: 'monthly',
           priority: 0.8,
           lastmod: now,
@@ -172,7 +182,7 @@ const config = {
       const alternates = buildBlogAlternates(group);
       for (const entry of group) {
         paths.push({
-          loc: `/${entry.locale}/blog/${entry.slug}`,
+          loc: localePath(entry.locale, `/blog/${entry.slug}`),
           changefreq: 'monthly',
           priority: 0.6,
           lastmod: now,
