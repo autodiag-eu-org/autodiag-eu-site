@@ -21,14 +21,21 @@ export default getRequestConfig(async ({ requestLocale }) => {
   if (locale !== "fr") {
     const frMessages = (await import("@/i18n/fr.json")).default as Messages;
 
+    const UNSAFE_KEYS = new Set(["__proto__", "constructor", "prototype"]);
+
     function mergeDeep(base: Messages, target: Messages): Messages {
       for (const key of Object.keys(base)) {
-        if (typeof base[key] === "object" && base[key] !== null) {
-          const baseSub = base[key] as Messages;
-          const targetSub = (target[key] ?? {}) as Messages;
-          target[key] = mergeDeep(baseSub, targetSub);
-        } else if (!target[key]) {
-          target[key] = base[key];
+        if (UNSAFE_KEYS.has(key)) continue;
+        if (!Object.prototype.hasOwnProperty.call(base, key)) continue;
+        const baseVal = base[key];
+        if (typeof baseVal === "object" && baseVal !== null) {
+          const existing = Object.prototype.hasOwnProperty.call(target, key)
+            ? (target[key] as Messages | undefined)
+            : undefined;
+          const targetSub: Messages = existing ?? Object.create(null);
+          target[key] = mergeDeep(baseVal as Messages, targetSub);
+        } else if (!Object.prototype.hasOwnProperty.call(target, key) || !target[key]) {
+          target[key] = baseVal;
         }
       }
       return target;

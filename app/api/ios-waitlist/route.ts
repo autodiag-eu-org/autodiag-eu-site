@@ -15,7 +15,17 @@ interface WaitlistRequestBody {
 }
 
 function isValidEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (typeof email !== "string" || email.length === 0 || email.length > 254) return false;
+  if (/\s/.test(email)) return false;
+  const atIndex = email.indexOf("@");
+  if (atIndex < 1 || atIndex !== email.lastIndexOf("@")) return false;
+  const local = email.slice(0, atIndex);
+  const domain = email.slice(atIndex + 1);
+  if (local.length === 0 || local.length > 64) return false;
+  if (domain.length === 0 || domain.length > 253) return false;
+  const dotIndex = domain.lastIndexOf(".");
+  if (dotIndex < 1 || dotIndex === domain.length - 1) return false;
+  return true;
 }
 
 function getClientIP(request: NextRequest): string {
